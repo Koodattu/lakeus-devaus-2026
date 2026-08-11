@@ -22,5 +22,7 @@ This repository is deliberately broader than the eventual presentation. It holds
 - [Editorial backlog: keep, cut, and test](docs/07-editorial-backlog.md)
 - [Source ledger](docs/08-source-ledger.md)
 - [Veteran lens: what changed and what did not](docs/09-veteran-lens.md)
+- [AI-native software development in August 2026](docs/10-ai-native-development-workflows.md)
+- [Workflow scenarios, field lessons, and open questions](docs/11-workflow-scenarios-and-field-notes.md)
 
-Research snapshot: **9 August 2026**. Current figures must be rechecked before the event.
+Research snapshot: **11 August 2026**. Current figures must be rechecked before the event.

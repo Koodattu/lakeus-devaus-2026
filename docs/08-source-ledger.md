@@ -1,6 +1,6 @@
 # Source ledger
 
-Research snapshot: **9 August 2026**. This ledger favors primary research, official statistics, regulator publications, and company releases. Commentary sources are marked. Links should be rechecked when the slide deck is produced.
+Research snapshot: **11 August 2026**. This ledger favors primary research, official statistics, regulator publications, and company releases. Commentary sources are marked. Links should be rechecked when the slide deck is produced.
 
 ## Developer adoption, productivity, and workflow
 
@@ -397,6 +397,168 @@ Research snapshot: **9 August 2026**. This ledger favors primary research, offic
 - **Supports:** mixed quality results across difficulty and generation setup; generated solutions scored better on some measures and worse on some structural/critical issue categories.
 - **Caveat:** static-analysis proxies and coding tasks do not capture production lifetime quality; recent preprint.
 - **Possible use:** support “quality is multidimensional,” probably appendix only.
+
+## AI-native workflows, orchestration, and context engineering
+
+### OpenAI harness engineering
+
+- **Source:** [OpenAI, “Harness engineering: leveraging Codex in an agent-first world”](https://openai.com/index/harness-engineering/)
+- **Type:** first-party engineering case study, 11 February 2026.
+- **Supports:** exceptional end-to-end agent delivery case; roughly one million lines and 1,500 pull requests without manually written application code; repository legibility, progressive documentation, browser access, per-worktree environments, telemetry, automated review, and continuous cleanup as complementary infrastructure.
+- **Caveat:** vendor-authored internal case with unusually high agent expertise and investment; explicitly not a representative team benchmark or proof that code volume equals product value.
+- **Possible use:** frontier case behind “zero human-written code is not zero human engineering.”
+
+### HubSpot cloud coding agents
+
+- **Source:** [HubSpot, “Cloud Coding Agents at HubSpot”](https://product.hubspot.com/blog/cloud-coding-agents-at-hubspot)
+- **Type:** first-party enterprise engineering case study, 23 January 2026.
+- **Supports:** 7,000 fully AI-generated merged pull requests and 50,000 AI-reviewed human pull requests in six months; isolated execution, editable plans, build feedback, hooks, evaluation, and deterministic lifecycle steps.
+- **Caveat:** company report from an opinionated internal platform; does not provide a controlled productivity comparison or full distribution of quality outcomes.
+- **Possible use:** concrete success-and-failure pair: agents generated useful work but also stopped with failing builds or incomplete handoffs until the harness constrained them.
+
+### How Claude Code is used in practice
+
+- **Source:** [Anthropic, “How Claude Code is used in practice”](https://www.anthropic.com/research/claude-code-expertise)
+- **Type:** vendor research over roughly 400,000 sessions and 235,000 users, published 16 June 2026.
+- **Supports:** users made roughly 70% of planning decisions and the agent roughly 80% of execution decisions; sessions were often short; task and user expertise predicted verified success; work extended beyond writing code into operation, documentation, and data tasks.
+- **Caveat:** one vendor’s product, inferred classifications, selected verification signals, and observational rather than causal evidence.
+- **Possible use:** broad-practice counterpoint to fully autonomous harness cases.
+
+### Stack Overflow agent pulse, April 2026
+
+- **Source:** [Stack Overflow, “Agents on a leash: Agentic AI remains mostly monitored at work”](https://stackoverflow.blog/2026/05/27/agents-on-a-leash-agentic-ai-remains-mostly-monitored-at-work/)
+- **Type:** April 2026 pulse survey of roughly 1,100 respondents, published 27 May 2026.
+- **Supports:** reported agent use rose from 31% to 59%; 63% rarely or never allowed full autopilot; 68% preferred a predictable single agent; accuracy and security remained central concerns.
+- **Caveat:** pulse sample, self-report, product definitions, and user mix differ from representative labor-market surveys.
+- **Possible use:** “frontier versus median” contrast and restraint on multi-agent hype.
+
+### Longitudinal shift toward supervisory engineering
+
+- **Source:** [*From Code Generation to Supervisory Engineering: A Longitudinal Study of AI-Augmented Software Development*](https://arxiv.org/abs/2605.23135)
+- **Type:** May 2026 preprint; two survey waves with 95 matched respondents.
+- **Supports:** 82% reported less time writing code; stable self-reported productivity benefit coexisted with a rising share reporting worse developer experience in at least one dimension; direction, evaluation, and correction emerge as new work.
+- **Caveat:** small self-selected sample, self-report, recent preprint, and no causal productivity measurement.
+- **Possible use:** faster output is not necessarily lower cognitive load or better developer experience.
+
+### Professional developers retain control
+
+- **Source:** [*Professional Software Developers Don’t Vibe, They Control*](https://arxiv.org/abs/2512.14012)
+- **Type:** December 2025 mixed-method preprint; observation of 13 developers and survey of 99.
+- **Supports:** experienced developers valued productivity while deliberately retaining agency over design and implementation because they expected to own quality.
+- **Caveat:** small and non-representative samples; describes behavior and attitudes rather than measured long-term outcomes.
+- **Possible use:** human-on-the-loop interpretation and veteran discussion.
+
+### Thoughtworks Technology Radar, volume 34
+
+- **Source:** [Thoughtworks Technology Radar, volume 34](https://www.thoughtworks.com/content/dam/thoughtworks/documents/radar/2026/04/tr_technology_radar_vol_34_en.pdf)
+- **Type:** practitioner synthesis and opinionated recommendations, April 2026.
+- **Supports:** context engineering and curated shared instructions; feedback sensors and DORA measures; cautious trial of skills; small deliberate agent teams rather than swarms; instruction bloat, throughput metrics, shadow IT, cognitive debt, and MCP-by-default warnings; security and durable workflow concerns.
+- **Caveat:** expert judgment rather than controlled study; individual blips reflect Thoughtworks’ experience and should not be presented as universal consensus.
+- **Possible use:** organizing framework and independent counterweight to platform vendors.
+
+### OpenAI Codex best practices and customization documentation
+
+- **Sources:** [OpenAI, Codex best practices](https://learn.chatgpt.com/guides/best-practices); [OpenAI, subagents](https://learn.chatgpt.com/docs/agent-configuration/subagents); [OpenAI, MCP](https://learn.chatgpt.com/docs/extend/mcp); [OpenAI, skills](https://learn.chatgpt.com/docs/build-skills)
+- **Type:** primary current product documentation, accessed 11 August 2026.
+- **Supports:** goal/context/constraints/done prompting; planning and validation; short durable repository instructions; MCP for live external context; skills for repeatable workflows; subagents for bounded exploration, tests, or triage; stable workflows before scheduling.
+- **Caveat:** vendor-specific capabilities and recommended practices change quickly; use for explaining this ecosystem, not as independent evidence of productivity.
+- **Possible use:** factual notes behind the workflow diagram; avoid product-interface detail on the main slide.
+
+### Structured prompt-driven development
+
+- **Source:** [Martin Fowler / Thoughtworks, “Structured Prompt-Driven Development”](https://www.martinfowler.com/articles/structured-prompt-driven/)
+- **Type:** practitioner method article, 28 April 2026.
+- **Supports:** prompts and specifications as versioned delivery artifacts; explicit requirements, domain, solution, structure, decomposition, norms, and safeguards; human validation of business intent.
+- **Caveat:** one disciplined method, not a comparative evaluation or universal lifecycle.
+- **Possible use:** example of moving prompt craft into durable specification practice.
+
+### Evaluating `AGENTS.md`
+
+- **Source:** [*Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?*](https://arxiv.org/abs/2602.11988)
+- **Type:** February 2026 preprint; 138 tasks across 12 repositories plus a benchmark comparison.
+- **Supports:** generated context files did not generally improve success and increased cost by roughly 20%; human-written files were somewhat more useful; agents followed instructions and explored or tested more.
+- **Caveat:** task/repository selection, model and harness choices, and file generation method limit generalization.
+- **Possible use:** instructions are an engineering artifact, not automatic improvement.
+
+### Instructions-as-code adoption study
+
+- **Source:** [*Toward Instructions-as-Code: A Longitudinal Study of Repository Guidance for Coding Agents*](https://arxiv.org/abs/2606.13449)
+- **Type:** June 2026 preprint analysis of 15,549 agentic pull requests across 148 projects.
+- **Supports:** projects experienced both substantial merge-rate improvements and declines after instruction-file adoption; quality and evolution matter more than presence.
+- **Caveat:** observational association and repository selection; recent preprint rather than a controlled intervention.
+- **Possible use:** motivate testing, versioning, and deleting stale guidance.
+
+### SWE-Skills-Bench
+
+- **Source:** [*SWE-Skills-Bench: Do Agent Skills Improve Software Engineering Performance?*](https://arxiv.org/abs/2603.15401)
+- **Type:** March 2026 benchmark preprint; 49 skills and roughly 565 task instances.
+- **Supports:** little average pass-rate gain; most skills showed no improvement, specialized skills sometimes helped considerably, and version mismatch sometimes reduced success while increasing token use.
+- **Caveat:** benchmark tasks, public-skill sample, specific models and harness; does not establish that well-maintained private organizational skills lack value.
+- **Possible use:** “skills are narrow tested methods, not collectible power-ups.”
+
+### Public skill ecosystem quality
+
+- **Source:** [*What Keeps Agent Skills Reusable? An Empirical Study of the Agent Skills Ecosystem*](https://arxiv.org/abs/2608.08453)
+- **Type:** very recent August 2026 preprint; analysis of more than 138,000 skills from over 20,000 repositories.
+- **Supports:** widespread detected defects in routing metadata, instruction bodies, resource organization, safety, and portability; need for specification-aware authoring and validation.
+- **Caveat:** hot-off-the-press preprint, automated defect detection, and ecosystem scraping choices; unsuitable for a definitive headline without review.
+- **Possible use:** appendix warning about skill supply chains and quality.
+
+### MCP client best practices
+
+- **Source:** [Model Context Protocol, client best practices](https://modelcontextprotocol.io/docs/develop/clients/client-best-practices)
+- **Type:** primary protocol documentation.
+- **Supports:** large always-loaded tool catalogues can degrade selection and context; dynamic discovery and search-then-load patterns; skills can declare integration dependencies.
+- **Caveat:** protocol guidance rather than comparative outcome research.
+- **Possible use:** explain why context is routed and why MCP is not synonymous with loading everything.
+
+### NSA MCP security guidance
+
+- **Source:** [NSA, *Model Context Protocol (MCP): Security Design Considerations for AI-Driven Automation*](https://media.defense.gov/2026/Jun/02/2003943289/-1/-1/0/CSI_MCP_SECURITY.PDF)
+- **Type:** U.S. government cybersecurity information sheet, version 1.0, May 2026.
+- **Supports:** least privilege, identity separation, authorization, tool integrity, audit, data controls, and prompt-injection-aware architecture for connected agents.
+- **Caveat:** defensive guidance rather than incident prevalence or product comparison; verify publication metadata from the PDF before a slide citation.
+- **Possible use:** security appendix or one sentence that integrations expand both capability and attack surface.
+
+### Browser feedback for agents
+
+- **Sources:** [Chrome DevTools for agents](https://developer.chrome.com/docs/devtools/agents/get-started); [Playwright Test Agents](https://playwright.dev/docs/test-agents)
+- **Type:** primary platform documentation.
+- **Supports:** agents can inspect live DOM, accessibility, network, console, runtime, screenshots, and performance; Playwright separates test planning, generation, and healing into auditable artifacts.
+- **Caveat:** platform capability documentation, not evidence that generated tests or UI fixes are correct; active browser sessions add data and prompt-injection risk.
+- **Possible use:** “the browser is where generated code meets empirical reality.”
+
+### Multi-agent isolated delegation
+
+- **Source:** [*Centralized Asynchronous Isolated Delegation for Multi-Agent Software Development*](https://arxiv.org/abs/2603.21489)
+- **Type:** March 2026 benchmark preprint.
+- **Supports:** central dependency planning, asynchronous workers, isolated workspaces, structured merge, and executable verification; reported benchmark gains over a single-agent baseline.
+- **Caveat:** benchmarks with defined scoring do not reproduce normal product ambiguity, organizational knowledge, or integration cost.
+- **Possible use:** worktree/dependency lesson, not “more agents always win.”
+
+### Practitioners building software-engineering agents
+
+- **Source:** [*How Practitioners Build Software Engineering Agents*](https://arxiv.org/abs/2607.10856)
+- **Type:** July 2026 mixed-method preprint; interviews across 12 organizations and a practitioner survey.
+- **Supports:** implementation cost shifts bottlenecks toward requirements, coordination, review, and deployment; specifications become versioned artifacts; evaluation and comprehension debt remain difficult.
+- **Caveat:** recent study, selected agent-building practitioners, and rapidly changing tools.
+- **Possible use:** industry-experience support for the bottleneck-shift thesis.
+
+### Self-evolving agent systems
+
+- **Source:** [*Self-Evolving Agents: A Survey*](https://arxiv.org/abs/2608.03392)
+- **Type:** early August 2026 survey preprint.
+- **Supports:** systems may adapt memory, instructions, skills, tools, model routing, and agent topology from traces and executable feedback; outlines overfitting, safety, maintenance, and cost risks.
+- **Caveat:** emerging research map, not evidence that safe self-improvement is production-ready.
+- **Possible use:** appendix or future-looking discussion only.
+
+### DORA 2026 AI tensions synthesis
+
+- **Source:** [DORA, “Balancing AI tensions”](https://dora.dev/insights/balancing-ai-tensions/)
+- **Type:** research-team synthesis of current DORA findings, 2026.
+- **Supports:** high adoption and perceived productivity alongside low trust; verification tax, reviewer cognitive load, prototype-to-production workflow gaps, delivery instability, and apprenticeship tension.
+- **Caveat:** check the underlying report, sample, model, and exact percentages before placing any number on a slide; associations are not automatically causal.
+- **Possible use:** connect local agent acceleration to system-level delivery outcomes and human experience.
 
 ## Lakeus-Devaus context
 

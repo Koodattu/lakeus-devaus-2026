@@ -10,7 +10,7 @@ This is where good ideas are preserved without forcing them into the main talk.
 | Seven-question quick-fire gallup | Profiles the room without turning polls into mini-discussions | 10 min |
 | Truthful personal workflow/project reveal | Makes the change concrete and exposes human judgment | 5 min |
 | Veteran test: Brooks and Naur | Establishes what previous revolutions teach and what may be different | 5 min |
-| 2022→2026 shift and jagged capability | Shows the move from answers to delegated outcomes without a model catalogue | 6 min |
+| 2022→2026 shift, AI-native control system, and jagged capability | Shows the move from answers to delegated outcomes and why frontier autonomy differs from normal practice | 7 min |
 | Conflicting productivity evidence and J-curve | Builds epistemic honesty and moves measurement from task to system | 7 min |
 | Review scarcity, slop, and ownership | Unifies quality, security, maintainer burden, and apprenticeship | 6 min |
 | SaaS, attention, people, Finland, and global synthesis | Shows where value moves without creating five separate talks | 7 min |
@@ -37,6 +37,9 @@ These working maximums leave several minutes inside the 35-minute main section f
 | Lehman’s individual laws and Parnas’ full aging argument | Deeply relevant to veterans | Brooks and Naur are enough for the short historical sequence |
 | Complete 4GL/CASE history | Provides historical humility | Needs archival work and can become its own talk |
 | Longitudinal AI-maintenance preprints | Directly relevant to the thesis | Evidence is young, selected, and easy to overstate |
+| Full skills/MCP/browser/subagent taxonomy | Useful reference for technical discussion | A glossary would date quickly and turn the talk into a tools tour |
+| Eight detailed workflow scenarios | Makes autonomy concrete across development contexts | Main talk needs one or two contrasts; the complete set belongs in notes or discussion |
+| Self-improving agent harnesses | A plausible next frontier beyond longer tasks | Very early evidence and too much conceptual overhead for the main narrative |
 
 ## Cut from the first version
 
@@ -72,6 +75,11 @@ These working maximums leave several minutes inside the 35-minute main section f
 | “Nobody understands AI-generated systems.” | Reject as general claim | Use Naur to ask who builds and retains the theory; AI can also help articulate it. |
 | “Open source is banning AI.” | Reject | Projects choose different governance models; Godot restricts substantial generation, while Linux and ESLint permit tools under accountability rules. |
 | “AI code needs less maintenance.” | Reject | A recent selected-sample preprint observed less frequent/smaller changes, but exposure time, selection, and interpretation prevent that conclusion. |
+| “AI can now do the whole software lifecycle.” | Keep with boundary | Documented harness-first teams delegate implementation, testing, review, browser verification, and handoff end to end; humans still build the environment, choose goals, resolve judgment, and own consequences. |
+| “More autonomy is better.” | Reject | Appropriate autonomy depends on planning quality, feedback, blast radius, reversibility, evaluability, and lifespan. |
+| “A good `AGENTS.md` makes agents reliable.” | Rewrite | Relevant local instructions can help, while generated or bloated files can add cost or reduce success; instructions must be tested and maintained like code. |
+| “MCP is the modern default.” | Reject | MCP is valuable for governed live integration; CLI, APIs, or scripts may be simpler and more reliable for local work. |
+| “Multi-agent is more advanced than one agent.” | Reject | Multiple agents buy parallelism and context isolation only when work can be decomposed and integrated safely. |
 
 ## Questions that still need the speaker’s input
 
@@ -98,6 +106,7 @@ Choose three for the final slide; do not use all six.
 - Invest in tests, context, and feedback because generation scales faster than trust.
 - Build something people need, can find, and can trust—not merely something that can be built.
 - Let AI produce options; keep human ownership of consequences.
+- Increase autonomy only as fast as feedback, legibility, and reversibility allow.
 
 ## Candidate recurring lines
 
@@ -114,6 +123,10 @@ Use repetition sparingly. Two or three can become motifs:
 - **We may automate the junior task before we automate the need for senior judgment.**
 - **Previous revolutions failed as total products and succeeded as invisible infrastructure.**
 - **Submission is abundant. Review is governed.**
+- **Zero human-written code is not zero human engineering.**
+- **Put a deterministic spine around a nondeterministic worker.**
+- **Autonomy is earned by feedback, legibility, and reversibility.**
+- **The browser is where generated code meets empirical reality.**
 
 ## Research refresh checklist
 
@@ -131,6 +144,10 @@ Run this shortly before slide production and again during event week:
 - a small set of properly licensed 4GL/CASE/NATO archival visuals;
 - any newer longitudinal evidence on agent-generated code maintenance;
 - current Godot, Linux, and ESLint contribution policies if they remain in the deck;
+- current agent-usage pulse and any newer independent autonomy data;
+- the latest public details or corrections for the OpenAI and HubSpot harness case studies;
+- current security guidance for MCP, connected apps, browser agents, and external actions;
+- any peer review or replication for the 2026 instruction-file, skill, and multi-agent preprints;
 
 ## Decision rule for new ideas
 

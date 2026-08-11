@@ -16,7 +16,7 @@ Do not read every percentage. The results form a profile of this room, not a sci
 
 ### 1. Experience
 
-**Question**  
+**Question**
 Vuosia ohjelmistoalalla?
 
 **Options**
@@ -31,7 +31,7 @@ Return to this distribution when introducing earlier software revolutions and ap
 
 ### 2. Recent use
 
-**Question**  
+**Question**
 AI koodauksessa tällä viikolla?
 
 **Options**
@@ -199,6 +199,35 @@ Kehitystiimi vuonna 2028?
 2. Samankokoinen
 3. Suurempi
 4. En tiedä
+
+### Current mode
+
+**Question**
+Miten käytät AI:ta?
+
+**Options**
+
+1. Kysyn
+2. Täydennän
+3. Delegoin
+4. Orkestroin
+5. En käytä
+
+This is deliberately about the highest level used regularly, not every use. It can replace “Recent use” if the presentation needs workflow maturity more than frequency.
+
+### Unattended time
+
+**Question**
+Agentti valvomatta?
+
+**Options**
+
+1. En lainkaan
+2. 5 minuuttia
+3. Tunnin
+4. Yön yli
+
+This is a faster and more vivid autonomy question than a policy-heavy production scenario. Ask participants to imagine a normal repository with version control and tests.
 
 ### Junior path
 

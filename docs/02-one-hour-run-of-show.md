@@ -118,15 +118,33 @@ The section should not conclude that AI is merely another CASE tool. Its job is 
 
 **Claim:** The unit of delegation is moving from a line of code toward a coherent task.
 
-Use only enough model material to establish:
+Begin with only enough model material to establish:
 
 - chat → autocomplete → repository agent → bounded outcome;
 - rapidly increasing task horizon;
-- jagged capability and incomplete reliability;
-- open-weight competition and strategic optionality;
-- USA, China, and Europe play related but different games.
+- jagged capability and incomplete reliability.
 
-The leaderboard is supporting evidence, not the story. One dated comparison is enough.
+Then show that a real AI-native workflow is not `prompt → model → code`, but a control system:
+
+```text
+goal → local context → skills/tools → agent(s) → evidence → human judgment → learning
+```
+
+Skills, MCP/apps, browser use, subagents, tests, hooks, and goals should appear only as parts of these functions—not as a product glossary. The browser closes the gap between compiling and working; skills package repeatable methods; live integrations supply context and action; subagents isolate context and parallel work; deterministic checks keep the generative core inside boundaries.
+
+Use one short frontier-versus-mainstream contrast:
+
+- OpenAI reports an internal product with no manually written application code, enabled by a highly structured repository, isolated environments, browser access, telemetry, review, and continual cleanup;
+- HubSpot reports 7,000 merged fully AI-generated pull requests, while also describing agents that stopped with broken builds or forgot lifecycle steps until deterministic hooks and orchestration were added;
+- Stack Overflow’s April 2026 pulse found 63% rarely or never allowing full autopilot and 68% preferring a predictable single agent to a complex multi-agent setup.
+
+The point is not that one side is correct. The frontier teams invested in the environment that makes longer delegation safe.
+
+Open-weight competition, model routing, and USA–China–EU differences move to one dated supporting slide or reserve material. The leaderboard is a weather report, not the story.
+
+Land on:
+
+> **Autonomy is earned by feedback, legibility, and reversibility.**
 
 ### Movement 3 — Is it actually faster? (0:34–0:42)
 

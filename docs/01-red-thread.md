@@ -46,6 +46,14 @@ Frame → expose context → delegate → inspect → test → challenge → int
 
 The second loop is not automatically shorter. It is more parallel and produces more candidate output. This increases the value of specifications, architecture, automated checks, small changes, good feedback, and knowing when not to delegate.
 
+By 2026, the mature version of this loop is a control system rather than a collection of buzzwords:
+
+```text
+goal → local truth → skills/tools → agent(s) → evidence → human judgment → learning
+```
+
+Skills encode repeatable methods, MCP and apps expose live context and actions, browser use supplies empirical product feedback, subagents isolate context or parallel work, and deterministic checks bound the nondeterministic core. The frontier case is technically close to end-to-end autonomous implementation; the normal case is still supervised. The difference is often the quality of the surrounding environment rather than model access alone.
+
 This is where a personal workflow belongs. Show artifacts and decisions, not a magic prompt:
 
 - how an ambiguous goal becomes constraints and acceptance criteria;
@@ -54,7 +62,7 @@ This is where a personal workflow belongs. Show artifacts and decisions, not a m
 - what the human rejects, changes, or verifies;
 - who owns the result after the session ends.
 
-**Act claim:** AI is an amplifier. It makes strong development systems faster and weak ones noisier.
+**Act claim:** AI is an amplifier. It makes strong development systems faster and weak ones noisier. Autonomy is earned by feedback, legibility, and reversibility.
 
 **Transition:** If the tools feel faster, why does the research disagree about how much faster we are?
 

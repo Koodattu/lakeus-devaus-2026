@@ -2,7 +2,7 @@
 
 These notes are an evidence bank, not slide copy. Each section asks: what does the evidence let us say, what does it mean for the red thread, and where can we overreach?
 
-Research snapshot: **9 August 2026**. See the [source ledger](08-source-ledger.md) for URLs and source types.
+Research snapshot: **11 August 2026**. See the [source ledger](08-source-ledger.md) for URLs and source types.
 
 ## 1. Adoption is high; confidence is not
 
@@ -102,24 +102,33 @@ Open-weight models matter for local operation, privacy choices, cost control, cu
 
 This is a short consequence-led section, not a model-architecture workshop. Lakeus-Devaus already hosted a local-coding-model event in 2024 covering model characteristics, quantization, context, Ollama, and practical comparisons. The 2026 continuation is: **what became possible, what remained hard, and why openness changes the strategic options.**
 
-## 5. The development loop changed
+## 5. The development loop became a control system
 
 Anthropic’s 2025 analysis of Claude Code conversations classified approximately 79% as automation and 21% as augmentation under its taxonomy. GitHub’s 2025 Octoverse reported 4.3 million AI-related projects, 43.2 million pull requests per month, and more than 180 million developers on the platform.
 
 These are platform-specific measurements, but they support a visible workflow shift: AI is increasingly asked to act within the repository rather than only explain code outside it.
+
+The 2026 evidence adds an important distinction between frontier capability and broad practice:
+
+- OpenAI describes an internal product of roughly one million lines with no manually written application code, built through a repository harness that gives agents structured knowledge, isolated application instances, browser access, telemetry, review, and continuous cleanup.
+- HubSpot reports 7,000 fully AI-generated pull requests merged in six months. It moved deterministic lifecycle actions outside the model and used hooks after agents stopped with failing builds or incomplete handoffs.
+- Stack Overflow’s April 2026 pulse found agent use rising while 63% rarely or never allowed full autopilot and 68% preferred a predictable single agent.
+- Anthropic’s study of roughly 400,000 Claude Code sessions found users making about 70% of planning decisions and the agent about 80% of execution decisions; user expertise predicted verified success.
+
+These sources use different populations and definitions. Together they suggest that end-to-end autonomy is technically real in engineered environments, while supervised delegation remains the more typical pattern.
 
 ### Working model
 
 ```text
 Goal
   → constraints and acceptance criteria
-  → repository and domain context
-  → bounded delegation
-  → inspection and adversarial questions
-  → automated checks
+  → routed repository and domain context
+  → skills and tools: shell, apps/MCP, browser
+  → one agent or bounded subagents
+  → deterministic checks and runtime evidence
   → human review and integration
   → production observation
-  → new context and revision
+  → better tests, instructions, skills, and architecture
 ```
 
 The expensive mistake is to treat generation as the end of this loop. In production, the human or organization still owns every downstream consequence.
@@ -132,6 +141,9 @@ The expensive mistake is to treat generation as the end of this loop. In product
 - Reviewing plausible code is a different cognitive task from writing code and can become a bottleneck.
 - Repository instructions, examples, and tools are a form of organizational memory.
 - Experienced developers may type less while making more consequential decisions.
+- Skills, MCP, browser use, and subagents are not separate magic ingredients; they supply methods, context/action, empirical feedback, and context isolation inside one loop.
+- More autonomy is appropriate when work is reversible and machine-evaluable; less when blast radius, lifespan, or subjective judgment grows.
+- Zero human-written code is not zero human engineering.
 
 ## 6. More software does not automatically mean more value
 
