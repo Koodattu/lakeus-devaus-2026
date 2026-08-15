@@ -1,6 +1,6 @@
 # Source ledger
 
-Research snapshot: **11 August 2026**. This ledger favors primary research, official statistics, regulator publications, and company releases. Commentary sources are marked. Links should be rechecked when the slide deck is produced.
+Research snapshot: **15 August 2026**. This ledger favors primary research, official statistics, regulator publications, and company releases. Commentary sources are marked. Links should be rechecked when the slide deck is produced.
 
 ## Developer adoption, productivity, and workflow
 
@@ -171,6 +171,14 @@ Research snapshot: **11 August 2026**. This ledger favors primary research, offi
 - **Supports:** AI is one proposed factor among pandemic over-hiring, interest rates, and macro conditions; causality is not obvious.
 - **Caveat:** secondary reporting; not needed if primary data tells the slide.
 - **Possible use:** background only.
+
+### r/singularity career-anxiety discussion
+
+- **Source:** [“Panicking Software Engineer,” r/singularity](https://old.reddit.com/r/singularity/comments/1vote1t/panicking_software_engineer/)
+- **Type:** evolving Reddit discussion, submitted 15 August 2026; excerpts captured in the speaker’s research material on the same date.
+- **Supports:** qualitative evidence of career anxiety, financial exposure, survival framing, competing beliefs about skill and architecture, and the claim that easier implementation exposes product judgment sooner.
+- **Caveat:** one self-selected thread in a community oriented toward rapid AI progress; commenters are unverified, votes are not representative, discussion can change, and none of its job-loss timelines are empirical evidence.
+- **Possible use:** a brief human bridge or discussion prompt behind “AI changes work through expectations as well as capability.” Do not use comment votes as survey data.
 
 ## Europe, regulation, and sovereignty
 

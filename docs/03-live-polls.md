@@ -200,6 +200,20 @@ Kehitystiimi vuonna 2028?
 3. Suurempi
 4. En tiedä
 
+### Capability or expectations
+
+**Question**
+Miten AI on muuttanut työtäsi?
+
+**Options**
+
+1. Tekemistä
+2. Odotuksia
+3. Molempia
+4. Ei vielä
+
+This is the cleanest career-and-culture question. It distinguishes what the tools already do from what employers, colleagues, and developers expect them to do. It can replace “Output quality” if the talk needs a stronger human bridge. Do not ask participants whether they expect to lose their jobs.
+
 ### Current mode
 
 **Question**

@@ -189,6 +189,7 @@ Touch the remaining lenses briefly:
 
 - **SaaSpocalypse:** generic point tools and feature layers are exposed; data, workflow, integration, security, support, and accountability remain.
 - **Apprenticeship:** if routine work disappears, organizations must deliberately create the future senior developers who can verify AI output.
+- **Career expectations:** AI changes work through both its current capabilities and expectations about its next capabilities. Motivation, hiring, trust, and team culture can move before displacement is measurable.
 - **Finland:** weak demand and delayed budgets interact with AI-shaped price and productivity expectations; AI is pressure and product, not a single cause.
 - **Global competition:** capital, models, open ecosystems, industrial application, regulation, and sovereignty are different dimensions.
 - **Regional advantage:** domain context, proximity, reputation, and willingness to own the unglamorous system after launch.

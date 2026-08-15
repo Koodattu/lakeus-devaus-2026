@@ -24,5 +24,6 @@ This repository is deliberately broader than the eventual presentation. It holds
 - [Veteran lens: what changed and what did not](docs/09-veteran-lens.md)
 - [AI-native software development in August 2026](docs/10-ai-native-development-workflows.md)
 - [Workflow scenarios, field lessons, and open questions](docs/11-workflow-scenarios-and-field-notes.md)
+- [Career anxiety, expectations, and the value shift](docs/12-career-anxiety-and-value-shift.md)
 
-Research snapshot: **11 August 2026**. Current figures must be rechecked before the event.
+Research snapshot: **15 August 2026**. Current figures must be rechecked before the event.

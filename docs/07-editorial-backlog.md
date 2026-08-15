@@ -40,6 +40,7 @@ These working maximums leave several minutes inside the 35-minute main section f
 | Full skills/MCP/browser/subagent taxonomy | Useful reference for technical discussion | A glossary would date quickly and turn the talk into a tools tour |
 | Eight detailed workflow scenarios | Makes autonomy concrete across development contexts | Main talk needs one or two contrasts; the complete set belongs in notes or discussion |
 | Self-improving agent harnesses | A plausible next frontier beyond longer tasks | Very early evidence and too much conceptual overhead for the main narrative |
+| Reddit career-panic discussion | Makes uncertainty, identity, and workplace culture emotionally concrete | A self-selected thread is not a forecast or labor-market sample |
 
 ## Cut from the first version
 
@@ -80,6 +81,7 @@ These working maximums leave several minutes inside the 35-minute main section f
 | “A good `AGENTS.md` makes agents reliable.” | Rewrite | Relevant local instructions can help, while generated or bloated files can add cost or reduce success; instructions must be tested and maintained like code. |
 | “MCP is the modern default.” | Reject | MCP is valuable for governed live integration; CLI, APIs, or scripts may be simpler and more reliable for local work. |
 | “Multi-agent is more advanced than one agent.” | Reject | Multiple agents buy parallelism and context isolation only when work can be decomposed and integrated safely. |
+| “Half of software jobs will disappear within five years.” | Reject | The Reddit thread expresses fear and prediction, not measured probability; use labor data and scenarios without inventing a timetable. |
 
 ## Questions that still need the speaker’s input
 
@@ -127,6 +129,7 @@ Use repetition sparingly. Two or three can become motifs:
 - **Put a deterministic spine around a nondeterministic worker.**
 - **Autonomy is earned by feedback, legibility, and reversibility.**
 - **The browser is where generated code meets empirical reality.**
+- **AI changes work twice: through what it can do, and through what we believe it will soon do.**
 
 ## Research refresh checklist
 

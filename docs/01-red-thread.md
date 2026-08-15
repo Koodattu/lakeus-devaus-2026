@@ -98,6 +98,7 @@ Ask the room to choose the scarce resource: good problems, product judgment, tru
 Connect this to:
 
 - jobs: short-term pain for some early-career roles can coexist with long-term demand for software work;
+- expectations: belief in imminent automation can change learning, hiring, trust, and workplace culture before measured displacement catches up;
 - consultancies: pressure comes from weak demand and delayed budgets as well as AI-shaped expectations;
 - SaaS: point solutions and generic interfaces are exposed, while systems of record, data, workflow, integration, compliance, and accountability remain meaningful moats;
 - geopolitics: the United States, China, and Europe have different mixtures of frontier labs, capital, industrial scale, open-weight ecosystems, regulation, and sovereignty goals;

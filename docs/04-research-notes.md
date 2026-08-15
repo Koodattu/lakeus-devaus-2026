@@ -2,7 +2,7 @@
 
 These notes are an evidence bank, not slide copy. Each section asks: what does the evidence let us say, what does it mean for the red thread, and where can we overreach?
 
-Research snapshot: **11 August 2026**. See the [source ledger](08-source-ledger.md) for URLs and source types.
+Research snapshot: **15 August 2026**. See the [source ledger](08-source-ledger.md) for URLs and source types.
 
 ## 1. Adoption is high; confidence is not
 
@@ -234,7 +234,31 @@ This is a better discussion than “Will AI take developer jobs?”:
 
 The employment evidence is U.S.-specific. Hiring also reflects interest rates, pandemic-era over-hiring, firm investment, and macroeconomic conditions. Do not attribute every tech vacancy decline to AI.
 
-## 10. The global race is not one scoreboard
+## 10. AI changes work through expectations as well as capability
+
+An August 2026 r/singularity discussion began with a 36-year-old career-switching developer describing debt, limited experience, difficulty preparing for interviews, and fear that software employment would contract before they could establish financial security. Replies ranged from “stay ahead of the average” and “manage a team of AIs” to warnings that this survival framing creates political maneuvering, mistrust, and a deteriorating engineering culture. A game-development branch argued that when implementation becomes easy, creators are confronted more quickly by the harder test: is the game actually fun?
+
+This thread is not employment evidence. It is a current, highly self-selected and technologically accelerationist community discussing its own expectations. Its value is qualitative: it exposes mechanisms that aggregate statistics do not show.
+
+### Meaning
+
+- Capability and expectations have separate effects. Hiring plans, learning choices, career motivation, team trust, and management behavior can change before a forecast is proven right.
+- Personal fear can be rational even when the macro outcome is uncertain. Debt, savings, age, experience, and access to retraining make the same probability feel very different.
+- Falling implementation barriers expose product truth sooner. In games the question becomes “is it fun?”; in other software it becomes “does anyone need, trust, find, buy, or maintain this?”
+- “Become hard to automate” can reward obscurity and politics. That may protect one person temporarily while making the organization worse.
+- “Manage a team of AIs” is too narrow as career advice. The more durable bundle is AI fluency plus domain understanding, problem framing, verification, system thinking, communication, and ownership.
+
+The presentation-level line is:
+
+> **AI changes work twice: through what it can do, and through what we believe it will soon do.**
+
+### Caveats
+
+Do not present the thread’s timelines, predicted profession shrinkage, “coding is done,” or “ideas are 99% of success” as established claims. Do not ridicule the original poster or use career panic as entertainment. The useful contrast is lived uncertainty versus uncertain forecasting.
+
+See [Career anxiety, expectations, and the value shift](12-career-anxiety-and-value-shift.md) for the editorial treatment.
+
+## 11. The global race is not one scoreboard
 
 The 2026 AI Index depicts different strengths:
 
@@ -258,7 +282,7 @@ Avoid declaring a single winner. The games differ: frontier capability, capital,
 - Patent volume is not equivalent to quality or deployment.
 - EU implementation dates and obligations are changing and must be rechecked before presentation. This talk is not legal advice.
 
-## 11. What did not become cheap
+## 12. What did not become cheap
 
 The historical software-engineering literature gives the current evidence a longer memory:
 
@@ -276,14 +300,15 @@ Early learning evidence adds another constraint: assistance can improve task per
 
 See [Veteran lens: what changed and what did not](09-veteran-lens.md) for the full historical treatment and new source set.
 
-## 12. Research conclusions that support the thesis
+## 13. Research conclusions that support the thesis
 
-Across the evidence, five recurring tensions survive individual statistics:
+Across the evidence, six recurring tensions survive individual statistics:
 
 1. **Adoption rose faster than trust.**
 2. **Output speed rose faster than our ability to measure product-level value.**
 3. **Capability rose faster than reliability became uniform.**
 4. **Software supply rose while attention and review remained scarce.**
 5. **Automation pressure rose while responsibility remained attached to people and organizations.**
+6. **Expectations about future capability started changing behavior before the labor-market outcome became clear.**
 
 Those tensions are the presentation. The individual studies are supporting evidence, not the red thread.
