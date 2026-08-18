@@ -2,7 +2,7 @@
 
 Working material for an hour-long Lakeus-Devaus talk about how AI changed software development from 2022 to 2026—and what that change asks of developers next.
 
-This repository is deliberately broader than the eventual presentation. It holds the argument, evidence, audience polls, possible demonstrations, and material we expect to cut. The first deliverable is an editorial foundation, not a finished slide deck.
+This repository contains the finished HTML presentation and the broader working material behind it: the argument, evidence, audience polls, possible demonstrations, and material cut from the main deck.
 
 ## Working thesis
 
@@ -26,4 +26,21 @@ This repository is deliberately broader than the eventual presentation. It holds
 - [Workflow scenarios, field lessons, and open questions](docs/11-workflow-scenarios-and-field-notes.md)
 - [Career anxiety, expectations, and the value shift](docs/12-career-anxiety-and-value-shift.md)
 
-Research snapshot: **15 August 2026**. Current figures must be rechecked before the event.
+Working-material snapshot: **15 August 2026**. The time-sensitive claims used in the deck were rechecked on **18 August 2026** and should be checked again if the event date changes materially.
+
+## HTML presentation
+
+The complete presentation is in [`index.html`](index.html). It has no runtime
+dependencies and can be opened directly in a browser.
+
+Presentation controls:
+
+- Right arrow, Space, or Page Down: reveal the next item or advance.
+- Left arrow or Page Up: reverse the current reveal or go back.
+- `N`: presenter notes and slide sources.
+- `O`: slide overview.
+- `F`: fullscreen.
+- `?`: keyboard help.
+
+The seven poll slides are an offline/hand-vote fallback. A live-voting system
+can replace them during the event without changing the rest of the deck.
