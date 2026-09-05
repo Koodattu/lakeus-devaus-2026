@@ -1,243 +1,143 @@
 # One-hour run of show
 
-**Main presentation draft, updated 5 September 2026.** This is the content and timing plan for the future PowerPoint, incorporating the [research refresh](13-research-refresh-2026-09-05.md). The [red thread](01-red-thread.md) explains the argument; the [editorial backlog](07-editorial-backlog.md) records cuts and reserve material. The existing HTML deck is an earlier prototype and does not implement this plan.
+**Revised direction, 5 September 2026:** give practical AI development a full 20 minutes alongside 20 minutes of context and evidence. This supersedes the earlier 5 + 10 + 5 + 35 + 5 structure. The [updated PowerPoint](../output/lakeus-devaus-2026-practical.pptx) now follows this plan; the previous draft is preserved.
 
-## Audience, promise, and format
+Use the [slide storyboard](16-practical-presentation-storyboard.md) for the messages and production notes, [design brief](../DESIGN.md) for composition, and [design research](15-presentation-design-research.md) for external guidance and the installed skill. The [September research refresh](13-research-refresh-2026-09-05.md) remains authoritative for selected statistical claims.
 
-The talk is for Lakeus-Devaus's mixed public audience: developers, students, managers, entrepreneurs, and adjacent professionals. Audience-facing wording is Finnish; planning notes are English. The event date, venue, and final personal demo remain to be confirmed.
+## Audience and promise
+
+Finnish-speaking developers, students, managers, entrepreneurs, and adjacent professionals at Lakeus-Devaus. Use Finnish slides and plain spoken explanations. No assumed familiarity with agents, MCP, skills, or worktrees.
 
 **Title:** Hei ohjelmistokehitys, mitä kuuluu?
 
-**Thesis:** Koodi halpeni. Vastuu ei.
+**Working thesis:** Koodi halpeni. Vastuu ei.
 
-The audience should leave able to distinguish what can be delegated, what constitutes evidence of a useful result, and how people keep learning to judge it. The talk should make room for real opportunity and real uncertainty.
+**Practical promise:** “Näet, miten AI:n kanssa edetään tehtävästä tarkistettuun muutokseen, ja saat mallin omaan kokeiluun.”
 
-| Time | Segment | Minutes | Purpose |
+The two halves answer connected questions: what changed in software development, and how can we use that change productively? Show AI helping with understanding, testing, review, and maintenance as well as writing code.
+
+The user selected documented workflow examples with Codex, Claude Code, and other relevant tools. These are teaching scenarios, not claims about the speaker's personal projects or measured results. Cover the full lifecycle without attempting an exhaustive tool catalogue.
+
+## Timing
+
+| Time | Segment | Minutes | Audience outcome |
 | --- | --- | ---: | --- |
-| 0:00–0:05 | Introduction | 5 | Establish the tension and central question |
-| 0:05–0:15 | Quick-fire gallup | 10 | Describe this room's experience, use, and trust |
-| 0:15–0:20 | Project/process reveal | 5 | Show an outcome, a correction, evidence, and ownership |
-| 0:20–0:24 | 1. History and understanding | 4 | Brooks and Naur frame what remains hard |
-| 0:24–0:31 | 2. Delegation and its conditions | 7 | Capability, feedback, and enforceable limits |
-| 0:31–0:38 | 3. Productivity and changed work | 7 | Separate task speed, delivery, and value |
-| 0:38–0:46 | 4. Verification and learning | 8 | Connect reviewer attention to future expertise |
-| 0:46–0:55 | 5. Value, people, and Finland | 9 | Apply the argument to products, careers, and the region |
-| 0:55–1:00 | Close | 5 | Three practical choices, repeated mood poll, final question |
-| **Total** | | **60** | **Main presentation: 35 minutes** |
+| 00:00–05:00 | Introduction | 5 | Understand the question and practical promise |
+| 05:00–15:00 | Opening gallup in the browser | 10 | See this room's experience and questions |
+| 15:00–35:00 | What AI changes in software development | 20 | Understand capability, evidence, learning, and value |
+| 35:00–55:00 | How modern AI development works | 20 | Follow a task through context, implementation, verification, and delivery |
+| 55:00–60:00 | Ending gallup and wrap-up | 5 | Choose one useful experiment and revisit the room's mood |
+| **Total** | | **60** | |
 
-Section budgets include transitions and brief callbacks. If the booking allows 90 minutes, the remaining time is audience discussion, not another prepared lecture.
+Transitions are included. This is a talk with a guided walkthrough, not a hands-on installation workshop. Longer discussion begins after the 60-minute programme.
 
-## 0:00–0:05 — Introduction
+## 00:00–05:00: Introduction
 
-**Question:** Kun ohjelmiston tuottamisesta tulee halpaa, mikä muuttuu arvokkaaksi—ja mikä ei edelleenkään muutu helpoksi?
+Open with a recognisable situation: an agent says the change is complete. What would make us believe it? Establish that the talk will show both the possibilities and a usable way of working.
 
-Suggested sequence:
+Use two slides: the title and a visual contrast between asking for an explanation and assigning a bounded task with evidence. Codex and Claude Code are examples of tools used in the second mode; this is not a precise historical claim about when a capability first appeared.
 
-1. Title and opening observation: “Vuonna 2022 pyysimme tekoälyltä vastauksia. Vuonna 2026 annamme sille tehtäviä.”
-2. Put two thoughts beside each other: the tools changed quickly; many difficult engineering problems are familiar.
-3. Explain that the session will test both through examples, research, and the room's experience.
-4. Introduce the poll.
+Keep the introduction conversational. Avoid definitions, model rankings, and a long agenda list.
 
-Use this as a qualitative trajectory, not exact dates on which capabilities first appeared. Leave the “more change than all earlier decades” superlative in reserve. Do not begin with definitions or a model catalogue.
+## 05:00–15:00: Opening gallup
 
-## 0:05–0:15 — Quick-fire gallup
+Switch to **[gallup.koodattu.dev](https://gallup.koodattu.dev)**. Use the seven questions in [live polls](03-live-polls.md): 90 seconds to join, six minutes for questions, and two and a half minutes to discuss at most three actual patterns.
 
-Use the seven questions in [live polls](03-live-polls.md): experience, recent use, perceived speed, reading generated code, production autonomy, output quality, and mood. Do not add new poll questions for each new research source.
+Results describe attendees, not developers generally. Do not predict the result. Later callbacks connect perceived speed to productivity evidence, autonomy to task boundaries, and code-reading habits to learning.
 
-- 90 seconds to join.
-- Six minutes for the seven questions and transitions.
-- Two and a half minutes to synthesize at most three actual patterns and move to the reveal.
+Do not create PowerPoint question slides. If the site is unavailable, ask the existing questions verbally for a show of hands. Do not copy the old HTML poll slides into PowerPoint.
 
-The later callbacks are part of the narrative: perceived speed before the experiments, autonomy before permission boundaries, and code-reading habits before comprehension.
+## 15:00–35:00: What AI changes
 
-Do not assume use exceeds trust before seeing the room's answers. Results describe attendees, not the industry. Prepare the existing hand-vote fallback.
-
-## 0:15–0:20 — Project/process reveal
-
-**Purpose:** make the invisible decisions behind a plausible result visible.
-
-Preferred material is a real AI-assisted software task with a mistake, correction, verification artifact, and continuing owner. The particular project and its public development history are still unconfirmed.
-
-**Current usable fallback:** the presentation's documented research process. Show an earlier draft claim, the source recheck that challenged it, and the resulting editorial decision. The Finnish-source discrepancy in the research memo supplies a concrete candidate; distinguish a documented finding from a correction actually applied to a deck. Do not invent a software failure or imply the live-voting application was agent-built without evidence.
-
-| Beat | Seconds | Material |
-| --- | ---: | --- |
-| Visible result | 30 | What the audience sees or has used |
-| Goal and constraints | 45 | Audience/user need and two or three limits |
-| Division of work | 60 | What was delegated and what the person decided |
-| Correction or rejection | 90 | One actual mistake, tradeoff, or changed claim |
-| Evidence | 45 | A source comparison, test, or observed behavior |
-| Ownership | 15 | Who maintains the result and answers for it |
-| Transition | 15 | Return to the central question |
-| **Total** | **300** | |
-
-The reveal is complete here, before the main presentation. Revisit it later rather than withholding its origin until a supposed midpoint. The optional “human or AI?” poll is omitted from the core version to protect the five-minute limit.
-
-## 0:20–0:24 — 1. History and understanding
-
-**Claim:** easier implementation does not automatically resolve complexity or create shared understanding.
-
-| Time | Beat | Content |
+| Time | Beat | Treatment |
 | --- | --- | --- |
-| 0:20–0:22 | Kitka vähenee. Vaikeat kysymykset jäävät. | A brief 1968 callback, then Brooks' essential/accidental distinction |
-| 0:22–0:24 | Kuka ymmärtää järjestelmän ensi vuonna? | Naur's theory-building lens; understanding needed for change and handoff |
+| 15:00–17:00 | Implementation and understanding | Combine Brooks and Naur: implementation sits inside a larger system of requirements, dependencies, users, and continuing understanding. Historical interpretation, not a quotation. |
+| 17:00–20:00 | Substantial but bounded delegation | MirrorCode: reference behaviour, implementation, tests. Explain the evaluation boundary. Keep its estimated human comparison in notes. |
+| 20:00–23:00 | Productivity depends on the task | Microsoft and METR, with their different measured quantities separated. State that METR's February 2026 follow-up did not establish a reliable current effect. |
+| 23:00–25:00 | Task speed and delivery | A delivery-flow diagram shows how review, integration, or unclear requirements can absorb a local gain. DORA supports the discussion; diagram widths are not measured times. |
+| 25:00–28:00 | Completing work and learning | A two-bar chart of immediate quiz scores, 50% and 67%, with the 52-participant unfamiliar-library context. Connect it to explaining and diagnosing code. |
+| 28:00–30:00 | Useful experiments become possible | Introduce the hypothetical maintenance-record scenario. Turning photographed notes into draft records is an experiment whose usefulness still needs testing. |
+| 30:00–32:00 | Work, careers, and expectations | Acknowledge career uncertainty and opportunities to learn. Keep Stanford's qualified US evidence in notes; avoid another employment chart. |
+| 32:00–35:00 | Finland and local opportunity | One dated Finnish sector snapshot, then the proposition that domain knowledge, integration, relationships, and support matter. Transition to working with an agent. |
 
-Treat the Finnish lines as the speaker's interpretations, not historical quotations. AI can also suggest conceptual solutions and help articulate understanding. Ask how those proposals are checked.
+### Evidence boundaries
 
-**Transition:** what can we delegate today that changes the work in practice?
+- Microsoft: about 26% more completed tasks across three experiments and 4,867 developers. This is not a universal speed increase.
+- METR: 19% more completion time for 16 experienced contributors on 246 familiar-repository tasks using early-2025 tools. Do not plot it on the same percentage axis as completed tasks.
+- DORA: associations with throughput and instability, not a causal guarantee. The March 2026 synthesis uses 2025 data.
+- Learning: authors' rounded immediate quiz means, 50% with AI and 67% without. No claim of permanent skill loss or a test of current autonomous agents.
+- Finland: 2025 turnover EUR 19bn, +5%; end-June 2026 employment approximately 80,200, down 1% from end-March. These observations do not isolate AI's effect.
 
-**Sources:** the historical sources in [veteran lens](09-veteran-lens.md). Full CASE/4GL history, Lehman, and Parnas remain in reserve.
+Full sources and qualifications are in the [research refresh](13-research-refresh-2026-09-05.md). Keep readable context beside each visual and detailed citations in speaker notes.
 
-## 0:24–0:31 — 2. Delegation and its conditions
+### Material moved to reserve
 
-**Claim:** substantial delegation becomes possible when the task has useful context, feedback, and enforceable boundaries.
+The separate five-minute research-process reveal, detailed Godot/Linux policy comparison, cybersecurity-evaluation incident, full historical sequence, and additional company statistics leave the main flow. Preserve them in existing dossiers for discussion. They would consume the practical section's time if simply added back.
 
-| Time | Beat | Content and evidence |
+MirrorCode demonstrates capability; the practical scenario demonstrates a reusable method. Avoid making one unusual evaluation carry both jobs.
+
+## 35:00–55:00: How modern AI development works
+
+Use the address-editing defect from [workflow scenarios](11-workflow-scenarios-and-field-notes.md): saving an address loses the apartment number. Introduce it as a teaching example, not an incident in this repository.
+
+| Time | Beat | What the audience sees |
 | --- | --- | --- |
-| 0:24–0:26 | Vastauksesta tehtävään | Chat → repository work → bounded outcome; MirrorCode as one concrete capability case |
-| 0:26–0:29 | Luotettava tulos tarvitsee palautetta | One goal–context–agent–evidence–judgment loop; HubSpot's engineering case as supporting material |
-| 0:29–0:31 | Kyky ja lupa ovat eri asioita | 60–90-second incident example, then the practical autonomy rule and poll callback |
+| 35:00–37:00 | The complete loop | Understand the need, define a task, inspect context, change, verify, review, release, observe. Distinguish interactive help, delegated work, and recurring work without a maturity ranking. |
+| 37:00–39:00 | Write a useful task | A vague request beside a concise brief: symptom, expected result, constraints, completion evidence. |
+| 39:00–41:00 | Provide local truth | Relevant code, test command, examples, and project instructions. Name AGENTS.md for Codex and CLAUDE.md for Claude Code. |
+| 41:00–43:00 | Give access to the right tools | Skill: reusable procedure. MCP: connection to external context/tools. Shell: project commands. Browser: actual behaviour. Explain each through the task. |
+| 43:00–45:00 | Find the failure before fixing it | A small reproduction. Trace the value from form to request to stored record. |
+| 45:00–47:00 | Make and check the smallest change | A readable diff, regression check, and the address persisting after reload. Discuss what the check established. |
+| 47:00–49:00 | Review and hand over | Cause, change, commands/results, remaining limits, and release owner in a short PR-style handoff. AI can assist review; findings still need checking. |
+| 49:00–51:00 | Apply the loop to a prototype | Maintenance records: example input, draft output, correction, user trial. Show how design context and browser checks fit the same loop. |
+| 51:00–52:30 | Parallel work when tasks separate | Independent tasks in separate worktrees rejoin at an integration check. Explain how shared-file edits can collide. |
+| 52:30–54:00 | Continue after release | Observe errors and user corrections, triage incidents, and automate a proven maintenance task with an owner and useful notification. |
+| 54:00–55:00 | Keep learning while delegating | Explain one decision, predict a failure, investigate a broken example. Refer back to the learning chart without repeating it. |
 
-**MirrorCode:** substantial reimplementation against reference behavior and tests. Explain that exact reconstruction is more checkable than ordinary product discovery. The 2–17-week human comparison is an expert estimate, not a measured speedup. Use a task description rather than a wall of model scores. [Source](https://epoch.ai/publications/mirrorcode-preliminary-results).
+This is a guided walkthrough. Show only a few lines of code at once and explain behaviour before syntax. Avoid stage time installing tools, typing long commands, comparing subscriptions, or waiting for a fresh agent run.
 
-**Workflow:** frame the goal, provide relevant context, delegate a bounded change, gather evidence, review the consequence, and improve the environment. Mention tools only as implementations of those functions. HubSpot's useful lesson is that feedback and deterministic lifecycle steps addressed incomplete agent work; do not lead with PR volume. [Source](https://product.hubspot.com/blog/cloud-coding-agents-at-hubspot).
+### Example task brief
 
-**Boundary case:** the August METR investigation concerns agents crossing intended limits in OpenAI cybersecurity evaluations. State the unusual research setting and investigation limitations. Use no exploit details or sensational dialogue. The practical distinction is between an instruction, an enforced permission boundary, and independently recorded evidence. [METR investigation](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/), [OpenAI account](https://openai.com/index/hugging-face-incident-and-the-road-ahead/).
+Authored teaching prompt, adaptable to Codex or Claude Code:
 
-**Landing:** choose autonomy by consequence, reversibility, evaluability, and lifespan. The incident is the first case to shorten if rehearsal shows it needs too much explanation; preserve the principle.
+> Osoitteen muokkaaminen kadottaa huoneiston numeron. Selvitä ensin, missä tieto katoaa, ja toista virhe. Korjaa rajattu syy nykyisiä käytäntöjä seuraten. Säilytä rajapinta ja muu osoitekäytös. Lisää regressiotarkistus ja varmista tallennus myös sivun uudelleenlatauksen jälkeen. Kerro muutoksen syy, ajetut tarkistukset ja avoimet kysymykset. Älä julkaise muutosta.
 
-**Transition:** what did this capability change at the level of actual work?
+Display a shorter four-part version; keep this full prompt in notes or a handout. The no-release boundary belongs to this example, not to a universal approval rule for every edit.
 
-## 0:31–0:38 — 3. Productivity and changed work
+### Tools in proportion
 
-**Claim:** task speed, team delivery, and value are different outcomes; AI can change the task mix too.
+Codex and Claude Code are named implementations of the workflow, not competing protagonists. Include IDE assistants, Git/CI, browser testing, design tools, skills, and connected services when an example needs them. Do not claim everyone uses the same setup or that more agents is always better.
 
-| Time | Beat | Content and evidence |
-| --- | --- | --- |
-| 0:31–0:34 | Nopeammin kenelle, missä tehtävässä? | Microsoft and METR, with participants, measured variables, and the follow-up caveat |
-| 0:34–0:36 | Tehtävästä hyödylliseen lopputulokseen | Individual → team → product; DORA and one bottleneck explanation |
-| 0:36–0:38 | AI muuttaa sitä, mitä kannattaa yrittää | Old tasks, newly chosen tasks, and value; a short hypothetical local example |
+Official references checked on 5 September 2026:
 
-**Evidence wording:**
+- [Codex prompting and workflows](https://learn.chatgpt.com/docs/prompting): reproducible tasks, constraints, verification.
+- [Codex project instructions](https://learn.chatgpt.com/docs/agent-configuration/agents-md) and [skills](https://learn.chatgpt.com/docs/build-skills): project guidance and reusable procedures.
+- [Claude Code best practices](https://code.claude.com/docs/en/best-practices): context, exploration, implementation, checks.
+- [Claude Code common workflows](https://code.claude.com/docs/en/common-workflows): everyday tasks and isolated parallel sessions.
 
-- Microsoft: approximately **26% more completed tasks**, combining three field experiments and 4,867 developers. Keep exact estimate and uncertainty in notes. [Study summary](https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/).
-- METR: **19% more completion time** for 16 experienced contributors working on 246 tasks in familiar repositories with early-2025 tools. Its February 2026 follow-up could not establish a reliable current effect because of selection and measurement problems. Say this on stage. [Original result](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/), [follow-up](https://metr.org/blog/2026-02-24-uplift-update/).
-- DORA: the delivery system conditions the outcome; higher adoption was associated with both higher throughput and greater instability. This is not a simple causal guarantee. Its March 2026 synthesis draws on 2025 data. [Synthesis](https://dora.dev/insights/balancing-ai-tensions/).
+The detailed sequence and prompts are our synthesis of these references and the existing scenarios, not verbatim vendor recipes or an industry adoption survey.
 
-Do not place the Microsoft and METR numbers on a common percentage axis. They measure different quantities. Do not add the self-reported productivity figures as a third apparent experiment.
+### Demonstration evidence
 
-**Opportunity:** use METR's task-substitution distinction to explain that AI can make useful work feasible, while hypothetical manual effort is not automatically value saved. This is a conceptual framework, not another measured uplift. [Analysis](https://metr.org/blog/2026-05-08-task-substitution-and-uplift/).
+For production, record a small example in a disposable demo project, then capture the actual task, failure, diff, checks, and browser outcome. Until that has been done, label diagrams and snippets as illustrative. Do not create fake success output, fake product screenshots, or a fictional client testimonial.
 
-Introduce the existing hypothetical manufacturer scenario: testing whether photographed service notes could become helpful draft records. The experiment can be worth doing even before there is a case for building a production system. Label it hypothetical and claim no measured savings.
+Prepared captures are the default stage sequence. A rehearsed local run is optional. Maintain a short verbal fallback for every capture.
 
-**Transition:** how do we evaluate the additional work and retain the ability to understand it?
+## 55:00–60:00: Ending gallup and wrap-up
 
-## 0:38–0:46 — 4. Verification and learning
+| Time | Action |
+| --- | --- |
+| 55:00–56:00 | One takeaway slide: choose a bounded useful task, define evidence, review what changed. |
+| 56:00–59:00 | Switch to gallup.koodattu.dev for the repeated mood question. Discuss actual results. |
+| 59:00–60:00 | Return to the closing slide. “Koodi halpeni. Vastuu ei.” Invite one practical experiment and direct optional feedback to the web app. |
 
-**Claim:** the work must produce evidence and understanding as well as output.
+Protect the last five minutes. If two minutes late, combine the tools explanation and shorten parallel work; preserve verification and review so the walkthrough stays complete.
 
-| Time | Beat | Content and evidence |
-| --- | --- | --- |
-| 0:38–0:40 | Kenen aikaa säästit? | Our definition of slop as shifted evaluation cost; return to the demo's correction |
-| 0:40–0:42 | Katselmointi tarvitsee tekijän | Godot and Linux: contrasting policies, shared reviewer scarcity and responsibility |
-| 0:42–0:45 | Valmis tehtävä ja opittu taito ovat eri tuloksia | Coding skill experiment, limitations, and one practical learning recommendation |
-| 0:45–0:46 | Myös arviointia voi parantaa | Smaller changes, reproducible evidence, useful automation, and maintained expertise |
+## Rehearsal checks
 
-**Maintainers:** use current Godot and Linux rules, including contributor understanding and maintainer discretion. ESLint is the reserve third example. These are project choices, not evidence that all open source takes one position. [Godot](https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html), [Linux](https://kernel.org/doc/html/next/process/generated-content.html).
-
-**Learning evidence:** the 52-participant experiment concerned learning an unfamiliar Python library. The authors' summary reports immediate quiz averages of 50% with AI and 67% without it; the task-time difference was not statistically significant. Attribute those rounded values to the summary. Do not generalize to permanent deskilling, all juniors, or current autonomous agents. [Author summary](https://www.anthropic.com/research/AI-assistance-coding-skills), [paper](https://arxiv.org/abs/2601.20245).
-
-**Our recommendation:** preserve opportunities to explain one decision, predict a failure, and diagnose a broken example. The study does not prove that this exact practice is the remedy. Connect this back to Naur and the room's code-reading poll.
-
-Agents can support reproduction, testing, and review as well as generation. Evidence should test the intended behavior, rather than merely echoing the generated implementation. Responsibility is not equivalent to manually reading every token.
-
-**Transition:** where do these distinctions leave products, careers, and the local market?
-
-## 0:46–0:55 — 5. Value, people, and Finland
-
-**Claim:** cheaper construction increases the importance of usefulness, adoption, understanding, and continuing ownership.
-
-| Time | Beat | Content and evidence |
-| --- | --- | --- |
-| 0:46–0:49 | Halpa toteutus tuo arvon testin lähemmäs | Combine the product question and SaaS economics; return to the maintenance-record example |
-| 0:49–0:52 | AI muuttaa työtä ja odotuksia | Revised employment interpretation, career uncertainty, and team incentives |
-| 0:52–0:55 | AI on paine ja tuote — myös täällä | One current Finnish sector snapshot and the regional application |
-
-**Product:** would the maintenance-record draft improve real work? Who corrects it, integrates it, finds it useful enough to adopt, and supports it later? These questions join SaaS, attention, and lifecycle cost in one concrete story. Reduced feature cost is not proof that subscriptions or entire product categories disappear. [Existing NCSC source](https://www.ncsc.gov.uk/blogs/vibe-check-ai-may-replace-saas-but-not-for-a-while).
-
-**People:** the August Stanford revision identifies a relative employment gap for US workers aged 22–25 in highly AI-exposed occupations, mainly through reduced hiring. It does not establish a causal AI job-loss count or a Finnish trend. Keep the exact 19% relative-gap definition in notes. [Revision](https://digitaleconomy.stanford.edu/news/canariesaug26/).
-
-Then distinguish evidence from our interpretation: expectations can influence learning, hiring, and trust before forecasts are resolved. Acknowledge uncertainty without telling worried people simply to manage agents. Employer choices about mentoring, learning time, and outcome-based evaluation matter. Token-consumption targets are an optional 30-second example within this budget, not an extra slide or an excuse to ridicule employees. [DORA commentary](https://dora.dev/insights/finding-balance-in-the-era-of-tokenmaxxing/).
-
-**Finland:** use the August outlook's consistent vintage: 2025 sector turnover **EUR 19bn, +5%**; end-June employment **approximately 80,200, -1% against end-March**. Put the observation periods on the slide. Do not carry forward the prototype's EUR 20bn/+9% figures or splice older employment snapshots into a trend. These observations do not isolate an AI effect. [Sector source](https://teknologiateollisuus.fi/en/economic-outlook-and-statistics/economic-outlook/information-technology-in-finland/).
-
-Company tables stay in reserve. If a contrasting company is needed in discussion, distinguish acquisitions and organic growth; the refreshed Gofore H1 report is available in the research memo.
-
-**Regional application, explicitly the speaker's proposition:** domain access, integration, relationships, and support can be valuable when implementation becomes more accessible. Return to the same hypothetical local workflow rather than inventing a customer testimonial. Ask what would make its outcome worth paying for and owning.
-
-## 0:55–1:00 — Close
-
-| Time | Beat | Content |
-| --- | --- | --- |
-| 0:55–0:57 | Three practical choices | Measure accepted outcomes and rework; preserve learning; assign ownership before release |
-| 0:57–0:59 | AI-fiilis, nyt? | Same question and options as the opening; one brief observation |
-| 0:59–1:00 | Koodi halpeni. Vastuu ei. | Closing lines, final spoken question, open optional comment wall |
-
-Suggested Finnish takeaways:
-
-1. **Mittaa hyväksyttyä lopputulosta ja korjaustyötä.**
-2. **Varmista, että osaaminen kasvaa työn mukana.**
-3. **Sovi omistajuus ennen julkaisua.**
-
-Close with the established lines:
-
-> Koodia syntyy enemmän.
->
-> Varmuus ei synny samalla nopeudella.
->
-> Joku omistaa seuraukset joka tapauksessa.
-
-**“Minkä seurauksen sinä olet valmis omistamaan?”**
-
-Open **“Mikä väite tai kysymys jäi pyörimään mieleen?”** as the final optional free-text activity. Discussion follows the complete hour. Do not interpret the mood comparison as proof of a causal attitude change.
-
-## PowerPoint content map
-
-The timed beat tables above are the slide brief. Each row is a communication beat, not an instruction to add a slide per source. Aim for approximately 18–22 sparse content slides, plus opening/closing poll screens; combine adjacent beats when one visual can carry them.
-
-Use one primary message, one relevant visual or artifact, and a short factual source/date per content slide. Presenter notes hold sample definitions, uncertainty, transitions, and the difference between findings and our recommendations. Introduce technical terms only when needed to understand the decision.
-
-Assets to select before production:
-
-- one documented task/process sequence with a correction and evidence;
-- a MirrorCode task description and its evaluation boundary;
-- the reported comprehension comparison with sample and timing;
-- a compact autonomy incident sequence;
-- one consistent Finnish sector snapshot;
-- a simple recurring hypothetical local workflow.
-
-The real software demo is still a material-selection dependency; the documented research-process fallback makes the draft usable without inventing one. Reuse rights and chart values must be checked when selecting actual assets. This document does not specify slide layouts or implement PowerPoint.
-
-## Compression and discussion reserve
-
-If the session runs long, shorten material that is actually in this draft, in this order:
-
-1. Omit the optional token-target example.
-2. Reduce the autonomy incident to one sentence; retain the practical boundary.
-3. Reduce the second maintainer example to a spoken contrast.
-4. Shorten the MirrorCode detail while retaining what was evaluated.
-5. Reduce historical background to the Brooks and Naur questions.
-
-Use the recovered time to preserve the learning, people, Finland, and closing sections. Do not solve an overrun by dropping a source caveat that changes the meaning of a headline.
-
-For optional discussion up to 90 minutes: exact employment results, detailed consultancy comparisons, the third maintainer policy, task-horizon methodology, open-weight ecosystems, geopolitics, security details, or CRA scope and dates. These are appendix threads selected by the room, not required content.
-
-## Final preparation checks
-
-- Confirm the event date and whether the full hour excludes announcements and Q&A.
-- Select and substantiate the demo; prepare screenshots or a recording and hand-vote fallback.
-- Rehearse to approximately 55–57 minutes to leave room for audience delay.
-- Verify every selected factual slide against its source and observation period.
-- Keep survey, experimental, conceptual, company-reported, and speaker-inferred claims distinguishable.
-- Apply the September corrections rather than copying values from the HTML prototype or older dossiers.
-- Keep the formal closing at one hour; extra discussion is optional.
+1. Finish context at 35:00 and practical content at 55:00.
+2. A newcomer can explain what the agent did, what the developer decided, and how success was checked.
+3. Captures are real or explicitly illustrative. Unrun checks never appear as passed.
+4. Charts retain population, units, observation period, and limitations.
+5. Each slide's main point is visible quickly; speech supplies the detail.
+6. Both browser handoffs and the fallback work without PowerPoint poll slides.

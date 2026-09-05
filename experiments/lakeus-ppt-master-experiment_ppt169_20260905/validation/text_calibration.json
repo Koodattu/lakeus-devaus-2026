@@ -1,0 +1,84 @@
+{
+  "roles": {
+    "body": {
+      "family": "Arial",
+      "size": 32.0,
+      "cjk_chars_per_100px": 2.9,
+      "latin_chars_per_100px": 6.3,
+      "caps_chars_per_100px": 4.9,
+      "digits_chars_per_100px": 5.3,
+      "longest_planned_line": {
+        "px": 3860.0,
+        "slide": "P05",
+        "text": "Microsoft: 26 % enemmän valmistuneita t…"
+      }
+    },
+    "title": {
+      "family": "Arial",
+      "size": 48.0,
+      "cjk_chars_per_100px": 2.0,
+      "latin_chars_per_100px": 4.2,
+      "caps_chars_per_100px": 3.3,
+      "digits_chars_per_100px": 3.5,
+      "longest_planned_line": {
+        "px": 1063.6,
+        "slide": "P03",
+        "text": "Toteutus helpottuu. Vaikeat kysymykset …"
+      }
+    },
+    "subtitle": {
+      "family": "Arial",
+      "size": 40.0,
+      "cjk_chars_per_100px": 2.4,
+      "latin_chars_per_100px": 5.0,
+      "caps_chars_per_100px": 3.9,
+      "digits_chars_per_100px": 4.2,
+      "longest_planned_line": {
+        "px": 4457.5,
+        "slide": "P05",
+        "text": "Microsoft: 26 % enemmän valmistuneita t…"
+      }
+    },
+    "annotation": {
+      "family": "Arial",
+      "size": 24.0,
+      "cjk_chars_per_100px": 3.9,
+      "latin_chars_per_100px": 8.4,
+      "caps_chars_per_100px": 6.5,
+      "digits_chars_per_100px": 7.1,
+      "longest_planned_line": null
+    },
+    "code": {
+      "family": "Courier New",
+      "size": 28.0,
+      "cjk_chars_per_100px": 3.4,
+      "latin_chars_per_100px": 5.5,
+      "caps_chars_per_100px": 5.3,
+      "digits_chars_per_100px": 5.6,
+      "longest_planned_line": null
+    },
+    "display": {
+      "family": "Arial",
+      "size": 96.0,
+      "cjk_chars_per_100px": 1.0,
+      "latin_chars_per_100px": 2.1,
+      "caps_chars_per_100px": 1.6,
+      "digits_chars_per_100px": 1.8,
+      "longest_planned_line": null
+    },
+    "footnote": {
+      "family": "Arial",
+      "size": 20.0,
+      "cjk_chars_per_100px": 4.7,
+      "latin_chars_per_100px": 10.1,
+      "caps_chars_per_100px": 7.9,
+      "digits_chars_per_100px": 8.5,
+      "longest_planned_line": null
+    }
+  },
+  "source": "spec_lock.md",
+  "generated_at": "2026-09-05T17:57:38Z",
+  "notes": [
+    "role display (96px, at least twice body) has no display_family and uses body_family; declare display_family if it is display type"
+  ]
+}

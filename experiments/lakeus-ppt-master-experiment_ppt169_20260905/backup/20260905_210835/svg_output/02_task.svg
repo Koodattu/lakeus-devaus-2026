@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial" data-pptx-page-role="content">
+<rect id="background" data-pptx-role="background" width="1280" height="720" fill="#F4F0E7"/>
+<text id="title" data-pptx-role="header" x="64" y="106" font-size="48" font-weight="700" fill="#10243A">Pyydä tulosta,<tspan x="64" dy="60">jonka voit tarkistaa</tspan></text>
+<g id="explanation" data-pptx-bounds="64 245 370 290"><text x="64" y="283" font-size="24" fill="#52616B">SELITYS</text><text x="64" y="348" font-size="32" fill="#162A3D">“Selitä osoitteen<tspan x="64" dy="48">tallennus.”</tspan></text></g>
+<g id="delegation" data-pptx-bounds="480 235 736 325"><rect x="480" y="235" width="736" height="325" fill="#10243A"/><text x="516" y="283" font-size="24" fill="#D8F36A">DELEGOITU TEHTÄVÄ</text><text x="516" y="350" font-size="40" fill="#F8FAFC" font-weight="700">“Toista virhe.<tspan x="516" dy="56">Korjaa rajattu syy.</tspan><tspan x="516" dy="56">Näytä toimiva tallennus.”</tspan></text></g>
+<g id="gallup" data-pptx-bounds="64 608 1152 64"><text x="64" y="645" font-size="24" fill="#2563EB">Seuraavaksi 10 min alkugallup · gallup.koodattu.dev</text></g></svg>

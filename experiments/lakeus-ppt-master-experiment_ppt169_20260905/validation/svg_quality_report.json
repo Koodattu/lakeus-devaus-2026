@@ -1,0 +1,1553 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "final",
+  "target": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "74bbd976526e62763fbed29b84e65ab270ce58ef6da208c479cc94102c94a646",
+    "file_count": 23,
+    "files": [
+      {
+        "file": "01_cover.svg",
+        "sha256": "ef06222579a0978bcb1b9911c4d1082dc06f71cceee8c256d0dcda18b7c751b0"
+      },
+      {
+        "file": "02_task.svg",
+        "sha256": "9b3b49ab0555f06a4153caf6e67cbcddae3fef94966fab46bde9090f37084b02"
+      },
+      {
+        "file": "03_work.svg",
+        "sha256": "d8dd9d86f21251a13c932d6b7e75fd202c32f403423dcd6c7b7d7de81e4a51ee"
+      },
+      {
+        "file": "04_mirrorcode.svg",
+        "sha256": "572d71593cd866414c1b35aa689b839316aaee6f93f9cdd031f0c79b2443ba17"
+      },
+      {
+        "file": "05_productivity.svg",
+        "sha256": "21ed6763071689a856157a2460e76ab15101c27dcf31b24b02f4fb48e7bb3c4d"
+      },
+      {
+        "file": "06_delivery.svg",
+        "sha256": "cc8448045123b44e7c822f14a4fba9bb4e5564b2684cdf4368e79286822deaa1"
+      },
+      {
+        "file": "07_learning.svg",
+        "sha256": "56c9241e509b6a2b243096529a10b9a2ef3a5b85f2ccdbefb662b46c1f19896b"
+      },
+      {
+        "file": "08_maintenance.svg",
+        "sha256": "0a0a2d5310aee3ba24e4d3cf3570af6bad413c919fb980cd2db64e82b56a8279"
+      },
+      {
+        "file": "09_learn.svg",
+        "sha256": "7858a687d92d4d986fd34644a7a06a7942e2980ce5801a248cda595a50f50e5a"
+      },
+      {
+        "file": "10_local.svg",
+        "sha256": "073fa23935e7875c01f154a43fd24b47a0324edc1a232c02bbc7485312da3b69"
+      },
+      {
+        "file": "11_workflow.svg",
+        "sha256": "db9bf0a71ee29736a0ca61d9bd962a03ce2803d0afc255da27c6e90c8597a5f1"
+      },
+      {
+        "file": "12_brief.svg",
+        "sha256": "a0fdeb074451b9307f536db788b14ce567ff7657896d1d279b786f64dd34a5cd"
+      },
+      {
+        "file": "13_context.svg",
+        "sha256": "3b781476082e4f07331261eed45d77047b08e6103e16631a957ae531ad14148c"
+      },
+      {
+        "file": "14_tools.svg",
+        "sha256": "4a5cbf1c1a718f6c644688dae105673a40fc27882e717bf55501c802b0fb19a3"
+      },
+      {
+        "file": "15_reproduce.svg",
+        "sha256": "6de84c9b85fa20c8b95d1c79912b021a0360e063d4886ca850a7e8ab4083e8bd"
+      },
+      {
+        "file": "16_fix.svg",
+        "sha256": "23897bc61e490a85387243ce8e1e4772ab992df670165f5bf84e70a05d6e5d0f"
+      },
+      {
+        "file": "17_handoff.svg",
+        "sha256": "6102081323f68ef7d1a84d1bb8c6f0a602be469d77b3948abfcb2a5ff5585708"
+      },
+      {
+        "file": "18_prototype.svg",
+        "sha256": "a4cb6231583d07d49aebdab36ed7cb5312450a07a1d8db9b736db3b010af7c8a"
+      },
+      {
+        "file": "19_parallel.svg",
+        "sha256": "1dad3fae9ab58c98e990359b8fc6ff2945cad00e3b22e6bf7d86e6d9738b78fb"
+      },
+      {
+        "file": "20_after_release.svg",
+        "sha256": "d79af5f07eee02afab8fd633c311aaa4c87f214cd6b00276e419e64c0873cc63"
+      },
+      {
+        "file": "21_understand.svg",
+        "sha256": "2a17298fe3b448b39119fd91d95ca7a7da1e6917ea82f17fa18ab4440066ac18"
+      },
+      {
+        "file": "22_start.svg",
+        "sha256": "cc3a3488526c06f3ba0755a2a53c0eb814494661f39d6b724358d3488fa16539"
+      },
+      {
+        "file": "23_close.svg",
+        "sha256": "4ebbdb3c2662344684a146cb2932553887f1c185d2fc3afb946044ac7b77c50f"
+      }
+    ]
+  },
+  "summary": {
+    "total": 23,
+    "passed": 23,
+    "warnings": 0,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 0,
+      "issues": []
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {},
+    "fonts": {},
+    "sizes": {
+      "64": [
+        "01_cover.svg",
+        "11_workflow.svg"
+      ],
+      "72": [
+        "21_understand.svg"
+      ]
+    }
+  },
+  "carrier_receipt": {
+    "scope": "informational-not-a-quota",
+    "pages": 23,
+    "totals": {
+      "text_elements": 191,
+      "image_placements": 2,
+      "icons": 0,
+      "svg_geometry_elements": 74,
+      "preset_shapes": 0,
+      "page_frame_elements": 23,
+      "marker_uses": 0,
+      "inline_emphasis_runs": 2,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "pages_with": {
+      "images": 2,
+      "icons": 0,
+      "presets": 0,
+      "charts": 1,
+      "tables": 0,
+      "formulas": 0,
+      "inline_emphasis_runs": 1,
+      "gradient_uses": 0,
+      "filter_uses": 0,
+      "text_effects": 0
+    },
+    "geometry_elements": {
+      "circle": 3,
+      "ellipse": 0,
+      "line": 27,
+      "path": 0,
+      "polygon": 0,
+      "polyline": 0,
+      "rect": 44
+    },
+    "preset_names": {},
+    "native_objects": {
+      "chart": 1,
+      "formula_block": 0,
+      "formula_inline": 0,
+      "other": 0,
+      "table": 0
+    },
+    "image_page_max_frame_share_range": [
+      0.2627,
+      1.0
+    ]
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_cover.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/01_cover.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 4,
+          "images": {
+            "placements": 1,
+            "files": [
+              "ai-workbench.png"
+            ],
+            "max_frame_share": 1.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 4,
+        "tspan_elements": 3,
+        "sparse_typography_sizes": {
+          "64": 2
+        }
+      },
+      "passed": true,
+      "source_sha256": "ef06222579a0978bcb1b9911c4d1082dc06f71cceee8c256d0dcda18b7c751b0"
+    },
+    {
+      "file": "02_task.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/02_task.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 6,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 6,
+        "tspan_elements": 4
+      },
+      "passed": true,
+      "source_sha256": "9b3b49ab0555f06a4153caf6e67cbcddae3fef94966fab46bde9090f37084b02"
+    },
+    {
+      "file": "03_work.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/03_work.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 8,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 8,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "d8dd9d86f21251a13c932d6b7e75fd202c32f403423dcd6c7b7d7de81e4a51ee"
+    },
+    {
+      "file": "04_mirrorcode.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/04_mirrorcode.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 10,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 3,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 10,
+        "tspan_elements": 3
+      },
+      "passed": true,
+      "source_sha256": "572d71593cd866414c1b35aa689b839316aaee6f93f9cdd031f0c79b2443ba17"
+    },
+    {
+      "file": "05_productivity.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/05_productivity.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 11,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 2
+      },
+      "passed": true,
+      "source_sha256": "21ed6763071689a856157a2460e76ab15101c27dcf31b24b02f4fb48e7bb3c4d"
+    },
+    {
+      "file": "06_delivery.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/06_delivery.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 7,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 4,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 7,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "cc8448045123b44e7c822f14a4fba9bb4e5564b2684cdf4368e79286822deaa1"
+    },
+    {
+      "file": "07_learning.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/07_learning.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 11,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 3,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 1,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "56c9241e509b6a2b243096529a10b9a2ef3a5b85f2ccdbefb662b46c1f19896b"
+    },
+    {
+      "file": "08_maintenance.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/08_maintenance.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 5,
+          "images": {
+            "placements": 1,
+            "files": [
+              "maintenance-illustration.png"
+            ],
+            "max_frame_share": 0.2627
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 5,
+        "tspan_elements": 2
+      },
+      "passed": true,
+      "source_sha256": "0a0a2d5310aee3ba24e4d3cf3570af6bad413c919fb980cd2db64e82b56a8279"
+    },
+    {
+      "file": "09_learn.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/09_learn.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 10,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 10,
+        "tspan_elements": 0
+      },
+      "passed": true,
+      "source_sha256": "7858a687d92d4d986fd34644a7a06a7942e2980ce5801a248cda595a50f50e5a"
+    },
+    {
+      "file": "10_local.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/10_local.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 8,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 8,
+        "tspan_elements": 3
+      },
+      "passed": true,
+      "source_sha256": "073fa23935e7875c01f154a43fd24b47a0324edc1a232c02bbc7485312da3b69"
+    },
+    {
+      "file": "11_workflow.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/11_workflow.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 13,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 1,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 13,
+        "tspan_elements": 1,
+        "sparse_typography_sizes": {
+          "64": 2
+        }
+      },
+      "passed": true,
+      "source_sha256": "db9bf0a71ee29736a0ca61d9bd962a03ce2803d0afc255da27c6e90c8597a5f1"
+    },
+    {
+      "file": "12_brief.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/12_brief.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 10,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 4,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 10,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "a0fdeb074451b9307f536db788b14ce567ff7657896d1d279b786f64dd34a5cd"
+    },
+    {
+      "file": "13_context.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/13_context.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 7,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial",
+          "Courier New"
+        ],
+        "text_elements": 7,
+        "tspan_elements": 6
+      },
+      "passed": true,
+      "source_sha256": "3b781476082e4f07331261eed45d77047b08e6103e16631a957ae531ad14148c"
+    },
+    {
+      "file": "14_tools.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/14_tools.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 11,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 6,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 0
+      },
+      "passed": true,
+      "source_sha256": "4a5cbf1c1a718f6c644688dae105673a40fc27882e717bf55501c802b0fb19a3"
+    },
+    {
+      "file": "15_reproduce.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/15_reproduce.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 13,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 13,
+        "tspan_elements": 0
+      },
+      "passed": true,
+      "source_sha256": "6de84c9b85fa20c8b95d1c79912b021a0360e063d4886ca850a7e8ab4083e8bd"
+    },
+    {
+      "file": "16_fix.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/16_fix.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 6,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial",
+          "Courier New"
+        ],
+        "text_elements": 6,
+        "tspan_elements": 6
+      },
+      "passed": true,
+      "source_sha256": "23897bc61e490a85387243ce8e1e4772ab992df670165f5bf84e70a05d6e5d0f"
+    },
+    {
+      "file": "17_handoff.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/17_handoff.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 8,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 2,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 2,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 8,
+        "tspan_elements": 6
+      },
+      "passed": true,
+      "source_sha256": "6102081323f68ef7d1a84d1bb8c6f0a602be469d77b3948abfcb2a5ff5585708"
+    },
+    {
+      "file": "18_prototype.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/18_prototype.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 9,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 9,
+        "tspan_elements": 5
+      },
+      "passed": true,
+      "source_sha256": "a4cb6231583d07d49aebdab36ed7cb5312450a07a1d8db9b736db3b010af7c8a"
+    },
+    {
+      "file": "19_parallel.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/19_parallel.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 7,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 3,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 3,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 7,
+        "tspan_elements": 2
+      },
+      "passed": true,
+      "source_sha256": "1dad3fae9ab58c98e990359b8fc6ff2945cad00e3b22e6bf7d86e6d9738b78fb"
+    },
+    {
+      "file": "20_after_release.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/20_after_release.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 11,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 1
+      },
+      "passed": true,
+      "source_sha256": "d79af5f07eee02afab8fd633c311aaa4c87f214cd6b00276e419e64c0873cc63"
+    },
+    {
+      "file": "21_understand.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/21_understand.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 4,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 4,
+        "tspan_elements": 2,
+        "sparse_typography_sizes": {
+          "72": 1
+        }
+      },
+      "passed": true,
+      "source_sha256": "2a17298fe3b448b39119fd91d95ca7a7da1e6917ea82f17fa18ab4440066ac18"
+    },
+    {
+      "file": "22_start.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/22_start.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 9,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 2,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 9,
+        "tspan_elements": 3
+      },
+      "passed": true,
+      "source_sha256": "cc3a3488526c06f3ba0755a2a53c0eb814494661f39d6b724358d3488fa16539"
+    },
+    {
+      "file": "23_close.svg",
+      "path": "/Users/koodattu/Documents/GitHub/lakeus-devaus-2026/experiments/lakeus-ppt-master-experiment_ppt169_20260905/svg_output/23_close.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "carrier_receipt": {
+          "text_elements": 3,
+          "images": {
+            "placements": 0,
+            "files": [],
+            "max_frame_share": 0.0
+          },
+          "icons": 0,
+          "effects": {
+            "inline_emphasis_runs": 0,
+            "gradient_uses": 0,
+            "filter_uses": 0,
+            "text_effects": 0
+          },
+          "geometry": {
+            "svg_elements": {
+              "rect": 1,
+              "circle": 0,
+              "ellipse": 0,
+              "line": 0,
+              "polyline": 0,
+              "polygon": 0,
+              "path": 0
+            },
+            "preset_shapes": 0,
+            "preset_names": {},
+            "page_frame_elements": 1,
+            "marker_uses": {
+              "start": 0,
+              "mid": 0,
+              "end": 0
+            }
+          },
+          "native_objects": {
+            "chart": 0,
+            "table": 0,
+            "formula_block": 0,
+            "formula_inline": 0,
+            "other": 0
+          }
+        },
+        "fonts": [
+          "Arial"
+        ],
+        "text_elements": 3,
+        "tspan_elements": 2
+      },
+      "passed": true,
+      "source_sha256": "4ebbdb3c2662344684a146cb2932553887f1c185d2fc3afb946044ac7b77c50f"
+    }
+  ]
+}

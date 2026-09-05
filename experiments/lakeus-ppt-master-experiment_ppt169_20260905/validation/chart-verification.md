@@ -1,0 +1,1 @@
+P07 quiz-scores | horizontal_bar_chart | direct-calc | axis ticks 0–100 | calc ran | x=370; widths 400 and 536 match 50/100×800 and 67/100×800. Category spacing is manually composed (y=322 and 437), not value-driven. Labels match source values and groups. One declared chart, one receipt.

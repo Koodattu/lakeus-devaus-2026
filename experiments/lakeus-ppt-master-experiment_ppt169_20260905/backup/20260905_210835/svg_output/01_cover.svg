@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" font-family="Arial" data-pptx-page-role="cover">
+<rect id="background" data-pptx-role="background" width="1280" height="720" fill="#F4F0E7"/>
+<image id="workbench" data-pptx-role="background" x="0" y="0" width="1280" height="720" href="../images/ai-workbench.png" preserveAspectRatio="xMidYMid slice"/>
+<g id="cover-copy" data-pptx-bounds="48 40 690 625">
+<rect x="48" y="40" width="674" height="625" fill="#F4F0E7" fill-opacity="0.94"/>
+<text x="80" y="101" font-size="24" fill="#2563EB" font-weight="700">LAKEUS-DEVAUS 2026</text>
+<text x="80" y="215" font-size="64" fill="#10243A" font-weight="700">Hei ohjelmisto-<tspan x="80" dy="76">kehitys,</tspan><tspan x="80" dy="76">mitä kuuluu?</tspan></text>
+<line x1="80" y1="430" x2="170" y2="430" stroke="#2563EB" stroke-width="8"/>
+<text x="80" y="501" font-size="32" fill="#162A3D">Mikä muuttui?<tspan x="80" dy="48">Miten AI:n kanssa tehdään työtä?</tspan></text>
+<text x="80" y="620" font-size="20" fill="#52616B">60 minuuttia · havainnot, kokeilut ja käytäntö</text>
+</g></svg>

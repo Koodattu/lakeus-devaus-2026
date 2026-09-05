@@ -4,343 +4,233 @@ document.documentElement.classList.add("js");
   "use strict";
 
   const slides = Array.from(document.querySelectorAll(".slide"));
-  const fragmentSets = slides.map((slide) => Array.from(slide.querySelectorAll(".fragment")));
-  const revealedCounts = slides.map(() => 0);
-  const counterCurrent = document.querySelector(".slide-counter span:first-child");
-  const counterTotal = document.querySelector(".slide-counter span:last-child");
-  const progressBar = document.querySelector(".progress i");
-  const notesPanel = document.querySelector(".notes-panel");
-  const notesTitle = document.querySelector("#notes-title");
-  const notesTiming = document.querySelector(".notes-timing");
-  const notesContent = document.querySelector(".notes-content");
-  const notesSources = document.querySelector(".notes-sources");
-  const helpPanel = document.querySelector(".help-panel");
+  const deck = document.querySelector(".deck");
+  const controls = document.querySelector(".controls");
   const overview = document.querySelector(".overview");
   const overviewGrid = document.querySelector(".overview__grid");
-  const controls = document.querySelector(".controls");
+  const notes = document.querySelector(".notes-panel");
+  const help = document.querySelector(".help-panel");
+  const blackout = document.querySelector(".blackout");
+  const dialogs = [overview, notes, help];
   const liveRegion = document.createElement("p");
   let currentIndex = 0;
-  let touchStartX = null;
-  let touchStartY = null;
+  let touchStart = null;
+  let blackoutFocus = null;
 
   liveRegion.className = "visually-hidden";
   liveRegion.setAttribute("aria-live", "polite");
   document.body.append(liveRegion);
+  document.querySelector(".slide-counter span:last-child").textContent = slides.length;
 
-  counterTotal.textContent = String(slides.length);
-
-  function clamp(value, minimum, maximum) {
-    return Math.min(Math.max(value, minimum), maximum);
+  function resizeDeck() {
+    const scale = Math.min((window.innerWidth - 32) / 1600, (window.innerHeight - 76) / 900);
+    document.documentElement.style.setProperty("--deck-scale", Math.max(0.1, scale));
   }
 
   function parseHash() {
-    const match = window.location.hash.match(/^#\/?(\d+)(?:\/(\d+))?$/);
-    if (!match) return null;
-
-    const slideIndex = clamp(Number(match[1]) - 1, 0, slides.length - 1);
-    const fragmentCount = clamp(Number(match[2] || 0), 0, fragmentSets[slideIndex].length);
-    return { slideIndex, fragmentCount };
-  }
-
-  function updateHash() {
-    const fragmentCount = revealedCounts[currentIndex];
-    const hash = `#/${currentIndex + 1}${fragmentCount ? `/${fragmentCount}` : ""}`;
-    window.history.replaceState(null, "", hash);
-  }
-
-  function announce() {
-    const title = slides[currentIndex].dataset.title || `Dia ${currentIndex + 1}`;
-    const revealed = revealedCounts[currentIndex];
-    const totalFragments = fragmentSets[currentIndex].length;
-    liveRegion.textContent = totalFragments
-      ? `Dia ${currentIndex + 1} / ${slides.length}: ${title}. Vaihe ${revealed + 1} / ${totalFragments + 1}.`
-      : `Dia ${currentIndex + 1} / ${slides.length}: ${title}.`;
-  }
-
-  function renderFragments(slideIndex) {
-    fragmentSets[slideIndex].forEach((fragment, fragmentIndex) => {
-      const isVisible = fragmentIndex < revealedCounts[slideIndex];
-      fragment.classList.toggle("is-visible", isVisible);
-      fragment.setAttribute("aria-hidden", String(!isVisible));
-    });
-  }
-
-  function updateControls() {
-    const currentFragments = fragmentSets[currentIndex];
-    const atStart = currentIndex === 0 && revealedCounts[currentIndex] === 0;
-    const atEnd = currentIndex === slides.length - 1 && revealedCounts[currentIndex] === currentFragments.length;
-
-    controls.querySelector('[data-action="previous"]').disabled = atStart;
-    controls.querySelector('[data-action="next"]').disabled = atEnd;
-    counterCurrent.textContent = String(currentIndex + 1);
-    progressBar.style.width = `${((currentIndex + 1) / slides.length) * 100}%`;
-
-    overviewGrid.querySelectorAll(".overview-card").forEach((card, cardIndex) => {
-      card.classList.toggle("is-current", cardIndex === currentIndex);
-      card.setAttribute("aria-current", cardIndex === currentIndex ? "true" : "false");
-    });
+    const match = location.hash.match(/^#(?:\/?|slide-)(\d+)(?:\/\d+)?$/);
+    return match ? Math.min(slides.length - 1, Math.max(0, Number(match[1]) - 1)) : 0;
   }
 
   function updateNotes() {
     const slide = slides[currentIndex];
-    const notes = slide.querySelector(".notes");
+    document.querySelector("#notes-title").textContent = slide.dataset.title;
+    document.querySelector(".notes-timing").textContent = "Tavoiteaika " + slide.dataset.timing;
+    document.querySelector(".notes-content").innerHTML = slide.querySelector(".notes")?.innerHTML || "";
     const sources = slide.querySelector(".source-line");
-
-    notesTitle.textContent = slide.dataset.title || `Dia ${currentIndex + 1}`;
-    notesTiming.textContent = slide.dataset.timing ? `Tavoiteaika · ${slide.dataset.timing}` : "";
-    notesContent.innerHTML = notes ? notes.innerHTML : "<p>Ei erillisiä muistiinpanoja.</p>";
-    notesSources.innerHTML = sources ? `<strong>Lähteet</strong><p>${sources.innerHTML}</p>` : "";
+    document.querySelector(".notes-sources").innerHTML = sources ? "<strong>Lähteet ja rajaukset</strong><p>" + sources.innerHTML + "</p>" : "";
   }
 
   function render() {
-    slides.forEach((slide, slideIndex) => {
-      const isActive = slideIndex === currentIndex;
-      slide.classList.toggle("is-active", isActive);
-      slide.classList.toggle("is-before", slideIndex < currentIndex);
-      slide.classList.toggle("is-after", slideIndex > currentIndex);
-      slide.setAttribute("aria-hidden", String(!isActive));
-      slide.inert = !isActive;
-      renderFragments(slideIndex);
+    // Move focus out of the old slide before making it inert.
+    const focusInOldSlide = document.activeElement.closest?.(".slide");
+    if (focusInOldSlide && focusInOldSlide !== slides[currentIndex]) deck.focus({ preventScroll: true });
+    slides.forEach((slide, index) => {
+      const active = index === currentIndex;
+      slide.classList.toggle("is-active", active);
+      slide.setAttribute("aria-hidden", String(!active));
+      slide.inert = !active;
     });
-
-    updateControls();
+    controls.querySelector('[data-action="previous"]').disabled = currentIndex === 0;
+    controls.querySelector('[data-action="next"]').disabled = currentIndex === slides.length - 1;
+    document.querySelector(".slide-counter span:first-child").textContent = currentIndex + 1;
+    document.querySelector(".section-label").textContent = slides[currentIndex].dataset.section;
+    document.querySelector(".progress i").style.width = ((currentIndex + 1) / slides.length * 100) + "%";
+    overviewGrid.querySelectorAll(".overview-card").forEach((card, index) => {
+      card.classList.toggle("is-current", index === currentIndex);
+      card.setAttribute("aria-current", String(index === currentIndex));
+    });
     updateNotes();
-    updateHash();
-    announce();
+    const hash = "#/" + (currentIndex + 1);
+    if (location.hash !== hash) {
+      // Some file:// browsers restrict History API access.
+      try { history.replaceState(null, "", hash); } catch { location.hash = hash; }
+    }
+    deck.scrollTop = 0;
+    liveRegion.textContent = "Dia " + (currentIndex + 1) + " / " + slides.length + ": " + slides[currentIndex].dataset.title;
   }
 
-  function revealNext() {
-    if (revealedCounts[currentIndex] < fragmentSets[currentIndex].length) {
-      revealedCounts[currentIndex] += 1;
-      renderFragments(currentIndex);
-      updateControls();
-      updateHash();
-      announce();
-      return;
-    }
-
-    if (currentIndex < slides.length - 1) {
-      currentIndex += 1;
-      revealedCounts[currentIndex] = 0;
-      render();
-    }
-  }
-
-  function revealPrevious() {
-    if (revealedCounts[currentIndex] > 0) {
-      revealedCounts[currentIndex] -= 1;
-      renderFragments(currentIndex);
-      updateControls();
-      updateHash();
-      announce();
-      return;
-    }
-
-    if (currentIndex > 0) {
-      currentIndex -= 1;
-      revealedCounts[currentIndex] = fragmentSets[currentIndex].length;
-      render();
-    }
-  }
-
-  function goToSlide(index, showAllFragments = false) {
-    currentIndex = clamp(index, 0, slides.length - 1);
-    revealedCounts[currentIndex] = showAllFragments ? fragmentSets[currentIndex].length : 0;
-    closeOverview();
+  function goToSlide(index) {
+    currentIndex = Math.min(slides.length - 1, Math.max(0, index));
+    if (overview.open) overview.close();
     render();
   }
 
-  function openNotes() {
-    if (notesPanel.open) {
-      notesPanel.close();
-      return;
-    }
-
+  function toggleDialog(dialog) {
+    if (dialog.open) { dialog.close(); return; }
+    dialogs.forEach(other => { if (other.open) other.close(); });
     updateNotes();
-    notesPanel.showModal();
-  }
-
-  function openHelp() {
-    if (helpPanel.open) {
-      helpPanel.close();
-      return;
+    dialog.showModal();
+    if (dialog === overview) {
+      const currentCard = overviewGrid.querySelector(".is-current");
+      currentCard?.focus({ preventScroll: true });
+      currentCard?.scrollIntoView({ block: "center" });
     }
-
-    helpPanel.showModal();
   }
 
-  function openOverview() {
-    overview.classList.add("is-open");
-    overview.setAttribute("aria-hidden", "false");
-    document.body.classList.add("overview-open");
-    const currentCard = overviewGrid.querySelector(".overview-card.is-current");
-    currentCard?.focus({ preventScroll: true });
-    currentCard?.scrollIntoView({ block: "center" });
-  }
-
-  function closeOverview() {
-    if (!overview.classList.contains("is-open")) return;
-    overview.classList.remove("is-open");
-    overview.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("overview-open");
-    controls.querySelector('[data-action="overview"]')?.focus({ preventScroll: true });
+  function toggleBlackout() {
+    const show = blackout.hidden;
+    blackout.hidden = !show;
+    document.querySelector(".presentation-bar").inert = show;
+    deck.inert = show;
+    if (show) {
+      blackoutFocus = document.activeElement;
+      blackout.querySelector("button").focus();
+    } else {
+      (blackoutFocus?.isConnected ? blackoutFocus : deck).focus({ preventScroll: true });
+    }
   }
 
   async function toggleFullscreen() {
     try {
-      if (document.fullscreenElement) {
-        await document.exitFullscreen();
-      } else {
-        await document.documentElement.requestFullscreen();
-      }
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await document.documentElement.requestFullscreen();
     } catch {
       liveRegion.textContent = "Koko näytön tilaa ei voitu avata tässä selaimessa.";
     }
   }
 
-  function buildOverview() {
-    slides.forEach((slide, index) => {
-      const card = document.createElement("button");
-      const section = slide.dataset.section || "Esitys";
-      const title = slide.dataset.title || `Dia ${index + 1}`;
-
-      card.type = "button";
-      card.className = "overview-card";
-      card.innerHTML = `<small>${index + 1} · ${section}</small><strong>${title}</strong>`;
-      card.setAttribute("aria-label", `Avaa dia ${index + 1}: ${title}`);
-      card.addEventListener("click", () => goToSlide(index));
-      overviewGrid.append(card);
-    });
-  }
-
   function handleAction(action) {
     switch (action) {
-      case "previous":
-        revealPrevious();
-        break;
-      case "next":
-        revealNext();
-        break;
-      case "overview":
-        overview.classList.contains("is-open") ? closeOverview() : openOverview();
-        break;
-      case "close-overview":
-        closeOverview();
-        break;
-      case "notes":
-        openNotes();
-        break;
-      case "fullscreen":
-        toggleFullscreen();
-        break;
-      case "help":
-        openHelp();
-        break;
-      default:
-        break;
+      case "previous": goToSlide(currentIndex - 1); break;
+      case "next": goToSlide(currentIndex + 1); break;
+      case "overview": toggleDialog(overview); break;
+      case "close-overview": overview.close(); break;
+      case "notes": toggleDialog(notes); break;
+      case "help": toggleDialog(help); break;
+      case "fullscreen": toggleFullscreen(); break;
+      case "blackout": toggleBlackout(); break;
     }
   }
 
-  function dialogIsOpen() {
-    return notesPanel.open || helpPanel.open;
-  }
-
-  document.addEventListener("click", (event) => {
-    const actionButton = event.target.closest("[data-action]");
-    if (actionButton) handleAction(actionButton.dataset.action);
-
-    const closeButton = event.target.closest("[data-close-dialog]");
-    if (closeButton) closeButton.closest("dialog")?.close();
+  slides.forEach((slide, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "overview-card" + (slide.classList.contains("dark") ? " is-dark" : "") + (slide.classList.contains("blue") ? " is-blue" : "");
+    button.setAttribute("aria-label", "Avaa dia " + (index + 1) + ": " + slide.dataset.title);
+    const label = document.createElement("small");
+    label.textContent = String(index + 1).padStart(2, "0") + " / " + slide.dataset.section;
+    const title = document.createElement("strong");
+    title.textContent = slide.dataset.title;
+    const timing = document.createElement("small");
+    timing.className = "overview-time";
+    timing.textContent = slide.dataset.timing;
+    button.append(label, title, timing);
+    button.addEventListener("click", () => goToSlide(index));
+    overviewGrid.append(button);
   });
 
-  document.addEventListener("keydown", (event) => {
-    const element = event.target;
-    const isEditable = element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement || element?.isContentEditable;
-    if (isEditable) return;
-
-    if (event.key === "Escape") {
-      if (notesPanel.open) notesPanel.close();
-      if (helpPanel.open) helpPanel.close();
-      closeOverview();
-      return;
-    }
-
-    if (dialogIsOpen()) return;
-
-    if (overview.classList.contains("is-open")) {
-      if (event.key.toLowerCase() === "o") closeOverview();
-      return;
-    }
-
-    const key = event.key.toLowerCase();
-    if (["arrowright", "pagedown", " "].includes(key)) {
-      event.preventDefault();
-      revealNext();
-    } else if (["arrowleft", "pageup"].includes(key)) {
-      event.preventDefault();
-      revealPrevious();
-    } else if (key === "home") {
-      event.preventDefault();
-      goToSlide(0);
-    } else if (key === "end") {
-      event.preventDefault();
-      goToSlide(slides.length - 1, true);
-    } else if (key === "n") {
-      event.preventDefault();
-      openNotes();
-    } else if (key === "o") {
-      event.preventDefault();
-      openOverview();
-    } else if (key === "f") {
-      event.preventDefault();
-      toggleFullscreen();
-    } else if (key === "?") {
-      event.preventDefault();
-      openHelp();
-    }
-  });
-
-  document.querySelector(".deck").addEventListener("touchstart", (event) => {
-    if (event.touches.length !== 1) return;
-    touchStartX = event.touches[0].clientX;
-    touchStartY = event.touches[0].clientY;
-  }, { passive: true });
-
-  document.querySelector(".deck").addEventListener("touchend", (event) => {
-    if (touchStartX === null || touchStartY === null || event.changedTouches.length !== 1) return;
-
-    const deltaX = event.changedTouches[0].clientX - touchStartX;
-    const deltaY = event.changedTouches[0].clientY - touchStartY;
-    touchStartX = null;
-    touchStartY = null;
-
-    if (Math.abs(deltaX) < 52 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) return;
-    deltaX < 0 ? revealNext() : revealPrevious();
-  }, { passive: true });
-
-  window.addEventListener("hashchange", () => {
-    const state = parseHash();
-    if (!state) return;
-    currentIndex = state.slideIndex;
-    revealedCounts[currentIndex] = state.fragmentCount;
-    render();
-  });
-
-  [notesPanel, helpPanel].forEach((dialog) => {
-    dialog.addEventListener("click", (event) => {
-      const rect = dialog.getBoundingClientRect();
-      const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
-      if (!inside) dialog.close();
+  const demoStates = [
+    ["Ennen tallennusta", "Käyttäjä on kirjoittanut huoneiston numeron.", "B 7", "Lomakkeella arvo on vielä tallella."],
+    ["Tallennus näyttää onnistuvan", "Onnistumisviesti ei osoita, että kaikki kentät tallentuivat.", "B 7", "Tallennettu. Arvo näkyy yhä lomakkeella."],
+    ["Uudelleenlataus paljastaa virheen", "Arvo puuttuu takaisin ladatuista tiedoista. Missä kohdassa se katosi?", "Tyhjä", "Huoneiston numero ei säilynyt."]
+  ];
+  document.querySelectorAll("[data-demo-step]").forEach(button => {
+    button.addEventListener("click", () => {
+      const step = Number(button.dataset.demoStep);
+      const [heading, description, apartment, status] = demoStates[step];
+      document.querySelector("#demo-step-label").textContent = "Vaihe " + (step + 1) + " / 3";
+      document.querySelector("#demo-heading").textContent = heading;
+      document.querySelector("#demo-description").textContent = description;
+      document.querySelector("#demo-apartment").textContent = apartment;
+      document.querySelector("#demo-apartment").classList.toggle("is-missing", step === 2);
+      document.querySelector("#demo-status").textContent = status;
+      document.querySelectorAll("[data-demo-step]").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
     });
   });
 
-  buildOverview();
+  document.addEventListener("click", event => {
+    const action = event.target.closest("[data-action]");
+    if (action) handleAction(action.dataset.action);
+    event.target.closest("[data-close-dialog]")?.closest("dialog")?.close();
+    if (event.target.closest(".skip-link")) {
+      event.preventDefault();
+      goToSlide(0);
+      deck.focus();
+    }
+  });
 
-  const initialState = parseHash();
-  if (initialState) {
-    currentIndex = initialState.slideIndex;
-    revealedCounts[currentIndex] = initialState.fragmentCount;
-  }
+  document.addEventListener("keydown", event => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.target.matches("input, textarea, select") || event.target.isContentEditable) return;
+    const key = event.key.toLowerCase();
+    if (!blackout.hidden) {
+      if (key === "b" || key === "escape") { event.preventDefault(); toggleBlackout(); }
+      return;
+    }
+    if (dialogs.some(dialog => dialog.open)) {
+      if (key === "escape") {
+        event.preventDefault();
+        dialogs.forEach(dialog => { if (dialog.open) dialog.close(); });
+      }
+      return;
+    }
+    // Space and Enter activate a focused button/link instead of advancing.
+    if ((key === " " || key === "enter") && event.target.closest("button, a")) return;
+    const actions = {
+      arrowright: () => goToSlide(currentIndex + 1),
+      pagedown: () => goToSlide(currentIndex + 1),
+      " ": () => goToSlide(currentIndex + 1),
+      arrowleft: () => goToSlide(currentIndex - 1),
+      pageup: () => goToSlide(currentIndex - 1),
+      home: () => goToSlide(0),
+      end: () => goToSlide(slides.length - 1),
+      n: () => toggleDialog(notes),
+      o: () => toggleDialog(overview),
+      f: toggleFullscreen,
+      b: toggleBlackout,
+      "?": () => toggleDialog(help)
+    };
+    if (actions[key]) { event.preventDefault(); actions[key](); }
+  });
 
+  deck.addEventListener("touchstart", event => {
+    touchStart = event.touches.length === 1 && !event.target.closest("a, button")
+      ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+  }, { passive: true });
+  deck.addEventListener("touchend", event => {
+    if (!touchStart || event.changedTouches.length !== 1) return;
+    const x = event.changedTouches[0].clientX - touchStart.x;
+    const y = event.changedTouches[0].clientY - touchStart.y;
+    touchStart = null;
+    if (Math.abs(x) > 60 && Math.abs(x) > Math.abs(y) * 1.5) goToSlide(currentIndex + (x < 0 ? 1 : -1));
+  }, { passive: true });
+
+  dialogs.forEach(dialog => dialog.addEventListener("click", event => {
+    if (event.target !== dialog) return;
+    const rect = dialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  }));
+
+  // Inactive slides should also be readable to the browser's print pipeline.
+  window.addEventListener("beforeprint", () => slides.forEach(slide => {
+    slide.inert = false;
+    slide.removeAttribute("aria-hidden");
+  }));
+  window.addEventListener("afterprint", render);
+  window.addEventListener("resize", resizeDeck);
+  window.addEventListener("hashchange", () => { currentIndex = parseHash(); render(); });
+  currentIndex = parseHash();
+  resizeDeck();
   render();
 })();

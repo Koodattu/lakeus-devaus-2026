@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial" data-pptx-page-role="content">
+<rect id="background" data-pptx-role="background" width="1280" height="720" fill="#F4F0E7"/>
+<text id="title" data-pptx-role="header" x="64" y="106" font-size="48" font-weight="700" fill="#10243A">Paikallinen etu syntyy työn tuntemisesta</text>
+<g id="sector" data-pptx-bounds="64 211 644 385"><text x="64" y="256" font-size="24" fill="#2563EB">SUOMEN IT-ALA</text><text x="64" y="377" font-size="96" font-weight="700" fill="#10243A">19 mrd €</text><text x="64" y="441" font-size="32" fill="#162A3D">Liikevaihto 2025 · +5 %</text><text x="64" y="528" font-size="32" fill="#162A3D">80 200 työntekijää<tspan x="64" dy="38" font-size="24" fill="#52616B">kesäkuussa 2026</tspan></text></g>
+<g id="interpretation" data-pptx-bounds="776 211 440 355"><rect x="776" y="211" width="440" height="355" fill="#10243A"/><text x="810" y="259" font-size="24" fill="#D8F36A">PAIKALLINEN ETU · TULKINTA</text><text x="810" y="340" font-size="32" fill="#F8FAFC">Työn tunteminen<tspan x="810" dy="80">Integraatiot</tspan><tspan x="810" dy="80">Tuki</tspan></text></g>
+<g id="source" data-pptx-bounds="64 615 1152 55"><text x="64" y="648" font-size="20" fill="#52616B">Lähde: Teknologiateollisuus · Information technology in Finland</text></g></svg>

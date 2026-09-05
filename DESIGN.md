@@ -1,76 +1,83 @@
-# HTML presentation design brief
+# PowerPoint redesign brief
+
+**Updated 5 September 2026.** This is the design brief for the practical 60-minute version. The [updated deck](output/lakeus-devaus-2026-practical.pptx) was edited through native PowerPoint computer use. The HTML prototype predates this brief. See the [storyboard](docs/16-practical-presentation-storyboard.md) and [design research](docs/15-presentation-design-research.md).
 
 ## Communication job
 
-By the end of the session, a mixed Lakeus-Devaus audience should understand
-that AI has made plausible implementation dramatically cheaper while moving
-more value and responsibility into problem choice, context, verification,
-integration, trust, distribution, and long-term ownership.
+Help a mixed Finnish-speaking Lakeus-Devaus audience understand what AI changes in software development and follow a modern workflow from a useful task to a verified, reviewed result. Practical use has equal weight with the research and argument.
 
-## Audience and context
+The programme is **5 minutes intro, 10 minutes opening gallup, 20 minutes context, 20 minutes practical workflow, 5 minutes closing gallup and wrap-up**. Both gallups run in gallup.koodattu.dev. PowerPoint holds the talk and browser-handoff notes, without voting-question slides.
 
-- Finnish-speaking developers and adjacent professionals in Seinäjoki and
-  Etelä-Pohjanmaa.
-- Mixed experience and mixed AI adoption, from active agent users to skeptics.
-- Projected in a room, but usable on a laptop or phone as an offline fallback.
-- A 60-minute programme: intro, rapid polls, a short reveal, a 35-minute main
-  story, and a complete close before optional discussion.
+## Visual direction
 
-## Information hierarchy
+A lively technical field guide with evidence large enough to examine. Dark opening and transition slides give the talk rhythm; light research slides support reading charts; darker code surfaces suit short diffs and captured output. This replaces the earlier rule that every background must remain the same.
 
-1. One claim per slide, stated in the title.
-2. Evidence appears only after the claim is understood.
-3. Caveats and sources stay visible but subordinate.
-4. Presenter notes hold timing, transitions, and detail that should not compete
-   with audience-facing content.
+The strongest visual on each slide should explain the message. Use a workflow diagram for sequence, a chart for measured quantities, a cropped screenshot for observed behaviour, and a photograph or illustration to establish a concrete setting. Colour and layout variation alone will not solve a text-heavy talk.
 
-## Interaction model
+## Colour and typography
 
-- Right arrow, Space, or Page Down reveals the next fragment before advancing.
-- Left arrow or Page Up reverses fragments before returning to the prior slide.
-- Home and End jump to the first and last slide.
-- `N` opens presenter notes and slide sources.
-- `O` opens a slide overview; `F` toggles fullscreen; `?` shows help.
-- Swipe gestures provide a simple touch fallback.
-- URL hashes preserve the current slide for refresh and deep links.
+| Role | Target |
+| --- | --- |
+| Dark backgrounds and primary ink | Deep navy `#10243A` |
+| Light evidence backgrounds | Warm paper `#F4F0E7` |
+| Primary evidence accent | Blue `#2563EB` on light surfaces |
+| Focal accent on dark surfaces | Yellow-green `#D8F36A`, used sparingly |
+| Exceptions or corrections | Coral `#EC765A`, paired with labels |
+| Text on dark surfaces | Warm white `#F8FAFC` |
 
-## Visual thesis
+The current native deck retains Arial message headings and uses Aptos for body text and editable code excerpts. Target 36–48 pt message headlines, 26–32 pt body text, 22–26 pt code, and 18–20 pt essential captions. Cover typography may be larger. These are production targets: shorten text before shrinking it and inspect the real projected composition.
 
-An editorial, projector-safe field guide: warm paper, dark ink, a Finnish-blue
-primary accent, and a restrained coral warning accent. The background remains
-stable throughout the deck. Layout silhouettes vary through typography, bars,
-timelines, comparisons, and sparse diagrams rather than repeated card grids.
+Use colour consistently; never encode meaning by colour alone. AI and comparison-group chart labels must be explicit, without implying that one colour is inherently good or bad.
 
-Typography uses system fonts so the deck remains offline-capable. Headings are
-large, balanced, and short. Body copy is kept above presentation scale and is
-reduced before type is reduced.
+## Composition vocabulary
 
-## Motion thesis
+1. Full-width dark opening or closing with a single dominant message.
+2. Large photo/illustration with concise type and generous contrast.
+3. Editable process diagram, preferably revealed in a few meaningful steps.
+4. Cropped screenshot or diff with a small number of nearby annotations.
+5. Native chart with direct labels and visible scope.
+6. Clearly separated comparison with units and contexts named.
+7. Short task brief or handoff treated as the artifact the speaker explains.
 
-Motion explains sequence and state. Slide changes use a short, interruptible
-opacity and horizontal movement. Fragments enter with a small vertical shift
-and a short stagger controlled by the presenter. Exit motion is quieter than
-entry motion. `prefers-reduced-motion` removes non-essential movement.
+Choose a composition for the information. Avoid three consecutive title-and-body layouts, repeated three-card grids, generic dashboards, and stock robot imagery. Use at least six composition types across the planned sequence, without a rigid quota overriding clarity.
 
-## Critical assumptions
+Keep a stable alignment grid, generous margins, and consistent typography across light and dark slides. Diagrams and charts remain editable PowerPoint objects. Real screenshots remain images and must not be passed off as editable UI.
 
-- Audience-facing copy is Finnish.
-- The event date, presenter name, venue, live voting URL, and session code are
-  not yet available, so the deck does not fabricate them.
-- Because the history of the live-voting application is unconfirmed, the reveal
-  uses this presentation's own research and implementation process.
-- Research is dated 15 August 2026; time-sensitive claims include an as-of date
-  and source.
+## Evidence and assets
 
-## Acceptance scenarios
+- One main message per slide; support it with something the audience can inspect.
+- Keep long explanations, complete prompts, transitions, and full source links in speaker notes.
+- Keep essential population, unit, date, and uncertainty context beside the evidence.
+- The Microsoft and METR results measure different quantities. Do not put them on a shared percentage axis.
+- The learning chart uses a 0–100% quiz-score scale with 50% and 67%, identifying the immediate quiz and unfamiliar-library experiment.
+- Use actual demo captures for the bug, fix, checks, and browser result. Until captured, label teaching diagrams and snippets as illustrative.
+- Mark the maintenance-record scenario as hypothetical. Never invent client provenance, personal experience, outcomes, or time savings.
+- Record image sources and licences, or generation provenance. Generated imagery may illustrate a setting, but does not supply evidence of a real workflow outcome.
 
-- The complete argument can be presented with keyboard only.
-- Every progressive slide is understandable at every reveal step.
-- Polls can be shown as a hand-vote fallback when the live application is not
-  available.
-- The deck remains legible at 1920×1080, 1366×768, and a narrow mobile viewport.
-- Presenter notes and sources are available without appearing on the audience
-  canvas by default.
-- Reduced-motion users receive immediate state changes without staged movement.
-- The deck has no network or package dependency for core presentation behavior.
+## Pacing and stage use
 
+The practical section follows one address bug; the maintenance-record example broadens it to product discovery and use. Reuse concepts, but show a different visual when returning to a case.
+
+Use short, presenter-controlled reveals only when they clarify a sequence. Avoid elaborate transitions and compulsory live generation. Prepared captures keep the walkthrough predictable; a rehearsed live run is optional.
+
+Browser handoffs occur at 05:00 and 56:00. Speaker notes specify when to return. If voting fails, use the existing questions verbally for a show of hands.
+
+## Quality checks
+
+The main message should be identifiable within a few seconds as a practical glance test. This is a design heuristic, not a measured attention-span claim.
+
+Inspect the slide sorter for rhythm, then every slide in PowerPoint slideshow view. Check clipping, contrast, line wrapping, chart labels, screenshot legibility, and consistency. Verify the final deck's native structure and that charts/diagrams intended to be editable are editable. A successful export alone is insufficient.
+
+Rehearse to the 35-minute transition and 55-minute close. The practical walkthrough must leave a newcomer able to explain what the agent did, what the person decided, and what evidence supports the result.
+
+## HTML rebuild — 5 September 2026
+
+The HTML now implements the same 60-minute editorial plan in 25 slides, including dedicated opening and closing gallup handoffs. Its visual system uses warm paper, navy, vivid blue, and lime, with Arial for presentation copy, monospace for code, and Georgia for the fictional field note. Illustrations reuse the two locally generated assets with provenance in `output/assets/README.md`.
+
+The 1600 × 900 landscape canvas scales to the available screen. Portrait layouts reflow into a scrollable slide, preserving readable text. Content stays semantic HTML, with a zero-based bar chart, labelled comparisons, varied flat compositions, and an interactive address example. The example switches authored states locally and is explicitly a teaching simulation.
+
+Keyboard navigation, slide overview, notes and sources, fullscreen, blackout, deep links, reduced motion, and print layouts support stage use. Notes and overview are native modal dialogs. The 25 rendered slides and phone layouts were visually reviewed in Chrome. Printing was checked as 25 pages with extractable text. This HTML rebuild does not regenerate any PowerPoint file.
+
+## Native build record
+
+Completed 5 September 2026 using `ppt-visual` and native PowerPoint computer use. The native Office theme supplies navy and teal alongside warm paper and white; the palette table above remains the broader design direction. Two generated illustrations establish the developer workspace and hypothetical maintenance scenario. SmartArt and short editable comparison panels carry the explanations. The learning-results graphic consists of editable bars and labels, with a 0–100% scale; Excel was unavailable for native chart-data editing. The address walkthrough remains explicitly illustrative, with no fabricated screenshots or claimed test runs. All 23 slides were reviewed in slideshow view, and package/layout/import validation passed.

@@ -1,641 +1,236 @@
 <!doctype html>
 <html lang="fi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
-    <meta
-      name="description"
-      content="Lakeus-Devaus 2026: Hei ohjelmistokehitys, mitä kuuluu? Koodi halpeni. Vastuu ei."
-    />
-    <title>Hei ohjelmistokehitys, mitä kuuluu?</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="presentation.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#slide-1">Siirry esitykseen</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Lakeus-Devaus 2026. Mitä AI muutti ohjelmistokehityksessä ja miten sen kanssa tehdään käytännössä työtä?">
+  <title>Hei ohjelmistokehitys, mitä kuuluu? — Lakeus-Devaus 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="presentation.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#slide-1">Siirry esitykseen</a>
+  <main class="deck" aria-label="Hei ohjelmistokehitys, mitä kuuluu?" tabindex="-1">
 
-    <main class="deck" aria-label="Hei ohjelmistokehitys, mitä kuuluu?">
-      <section
-        class="slide slide--title is-active"
-        id="slide-1"
-        data-title="Hei ohjelmistokehitys, mitä kuuluu?"
-        data-section="Alku"
-        data-timing="0:00–0:02"
-      >
-        <div class="slide__inner title-composition">
-          <p class="kicker">Lakeus-Devaus · 2026</p>
-          <h1 class="display-title">Hei ohjelmistokehitys,<br />mitä kuuluu?</h1>
-          <p class="thesis-line">Koodi halpeni. <span>Vastuu ei.</span></p>
-        </div>
-        <aside class="notes">
-          <p>Aloita ilman määritelmiä tai mallinimiä. Anna otsikon olla hetken.</p>
-          <p>Siirtymä: “Vuonna 2022 pyysimme tekoälyltä vastauksia. Vuonna 2026 annamme sille tehtäviä.”</p>
-        </aside>
-      </section>
+    <section class="slide cover dark is-active" id="slide-1" data-title="Hei ohjelmistokehitys, mitä kuuluu?" data-section="Alku" data-timing="00:00–02:00" data-note="01_cover">
+      <img class="cover-art" src="output/assets/ai-workbench.png" alt="Kuvitettu kehittäjän työpöytä: kannettava tietokone ja suunnitelmia paperilla" fetchpriority="high"><div class="slide__inner cover-copy"><p class="eyebrow">Lakeus-Devaus 2026</p><h1>Hei<br>ohjelmisto&shy;kehitys,<br><em>mitä kuuluu?</em></h1><p class="cover-subtitle">AI muutti työtä.<br>Miten sitä tehdään nyt?</p><p class="cover-foot">Koodi halpeni. Vastuu ei.</p></div>
+    <aside class="notes"><p>Avaus. Kysy, mikä muuttuu omassa työssä, kun uskottavan ensimmäisen version tekeminen helpottuu. Esityksen kaksi kysymystä ovat: mitä ohjelmistokehityksessä on muuttunut, ja miten AI:n kanssa tehdään käytännössä työtä.</p>
+<p>Yleisössä saa olla erilaisia kokemuksia. Tarkoitus on antaa sekä tutkimukseen perustuvaa taustaa että yksi kokeiltava työtapa. Käytännön osoite- ja huoltoesimerkit ovat opetusta varten kirjoitettuja, eivät väitteitä puhujan asiakasprojekteista.</p>
+<p>Rytmi: 5 min johdanto, 10 min alkugallup, 20 min nykytilanne, 20 min käytännöt, 5 min loppugallup ja päätös. Siirry kahteen erilaiseen pyyntöön. Kuvitus: OpenAI imagegen, 5.9.2026; tätä esitystä varten luotu työpöytäkuvitus, ei todellinen työympäristö.</p></aside>
+    </section>
 
-      <section
-        class="slide"
-        id="slide-2"
-        data-title="Molemmat voivat olla totta"
-        data-section="Alku"
-        data-timing="0:02–0:04"
-      >
-        <div class="slide__inner">
-          <p class="kicker">Neljä vuotta, kaksi väitettä</p>
-          <h2>Molemmat voivat olla totta.</h2>
-          <div class="tension-pair">
-            <p class="tension-pair__claim fragment">Ohjelmistokehitys muuttui enemmän kuin osaamme vielä mitata.</p>
-            <p class="tension-pair__claim tension-pair__claim--counter fragment">Vaikeat osat eivät muuttuneet juuri lainkaan.</p>
-          </div>
-          <p class="landing fragment">Muutos tapahtui siinä, <strong>mikä on niukkaa.</strong></p>
-        </div>
-        <aside class="notes">
-          <p>Älä puolusta kumpaakaan väitettä vielä. Jätä ristiriita auki ja tee siitä illan tutkimuskysymys.</p>
-        </aside>
-      </section>
+    <section class="slide " id="slide-2" data-title="Vastauksesta tarkistettavaan muutokseen" data-section="Alku" data-timing="02:00–05:00" data-note="02_task">
+      <div class="slide__inner"><p class="eyebrow">Kaksi hyödyllistä tapaa käyttää AI:ta</p><h2>Vastauksesta<br><em>tarkistettavaan muutokseen</em></h2><div class="request-pair"><div><p class="label">Keskustelu</p><blockquote>“Miten tämä<br>lomake toimii?”</blockquote><p class="muted">Saat selityksen.</p></div><div class="request-task"><p class="label">Tehtävä agentille</p><blockquote>“Korjaa katoava huoneiston numero. Näytä, että se säilyy tallennuksessa.”</blockquote><p>Saat muutoksen ja näytön sen toiminnasta.</p></div></div><p class="bottom-line">Tänään: mitä muuttui ja miten viet yhden tehtävän loppuun.</p></div>
+    <aside class="notes"><p>Keskustelusta tarkistettavaan tehtävään. Lue vasen pyyntö: siinä halutaan selitys. Oikeassa pyynnössä halutaan muutos ja näyttö siitä, että se toimii.</p>
+<p>Molemmat käyttötavat ovat hyödyllisiä. Ero on siinä, mitä odotamme vastaukseksi. Käytännön osassa käymme läpi osoitevirheen samalla periaatteella.</p>
+<p>Anna tehtävän rajat ja kerro, millainen lopputulos voidaan havaita. Älä vielä avaa jokaista työkalua. Kysy yleisöltä lyhyesti, kumman tyyppisiä pyyntöjä he tekevät useammin.</p>
+<p>Seuraava dia avaa alkugallupin. Varaa sille 05:00–15:00.</p></aside>
+    </section>
 
-      <section
-        class="slide slide--question"
-        id="slide-3"
-        data-title="Kun ohjelmiston tuottamisesta tulee halpaa"
-        data-section="Alku"
-        data-timing="0:04–0:05"
-      >
-        <div class="slide__inner question-composition">
-          <p class="kicker">Illan kysymys</p>
-          <h2>Kun ohjelmiston tuottamisesta tulee halpaa,</h2>
-          <p class="question-answer fragment">mikä muuttuu arvokkaaksi — ja mikä ei edelleenkään muutu helpoksi?</p>
-        </div>
-        <aside class="notes">
-          <p>Tämä on koko esityksen yhteinen kysymys. Avaa gallup heti, kun lause on laskeutunut.</p>
-        </aside>
-      </section>
+    <section class="slide gallup blue" id="slide-3" data-title="Huoneen lähtötilanne" data-section="Alkugallup" data-timing="05:00–15:00">
+      <div class="slide__inner"><p class="eyebrow">10 minuuttia yhdessä</p><h2>Huoneen<br><em>lähtötilanne</em></h2><a class="gallup-link" href="https://gallup.koodattu.dev" target="_blank" rel="noopener">gallup.koodattu.dev <span aria-hidden="true">↗</span></a><p class="gallup-caption">Vastaaminen ja tulokset avautuvat gallupissa.</p><p class="gallup-next">Sen jälkeen: mitä tutkimus kertoo?</p></div>
+    <aside class="notes"><p>05:00–15:00. Avaa gallup linkistä omaan välilehteen ja näytä liittymisnäkymä. Kysymykset ja tulokset ovat gallup.koodattu.dev-palvelussa.</p>
+<p>Älä ennakoi vastauksia. Poimi lopuksi pari todellista havaintoa huoneen kokemuksesta, käytöstä ja luottamuksesta. Palaa esitykseen ajassa 15:00.</p>
+<p>Jos yhteys ei toimi, käytä aika lyhyeen suulliseen keskusteluun. Esityksessä ei ole kysymysten kopiota.</p></aside>
+    </section>
 
-      <section
-        class="slide slide--poll-intro"
-        id="slide-4"
-        data-title="Nopea pulssi huoneesta"
-        data-section="Gallup"
-        data-timing="0:05–0:06:30"
-      >
-        <div class="slide__inner poll-intro">
-          <div>
-            <p class="kicker">Gallup · 7 kysymystä</p>
-            <h2>Nopea pulssi huoneesta.</h2>
-            <p class="lede">Ei perusteluja vielä. Vastaa vaistolla.</p>
-          </div>
-          <div class="poll-rhythm" aria-label="Gallupin rytmi">
-            <span>Liity</span><i></i><span>Vastaa</span><i></i><span>Vertaa lopussa</span>
-          </div>
-        </div>
-        <aside class="notes">
-          <p>Näytä tässä live-äänestyksen liittymisnäkymä, jos se on käytössä. Seuraavat seitsemän diaa toimivat käsiäänestyksenä ja offline-varana.</p>
-          <p>Pidä tahti 45–50 sekunnissa per kysymys. Ei yleisökommentteja kysymysten välissä.</p>
-        </aside>
-      </section>
+    <section class="slide " id="slide-4" data-title="Toteutus on yksi osa kehittämistä" data-section="Mikä muuttui?" data-timing="15:00–17:00" data-note="03_work">
+      <div class="slide__inner"><p class="eyebrow">01 / Mitä ohjelmistokehityksessä muuttui?</p><h2>Toteutus on yksi osa<br><em>kehittämistä</em></h2><div class="work-strip"><div><span>01</span><h3>Tarve</h3><p>Kenen ongelma<br>kannattaa ratkaista?</p></div><div><span>02</span><h3>Ymmärrys</h3><p>Mitä järjestelmän<br>pitää tarkoittaa?</p></div><div class="highlight"><span>03</span><h3>Toteutus</h3><p>Koodi, testit<br>ja työkalut</p></div><div><span>04</span><h3>Ylläpito</h3><p>Miten ratkaisu<br>toimii arjessa?</p></div></div><p class="bottom-line">AI voi auttaa jokaisessa vaiheessa. Hyöty pitää silti havaita.</p></div>
+    <div class="source-line">Brooks: No Silver Bullet (1987). Naur: Programming as Theory Building (1985).</div>
+<aside class="notes"><p>Toteutus on yksi osa kehittämistä. Käy neljä aluetta läpi arkisesti: tarve, ymmärrys, toteutus ja ylläpito. Käyttäjän oikean ongelman löytäminen, järjestelmän käsitteiden ymmärtäminen ja muutoksen sovittaminen olemassa olevaan ympäristöön eivät katoa.</p>
+<p>AI voi auttaa kaikissa vaiheissa, mutta valmiin näköinen koodi ei yksin osoita, että ymmärrys tai hyöty on syntynyt. Brooksin ja Naurin klassiset tekstit antavat tälle taustan; niitä ei käytetä empiirisenä mittauksena vuoden 2026 työkaluista. Kysy: missä näistä teillä odotetaan eniten?</p>
+<p>Siirry seuraavaksi esimerkkiin siitä, kuinka pitkälle rajattu toteutustehtävä voi jo edetä. Lähteet: Fred Brooks, No Silver Bullet (1987); Peter Naur, Programming as Theory Building (1985). Tarkemmat bibliografiset lähteet projektin lähdeaineistossa.
+ Kuvion vaiheet kuvaavat työn alueita, eivät mitattuja kustannuksia tai ajankäyttöä.</p></aside>
+    </section>
 
-      <section class="slide slide--poll" id="slide-5" data-title="Vuosia ohjelmistoalalla?" data-section="Gallup" data-timing="0:06:30–0:07:20">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">1 / 7</p>
-          <h2>Vuosia ohjelmistoalalla?</h2>
-          <ol class="poll-options">
-            <li>0–2</li><li>3–9</li><li>10–19</li><li>20+</li>
-          </ol>
-        </div>
-        <aside class="notes"><p>Palaa jakaumaan historiallisessa osuudessa ja junioripolun kohdalla.</p></aside>
-      </section>
+    <section class="slide dark" id="slide-5" data-title="Rajattu tehtävä voi edetä pitkälle" data-section="Mikä muuttui?" data-timing="17:00–20:00" data-note="04_mirrorcode">
+      <div class="slide__inner"><p class="eyebrow">MirrorCode / Epoch AI &amp; METR / huhtikuu 2026</p><h2>Rajattu tehtävä voi<br><em>edetä pitkälle</em></h2><div class="mirror-layout"><div class="large-fact"><strong>~16 000</strong><span>rivin vertailuohjelma<br>gotree-työkalupakissa</span></div><ol class="ruled-list"><li><span>1</span><div>Vertailtava toiminta<small>Olemassa oleva ohjelma antaa palautetta.</small></div></li><li><span>2</span><div>Agentin toteutus<small>Rajattu toiminnallisuus rakennetaan uudelleen.</small></div></li><li><span>3</span><div>Erillinen arviointi<small>Tulos verrataan käyttäytymiseen ja testeihin.</small></div></li></ol></div><p class="bottom-line caveat">Alustava tulos valitusta toiminnallisuudesta. Tuotteen elinkaari on laajempi tehtävä.</p></div>
+    <div class="source-line"><a target="_blank" rel="noopener" href="https://epoch.ai/publications/mirrorcode-preliminary-results">Epoch AI: MirrorCode, 10.4.2026</a></div>
+<aside class="notes"><p>MirrorCode. Selitä ketju: vertailtava ohjelma tai käyttäytyminen, agentin tekemä toteutus, ja erillinen vertailu tai testaus. Epochin alustavat tulokset havainnollistavat, kuinka laajoja mutta rajattuja toteutustehtäviä agentit voivat tehdä.</p>
+<p>Säilytä rajaus: kyse on valitusta toiminnallisuudesta ja tutkimuksen arviointiympäristöstä. Älä väitä, että kokonaisen tuotteen asiakastarve, julkaisu, tuki ja ylläpito hoituisivat samalla tavalla automaattisesti. Kuvion tasakokoiset vaiheet eivät esitä ajankäyttöä.</p>
+<p>Yleisölle tärkeä kysymys: mikä on se vertailukohde, jolla oma tehtävä voidaan arvioida? Näin kyvykkyys kytkeytyy käytännön työn rajaamiseen. Seuraavaksi erotetaan kyvykkyys ja mitattu tuottavuus.</p>
+<p>Lähde: <a href="https://epoch.ai/publications/mirrorcode-preliminary-results" target="_blank" rel="noopener">https://epoch.ai/publications/mirrorcode-preliminary-results</a></p></aside>
+    </section>
 
-      <section class="slide slide--poll" id="slide-6" data-title="AI koodauksessa tällä viikolla?" data-section="Gallup" data-timing="0:07:20–0:08:10">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">2 / 7</p>
-          <h2>AI koodauksessa tällä viikolla?</h2>
-          <ol class="poll-options">
-            <li>Päivittäin</li><li>Muutaman kerran</li><li>Kerran</li><li>En lainkaan</li>
-          </ol>
-        </div>
-        <aside class="notes"><p>Tämä kertoo käytöstä, ei luottamuksesta tai laadusta.</p></aside>
-      </section>
+    <section class="slide " id="slide-6" data-title="Tuottavuus riippuu tehtävästä" data-section="Mikä muuttui?" data-timing="20:00–23:00" data-note="05_productivity">
+      <div class="slide__inner"><p class="eyebrow">Sama sana, eri mittarit</p><h2>Tuottavuus riippuu <em>tehtävästä</em></h2><div class="study-pair"><div class="study"><p class="label">Microsoft / kolme kenttäkoetta</p><strong class="stat blue-text">+26<span>%</span></strong><h3>enemmän valmistuneita tehtäviä</h3><p>4 867 kehittäjää</p></div><div class="study"><p class="label">METR / alkuvuoden 2025 koe</p><strong class="stat rust-text">+19<span>%</span></strong><h3>enemmän aikaa tehtävään</h3><p>16 kokenutta kehittäjää tutuissa repoissa</p></div></div><p class="bottom-line caveat">Eri tehtävät ja mittarit. METR:n 2026 seuranta ei tuottanut luotettavaa uutta vaikutusarviota.</p></div>
+    <div class="source-line"><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/">Microsoft Research</a> · <a target="_blank" rel="noopener" href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">METR 2025</a> · <a target="_blank" rel="noopener" href="https://metr.org/blog/2026-02-24-uplift-update/">Seuranta 24.2.2026</a></div>
+<aside class="notes"><p>Eri tutkimukset mittaavat eri työtä. Microsoftin kolmen kenttäkokeen yhdistelmässä oli 4 867 kehittäjää; tekijät raportoivat noin 26 % enemmän valmistuneita tehtäviä AI-avun kanssa. METR:n alkuvuoden 2025 kokeessa 16 kokenutta avoimen lähdekoodin kehittäjää työskenteli tutuissa repositorioissaan ja käytti AI:n kanssa noin 19 % enemmän aikaa.</p>
+<p>Näitä lukuja ei pidä vähentää toisistaan tai esittää yhteisellä tuottavuusakselilla. Mittari, tehtävä, väline ja käyttäjäjoukko poikkeavat. METR:n helmikuun 2026 jatkotutkimus ei antanut luotettavaa uutta vaikutusarviota valikoitumisen ja mittausongelmien vuoksi.</p>
+<p>Sano tämä ääneen: vuoden 2025 tulos ei ole nykyisten työkalujen yleispätevä nopeuskerroin. Lähteet: <a href="https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/</a> ; <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/" target="_blank" rel="noopener">https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/</a> ; <a href="https://metr.org/blog/2026-02-24-uplift-update/" target="_blank" rel="noopener">https://metr.org/blog/2026-02-24-uplift-update/</a></p></aside>
+    </section>
 
-      <section class="slide slide--poll" id="slide-7" data-title="Nopeuttaako AI sinua?" data-section="Gallup" data-timing="0:08:10–0:09:00">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">3 / 7</p>
-          <h2>Nopeuttaako AI sinua?</h2>
-          <ol class="poll-options">
-            <li>Kyllä</li><li>Riippuu tehtävästä</li><li>Ei</li><li>En tiedä</li>
-          </ol>
-        </div>
-        <aside class="notes"><p>Palaa tähän Microsoft–METR–DORA-ristiriidan kohdalla.</p></aside>
-      </section>
+    <section class="slide " id="slide-7" data-title="Nopeampi koodi voi päätyä jonoon" data-section="Mikä muuttui?" data-timing="23:00–25:00" data-note="06_delivery">
+      <div class="slide__inner"><p class="eyebrow">Tehtävästä toimitukseen</p><h2>Nopeampi koodi<br><em>voi päätyä jonoon</em></h2><ol class="delivery-track" aria-label="Toimituksen vaiheet"><li><span class="step-label">Toteutus</span><strong class="blue-text">Valmis</strong></li><li class="queue"><span class="step-label">Katselmointi</span><div class="queue-lines" aria-label="Kolme muutosta odottaa"><span>Muutos 03</span><span>Muutos 02</span><span>Muutos 01</span></div></li><li><span class="step-label">Integrointi</span><strong>Yhteen</strong></li><li><span class="step-label">Käyttö</span><strong>Hyöty</strong></li></ol><p class="bottom-line">Missä teidän työssänne odotetaan?</p></div>
+    <div class="source-line">Selittävä ketju, ei mitattu aikajana. <a target="_blank" rel="noopener" href="https://dora.dev/insights/balancing-ai-tensions/">DORA: Balancing AI tensions</a></div>
+<aside class="notes"><p>Tehtävästä toimitukseen. Käy ketju läpi: toteutus, katselmointi, integrointi ja käyttö. Jos toteutus nopeutuu mutta muutokset jonoutuvat katselmointiin tai yhteensovittamiseen, asiakkaan kokema toimitusaika ei välttämättä lyhene.</p>
+<p>DORA käsittelee AI:n hyötyjen ja toimitusjärjestelmän jännitteitä; kyseisiä yhteyksiä ei pidä esittää yksinkertaisena syy-seurauslakina. Kuvio on selittävä esimerkkiketju. Vaiheiden leveydet eivät kuvaa mitattua aikaa.</p>
+<p>Pyydä yleisöä nimeämään yksi kohta, jossa heidän työssään odotetaan. Käytännön osan rajaus ja näyttö auttavat juuri katselmoinnin ja integroinnin kohdalla. Lähde: <a href="https://dora.dev/insights/balancing-ai-tensions/" target="_blank" rel="noopener">https://dora.dev/insights/balancing-ai-tensions/</a></p></aside>
+    </section>
 
-      <section class="slide slide--poll" id="slide-8" data-title="Luetko AI-koodin?" data-section="Gallup" data-timing="0:09:00–0:09:50">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">4 / 7</p>
-          <h2>Luetko AI-koodin?</h2>
-          <ol class="poll-options">
-            <li>Kaiken</li><li>Olennaiset osat</li><li>Harvoin</li><li>En käytä AI:ta</li>
-          </ol>
-        </div>
-        <aside class="notes"><p>Tämän tehtävä on tehdä todentamisen raja näkyväksi, ei arvioida vastaajia.</p></aside>
-      </section>
+    <section class="slide " id="slide-8" data-title="Valmis tehtävä ja opittu taito ovat eri tuloksia" data-section="Mikä muuttui?" data-timing="25:00–28:00" data-note="07_learning">
+      <div class="slide__inner"><p class="eyebrow">Oppiminen on oma tuloksensa</p><h2>Valmis tehtävä ja opittu taito<br><em>ovat eri tuloksia</em></h2><figure class="learning-chart"><figcaption>Välittömän osaamiskokeen keskiarvo</figcaption><div class="chart-row"><span>AI-avulla</span><div class="bar-track"><div class="bar bar-ai" style="--value:50%"><b>50 %</b></div></div></div><div class="chart-row"><span>Ilman AI:ta</span><div class="bar-track"><div class="bar bar-human" style="--value:67%"><b>67 %</b></div></div></div><div class="chart-axis" aria-hidden="true"><span>0</span><span>25</span><span>50</span><span>75</span><span>100 %</span></div></figure><p class="bottom-line caveat">52 osallistujaa, vieras Python-kirjasto. Lyhyt koe ei mittaa pysyvää taitojen menetystä.</p></div>
+    <div class="source-line"><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/AI-assistance-coding-skills">Shen &amp; Tamkin, tammikuu 2026</a> · <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2601.20245">Tutkimus</a></div>
+<aside class="notes"><p>Oppiminen on oma tuloksensa. Tutkimuksessa 52 osallistujaa opetteli itselleen vierasta Python-kirjastoa. Tekijöiden yhteenvedon pyöristetyt välittömän osaamiskokeen keskiarvot olivat 50 % AI-avusteisessa ryhmässä ja 67 % ilman AI:ta.</p>
+<p>Ero on noin 17 prosenttiyksikköä, ei väite siitä että kaikki kehittäjät menettäisivät saman osuuden taidoistaan. Koe mittasi välitöntä osaamista kyseisessä tehtävässä, ei pysyvää taitojen menetystä. Tekijöiden laadullinen analyysi yhdisti selittävän käytön parempaan ymmärrykseen.</p>
+<p>Se ei osoita vuorovaikutustavan syyvaikutusta. Kysy, miten valmis ratkaisu ja oman ymmärryksen tarkistaminen erotetaan työssä. Palkkien asteikko on nollasta sataan prosenttiin.</p>
+<p>Lähteet: <a href="https://www.anthropic.com/research/AI-assistance-coding-skills" target="_blank" rel="noopener">https://www.anthropic.com/research/AI-assistance-coding-skills</a> ; <a href="https://arxiv.org/abs/2601.20245" target="_blank" rel="noopener">https://arxiv.org/abs/2601.20245</a></p></aside>
+    </section>
 
-      <section class="slide slide--poll" id="slide-9" data-title="Agentin PR tuotantoon?" data-section="Gallup" data-timing="0:09:50–0:10:40">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">5 / 7</p>
-          <h2>Agentin PR tuotantoon?</h2>
-          <ol class="poll-options">
-            <li>Jo nyt</li><li>Vain katselmoituna</li><li>Ei vielä</li><li>Ei koskaan</li>
-          </ol>
-          <p class="poll-qualifier">Ajattele tavallista, matalan riskin projektia: versionhallinta ja testit ovat kunnossa.</p>
-        </div>
-        <aside class="notes"><p>Tämä mittaa vaistonvaraista luottamusrajaa, ei suositeltua tuotantopolitiikkaa.</p></aside>
-      </section>
+    <section class="slide image-split" id="slide-9" data-title="AI muuttaa myös sitä, mitä kannattaa yrittää" data-section="Mikä muuttui?" data-timing="28:00–30:00" data-note="08_maintenance">
+      <img class="side-art" src="output/assets/maintenance-illustration.png" alt="Kuvitteellinen huoltotilanne: puhelin, muistiinpanot ja pumppu"><div class="slide__inner"><p class="eyebrow">Kuvitteellinen huoltoesimerkki</p><h2>AI muuttaa myös sitä,<br><em>mitä kannattaa yrittää</em></h2><blockquote class="field-note">“Pumppu A pitää<br>outoa ääntä.<br>Tarkistus perjantaina.”</blockquote><p class="image-question">Voisiko tästä syntyä<br>hyödyllinen huoltoluonnos?</p></div>
+    <aside class="notes"><p>Uusi kokeilu voi olla pieni. Tämä on kuvitteellinen huoltotyön esimerkki: muistiinpanosta syntyy ehdotus rakenteiseksi havainnoksi. Laite, havainto ja seuraava toimi ovat ihmisen tarkistettavia.</p>
+<p>Emme väitä, että kuvituksessa näkyvä järjestelmä olisi rakennettu, että laakerissa olisi vika tai että aikaa olisi säästynyt tietty määrä. Kysy, mitä asentaja korjaisi ja missä luonnos olisi hyödyllinen. Tarkoitus on näyttää, että AI:n arvo voi syntyä uuden pienen työkalun kokeilemisesta, ei vain vanhan ohjelmointitehtävän nopeuttamisesta.</p>
+<p>Palaamme samaan esimerkkiin prototypoinnin kohdalla. Kuvitus: OpenAI imagegen, 5.9.2026, esitystä varten luotu kuvitteellinen huoltotyön kuvitus.</p></aside>
+    </section>
 
-      <section class="slide slide--poll" id="slide-10" data-title="Enemmän vai parempaa koodia?" data-section="Gallup" data-timing="0:10:40–0:11:30">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">6 / 7</p>
-          <h2>Enemmän vai parempaa koodia?</h2>
-          <ol class="poll-options">
-            <li>Enemmän</li><li>Parempaa</li><li>Molempia</li><li>Ei kumpaakaan</li>
-          </ol>
-        </div>
-        <aside class="notes"><p>Tulos avaa eron paikallisen tuotoksen ja koko järjestelmän tuloksen välillä.</p></aside>
-      </section>
+    <section class="slide dark" id="slide-10" data-title="Missä seuraava kehittäjä oppii?" data-section="Mikä muuttui?" data-timing="30:00–32:00" data-note="09_learn">
+      <div class="slide__inner"><p class="eyebrow">Kokemus tarvitsee harjoitusta</p><h2>Missä seuraava<br><em>kehittäjä oppii?</em></h2><div class="learning-steps"><div><span>01</span><h3>Kokeilu</h3><p>Oma ennuste</p></div><div><span>02</span><h3>Selitys</h3><p>Miksi tämä toimii?</p></div><div><span>03</span><h3>Palaute</h3><p>Kokenut kollega</p></div><div><span>04</span><h3>Uusi yritys</h3><p>Korjattu ymmärrys</p></div></div><p class="bottom-line">Tiimi päättää, missä tälle jää tilaa.</p></div>
+    <aside class="notes"><p>Tilaa oppimiselle. Kierros on kokeile, selitä, saa palautetta ja muuta seuraavaa yritystä. Työpaikan on päätettävä, missä kokemusta syntyy ja kuka antaa palautetta.</p>
+<p>Tunnista urahuoli vähättelemättä sitä. Stanford Digital Economy Labin Yhdysvaltoja koskeva analyysi tarjoaa taustaa nuorten työntekijöiden työllisyyskehitykseen AI:lle altistuneissa ammateissa; se ei ole Suomen työmarkkinaennuste eikä yksin osoita syy-yhteyttä. Älä lisää otsikkoon yleistä väitettä junioreiden katoamisesta.</p>
+<p>Käytännön toiminta voi olla yhden suunnittelupäätöksen selittäminen katselmoinnissa ja epäonnistumistavan ennustaminen ennen testiä. Siirry paikalliseen näkökulmaan. Lähde: <a href="https://digitaleconomy.stanford.edu/news/canariesaug26/" target="_blank" rel="noopener">https://digitaleconomy.stanford.edu/news/canariesaug26/</a>
+ Dian harjoittelukierros on käytännön ehdotus.</p>
+<p>Stanford-lähde on taustaa urahuolelle, ei kierroksen vaikutustutkimus.</p></aside>
+    </section>
 
-      <section class="slide slide--poll" id="slide-11" data-title="AI-fiilis?" data-section="Gallup" data-timing="0:11:30–0:12:20">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">7 / 7</p>
-          <h2>AI-fiilis?</h2>
-          <ol class="poll-options poll-options--five">
-            <li>Innostunut</li><li>Utelias</li><li>Ristiriitainen</li><li>Huolestunut</li><li>Väsynyt</li>
-          </ol>
-        </div>
-        <aside class="notes"><p>Luo tästä erillinen suljettava kysymys. Lopussa käytetään täsmälleen samaa asteikkoa uutena kysymyksenä.</p></aside>
-      </section>
+    <section class="slide local-slide" id="slide-11" data-title="Paikallinen etu syntyy työn tuntemisesta" data-section="Mikä muuttui?" data-timing="32:00–35:00" data-note="10_local">
+      <div class="slide__inner"><p class="eyebrow">Suomen IT-ala / elokuun 2026 tilannekuva</p><h2>Paikallinen etu syntyy<br><em>työn tuntemisesta</em></h2><div class="local-layout"><div><strong class="stat">19<span> mrd €</span></strong><p>liikevaihto vuonna 2025<br><b>+5 %</b> edellisvuodesta</p><p class="local-employment">Noin 80 200 työntekijää kesäkuussa 2026</p></div><div class="local-insight"><p class="label">Mahdollisuus Lakeudella</p><p>Kuka tuntee oikean työn?</p><p>Kuka yhdistää vanhoihin järjestelmiin?</p><p>Kuka auttaa käyttöönotossa?</p></div></div><p class="bottom-line caveat">Toimialaluvut eivät erottele AI:n vaikutusta. Paikallinen mahdollisuus on esityksen tulkinta.</p></div>
+    <div class="source-line"><a target="_blank" rel="noopener" href="https://teknologiateollisuus.fi/en/economic-outlook-and-statistics/economic-outlook/information-technology-in-finland/">Teknologiateollisuus, elokuu 2026</a></div>
+<aside class="notes"><p>Suomen toimiala ja paikallinen mahdollisuus. Teknologiateollisuuden toimialakuvauksen mukaan vuoden 2025 liikevaihto oli noin 19 miljardia euroa ja kasvua noin 5 %. Kesäkuun 2026 henkilöstöluku oli noin 80 200.</p>
+<p>Nämä ovat koko toimialan lukuja, eivät AI:n vaikutuksen mittaus tai alueellinen ennuste. Oikean puolen kolme asiaa ovat esityksen tulkinta: oikean työn tunteminen, yhteydet olemassa oleviin järjestelmiin sekä käyttöönoton ja ylläpidon tuki voivat olla paikallisen tekijän vahvuuksia. Konkretisoi huoltoesimerkillä: kuka tietää miten merkinnät tehdään ja minne ne päätyvät?</p>
+<p>Päätä nykytilanneosuus tähän ajassa 35:00 ja siirry käytännön ketjuun. Lähde: <a href="https://teknologiateollisuus.fi/en/economic-outlook-and-statistics/economic-outlook/information-technology-in-finland/" target="_blank" rel="noopener">https://teknologiateollisuus.fi/en/economic-outlook-and-statistics/economic-outlook/information-technology-in-finland/</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-12" data-title="Mitä tämä huone kertoi?" data-section="Gallup" data-timing="0:12:20–0:15">
-        <div class="slide__inner synthesis-composition">
-          <p class="kicker">Kaksi minuuttia, kolme havaintoa</p>
-          <h2>Mitä tämä huone kertoi?</h2>
-          <div class="sentence-stack">
-            <p class="fragment">Tässä huoneessa on <span>_____</span> kokemusta.</p>
-            <p class="fragment">AI on <span>_____</span> osa arkea.</p>
-            <p class="fragment">Käyttö, koettu hyöty ja luottamus ovat <span>_____</span> suhteessa toisiinsa.</p>
-          </div>
-        </div>
-        <aside class="notes">
-          <p>Täydennä lauseet ääneen näkyvistä tuloksista. Älä lue jokaista prosenttia.</p>
-          <p>Siirtymä: “Te ette olleet vain yleisö. Teistä tuli tämän esityksen paikallinen aineisto.”</p>
-        </aside>
-      </section>
+    <section class="slide dark workflow-slide" id="slide-12" data-title="Yksi tehtävä alusta loppuun" data-section="AI käytännössä" data-timing="35:00–37:00" data-note="11_workflow">
+      <div class="slide__inner"><p class="eyebrow">02 / AI käytännössä</p><h2>Yksi tehtävä<br><em>alusta loppuun</em></h2><p class="workflow-problem">Huoneiston numero katoaa osoitteen tallennuksessa.</p><ol class="workflow"><li><span>01</span>Rajaa</li><li><span>02</span>Tutki</li><li><span>03</span>Toteuta</li><li><span>04</span>Tarkista</li><li><span>05</span>Seuraa</li></ol><p class="bottom-line">Codex, Claude Code ja muut repoagentit. Sama tehtävä, työkalukohtaiset käytännöt.</p></div>
+    <aside class="notes"><p>Käytännön kokonaisuus. Rajaa, tutki, toteuta, tarkista ja seuraa. Tämä ei ole vain yksi pitkä kehote: agentti lukee projektia, käyttää työkaluja, saa palautetta ja tarkistaa tuloksia.</p>
+<p>Esimerkkimme on huoneiston numeron katoaminen osoitteen tallennuksessa. Sama työtapa soveltuu Codexiin ja Claude Codeen; työkalujen ominaisuudet ja projektin ohjeet vaikuttavat yksityiskohtiin. Ihminen arvioi tavoitteen, olennaiset päätökset ja näytön.</p>
+<p>Tässä esityksessä bugi havainnollistetaan klikattavalla, paikallisella havainnollistuksella. Se ei ole väite ajetusta asiakasprojektista tai tuotantoon julkaistusta korjauksesta. Selitä, että seuraavien diojen aikana käydään läpi yksi kokonainen tehtävän ajatteluketju.</p>
+<p>Lähteet: <a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/prompting</a> ; <a href="https://code.claude.com/docs/en/common-workflows" target="_blank" rel="noopener">https://code.claude.com/docs/en/common-workflows</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-13" data-title="Tämä esitys syntyi kahdenlaisesta työstä" data-section="Paljastus" data-timing="0:15–0:18">
-        <div class="slide__inner">
-          <p class="kicker">Artefakti ensin, prosessi sitten</p>
-          <h2>Tämä esitys syntyi kahdenlaisesta työstä.</h2>
-          <div class="role-split">
-            <div class="role-split__side fragment">
-              <p class="role-split__label">Ihminen määritteli</p>
-              <p>yleisön, tavoitteen, rajat — ja hyväksyy lopputuloksen.</p>
-            </div>
-            <div class="role-split__side role-split__side--agent fragment">
-              <p class="role-split__label">Agentti toteutti</p>
-              <p>13 taustadokumentin läpikäynnin, rakenteen, HTML:n ja tarkistukset.</p>
-            </div>
-          </div>
-          <p class="landing fragment">Tekijyys ei selviä pinnasta.</p>
-        </div>
-        <div class="source-line">Tämän esityksen rakennusprosessi · 18.8.2026</div>
-        <aside class="notes">
-          <p>Tämä on tarkoituksella rehellinen vaihtoehto vahvistamattomalle projektidemolle. Näytä tarvittaessa repossa brief, punainen lanka ja lopullinen HTML rinnakkain.</p>
-          <p>Älä väitä, että agentti valitsi aiheen tai omistaa lavalla esitetyt väitteet.</p>
-        </aside>
-      </section>
+    <section class="slide brief-slide" id="slide-13" data-title="Hyvä tehtävä kertoo, miltä valmis näyttää" data-section="AI käytännössä" data-timing="37:00–39:00" data-note="12_brief">
+      <div class="slide__inner"><p class="eyebrow">01 / Rajaa</p><h2>Hyvä tehtävä kertoo,<br><em>miltä valmis näyttää</em></h2><dl class="brief"><div><dt>Ongelma</dt><dd>Huoneiston numero katoaa tallennuksessa.</dd></div><div><dt>Tavoite</dt><dd>Osoite säilyy myös uudelleenlatauksessa.</dd></div><div><dt>Raja</dt><dd>Säilytä rajapinta ja muu osoitekäytös.</dd></div><div class="brief-evidence"><dt>Näyttö</dt><dd>Toistettu virhe, regressiotarkistus, toimiva tallennus.</dd></div></dl><p class="bottom-line">“Tutki ensin syy. Tee rajattu korjaus ja kerro, miten tarkistit sen.”</p></div>
+    <aside class="notes"><p>Kirjoita valmis näkyväksi. Tehtävän neljä osaa ovat ongelma, tavoite, raja ja näyttö. Ongelma on katoava huoneiston numero.</p>
+<p>Tavoite on sen säilyminen uudelleenlatauksessa. Raja on nykyisen rajapinnan säilyttäminen, ja näyttö sisältää toiston, testin ja toimivan tallennuksen. Voit pyytää agenttia tutkimaan syyn ennen toteuttamista, jos vaikutusalue on epäselvä.</p>
+<p>Säilytä rajapinta on tässä opetusesimerkin raja, ei yleinen sääntö kaikkiin korjauksiin. Määritä konkreettinen havainto: huoneiston numero näkyy vielä uudelleenlatauksen jälkeen. Pyydä toistoa, rajattua muutosta ja sopivaa tarkistusta.</p>
+<p>Anna yleisölle 20 sekuntia muotoilla mielessään oma tehtävä näihin neljään osaan. Lähteet: <a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/prompting</a> ; <a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">https://code.claude.com/docs/en/best-practices</a></p></aside>
+    </section>
 
-      <section class="slide slide--question" id="slide-14" data-title="Ihminen vai AI on väärä kysymys" data-section="Paljastus" data-timing="0:18–0:20">
-        <div class="slide__inner question-composition">
-          <p class="kicker">Väärä binääri</p>
-          <h2>“Ihminen vai AI?” on väärä kysymys.</h2>
-          <div class="three-questions">
-            <p class="fragment">Miten työ rajattiin?</p>
-            <p class="fragment">Millä näytöllä se hyväksyttiin?</p>
-            <p class="fragment">Kuka omistaa seuraukset?</p>
-          </div>
-        </div>
-        <aside class="notes"><p>Tämä paljastus on esityksen hinge: alkuperästä prosessiin, näytöstä vastuuseen.</p></aside>
-      </section>
+    <section class="slide " id="slide-14" data-title="Projektin oma tieto agentin käyttöön" data-section="AI käytännössä" data-timing="39:00–41:00" data-note="13_context">
+      <div class="slide__inner"><p class="eyebrow">02 / Tutki</p><h2>Projektin oma tieto<br><em>agentin käyttöön</em></h2><div class="context-layout"><pre class="repo-tree" aria-label="Esimerkkiprojektin tiedostot"><code>projekti/
+├─ src/
+│  └─ address.ts
+├─ tests/
+│  └─ address.test.ts
+└─ <mark>AGENTS.md</mark>
+   <span class="code-muted">tai CLAUDE.md</span></code></pre><div class="context-copy"><p class="label">Pysyvät projektiohjeet</p><h3>Oikeat komennot.<br>Läheinen esimerkki.<br>Olennaiset rajat.</h3><p>Codex: <code>AGENTS.md</code><br>Claude Code: <code>CLAUDE.md</code></p><p class="muted">Tehtävän tavoite kuuluu pyyntöön.<br>Toistuva projektitieto ohjeisiin.</p></div></div><p class="bottom-line caveat">Tiedostot ovat opetusesimerkki. Agentti tarkistaa aina nykyisen toteutuksen.</p></div>
+    <aside class="notes"><p>Projektin konteksti. Vasemman puolen polut ovat opetusesimerkkejä, eivät väite tämän esitysrepositorion rakenteesta. Agentti tarvitsee toteutuksen, läheiset esimerkit, testit ja oikeat komennot.</p>
+<p>Codexin AGENTS.md ja Claude Coden CLAUDE.md ovat esimerkkejä pysyvien projektiohjeiden paikoista. Kirjoita niihin projektin tavat, testikomennot ja olennaiset rajat. Älä täytä ohjeita kaikella mahdollisella tai kopioi koko repoa jokaiseen pyyntöön.</p>
+<p>Viittaa löydettävään tietoon ja anna agentin tarkistaa nykyinen toteutus. Tuo ero esiin: tehtäväkohtainen tavoite kuuluu pyyntöön, toistuva projektitieto pysyviin ohjeisiin. Lähteet: <a href="https://learn.chatgpt.com/docs/agent-configuration/agents-md" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/agent-configuration/agents-md</a> ; <a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">https://code.claude.com/docs/en/best-practices</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-15" data-title="1968 ja 2026" data-section="Mikä muuttui?" data-timing="0:20–0:21:30">
-        <div class="slide__inner year-comparison">
-          <p class="kicker">Ohjelmistokriisi, uusi tuotantotapa</p>
-          <h2>Mittakaava vaihtui. Kriisin rakenne jäi.</h2>
-          <div class="year-comparison__row">
-            <div class="year-block fragment"><strong>1968</strong><span>Voimme rakentaa enemmän ohjelmistoja kuin osaamme hallita.</span></div>
-            <div class="year-arrow" aria-hidden="true">→</div>
-            <div class="year-block year-block--now fragment"><strong>2026</strong><span>Voimme generoida enemmän ohjelmistoja kuin osaamme katselmoida.</span></div>
-          </div>
-          <p class="caveat fragment">Rinnastus on retorinen tiivistys — ei väite, että vuodet olisivat sama ilmiö.</p>
-        </div>
-        <div class="source-line">NATO Software Engineering Conference, 1968</div>
-        <aside class="notes"><p>Veteraanien kanssa historiallinen nöyryys on tärkeä. AI ei ole ensimmäinen lupaus tehdä ohjelmistosta helppoa.</p></aside>
-      </section>
+    <section class="slide " id="slide-15" data-title="Työkalut tuovat tehtävän äärelle" data-section="AI käytännössä" data-timing="41:00–43:00" data-note="14_tools">
+      <div class="slide__inner"><p class="eyebrow">02 / Tutki</p><h2>Työkalut tuovat<br><em>tehtävän äärelle</em></h2><div class="tools-layout"><div class="agent-label"><span>Tehtävä</span><strong>Agentti</strong><p>Lukee, toimii,<br>tarkistaa ja jatkaa.</p></div><dl class="tool-list"><div><dt>Shell</dt><dd>Projektin komennot ja testit</dd></div><div><dt>Selain</dt><dd>Käyttäjälle näkyvä toiminta</dd></div><div><dt>MCP</dt><dd>Yhteys liitettyyn palveluun, kuten tiketteihin</dd></div><div><dt>Skill</dt><dd>Uudelleenkäytettävä työtapa ja tukiresurssit</dd></div></dl></div><p class="bottom-line">Jokainen tehtävä ei tarvitse kaikkia työkaluja.</p></div>
+    <aside class="notes"><p>Työkalut konkreettisesti. Shellillä agentti voi ajaa projektin testikomennon. Selaimella se voi tarkistaa käyttäjälle näkyvän toiminnan.</p>
+<p>MCP-yhteys voi tuoda saataville liitetyn palvelun, kuten tehtäväjärjestelmän, jos sellainen on asennettu ja sallittu. Skill kuvaa uudelleenkäytettävän työtavan ja voi sisältää tukiresursseja. Nämä eivät ole keskenään sama asia, eikä jokainen tehtävä tarvitse kaikkia.</p>
+<p>Anna tehtävän vaatimat käyttöoikeudet ja varmista, että agentti tietää missä se työskentelee. Agentin onnistumista arvioidaan tuloksesta, ei käytettyjen työkalujen määrästä. Siirry konkreettiseen virheen toistoon.</p>
+<p>Lähteet: <a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/build-skills</a> ; <a href="https://modelcontextprotocol.io/docs/develop/clients/client-best-practices" target="_blank" rel="noopener">https://modelcontextprotocol.io/docs/develop/clients/client-best-practices</a> ; <a href="https://code.claude.com/docs/en/common-workflows" target="_blank" rel="noopener">https://code.claude.com/docs/en/common-workflows</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-16" data-title="AI poistaa kitkaa, ei todellisuutta" data-section="Mikä muuttui?" data-timing="0:21:30–0:23:30">
-        <div class="slide__inner">
-          <p class="kicker">Brooksin testi, 40 vuotta myöhemmin</p>
-          <h2>AI poistaa kitkaa. Ei todellisuutta.</h2>
-          <div class="complexity-split">
-            <div class="complexity-split__column fragment">
-              <p class="column-label">Halpeni nopeasti</p>
-              <ul class="plain-list"><li>syntaksi ja API-haku</li><li>boilerplate ja käännökset</li><li>testirungot ja työkalujen käyttö</li></ul>
-            </div>
-            <div class="complexity-split__column complexity-split__column--essential fragment">
-              <p class="column-label">Pysyy vaikeana</p>
-              <ul class="plain-list"><li>mitä järjestelmän pitäisi tarkoittaa</li><li>muuttuvat ja ristiriitaiset vaatimukset</li><li>seuraukset, joita kukaan ei kirjoittanut speksiin</li></ul>
-            </div>
-          </div>
-          <p class="landing fragment">Kysymys ei ole, hävisikö kompleksisuus — vaan <strong>minne se siirtyi.</strong></p>
-        </div>
-        <div class="source-line"><a href="https://dl.icdst.org/pdfs/files3/f923b64c10c1292ad76c939911e3e3ac.pdf" target="_blank" rel="noopener">Fred Brooks, No Silver Bullet (1986)</a></div>
-        <aside class="notes"><p>AI yltää myös konseptuaaliseen työhön: se ehdottaa arkkitehtuureja ja vaatimuksia. Ehdotus ei vielä osoita, että rakenne vastaa todellisuutta.</p></aside>
-      </section>
+    <section class="slide demo-slide" id="slide-16" data-title="Tallennettu ei vielä tarkoita säilynyttä" data-section="AI käytännössä" data-timing="43:00–45:00" data-note="15_reproduce">
+      <div class="slide__inner"><p class="eyebrow">02 / Tutki / interaktiivinen opetusesimerkki</p><h2>Tallennettu ei vielä<br><em>tarkoita säilynyttä</em></h2><div class="demo-layout"><div class="browser-example"><div class="browser-top"><span aria-hidden="true">● ● ●</span> Osoitteen muokkaus</div><div class="browser-body"><p class="label">Katuosoite</p><p class="example-field">Esimerkkikatu 12</p><p class="label">Huoneisto</p><p class="example-field apartment" id="demo-apartment">B 7</p><p id="demo-status" class="demo-status" aria-live="polite">Lomakkeella arvo on vielä tallella.</p></div></div><div class="demo-explainer"><p class="label" id="demo-step-label">Vaihe 1 / 3</p><h3 id="demo-heading">Ennen tallennusta</h3><p id="demo-description">Käyttäjä on kirjoittanut huoneiston numeron.</p><div class="demo-steps" role="group" aria-label="Osoite-esimerkin vaiheet"><button type="button" data-demo-step="0" aria-pressed="true">1. Syöttö</button><button type="button" data-demo-step="1" aria-pressed="false">2. Tallennus</button><button type="button" data-demo-step="2" aria-pressed="false">3. Lataa uudelleen</button></div></div></div><p class="bottom-line caveat">Havainnollistus, ei asiakasjärjestelmä. Seuraa arvoa lomakkeesta tallennukseen ja takaisin.</p></div>
+    <aside class="notes"><p>Toista ensin. Havainnollistuksessa käyttäjä kirjoittaa huoneistoksi B 7. Tallennus näyttää onnistuneen, mutta uudelleenlatauksen jälkeen kenttä on tyhjä.</p>
+<p>Tämä on kirjoitettu opetusesimerkki, ei todellinen ruutukaappaus. Agentin pitäisi todellisessa tehtävässä havaita vastaava virhe ja seurata arvoa lomakkeesta lähetettävään tietoon, palvelimen tallennukseen ja takaisin näkymään. Älä oleta syytä pelkän oireen perusteella.</p>
+<p>Tässä seuraava dia näyttää yhden mahdollisen syyn: kenttä puuttuu muodostettavasta payloadista. Kysy, missä muissa kohdissa arvo voisi kadota. Hyvä toisto auttaa rajaamaan korjauksen ja luomaan regressiotarkistuksen.</p>
+<p>Lähde työskentelyperiaatteelle: <a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">https://code.claude.com/docs/en/best-practices</a>
+ Käytä dian painikkeita järjestyksessä: Syöttö, Tallennus, Lataa uudelleen. Painikkeet vaihtavat opetusesimerkin tilaa. Ne eivät muodosta yhteyttä palvelimeen.</p>
+<p>Voit palata ensimmäiseen vaiheeseen painamalla Syöttö.</p></aside>
+    </section>
 
-      <section class="slide slide--quote" id="slide-17" data-title="Kuka rakentaa teorian?" data-section="Mikä muuttui?" data-timing="0:23:30–0:25">
-        <div class="slide__inner quote-composition">
-          <p class="kicker">Naurin kysymys agenttiajalle</p>
-          <blockquote>Kuka rakentaa teorian järjestelmästä, jos agentti rakentaa koodin?</blockquote>
-          <p class="quote-explainer fragment">Koodi on artefakti. Teoria on ymmärrys siitä, miksi järjestelmä on tällainen — ja miten sitä muutetaan turvallisesti.</p>
-        </div>
-        <div class="source-line"><a href="https://gwern.net/doc/cs/algorithm/1985-naur.pdf" target="_blank" rel="noopener">Peter Naur, Programming as Theory Building (1985)</a></div>
-        <aside class="notes"><p>Jätä kysymys auki. AI voi heikentää teoriaa, pakottaa sen näkyväksi tai auttaa rakentamaan sitä. Organisaatio ei voi vielä olettaa synteettistä jatkuvuutta.</p></aside>
-      </section>
+    <section class="slide " id="slide-17" data-title="Pieni muutos, tarkistettava vaikutus" data-section="AI käytännössä" data-timing="45:00–47:00" data-note="16_fix">
+      <div class="slide__inner"><p class="eyebrow">03–04 / Toteuta ja tarkista</p><h2>Pieni muutos,<br><em>tarkistettava vaikutus</em></h2><div class="fix-layout"><div class="code-surface"><p class="code-caption">Korjausidea / yksinkertaistettu katkelma</p><pre><code><span class="code-muted">const</span> payload = {
+  street: form.street,
+<mark>+ apartment: form.apartment,</mark>
+};</code></pre></div><div class="check-list"><p class="label">Tarkistettava</p><p><span>01</span>Annettu huoneisto säilyy</p><p><span>02</span>Tyhjä arvo toimii</p><p><span>03</span>Uudelleenlataus säilyttää arvon</p></div></div><p class="bottom-line">Regressiotesti: epäonnistuu ennen korjausta, onnistuu sen jälkeen.</p></div>
+    <div class="source-line">Opetusesimerkki. Listatut tarkistukset eivät ole ajettujen testien raportti.</div>
+<aside class="notes"><p>Muutos ja näyttö. Koodikatkelma on korjausidean yksinkertaistettu ydin: apartment lisätään lähetettävään tietoon. Se ei esitä koko sovelluksen toteutusta.</p>
+<p>Oikealla ovat tarkistuskohteet: annettu huoneisto säilyy, tyhjä arvo toimii ja sivun uudelleenlataus säilyttää arvon. Tässä esityksessä ei väitetä näiden testien olevan ajettuja. Todellisessa työssä regressiotestin pitäisi epäonnistua ennen korjausta ja onnistua sen jälkeen, ja näkyvä tallennus pitäisi tarkistaa tarkoituksenmukaisessa ympäristössä.</p>
+<p>Yksikkötesti ei yksin takaa palvelimen tai käyttöliittymän toimintaa. Pyydä agenttia raportoimaan mitä ajettiin, tulos sekä mitä jäi tarkistamatta. Lähteet: <a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener">https://learn.chatgpt.com/docs/prompting</a> ; <a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">https://code.claude.com/docs/en/best-practices</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-18" data-title="Delegoinnin yksikkö kasvoi" data-section="Mikä muuttui?" data-timing="0:25–0:27">
-        <div class="slide__inner">
-          <p class="kicker">2022 → 2026</p>
-          <h2>Delegoinnin yksikkö kasvoi.</h2>
-          <div class="delegation-line" aria-label="Delegoinnin kehitys">
-            <div class="delegation-step fragment"><span>2022</span><strong>vastaus</strong><small>chat</small></div>
-            <div class="delegation-connector fragment" aria-hidden="true"></div>
-            <div class="delegation-step fragment"><span>2024</span><strong>muutos</strong><small>IDE-avustaja</small></div>
-            <div class="delegation-connector fragment" aria-hidden="true"></div>
-            <div class="delegation-step delegation-step--final fragment"><span>2026</span><strong>lopputulos</strong><small>repoagentti + työkalut</small></div>
-          </div>
-          <p class="landing fragment">Delegointi ei kuitenkaan ole sama asia kuin yhteinen ymmärrys.</p>
-        </div>
-        <aside class="notes"><p>Tämän dian tehtävä on kuvata laadullinen muutos ilman mallilogoseinää.</p></aside>
-      </section>
+    <section class="slide handoff-slide" id="slide-18" data-title="Hyvä luovutus auttaa katselmoimaan" data-section="AI käytännössä" data-timing="47:00–49:00" data-note="17_handoff">
+      <div class="slide__inner"><p class="eyebrow">04 / Tarkista / malliluovutus</p><h2>Hyvä luovutus<br><em>auttaa katselmoimaan</em></h2><div class="handoff-layout"><dl class="handoff"><div><dt>Syy</dt><dd>Huoneisto puuttuu lähetettävästä tiedosta.</dd></div><div><dt>Muutos</dt><dd>Kenttä mukaan osoitteen tallennukseen.</dd></div><div><dt>Näyttö</dt><dd>Ajettu komento, tulos ja havaittu selainkäytös.</dd></div></dl><div class="open-question"><p class="label">Avoin päätös</p><h3>Entä vanhat<br>puuttuvat<br>osoitetiedot?</h3><p>Uuden tallennuksen korjaus<br>ei palauta vanhaa tietoa.</p></div></div><p class="bottom-line caveat">Liitä todelliset havainnot. Kerro myös, mikä jäi tarkistamatta.</p></div>
+    <aside class="notes"><p>Luovuta arvioitava muutos. Vasemmalla ovat kuvitteellisen korjauksen syy, muutos sekä kehotus liittää oikeasti ajettu testi ja selaintarkistus. Oikealla on avoin kysymys vanhan datan korjaamisesta.</p>
+<p>Tämä ei ole oikea julkaistu pull request eikä suoritettujen tarkistusten raportti. Hyvä agentin luovutus tekee katselmoinnista helpompaa: lukija löytää syyn, muutoksen, näytön ja keskeneräiset päätökset. Vanhojen puuttuvien huoneistotietojen palautus voi vaatia erillisen päätöksen; uuden kentän tallennuksen korjaaminen ei itsessään palauta niitä.</p>
+<p>Pidä selitys lyhyenä mutta täsmällisenä. Lähteet: <a href="https://product.hubspot.com/blog/cloud-coding-agents-at-hubspot" target="_blank" rel="noopener">https://product.hubspot.com/blog/cloud-coding-agents-at-hubspot</a> ; <a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">https://code.claude.com/docs/en/best-practices</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-19" data-title="Kyvykkyys kasvoi, luotettavuus jäi rosoiseksi" data-section="Mikä muuttui?" data-timing="0:27–0:29">
-        <div class="slide__inner">
-          <p class="kicker">Nopea nousu, rosoinen rintama</p>
-          <h2>Kyvykkyys kasvoi. Luotettavuus jäi rosoiseksi.</h2>
-          <div class="benchmark-pair">
-            <div class="benchmark fragment">
-              <p class="benchmark__number">~60 → lähes 100<span>%</span></p>
-              <p>SWE-bench Verified, noin vuodessa</p>
-            </div>
-            <div class="benchmark fragment">
-              <p class="benchmark__number">12 → 66,3<span>%</span></p>
-              <p>OSWorld-agenttitehtävät — noin joka kolmas epäonnistuu yhä</p>
-            </div>
-          </div>
-          <p class="caveat fragment">Benchmark kertoo suunnan. Se ei ole tuotantolupaus eikä työpaikkaennuste.</p>
-        </div>
-        <div class="source-line"><a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">Stanford AI Index 2026</a> · maaliskuun 2026 tilanne</div>
-        <aside class="notes"><p>Nosta esiin jagged frontier: kyvykkyys ei etene tasaisesti eikä muistuta yhtenäistä ihmismäistä osaamista.</p></aside>
-      </section>
+    <section class="slide prototype-slide" id="slide-19" data-title="Prototyyppi auttaa kysymään käyttäjältä" data-section="AI käytännössä" data-timing="49:00–51:00" data-note="18_prototype">
+      <div class="slide__inner"><p class="eyebrow">Sama työtapa uuden idean kokeiluun</p><h2>Prototyyppi auttaa<br><em>kysymään käyttäjältä</em></h2><div class="prototype-layout"><blockquote class="paper-note">“Pumppu A pitää outoa ääntä. Tarkistus perjantaina.”<small>Kuvitteellinen huoltomuistiinpano</small></blockquote><div class="draft-record"><p class="label">AI:n luonnos</p><dl><div><dt>Laite</dt><dd>Pumppu A</dd></div><div><dt>Havainto</dt><dd>Poikkeava ääni</dd></div><div><dt>Seuraava toimi</dt><dd>Tarkistus perjantaina</dd></div></dl></div></div><div class="prototype-question"><strong>Mitä asentaja korjaisi?</strong><span>Selaintarkistus osoittaa toiminnan.<br>Käyttäjäkokeilu kertoo hyödyllisyydestä.</span></div></div>
+    <aside class="notes"><p>Prototyypin käyttäjäpalaute. Palaa kuvitteelliseen huoltoesimerkkiin. Muistiinpano tuottaa luonnoksen, jonka asentaja korjaa.</p>
+<p>Agentti voi auttaa tekemään pienen käyttöliittymän, tarkistamaan selaimessa että muokkaus toimii ja korjaamaan löydetyn virheen. Käyttäjäkokeilu vastaa eri kysymykseen: onko luonnoksesta hyötyä ja vastaavatko kentät oikeaa työtä? Esimerkiksi epätavallinen ääni ei vielä ole diagnoosi.</p>
+<p>Pyydä käyttäjää näyttämään, mitä hän muuttaisi. Seuraava pieni muutos perustuu tähän havaintoon. Emme väitä, että kuvitteellinen palvelu olisi julkaistu tai säästäisi tietyn ajan.</p>
+<p>Näin sama rajaus–näyttö–palaute-työtapa palvelee myös uuden työkalun kokeilemista.</p></aside>
+    </section>
 
-      <section class="slide" id="slide-20" data-title="Luotettava lopputulos tarvitsee järjestelmän" data-section="Työnkulku" data-timing="0:29–0:31:30">
-        <div class="slide__inner">
-          <p class="kicker">Ei taikapromptia vaan ohjausjärjestelmä</p>
-          <h2>Luotettava lopputulos tarvitsee ympärilleen järjestelmän.</h2>
-          <div class="control-loop" aria-label="AI-avusteisen kehityksen ohjaussilmukka">
-            <div class="control-loop__node fragment"><span>1</span><strong>Tavoite</strong><small>rajat ja hyväksymiskriteerit</small></div>
-            <div class="control-loop__node fragment"><span>2</span><strong>Paikallinen totuus</strong><small>repo, domain, työkalut</small></div>
-            <div class="control-loop__node fragment"><span>3</span><strong>Agentti</strong><small>suunnittelee ja toteuttaa</small></div>
-            <div class="control-loop__node fragment"><span>4</span><strong>Näyttö</strong><small>testit, selain, lokit</small></div>
-            <div class="control-loop__node fragment"><span>5</span><strong>Ihmisen harkinta</strong><small>hyväksyy ja oppii</small></div>
-          </div>
-          <p class="landing fragment">Laita deterministinen selkäranka epädeterministisen työntekijän ympärille.</p>
-        </div>
-        <div class="source-line"><a href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener">OpenAI, Harness engineering (2026)</a> · <a href="https://product.hubspot.com/blog/cloud-coding-agents-at-hubspot" target="_blank" rel="noopener">HubSpot, Cloud Coding Agents (2026)</a></div>
-        <aside class="notes"><p>Mainitse skills, MCP, selain ja subagentit vain näiden toimintojen toteuttajina. Tämä ei ole tuoteglossaario.</p></aside>
-      </section>
+    <section class="slide " id="slide-20" data-title="Rinnakkaisuus auttaa erillisissä tehtävissä" data-section="AI käytännössä" data-timing="51:00–52:30" data-note="19_parallel">
+      <div class="slide__inner"><p class="eyebrow">Useampi agentti / worktree = erillinen työkopio</p><h2>Rinnakkaisuus auttaa<br><em>erillisissä tehtävissä</em></h2><div class="parallel-layout"><div class="branches"><div><span>Worktree A</span><h3>Regressiotesti</h3><code>tests/address.test.ts</code></div><div><span>Worktree B</span><h3>Käyttöohje</h3><code>docs/address.md</code></div></div><div class="merge-result"><p class="label">Yhteinen lopputulos</p><h3>Katselmointi<br>ja yhdistäminen</h3><p>Sen jälkeen yhteiset tarkistukset.</p></div></div><p class="bottom-line caveat">Sama tiedosto tai sama käyttäytyminen vaatii yhteensovittamista. Lisää agentteja vasta, kun työnjako on selvä.</p></div>
+    <aside class="notes"><p>Rinnakkainen työ. Erilliset työpuut voivat auttaa, kun tehtävät ovat aidosti erilliset. Kuvion esimerkissä yksi muutos lisää osoitteen regressiotestin ja toinen päivittää käyttöohjeen.</p>
+<p>Molemmat katselmoidaan ja yhdistetään, minkä jälkeen ajetaan yhteiset tarkistukset. Jos kaksi agenttia muuttaa samaa tiedostoa tai samaa käyttäytymistä, tarvitaan työnjako ja yhteensovitus. Erillinen worktree eristää työkopion, mutta ei poista ristiriitaisten ratkaisujen ongelmaa.</p>
+<p>Älä väitä lineaarista nopeushyötyä agenttien määrästä. Aloita yhdestä tehtävästä ja lisää rinnakkaisuutta vasta, kun riippuvuudet ovat selvät. Lähde: <a href="https://code.claude.com/docs/en/common-workflows" target="_blank" rel="noopener">https://code.claude.com/docs/en/common-workflows</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-21" data-title="Frontier on todellinen, mutta se ei ole mediaani" data-section="Työnkulku" data-timing="0:31:30–0:34">
-        <div class="slide__inner">
-          <p class="kicker">Kaksi samanaikaista todellisuutta</p>
-          <h2>Frontier on todellinen. Se ei ole mediaani.</h2>
-          <div class="frontier-grid">
-            <div class="frontier-grid__side fragment">
-              <p class="column-label">Rakennettu ympäristö</p>
-              <p class="stat-line"><strong>~1 M</strong><span>riviä, 0 käsin kirjoitettua sovelluskoodia</span></p>
-              <p class="stat-line"><strong>7 000</strong><span>yhdistettyä täysin AI-generoitua PR:ää</span></p>
-            </div>
-            <div class="frontier-grid__side frontier-grid__side--median fragment">
-              <p class="column-label">Laajempi käytäntö</p>
-              <p class="stat-line"><strong>63 %</strong><span>harvoin tai ei koskaan täyttä autopilottia</span></p>
-              <p class="stat-line"><strong>68 %</strong><span>mieluummin yksi ennustettava agentti</span></p>
-            </div>
-          </div>
-          <p class="landing fragment">Pitkä delegointi on mahdollista, kun ympäristö tekee siitä turvallista.</p>
-        </div>
-        <div class="source-line"><a href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener">OpenAI, 11.2.2026</a> · <a href="https://product.hubspot.com/blog/cloud-coding-agents-at-hubspot" target="_blank" rel="noopener">HubSpot, 23.1.2026</a> · <a href="https://stackoverflow.blog/2026/05/27/agents-on-a-leash-agentic-ai-remains-mostly-monitored-at-work/" target="_blank" rel="noopener">Stack Overflow pulse, huhtikuu 2026</a></div>
-        <aside class="notes"><p>OpenAI ja HubSpot ovat ensikäden poikkeustapauksia, eivät kontrolloituja tuottavuusvertailuja. Niiden arvo on kuvata täydentävä infrastruktuuri.</p></aside>
-      </section>
+    <section class="slide dark" id="slide-21" data-title="Julkaisun jälkeen työ jatkuu" data-section="AI käytännössä" data-timing="52:30–54:00" data-note="20_after_release">
+      <div class="slide__inner"><p class="eyebrow">05 / Seuraa</p><h2>Julkaisun jälkeen<br><em>työ jatkuu</em></h2><ol class="operation-list"><li><span>01</span><h3>Havainto</h3><p>Käyttäjä korjaa<br>huoltoluonnosta.</p></li><li><span>02</span><h3>Tutkiminen</h3><p>Miksi sama virhe<br>toistuu?</p></li><li><span>03</span><h3>Korjaus</h3><p>Rajattu muutos<br>ja tarkistus.</p></li><li><span>04</span><h3>Päätös</h3><p>Omistaja arvioi<br>julkaisun.</p></li></ol><p class="bottom-line">Sovi mitä seurataan, kuka saa ilmoituksen ja kuka toimii.</p></div>
+    <aside class="notes"><p>Julkaisun jälkeinen kierros. Havainto voi olla virheilmoitus tai käyttäjän toistuva korjaus huoltoluonnokseen. Agentti voi auttaa tutkimaan havaintoa ja valmistelemaan rajatun korjauksen.</p>
+<p>Sovi mitä seurataan, kuka saa ilmoituksen ja kuka tekee julkaisupäätöksen. Pelkkä automaattinen tarkistus ilman omistajaa ei takaa, että ongelma tulee käsitellyksi. Käytä samaa ketjua: havainto, tutkiminen, pieni muutos ja tarkistus.</p>
+<p>Julkaisu ja käyttö ovat osa elinkaarta; tämä dia ei tarkoita, että agentti saisi automaattisesti julkaista kaikki muutokset. Esimerkki on työskentelymalli, ei tässä tehtävässä käynnistetty seuranta. Siirry lopuksi siihen, miten oma ymmärrys säilyy mukana.</p></aside>
+    </section>
 
-      <section class="slide" id="slide-22" data-title="Autonomia valitaan seurauksen mukaan" data-section="Työnkulku" data-timing="0:34–0:35:30">
-        <div class="slide__inner autonomy-composition">
-          <p class="kicker">Autonomia ei ole yksi prosentti</p>
-          <h2>Autonomia valitaan seurauksen mukaan.</h2>
-          <div class="autonomy-axis fragment"><span>Pieni vaikutus</span><i style="--position: 24%"></i><span>Laaja vaikutus</span><b>blast radius</b></div>
-          <div class="autonomy-axis fragment"><span>Helppo perua</span><i style="--position: 32%"></i><span>Vaikea perua</span><b>palautettavuus</b></div>
-          <div class="autonomy-axis fragment"><span>Kone mitattavissa</span><i style="--position: 46%"></i><span>Subjektiivinen / viiveellä</span><b>arvioitavuus</b></div>
-          <div class="autonomy-axis fragment"><span>Kertakäyttöinen</span><i style="--position: 68%"></i><span>Vuosien järjestelmä</span><b>elinkaari</b></div>
-          <p class="landing fragment">Mitä enemmän oikealle, sitä enemmän näyttöä, hyväksyntää ja ihmisen harkintaa.</p>
-        </div>
-        <aside class="notes"><p>Korosta, että samalle mallille sopii eri autonomia eri tehtävissä. Tuotantokirjoitus ja moraalinen vastuu eivät ole sama ulottuvuus.</p></aside>
-      </section>
+    <section class="slide question-slide blue" id="slide-22" data-title="Entä jos huoneisto on tyhjä?" data-section="AI käytännössä" data-timing="54:00–55:00" data-note="21_understand">
+      <div class="slide__inner"><p class="eyebrow">Yksi päätös, jonka osaat selittää</p><h2>Entä jos<br>huoneisto<br><em>on tyhjä?</em></h2><p class="question-prompt">Ennusta lopputulos.<br>Selitä miksi.<br>Tarkista ennuste.</p></div>
+    <aside class="notes"><p>Yksi opittava päätös. Kysy: mitä rikkoutuisi, jos huoneisto olisi tyhjä? Anna hetki ennustamiseen.</p>
+<p>Selitä omin sanoin, mitä tietoa järjestelmä lähettää ja miten se näkyy takaisin. Tarkista ennuste testillä tai yhdessä toisen kehittäjän kanssa. Näin AI:n käyttö ja oppiminen voidaan yhdistää konkreettiseen tilanteeseen.</p>
+<p>Kaikkea ei tarvitse kirjoittaa itse, mutta jokaisesta tehtävästä voi valita yhden päätöksen, jonka ymmärtää. Tämä on käytännön ehdotus, ei tutkimuksessa todistettu yleinen oppimismenetelmä. Käytännön osuus päättyy ajassa 55:00.</p>
+<p>Lähde oppimisen taustalle: <a href="https://www.anthropic.com/research/AI-assistance-coding-skills" target="_blank" rel="noopener">https://www.anthropic.com/research/AI-assistance-coding-skills</a></p></aside>
+    </section>
 
-      <section class="slide" id="slide-23" data-title="Onko se nopeampaa?" data-section="Tuottavuus" data-timing="0:35:30–0:38">
-        <div class="slide__inner">
-          <p class="kicker">Sama kysymys, eri rajat</p>
-          <h2>Onko se nopeampaa? Kyllä. Ei. Riippuu rajasta.</h2>
-          <div class="evidence-duel">
-            <div class="evidence-duel__side fragment">
-              <p class="evidence-duel__number evidence-duel__number--positive">+26,08 %</p>
-              <p>enemmän valmiita tehtäviä 4 867 kehittäjän kolmessa kenttäkokeessa</p>
-              <small>Microsoft Research · julkaistu 2025</small>
-            </div>
-            <div class="evidence-duel__side evidence-duel__side--negative fragment">
-              <p class="evidence-duel__number">−19 %</p>
-              <p>hitaampia 16 kokeneella kehittäjällä tutuissa avoimen lähdekoodin repoissa</p>
-              <small>METR · early-2025 työkalut</small>
-            </div>
-          </div>
-          <p class="landing fragment">Ristiriita ei ole virhe. Se on mittausrajan sisältö.</p>
-        </div>
-        <div class="source-line"><a href="https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/" target="_blank" rel="noopener">Microsoft Research</a> · <a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/" target="_blank" rel="noopener">METR</a></div>
-        <aside class="notes">
-          <p>Älä sano “AI nopeuttaa 26 %” tai “AI hidastaa 19 %”. Nimeä osallistujat, tehtävät ja lopputulosraja.</p>
-          <p>METR arvioi myöhemmin, että 2026 työkaluilla vaikutus on todennäköisesti parempi, mutta uusi tutkimus kärsi valikoitumisesta eikä antanut luotettavaa nykyarviota.</p>
-        </aside>
-      </section>
+    <section class="slide " id="slide-23" data-title="Seuraava hyödyllinen tehtävä" data-section="Loppu" data-timing="55:00–56:00" data-note="22_start">
+      <div class="slide__inner"><p class="eyebrow">Mitä kokeilet seuraavaksi?</p><h2>Seuraava<br><em>hyödyllinen tehtävä</em></h2><ol class="takeaways"><li><span>01</span><div><h3>Rajaa tehtävä</h3><p>Yksi havaittava ongelma.</p></div></li><li><span>02</span><div><h3>Määritä näyttö</h3><p>Mistä tiedät, että se toimii?</p></div></li><li><span>03</span><div><h3>Arvioi muutos</h3><p>Ymmärrätkö olennaisen päätöksen?</p></div></li></ol></div>
+    <aside class="notes"><p>Seuraava hyödyllinen tehtävä. Rajaa tehtävä, määritä näyttö ja arvioi muutos. Palaa osoite-esimerkkiin: yksi toistettava virhe, selkeä säilymisen ehto, pieni korjaus ja tarkistus.</p>
+<p>Pyydä yleisöä valitsemaan mielessään yksi oma tehtävä, jossa tätä voisi kokeilla. Seuraava dia avaa loppugallupin ajassa 56:00. Palaa päätösdiaan 59:00.</p></aside>
+    </section>
 
-      <section class="slide" id="slide-24" data-title="Tehtävä voi nopeutua ilman että järjestelmä nopeutuu" data-section="Tuottavuus" data-timing="0:38–0:40">
-        <div class="slide__inner boundary-composition">
-          <p class="kicker">Mittaa oikea raja</p>
-          <h2>Tehtävä voi nopeutua ilman, että järjestelmä nopeutuu.</h2>
-          <div class="boundary-line" aria-label="Tuottavuuden mittausrajat">
-            <div class="boundary fragment"><strong>Minä</strong><span>kirjoitin nopeammin</span></div>
-            <div class="boundary fragment"><strong>Tiimi</strong><span>katselmoi enemmän</span></div>
-            <div class="boundary fragment"><strong>Tuote</strong><span>pääsi käyttäjälle</span></div>
-            <div class="boundary fragment"><strong>Elinkaari</strong><span>pysyi ymmärrettävänä</span></div>
-          </div>
-          <p class="big-question fragment">Nopeammin kenelle, missä tehtävässä, millä rajalla?</p>
-        </div>
-        <div class="source-line"><a href="https://dora.dev/research/2025/dora-report/" target="_blank" rel="noopener">DORA, State of AI-assisted Software Development 2025</a></div>
-        <aside class="notes"><p>DORA kuvaa AI:ta vahvistimena: läpimeno voi kasvaa samalla kun toimitusvakaus heikkenee. Hyödyt riippuvat ympäröivästä järjestelmästä.</p></aside>
-      </section>
+    <section class="slide gallup blue" id="slide-24" data-title="Palataan huoneen fiilikseen" data-section="Loppugallup" data-timing="56:00–59:00">
+      <div class="slide__inner"><p class="eyebrow">3 minuuttia yhdessä</p><h2>Palataan<br><em>huoneen fiilikseen</em></h2><a class="gallup-link" href="https://gallup.koodattu.dev" target="_blank" rel="noopener">gallup.koodattu.dev <span aria-hidden="true">↗</span></a><p class="gallup-caption">Loppugallup ja tulokset samassa palvelussa.</p><p class="gallup-next">Millainen keskustelu tästä jatkuu?</p></div>
+    <aside class="notes"><p>56:00–59:00. Avaa gallup.koodattu.dev ja käytä samaa fiilisasteikkoa kuin alussa. Kommentoi aitoja tuloksia, myös ristiriitaisia.</p>
+<p>Tämä on kuva tästä huoneesta, ei kontrolloitu vaikuttavuuskoe. Palaa päätösdiaan ajassa 59:00.</p></aside>
+    </section>
 
-      <section class="slide" id="slide-25" data-title="Pullonkaula siirtyi" data-section="Tuottavuus" data-timing="0:40–0:42">
-        <div class="slide__inner bottleneck-composition">
-          <p class="kicker">Enemmän syötettä, sama portti</p>
-          <h2>Pullonkaula siirtyi.</h2>
-          <div class="flow-bars">
-            <div class="flow-stage fragment"><span>Generointi</span><i class="flow-stage__bar flow-stage__bar--wide"></i><b>↑</b></div>
-            <div class="flow-stage fragment"><span>Katselmointi</span><i class="flow-stage__bar flow-stage__bar--narrow"></i><b>→</b></div>
-            <div class="flow-stage fragment"><span>Testaus & integraatio</span><i class="flow-stage__bar flow-stage__bar--narrower"></i><b>→</b></div>
-            <div class="flow-stage fragment"><span>Julkaisupäätös</span><i class="flow-stage__bar flow-stage__bar--gate"></i><b>1</b></div>
-          </div>
-          <p class="landing fragment">Mallin nopeus ei poista organisaation rajapintoja.</p>
-        </div>
-        <aside class="notes"><p>Tuottavuuden J-käyrä: täydentävät investoinnit prosessiin, osaamiseen, arkkitehtuuriin ja mittaamiseen tulevat ennen koko hyödyn näkyvyyttä.</p></aside>
-      </section>
+    <section class="slide dark closing-slide" id="slide-25" data-title="Koodi halpeni. Vastuu ei." data-section="Loppu" data-timing="59:00–60:00" data-note="23_close">
+      <div class="slide__inner"><p class="eyebrow">Lakeus-Devaus 2026</p><h2>Koodi<br>halpeni.<br><em>Vastuu ei.</em></h2><p class="closing-invitation">Yksi hyödyllinen tehtävä.<br>Lopputulos, jonka voit tarkistaa.</p></div>
+    <aside class="notes"><p>Päätös. Anna lauseelle tilaa: koodi halpeni, vastuu ei. Se on esityksen tiivistävä tulkinta, ei universaali kustannusmittaus.</p>
+<p>Käytännön kutsu on valita hyödyllinen tehtävä ja tehdä lopputulos tarkistettavaksi. Kiitä yleisöä ja jatka keskustelua. Varsinainen tunnin kokonaisuus päättyy tähän.</p>
+<p>Mahdollinen lisäpalaute pysyy gallup.koodattu.dev-palvelussa.</p></aside>
+    </section>
 
-      <section class="slide slide--quote" id="slide-26" data-title="AI-slop on siirretty kustannus" data-section="Arvioinnin hinta" data-timing="0:42–0:44">
-        <div class="slide__inner quote-composition">
-          <p class="kicker">Tarkka määritelmä</p>
-          <blockquote>AI-slop ei ole tyyli. Se on tuottajan säästämä aika, joka siirretään rajattomana arviointikustannuksena muille.</blockquote>
-          <div class="cost-recipients">
-            <span class="fragment">katselmoijalle</span><span class="fragment">ylläpitäjälle</span><span class="fragment">käyttäjälle</span><span class="fragment">julkisuudelle</span>
-          </div>
-          <p class="landing fragment">Älä tee omasta nopeudestasi toisen review-velkaa.</p>
-        </div>
-        <div class="source-line"><a href="https://survey.stackoverflow.co/2025/ai" target="_blank" rel="noopener">Stack Overflow Developer Survey 2025</a> · 66 %: “melkein oikein” -vastaukset, 45 %: korjaaminen vie aikaa</div>
-        <aside class="notes"><p>Älä käytä slopia ihmisten, aloittelijoiden tai kaiken AI-avusteisen työn pilkkaamiseen. Kritiikin kohde on prosessi ja ulkoistettu kustannus.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-27" data-title="Lähettäminen on halpaa, katselmointi on rajattu resurssi" data-section="Arvioinnin hinta" data-timing="0:44–0:46:30">
-        <div class="slide__inner policy-composition">
-          <p class="kicker">Kolme politiikkaa, sama talous</p>
-          <h2>Lähettäminen on halpaa. Katselmointi on rajattu resurssi.</h2>
-          <div class="policy-lines">
-            <div class="policy-line fragment"><strong>Godot</strong><span>rajoittaa olennaisesti generoitua koodia ja suojaa ylläpitäjäpolkua</span></div>
-            <div class="policy-line fragment"><strong>Linux</strong><span>sallii työkalut, mutta vaatii ymmärryksen, avoimuuden ja puolustettavan näytön</span></div>
-            <div class="policy-line fragment"><strong>ESLint</strong><span>sallii avun hyväksytyissä töissä, ihmisen katselmoinnilla ja viestinnällä</span></div>
-          </div>
-          <p class="landing fragment">Eri portit. Sama niukkuus: pätevä ihmishuomio.</p>
-        </div>
-        <div class="source-line"><a href="https://godotengine.org/article/contribution-policy-2026/" target="_blank" rel="noopener">Godot, 30.6.2026</a> · <a href="https://kernel.org/doc/html/next/process/generated-content.html" target="_blank" rel="noopener">Linux guidelines</a> · <a href="https://eslint.org/docs/latest/contribute/ai-policy" target="_blank" rel="noopener">ESLint policy</a></div>
-        <aside class="notes"><p>Älä tiivistä tätä muotoon “open source kieltää AI:n”. Politiikat eroavat, mutta kaikki suojaavat reviewer-kaistaa ja vastuun ketjua.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-28" data-title="Halpa toteutus paljastaa tuotekysymyksen" data-section="Arvo"
-        data-timing="0:46:30–0:48:30">
-        <div class="slide__inner product-test-composition">
-          <p class="kicker">Kun “voimmeko rakentaa?” ei enää pysäytä</p>
-          <h2>Halpa toteutus paljastaa tuotekysymyksen nopeammin.</h2>
-          <div class="product-tests">
-            <p class="fragment"><span>Peli</span>Onko se oikeasti hauska?</p>
-            <p class="fragment"><span>SaaS</span>Onko ongelma uuden tilauksen arvoinen?</p>
-            <p class="fragment"><span>Sisäinen työkalu</span>Paraneeko työ, kun ylläpito ja omistajuus lasketaan mukaan?</p>
-          </div>
-          <p class="big-question fragment">Kun kuka tahansa voi rakentaa, miksi juuri tätä käytettäisiin?</p>
-        </div>
-        <aside class="notes"><p>Tämä on urahuolikeskustelun paras tuoteoivallus: implementaation esteen lasku tuo arvon testin aikaisemmin vastaan.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-29" data-title="SaaS ei kuole, ohut ominaisuus halpenee" data-section="Arvo" data-timing="0:48:30–0:50:30">
-        <div class="slide__inner">
-          <p class="kicker">SaaSpocalypse, ilman hautajaisia</p>
-          <h2>SaaS ei kuole. Ohut ominaisuus halpenee.</h2>
-          <div class="durability-split">
-            <div class="durability-split__side fragment">
-              <p class="column-label">Enemmän paineessa</p>
-              <p>geneerinen wrapper</p><p>yksi CRUD-ominaisuus</p><p>helppo vaihtaa pois</p>
-            </div>
-            <div class="durability-split__side durability-split__side--durable fragment">
-              <p class="column-label">Sitkeämpi arvo</p>
-              <p>järjestelmän data ja historia</p><p>työnkulkujen integraatio</p><p>turva, tuki ja vastuu</p>
-            </div>
-          </div>
-          <p class="landing fragment">Tilaus ei maksa pelkästä käyttöliittymästä. Sen pitää maksaa omistetusta lopputuloksesta.</p>
-        </div>
-        <div class="source-line"><a href="https://www.ncsc.gov.uk/blogs/vibe-check-ai-may-replace-saas-but-not-for-a-while" target="_blank" rel="noopener">UK NCSC, Vibe check: AI may replace SaaS (but not for a while), 24.3.2026</a></div>
-        <aside class="notes"><p>NCSC puhuu muuttuvasta buy/build/go-without-käyrästä, ei äkillisestä CRM:n vibe-koodauksesta. Muutos on vuosien, ei yhden kvartaalin.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-30" data-title="Kuka oppii arvioimaan, jos harjoitustyö katoaa?" data-section="Ihmiset" data-timing="0:50:30–0:52">
-        <div class="slide__inner apprenticeship-composition">
-          <p class="kicker">Junioripolun kaksoistehtävä</p>
-          <h2>Kuka oppii arvioimaan, jos harjoitustyö katoaa?</h2>
-          <div class="apprenticeship-flow">
-            <div class="apprenticeship-step fragment"><strong>“Tylsä” tiketti</strong><span>tuottaa hyötyä</span></div>
-            <div class="plus fragment">+</div>
-            <div class="apprenticeship-step fragment"><strong>Toisto + katselmointi</strong><span>rakentaa arviointikykyä</span></div>
-            <div class="equals fragment">=</div>
-            <div class="apprenticeship-step apprenticeship-step--result fragment"><strong>Tuleva seniori</strong><span>osaa epäillä oikeasta kohdasta</span></div>
-          </div>
-          <p class="landing fragment">Jos tehtävä poistuu, oppimisen funktio pitää rakentaa tarkoituksella uudelleen.</p>
-        </div>
-        <div class="source-line"><a href="https://godotengine.org/article/contribution-policy-2026/" target="_blank" rel="noopener">Godot Foundation 2026</a> · <a href="https://www.microsoft.com/en-us/research/publication/the-impact-of-generative-ai-on-critical-thinking-self-reported-reductions-in-cognitive-effort-and-confidence-effects-from-a-survey-of-knowledge-workers/" target="_blank" rel="noopener">Microsoft Research & CMU, CHI 2025</a></div>
-        <aside class="notes"><p>Lähteet eivät todista pysyvää deskillingiä. Ne riittävät tekemään oppimisesta eksplisiittisen suunnittelukysymyksen.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-31" data-title="AI muuttaa työtä kahdesti" data-section="Ihmiset" data-timing="0:52–0:53">
-        <div class="slide__inner double-change-composition">
-          <p class="kicker">Kyvykkyys ja odotus</p>
-          <h2>AI muuttaa työtä kahdesti.</h2>
-          <div class="double-change">
-            <p class="fragment"><strong>1</strong><span>sen kautta, mitä se jo osaa tehdä</span></p>
-            <p class="fragment"><strong>2</strong><span>sen kautta, mitä uskomme sen pian osaavan</span></p>
-          </div>
-          <p class="change-effects fragment">Odotus muuttaa jo nyt oppimista, rekrytointia, luottamusta ja tapaa kohdella toisiamme.</p>
-        </div>
-        <aside class="notes"><p>Tämä on laadullinen, ei ennustava väite. Henkilökohtainen pelko voi olla rationaalinen, vaikka makrotulos on epävarma.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-32" data-title="Suomen IT-markkina ei ole yksi käyrä" data-section="Suomi ja Lakeus" data-timing="0:53–0:54">
-        <div class="slide__inner finland-composition">
-          <p class="kicker">Paine on todellinen, syy ei ole yksi</p>
-          <h2>Suomen IT-markkina ei ole yksi käyrä.</h2>
-          <div class="finland-stats">
-            <p class="fragment"><strong>&gt;20 mrd €</strong><span>IT-palvelujen ja ohjelmistojen liikevaihto 2025</span><small>noin +9 %</small></p>
-            <p class="fragment"><strong>79 200</strong><span>alan henkilöstö Suomessa 2026</span><small>80 800 vuonna 2025</small></p>
-            <p class="fragment"><strong>↕</strong><span>yritykset raportoivat yhtä aikaa heikkoa kysyntää, tehokkuutta, rakennemuutosta ja AI-investointeja</span><small>eri jaksot, eri liiketoiminnat</small></p>
-          </div>
-          <p class="landing fragment">AI on osa muutosta — ei riittävä yhden rivin syy.</p>
-        </div>
-        <div class="source-line"><a href="https://teknologiateollisuus.fi/en/economic-outlook-and-statistics/economic-outlook/information-technology-in-finland/" target="_blank" rel="noopener">Teknologiateollisuus ry, 2026</a> · aineistotilanne 15.8.2026</div>
-        <aside class="notes"><p>Aloita sektorikuvasta, älä nimetyistä yhtiöistä. Liikevaihdon kasvu voi elää samaan aikaan käyttöasteen, katteen ja työllisyyden heikkouden kanssa.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-33" data-title="AI on paine ja tuote" data-section="Suomi ja Lakeus" data-timing="0:54–0:55">
-        <div class="slide__inner pressure-product-composition">
-          <p class="kicker">Etelä-Pohjanmaan kysymys</p>
-          <h2>AI on paine ja tuote.</h2>
-          <div class="pressure-product">
-            <div class="fragment"><p class="column-label">Paine vanhalle mallille</p><p>enemmän tulosta per euro</p><p>geneerinen toteutus helpompi tehdä itse</p><p>tunti- ja paikkahinnoittelu tarkasteluun</p></div>
-            <div class="fragment"><p class="column-label">Kysyntä uudelle mallille</p><p>data, arkkitehtuuri ja turvallisuus</p><p>integraatio ja muutosjohtaminen</p><p>omistettu, mitattava lopputulos</p></div>
-          </div>
-          <p class="regional-question fragment">Mistä alueellisen ohjelmistoyrityksen luottamusmoat syntyy?</p>
-          <p class="regional-answer fragment">Domainista. Läheisyydestä. Maineesta. Halusta omistaa tylsäkin järjestelmä demon jälkeen.</p>
-        </div>
-        <aside class="notes"><p>Paikallisuus ei muuta teknisiä lakeja. Se voi olla etu silloin, kun konteksti, pääsy käyttäjiin, luottamus ja pitkä omistajuus korostuvat.</p></aside>
-      </section>
-
-      <section class="slide" id="slide-34" data-title="Mikä on nyt niukkaa?" data-section="Synteesi" data-timing="0:55–0:56">
-        <div class="slide__inner scarcity-composition">
-          <p class="kicker">Kun outputia on liikaa</p>
-          <h2>Mikä on nyt niukkaa?</h2>
-          <div class="scarcity-words">
-            <span class="fragment">hyvät ongelmat</span>
-            <span class="fragment">tuoteharkinta</span>
-            <span class="fragment">luottamus</span>
-            <span class="fragment">huomio & jakelu</span>
-            <span class="fragment">omistajuus</span>
-          </div>
-          <p class="landing fragment">Niukkuus ei kadonnut. Se vaihtoi paikkaa.</p>
-        </div>
-        <aside class="notes"><p>Jos käytössä on live-äänestys, tämän voi kysyä yleisöltä ennen vastausten paljastamista.</p></aside>
-      </section>
-
-      <section class="slide slide--recap" id="slide-35" data-title="Koodi halpeni, vastuu ei" data-section="Loppu" data-timing="0:56–0:57:30">
-        <div class="slide__inner recap-composition">
-          <p class="kicker">Kolme johtopäätöstä</p>
-          <div class="recap-lines">
-            <p class="fragment"><span class="recap-number">1</span><span class="recap-copy"><strong>Muutos on tosi.</strong> Plausible software ja repotason toiminta ovat paljon saavutettavampia.</span></p>
-            <p class="fragment"><span class="recap-number">2</span><span class="recap-copy"><strong>Vanhat ongelmat selvisivät.</strong> Vaatimukset, integraatio, muutos ja ylläpito eivät kadonneet.</span></p>
-            <p class="fragment"><span class="recap-number">3</span><span class="recap-copy"><strong>Pullonkaula siirtyi.</strong> Harkinta, näyttö, luottamus, huomio ja omistajuus korostuvat.</span></p>
-          </div>
-          <p class="thesis-line thesis-line--recap fragment">Koodi halpeni. <span>Vastuu ei.</span></p>
-        </div>
-        <aside class="notes"><p>Pidä tämä tiukkana. Älä avaa uusia sivupolkuja. Siirry suoraan samaan fiiliskysymykseen.</p></aside>
-      </section>
-
-      <section class="slide slide--poll" id="slide-36" data-title="AI-fiilis, nyt?" data-section="Loppu" data-timing="0:57:30–0:59">
-        <div class="slide__inner poll-composition">
-          <p class="poll-count">Sama kysymys · uusi hetki</p>
-          <h2>AI-fiilis, nyt?</h2>
-          <ol class="poll-options poll-options--five">
-            <li>Innostunut</li><li>Utelias</li><li>Ristiriitainen</li><li>Huolestunut</li><li>Väsynyt</li>
-          </ol>
-          <p class="poll-qualifier">Ristiriitaisempi olo voi tarkoittaa, että keskustelu parani.</p>
-        </div>
-        <aside class="notes"><p>Vertaa vain suurimpia ryhmiä. Tämä ei ole kontrolloitu ennen/jälkeen-mittaus.</p></aside>
-      </section>
-
-      <section class="slide slide--final" id="slide-37" data-title="Minkä seurauksen olet valmis omistamaan?" data-section="Loppu" data-timing="0:59–1:00">
-        <div class="slide__inner final-composition">
-          <div class="final-lines">
-            <p class="fragment">Koodia syntyy enemmän.</p>
-            <p class="fragment">Varmuus ei synny samalla nopeudella.</p>
-            <p class="fragment">Joku omistaa seuraukset joka tapauksessa.</p>
-          </div>
-          <h2 class="fragment">Minkä seurauksen sinä olet valmis omistamaan?</h2>
-          <p class="final-wall fragment">Mikä väite tai kysymys jäi pyörimään mieleen?</p>
-        </div>
-        <aside class="notes"><p>Viimeinen rivi avaa kommenttiseinän ja valinnaisen keskustelun. Esitys on tässä kohtaa valmis; lisäaika ei ole uusi luento.</p></aside>
-      </section>
-    </main>
-
-    <div class="progress" aria-hidden="true"><i></i></div>
-
-    <nav class="controls" aria-label="Esityksen ohjaimet">
-      <button type="button" data-action="previous" aria-label="Edellinen vaihe" title="Edellinen (←)">←</button>
-      <p class="slide-counter" aria-live="polite"><span>1</span><i>/</i><span>37</span></p>
-      <button type="button" data-action="next" aria-label="Seuraava vaihe" title="Seuraava (→ tai välilyönti)">→</button>
-      <span class="controls__divider" aria-hidden="true"></span>
-      <button type="button" data-action="overview" aria-label="Avaa diojen yleisnäkymä" title="Yleisnäkymä (O)">O</button>
-      <button type="button" data-action="notes" aria-label="Avaa puhujan muistiinpanot" title="Muistiinpanot (N)">N</button>
-      <button type="button" data-action="fullscreen" aria-label="Koko näyttö" title="Koko näyttö (F)">⛶</button>
-      <button type="button" data-action="help" aria-label="Näytä pikanäppäimet" title="Ohje (?)">?</button>
-    </nav>
-
-    <dialog class="notes-panel" aria-labelledby="notes-title">
-      <div class="dialog-heading">
-        <div><p>Puhujanäkymä</p><h2 id="notes-title"></h2></div>
-        <button type="button" data-close-dialog aria-label="Sulje muistiinpanot">×</button>
-      </div>
-      <p class="notes-timing"></p>
-      <div class="notes-content"></div>
-      <div class="notes-sources"></div>
-    </dialog>
-
-    <dialog class="help-panel" aria-labelledby="help-title">
-      <div class="dialog-heading">
-        <div><p>Ohjaus</p><h2 id="help-title">Pikanäppäimet</h2></div>
-        <button type="button" data-close-dialog aria-label="Sulje ohje">×</button>
-      </div>
-      <dl class="shortcut-list">
-        <div><dt>→ / Space</dt><dd>Paljasta tai siirry eteenpäin</dd></div>
-        <div><dt>←</dt><dd>Piilota tai siirry taaksepäin</dd></div>
-        <div><dt>Home / End</dt><dd>Ensimmäinen / viimeinen dia</dd></div>
-        <div><dt>O</dt><dd>Yleisnäkymä</dd></div>
-        <div><dt>N</dt><dd>Puhujan muistiinpanot ja lähteet</dd></div>
-        <div><dt>F</dt><dd>Koko näyttö</dd></div>
-        <div><dt>Esc</dt><dd>Sulje näkymä</dd></div>
-      </dl>
-    </dialog>
-
-    <div class="overview" aria-hidden="true">
-      <div class="overview__bar">
-        <div><p>Esityksen yleisnäkymä</p><strong>Valitse dia</strong></div>
-        <button type="button" data-action="close-overview" aria-label="Sulje yleisnäkymä">×</button>
-      </div>
-      <div class="overview__grid"></div>
-    </div>
-  </body>
+  </main>
+  <div class="presentation-bar"><p class="section-label">Alku</p><nav class="controls" aria-label="Esityksen ohjaimet">
+    <button type="button" data-action="previous" aria-label="Edellinen dia" title="Edellinen (←)">←</button>
+    <p class="slide-counter"><span>1</span><i>/</i><span>25</span></p>
+    <button type="button" data-action="next" aria-label="Seuraava dia" title="Seuraava (→)">→</button>
+    <span class="controls__divider" aria-hidden="true"></span>
+    <button type="button" data-action="overview" aria-label="Diojen yleisnäkymä" title="Yleisnäkymä (O)">O</button>
+    <button type="button" data-action="notes" aria-label="Puhujan muistiinpanot" title="Muistiinpanot (N)">N</button>
+    <button type="button" data-action="fullscreen" aria-label="Koko näyttö" title="Koko näyttö (F)">⛶</button>
+    <button type="button" data-action="help" aria-label="Pikanäppäimet" title="Ohje (?)">?</button>
+  </nav></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <dialog class="notes-panel" aria-labelledby="notes-title"><div class="dialog-heading"><div><p>Puhujan muistiinpanot</p><h2 id="notes-title"></h2></div><button type="button" data-close-dialog aria-label="Sulje muistiinpanot">×</button></div><p class="notes-timing"></p><div class="notes-content"></div><div class="notes-sources"></div></dialog>
+  <dialog class="help-panel" aria-labelledby="help-title"><div class="dialog-heading"><h2 id="help-title">Pikanäppäimet</h2><button type="button" data-close-dialog aria-label="Sulje ohje">×</button></div><dl class="shortcut-list"><div><dt>→ / Space / Page Down</dt><dd>Seuraava dia</dd></div><div><dt>← / Page Up</dt><dd>Edellinen dia</dd></div><div><dt>Home / End</dt><dd>Ensimmäinen / viimeinen dia</dd></div><div><dt>O</dt><dd>Diojen yleisnäkymä</dd></div><div><dt>N</dt><dd>Muistiinpanot, ajoitus ja lähteet</dd></div><div><dt>F</dt><dd>Koko näyttö</dd></div><div><dt>B</dt><dd>Pimennä näyttö / palaa esitykseen</dd></div><div><dt>Esc</dt><dd>Sulje avoin näkymä</dd></div></dl><p>Osoite-esimerkin vaiheet avautuvat dian painikkeista. Pyyhkäise puhelimella vaihtaaksesi diaa. Selaimen tulostus sisältää kaikki diat.</p></dialog>
+  <dialog class="overview" aria-labelledby="overview-title"><div class="dialog-heading"><div><p>60 minuuttia / 25 diaa</p><h2 id="overview-title">Valitse dia</h2></div><button type="button" data-action="close-overview" aria-label="Sulje yleisnäkymä">×</button></div><div class="overview__grid"></div></dialog>
+  <div class="blackout" hidden><button type="button" data-action="blackout">Palaa esitykseen (B)</button></div>
+</body>
 </html>

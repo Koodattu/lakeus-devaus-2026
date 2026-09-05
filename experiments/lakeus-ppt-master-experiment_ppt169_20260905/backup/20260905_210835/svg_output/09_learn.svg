@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial" data-pptx-page-role="content">
+<rect id="background" data-pptx-role="background" width="1280" height="720" fill="#F4F0E7"/>
+<text id="title" data-pptx-role="header" x="64" y="106" font-size="48" font-weight="700" fill="#10243A">Työssä tarvitaan myös tilaa oppia</text>
+<g id="learning-sequence" data-pptx-bounds="64 245 1152 305"><text x="64" y="306" font-size="24" fill="#2563EB">01</text><text x="64" y="373" font-size="48" fill="#10243A" font-weight="700">Kokeile</text><text x="367" y="354" font-size="24" fill="#2563EB">02</text><text x="367" y="421" font-size="48" fill="#10243A" font-weight="700">Selitä</text><text x="647" y="402" font-size="24" fill="#2563EB">03</text><text x="647" y="469" font-size="48" fill="#10243A" font-weight="700">Palaute</text><text x="950" y="450" font-size="24" fill="#2563EB">04</text><text x="950" y="517" font-size="48" fill="#10243A" font-weight="700">Muuta</text></g>
+<g id="takeaway" data-pptx-bounds="64 600 1152 75"><text x="64" y="642" font-size="32" fill="#52616B">Oppiminen tarvitsee aikaa ja oikeita tehtäviä.</text></g></svg>

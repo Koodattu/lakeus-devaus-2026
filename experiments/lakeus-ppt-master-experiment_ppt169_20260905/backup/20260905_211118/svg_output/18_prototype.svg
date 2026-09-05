@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial" data-pptx-page-role="content">
+<rect id="background" data-pptx-role="background" width="1280" height="720" fill="#F4F0E7" />
+<text id="title" data-pptx-role="header" x="64" y="106" font-size="48" font-weight="700" fill="#10243A">Prototyyppi auttaa kysymään käyttäjältä</text>
+<g id="note" data-pptx-bounds="64 244 300 320"><text x="64" y="288" font-size="24" fill="#2563EB">01 · MUISTIINPANO</text><text x="64" y="362" font-size="32" fill="#162A3D">“Pumppu A<tspan x="64" dy="48">pitää ääntä.”</tspan></text></g>
+<g id="draft" data-pptx-bounds="420 244 300 320"><text x="420" y="288" font-size="24" fill="#2563EB">02 · LUONNOS</text><text x="420" y="362" font-size="32" fill="#162A3D">AI jäsentää<tspan x="420" dy="48">havainnon</tspan><tspan x="420" dy="48">kirjaukseksi.</tspan></text></g>
+<g id="correction" data-pptx-bounds="776 244 440 320"><rect x="776" y="244" width="440" height="320" fill="#10243A" /><text x="808" y="288" font-size="24" fill="#D8F36A">03 · ASENTAJAN KORJAUS</text><text x="808" y="362" font-size="32" fill="#F8FAFC">Onko havainto oikea?<tspan x="808" dy="48">Mitä puuttuu?</tspan><tspan x="808" dy="48">Auttaako tämä työssä?</tspan></text></g>
+<g id="boundary" data-pptx-bounds="64 605 1152 83" fill="#52616B"><text x="64" y="641" font-size="24">Selain tarkistaa toiminnan. Käyttäjäkokeilu hyödyllisyyden.</text><text x="64" y="668" font-size="20">Kuvitteellinen huoltotyön opetusesimerkki.</text></g></svg>
