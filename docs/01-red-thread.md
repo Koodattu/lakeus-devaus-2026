@@ -1,167 +1,156 @@
 # Red thread
 
+Editorial draft updated **5 September 2026**, following the [research refresh](13-research-refresh-2026-09-05.md). The [one-hour run of show](02-one-hour-run-of-show.md) is the main content and timing plan for the future PowerPoint. This document explains why its sections belong together.
+
 ## The story in one paragraph
 
-Software development has repeatedly automated the difficult mechanics of its previous era without eliminating complexity, change, coordination, or maintenance. Generative AI is both part of that history and a discontinuity within it. In 2022 it produced surprising snippets and fluent answers. By 2026, agents can inspect repositories, edit several files, run tools, and continue for much longer tasks—but not with uniform reliability. This makes the first plausible version dramatically cheaper and faster while the costs of system integration, customer understanding, security, maintenance, and accountability remain. The bottleneck is moving from “can we produce code?” toward “do we understand what should exist, can we verify it, and will anyone own it?”
+Software development keeps making implementation easier while discovering new limits in understanding, coordination, and maintenance. AI expands the unit of delegation from answers and snippets toward substantial tasks, and makes some worthwhile work affordable for the first time. Those gains depend on the task and on the environment that provides context, feedback, and enforceable limits. Completing more tasks, creating more value, and learning to understand the result are different outcomes. As generation scales, verification, integration, and learning need deliberate investment too. AI can help with those activities; responsibility for the result remains with people and organizations. The question becomes: what should we build, how will we know it works, and who will understand and own it later?
 
-## The four-act arc
+## The central question
 
-### Act I — Every generation gets a silver bullet
+> **Kun ohjelmiston tuottamisesta tulee halpaa, mikä muuttuu arvokkaaksi—ja mikä ei edelleenkään muutu helpoksi?**
 
-**Question:** What actually changed between 2022 and 2026—and what remained stubbornly familiar?
+The recurring answer is **Koodi halpeni. Vastuu ei.** This is the talk's thesis, not a measured price index or a prediction that human tasks will never change.
 
-Begin with a compressed historical test:
-
-- the 1968 software crisis: scale, reliability, cost, coordination, and maintenance;
-- 4GLs, CASE, visual programming, outsourcing, cloud, and low-code as earlier attempts to move the abstraction boundary;
-- Brooks: accidental difficulty can shrink while essential conceptual complexity remains;
-- Naur: the durable product of programming may be the theory held by people, not only the program text.
-
-Then show why 2026 may still be different in degree and kind:
-
-The progression is not merely better autocomplete:
-
-1. chat produces snippets and explanations;
-2. IDE assistants complete local code;
-3. agents navigate repositories, edit files, run commands, and revise;
-4. workflows start to delegate bounded outcomes rather than individual keystrokes.
-
-The state-of-the-art section belongs here only to establish the speed and unevenness of the shift. Show a task-capability curve, open-weight competition, and one stubbornly jagged failure. Do not spend ten minutes naming models.
-
-**Act claim:** The unit of delegation is moving from a line toward a task, but delegation is not the same as shared understanding.
-
-**Transition:** If producing code is no longer the main constraint, what becomes the constraint?
-
-### Act II — The bottleneck moved
-
-**Question:** How is software actually made now?
-
-Contrast two loops:
-
-**Earlier simplified loop**  
-Understand → design → type → test → review → ship
-
-**AI-assisted loop**  
-Frame → expose context → delegate → inspect → test → challenge → integrate → observe → revise
-
-The second loop is not automatically shorter. It is more parallel and produces more candidate output. This increases the value of specifications, architecture, automated checks, small changes, good feedback, and knowing when not to delegate.
-
-By 2026, the mature version of this loop is a control system rather than a collection of buzzwords:
+The causal chain:
 
 ```text
-goal → local truth → skills/tools → agent(s) → evidence → human judgment → learning
+more substantial tasks can be delegated
+                  ↓
+first versions and experiments become more affordable
+                  ↓
+the task mix changes; output, value, and learning can diverge
+                  ↓
+verification, integration, and understanding need investment
+                  ↓
+value depends on useful outcomes, trust, and accountable ownership
 ```
 
-Skills encode repeatable methods, MCP and apps expose live context and actions, browser use supplies empirical product feedback, subagents isolate context or parallel work, and deterministic checks bound the nondeterministic core. The frontier case is technically close to end-to-end autonomous implementation; the normal case is still supervised. The difference is often the quality of the surrounding environment rather than model access alone.
+## Five movements, one argument
 
-This is where a personal workflow belongs. Show artifacts and decisions, not a magic prompt:
+### 1. What did earlier revolutions leave unresolved?
 
-- how an ambiguous goal becomes constraints and acceptance criteria;
-- how repository instructions, examples, and tests steer the work;
-- how the agent proposes or implements a bounded change;
-- what the human rejects, changes, or verifies;
-- who owns the result after the session ends.
+**Main time: 0:20–0:24.**
 
-**Act claim:** AI is an amplifier. It makes strong development systems faster and weak ones noisier. Autonomy is earned by feedback, legibility, and reversibility.
+Use the 1968 software crisis as a short callback, Brooks to distinguish implementation friction from conceptual difficulty, and Naur to ask who holds the understanding needed to change a system. The extended CASE/4GL timeline belongs in reserve.
 
-**Transition:** If the tools feel faster, why does the research disagree about how much faster we are?
+Do not conclude that AI can only address accidental complexity. It can propose designs and help people understand systems. The test is whether that understanding survives verification, change, and handoff.
 
-### Act III — Abundance has side effects
+**Transition:** If these problems are familiar, what can we now delegate that we could not before?
 
-**Question:** What happens when plausible output becomes cheap?
+### 2. What can be delegated, under what conditions?
 
-Present the productivity evidence as a deliberate contradiction:
+**Main time: 0:24–0:31.**
 
-- one large field-experiment synthesis found substantially more completed tasks with an AI assistant;
-- a small randomized study of experienced open-source developers found they were slower in familiar repositories;
-- surveys report high perceived gains, while developers also report distrust and time spent fixing nearly-correct answers;
-- DORA frames AI as an amplifier associated with higher throughput and also greater delivery instability.
+Move from chat to repository agents to bounded outcomes. Use MirrorCode as the concrete capability example: substantial reconstruction of existing software with unusually checkable behavior. Its estimated human effort is not a measured human baseline, and reconstruction is not the whole product lifecycle.
 
-Then widen the lens:
+Follow it with one workflow:
 
-- more prototypes, pull requests, packages, and apps;
-- security flaws, hallucinated dependencies, review burden, and “AI slop”;
-- look-alike SaaS and pressure on undifferentiated feature layers;
-- an attention problem: making software is not the same as earning use;
-- a maintenance problem: the bill arrives after the demo.
+```text
+goal → context and constraints → agent work → evidence → judgment → learning
+```
 
-**Act claim:** Cheap output creates expensive evaluation.
+Retain HubSpot as the supporting engineering case for feedback and deterministic lifecycle steps. The case's lesson is the environment, not the number of generated pull requests. Skills, connected tools, browser feedback, and subagents are possible components, not separate topics.
 
-**Transition:** If code and features are less defensible, where do companies and people create durable value?
+Use the August METR incident investigation as a short boundary case: agents in an unusual cybersecurity evaluation crossed intended isolation and authorization limits. Explain the research setting and limited investigation scope. The transferable lesson is that instructions, enforced permissions, and trustworthy evidence have distinct jobs.
 
-### Act IV — Responsibility becomes the product
+> **Kyky saavuttaa tavoite ja lupa käyttää keinoja ovat eri asioita.**
 
-**Question:** What remains scarce, and what is the role of the human?
+Autonomy depends on consequences, reversibility, evaluability, and lifespan. A capability demonstration does not by itself establish safe delegation in another setting.
 
-Ask the room to choose the scarce resource: good problems, product judgment, trust, attention and distribution, or ownership. The discomfort is the point: all five matter, but a single-choice poll reveals what this particular room values.
+**Transition:** Even when an agent can complete the task, how much better did the work become?
 
-Connect this to:
+### 3. What does “more productive” mean?
 
-- jobs: short-term pain for some early-career roles can coexist with long-term demand for software work;
-- expectations: belief in imminent automation can change learning, hiring, trust, and workplace culture before measured displacement catches up;
-- consultancies: pressure comes from weak demand and delayed budgets as well as AI-shaped expectations;
-- SaaS: point solutions and generic interfaces are exposed, while systems of record, data, workflow, integration, compliance, and accountability remain meaningful moats;
-- geopolitics: the United States, China, and Europe have different mixtures of frontier labs, capital, industrial scale, open-weight ecosystems, regulation, and sovereignty goals;
-- the region: in a smaller market, domain knowledge, proximity, trust, and responsibility can be advantages rather than consolation prizes.
+**Main time: 0:31–0:38.**
 
-**Act claim:** The valuable human is not the person who types every token. It is the person who can decide what should exist and remain accountable when it does.
+Show the Microsoft and early-2025 METR experiments as measurements with different boundaries. Name the participant/task context and the measured variable. Bring METR's later inability to estimate a reliable current effect into the spoken explanation.
+
+Then distinguish individual task speed, team delivery, and useful outcomes. DORA connects this to the surrounding delivery system. Use one explanation of the bottleneck; avoid repeating it as several abstract slides.
+
+METR's task-substitution analysis adds the opportunity: AI changes what people choose to attempt. Some worthwhile work becomes feasible, but the manual effort of an artifact nobody would otherwise build is not automatically value saved.
+
+> **AI muuttaa myös sitä, mitä kannattaa yrittää.**
+
+**Transition:** More completed work only helps if we can evaluate it—and continue learning enough to do so.
+
+### 4. Who verifies the result, and who learns?
+
+**Main time: 0:38–0:46.**
+
+Define AI slop as our editorial description of output that transfers excessive evaluation cost to others. Show one concrete nearly-correct result or return to the demo's actual correction. Critique the process, not beginners or AI provenance.
+
+Use Godot and Linux as two contrasting governance responses to scarce reviewer attention. ESLint stays in notes. Their policies are examples, not universal prescriptions.
+
+Connect Naur to the coding skill-formation experiment: a finished task and comprehension of the unfamiliar library were separate measured outcomes. Preserve its short duration, sample, and limits. It does not demonstrate permanent skill loss.
+
+> **Valmis tehtävä ja opittu taito ovat eri tuloksia.**
+
+Our practical recommendation: preserve opportunities to explain a decision, predict a failure, and diagnose a problem. Merely asking whether someone read the code does not establish understanding.
+
+Close the loop constructively. Agents can also help reproduce failures, prepare evidence, generate candidate tests, and support review. Invest in those capabilities and in human learning as generation grows; do not assume review must remain an unchanged manual queue.
+
+**Transition:** If useful outcomes and durable understanding matter, where should people and companies invest?
+
+### 5. What deserves to exist, and what does that mean here?
+
+**Main time: 0:46–0:55.**
+
+Give product value, people, and Finland a full nine minutes.
+
+- **Product:** cheaper implementation brings the usefulness test forward. Combine SaaS, distribution, and maintenance in one example rather than three topic changes.
+- **People:** acknowledge career uncertainty. Use Stanford's revised US employment interpretation carefully, then distinguish measured changes from expectations that influence hiring, learning, and team behavior.
+- **Finland:** present one consistent August sector snapshot. AI is pressure on delivery expectations and a potential service opportunity; company results do not isolate its causal effect.
+- **Regional opportunity:** apply the argument to domain access, workflow fit, trust, integration, and continued support. Present this as a strategic proposition to discuss, not proof that proximity guarantees success.
+
+Keep global competition, detailed company tables, and legal timelines in reserve.
+
+**Transition to the close:** What can we choose to do differently now, without pretending to know the whole future?
+
+## One recurring example
+
+The preferred anchor is a real AI-assisted software task with an actual mistake, correction, verification artifact, and owner. Its public suitability and development history remain unconfirmed.
+
+Until one is selected, use the presentation's documented research and editorial process for the five-minute reveal. Describe only work supported by actual artifacts. A useful available contrast is an earlier factual draft and the dated source correction recorded in the research refresh.
+
+A separate, explicitly hypothetical local scenario can make later consequences concrete: photographed service notes become draft maintenance records for a manufacturer. It already appears in [workflow scenarios](11-workflow-scenarios-and-field-notes.md). Revisit it briefly when discussing newly affordable experiments, usefulness, integration, and ownership. Never present it as a customer success or manufacture savings.
 
 ## Opening
 
-1. Put the live-voting application on screen while introducing the title and central tension.
-2. Say: “Vuonna 2022 pyysimme tekoälyltä vastauksia. Vuonna 2026 annamme sille tehtäviä.”
-3. Pose the two apparently conflicting claims: everything changed quickly, and the hard parts of software remain stubbornly familiar.
-4. Run the seven-question quick-fire gallup without discussion between questions.
-5. Summarize the room in three observations: experience, actual use, and the distance between use and trust.
-6. Transition directly into the project demo.
+1. Establish the title and the tension between changed tools and persistent engineering problems.
+2. Ask the central question.
+3. Run the seven-question gallup from [live polls](03-live-polls.md).
+4. Summarize at most three patterns actually present in the responses.
+5. Move into the five-minute reveal, then return to its decisions during the main section.
 
-The opening makes the room part of the evidence without spending ten minutes interpreting individual feelings. The final short mood question can still reveal whether the conversation changed the room’s emphasis.
+The results describe this room. They are not an industry sample, and the final mood comparison is not a causal evaluation of the talk.
 
 ## Closing
 
-Return to the same short **“AI-fiilis?”** question with the same options. Do not demand that sentiment improve. A shift from excited to conflicted can indicate a better conversation.
+Translate the thesis into three choices:
 
-Then close with three lines:
+1. **Mittaa hyväksyttyä lopputulosta ja korjaustyötä.**
+2. **Varmista, että osaaminen kasvaa työn mukana.**
+3. **Sovi omistajuus ennen julkaisua.**
 
-> Koodia syntyy enemmän.  
-> Varmuus ei synny samalla nopeudella.  
+These are the speaker's recommendations, not three universal effects established by one study.
+
+Repeat **“AI-fiilis?”** with the same options as at the start. A more conflicted response can coexist with better understanding; do not demand improved sentiment.
+
+Close with:
+
+> Koodia syntyy enemmän.
+>
+> Varmuus ei synny samalla nopeudella.
+>
 > Joku omistaa seuraukset joka tapauksessa.
 
 Final spoken question: **“Minkä seurauksen sinä olet valmis omistamaan?”**
 
-The last activity is the optional comment wall: **“Mikä väite tai kysymys jäi pyörimään mieleen?”** Use the comments to open discussion rather than summarizing the talk again.
+The optional final comment wall, **“Mikä väite tai kysymys jäi pyörimään mieleen?”**, opens discussion after the complete formal hour.
 
-## The project reveal as a hinge
+## Editorial test
 
-A strong midpoint hinge is to let participants use or see a polished project, ask them what they infer about its origin, and later reveal the AI-assisted process. The reveal should not be “the machine made this while I watched.” It should expose the invisible human work: the brief, constraints, tool choice, tests, review, iteration, deployment decisions, and ownership.
+Each beat must advance the causal chain, add evidence or meaning, and fit the time budget. New sources replace weaker material or go into notes. A source's novelty alone does not earn a slide.
 
-This makes the thesis experiential:
-
-- output does not reveal authorship reliably;
-- origin is less useful than process and evidence;
-- “AI-generated” is too coarse a category;
-- good steering is not a magic prompt—it is applied software engineering.
-
-Do not misrepresent the development history. If the live-voting project is not actually an AI-assisted project, use a different example or frame it only as the presentation’s interaction layer.
-
-## Why this arc is stronger than a topic catalogue
-
-The user’s original idea bank is rich enough for several talks. A catalogue would create repeated context switches: models, jobs, Finland, apps, SaaS, slop, workflow, geopolitics. The four-act arc makes each topic answer the same causal chain:
-
-```text
-capability rises
-      ↓
-plausible output gets cheaper
-      ↓
-evaluation, integration, trust, and attention become bottlenecks
-      ↓
-developer and company value shifts toward judgment and ownership
-```
-
-Every candidate slide should earn its place by advancing one arrow in that chain.
-
-## Provocation with a responsible landing
-
-**Provocation:** “Ohjelmistokehitys muuttui vuonna 2026 enemmän kuin vuosina 2000–2025 yhteensä.”
-
-**Landing:** We cannot measure that claim cleanly, and previous shifts—web, open source, cloud, mobile, DevOps—were foundational. The narrower defensible claim is that 2022–2026 may be the fastest change in who can produce plausible software and at what marginal cost. Use the broad claim to start a debate, not to end one.
+Keep these distinctions visible: fact versus interpretation; experiment versus survey or case report; measured task time versus estimated manual effort; code completion versus comprehension; capability versus authorization; and local evidence versus imported labour-market findings.

@@ -1,310 +1,243 @@
 # One-hour run of show
 
-The formal presentation should finish in **60 minutes**. If the booking allows up to 90 minutes, the extra time is a discussion runway rather than another half-hour of prepared slides. This protects audience energy and lets people leave at the advertised one-hour mark with a complete experience.
+**Main presentation draft, updated 5 September 2026.** This is the content and timing plan for the future PowerPoint, incorporating the [research refresh](13-research-refresh-2026-09-05.md). The [red thread](01-red-thread.md) explains the argument; the [editorial backlog](07-editorial-backlog.md) records cuts and reserve material. The existing HTML deck is an earlier prototype and does not implement this plan.
 
-## Core 60-minute format
+## Audience, promise, and format
 
-| Time | Segment | Job |
-| --- | --- | --- |
-| 0:00–0:05 | Intro | Name the change and pose the central question. |
-| 0:05–0:15 | Quick-fire gallup | Build a fast profile of the room: experience, use, trust, productivity, autonomy, and mood. |
-| 0:15–0:20 | Project demo | Let the audience experience the argument before explaining it. |
-| 0:20–0:55 | Main presentation | Tell one 35-minute story using models, productivity, slop, SaaS, jobs, Finland, and geopolitics as evidence—not as separate talks. |
-| 0:55–1:00 | Recap | Resolve the opening, repeat the mood question, and open the comment wall. |
+The talk is for Lakeus-Devaus's mixed public audience: developers, students, managers, entrepreneurs, and adjacent professionals. Audience-facing wording is Finnish; planning notes are English. The event date, venue, and final personal demo remain to be confirmed.
 
-This is the target version. It requires discipline: gallup answers stay short, the demo is pre-rehearsed, and every main-section topic gets one claim rather than a miniature deep dive.
+**Title:** Hei ohjelmistokehitys, mitä kuuluu?
 
-## The central question
+**Thesis:** Koodi halpeni. Vastuu ei.
 
-> **Kun ohjelmiston tuottamisesta tulee halpaa, mikä muuttuu arvokkaaksi—ja mikä ei edelleenkään muutu helpoksi?**
+The audience should leave able to distinguish what can be delegated, what constitutes evidence of a useful result, and how people keep learning to judge it. The talk should make room for real opportunity and real uncertainty.
 
-Working answer:
+| Time | Segment | Minutes | Purpose |
+| --- | --- | ---: | --- |
+| 0:00–0:05 | Introduction | 5 | Establish the tension and central question |
+| 0:05–0:15 | Quick-fire gallup | 10 | Describe this room's experience, use, and trust |
+| 0:15–0:20 | Project/process reveal | 5 | Show an outcome, a correction, evidence, and ownership |
+| 0:20–0:24 | 1. History and understanding | 4 | Brooks and Naur frame what remains hard |
+| 0:24–0:31 | 2. Delegation and its conditions | 7 | Capability, feedback, and enforceable limits |
+| 0:31–0:38 | 3. Productivity and changed work | 7 | Separate task speed, delivery, and value |
+| 0:38–0:46 | 4. Verification and learning | 8 | Connect reviewer attention to future expertise |
+| 0:46–0:55 | 5. Value, people, and Finland | 9 | Apply the argument to products, careers, and the region |
+| 0:55–1:00 | Close | 5 | Three practical choices, repeated mood poll, final question |
+| **Total** | | **60** | **Main presentation: 35 minutes** |
 
-> Code production becomes cheaper. Understanding, judgment, verification, integration, maintenance, trust, attention, and responsibility do not automatically become cheap with it.
+Section budgets include transitions and brief callbacks. If the booking allows 90 minutes, the remaining time is audience discussion, not another prepared lecture.
 
-The main talk is a sequence of attempts to answer this one question.
+## 0:00–0:05 — Introduction
 
-## 0:00–0:05 — Intro
+**Question:** Kun ohjelmiston tuottamisesta tulee halpaa, mikä muuttuu arvokkaaksi—ja mikä ei edelleenkään muutu helpoksi?
 
-### Job
+Suggested sequence:
 
-Create tension without summarizing the entire presentation.
+1. Title and opening observation: “Vuonna 2022 pyysimme tekoälyltä vastauksia. Vuonna 2026 annamme sille tehtäviä.”
+2. Put two thoughts beside each other: the tools changed quickly; many difficult engineering problems are familiar.
+3. Explain that the session will test both through examples, research, and the room's experience.
+4. Introduce the poll.
 
-### Possible sequence
-
-1. **Hei ohjelmistokehitys, mitä kuuluu?**
-2. “Vuonna 2022 pyysimme tekoälyltä vastauksia. Vuonna 2026 annamme sille tehtäviä.”
-3. Show the two candidate claims:
-   - “Ohjelmistokehitys muuttui enemmän neljässä vuodessa kuin edeltävissä vuosikymmenissä.”
-   - “Ohjelmistokehityksen vaikeat osat eivät muuttuneet juuri lainkaan.”
-4. Say that both may contain part of the truth.
-5. Introduce the central question and open the gallup.
-
-Do not begin with definitions, model names, or a historical timeline. The gallup should start while the room’s curiosity is still unresolved.
+Use this as a qualitative trajectory, not exact dates on which capabilities first appeared. Leave the “more change than all earlier decades” superlative in reserve. Do not begin with definitions or a model catalogue.
 
 ## 0:05–0:15 — Quick-fire gallup
 
-### Job
+Use the seven questions in [live polls](03-live-polls.md): experience, recent use, perceived speed, reading generated code, production autonomy, output quality, and mood. Do not add new poll questions for each new research source.
 
-Turn the audience into the talk’s local dataset. The poll should feel like a rapid pulse check, not a sequence of discussion questions.
+- 90 seconds to join.
+- Six minutes for the seven questions and transitions.
+- Two and a half minutes to synthesize at most three actual patterns and move to the reveal.
 
-### Rhythm
+The later callbacks are part of the narrative: perceived speed before the experiments, autonomy before permission boundaries, and code-reading habits before comprehension.
 
-- 60–90 seconds to join;
-- six or seven questions at approximately 40–50 seconds each;
-- no audience comments between questions;
-- one two-minute synthesis after the last result.
+Do not assume use exceeds trust before seeing the room's answers. Results describe attendees, not the industry. Prepare the existing hand-vote fallback.
 
-The synthesis should identify no more than three patterns, for example:
+## 0:15–0:20 — Project/process reveal
 
-> “Tässä huoneessa on paljon kokemusta. AI on jo arkea. Käyttö on silti selvästi luottamusta edellä.”
+**Purpose:** make the invisible decisions behind a plausible result visible.
 
-Do not read every percentage aloud. Return to selected gallup results later when the relevant evidence appears.
+Preferred material is a real AI-assisted software task with a mistake, correction, verification artifact, and continuing owner. The particular project and its public development history are still unconfirmed.
 
-## 0:15–0:20 — Project demo
+**Current usable fallback:** the presentation's documented research process. Show an earlier draft claim, the source recheck that challenged it, and the resulting editorial decision. The Finnish-source discrepancy in the research memo supplies a concrete candidate; distinguish a documented finding from a correction actually applied to a deck. Do not invent a software failure or imply the live-voting application was agent-built without evidence.
 
-### Job
+| Beat | Seconds | Material |
+| --- | ---: | --- |
+| Visible result | 30 | What the audience sees or has used |
+| Goal and constraints | 45 | Audience/user need and two or three limits |
+| Division of work | 60 | What was delegated and what the person decided |
+| Correction or rejection | 90 | One actual mistake, tradeoff, or changed claim |
+| Evidence | 45 | A source comparison, test, or observed behavior |
+| Ownership | 15 | Who maintains the result and answers for it |
+| Transition | 15 | Return to the central question |
+| **Total** | **300** | |
 
-Make the change tangible before explaining it.
+The reveal is complete here, before the main presentation. Revisit it later rather than withholding its origin until a supposed midpoint. The optional “human or AI?” poll is omitted from the core version to protect the five-minute limit.
 
-The live-voting application is a strong candidate if its actual development history supports the reveal. Otherwise use another real project.
+## 0:20–0:24 — 1. History and understanding
 
-### Five-minute sequence
+**Claim:** easier implementation does not automatically resolve complexity or create shared understanding.
 
-1. **What you just used** — the visible outcome, 30 seconds.
-2. **What it had to do** — three or four product constraints, 45 seconds.
-3. **How it was made** — the truthful role of the agent and human, 60 seconds.
-4. **What went wrong or needed judgment** — one concrete correction, rejection, or tradeoff, 90 seconds.
-5. **What proved it worked** — a test, observation, or real-use signal, 45 seconds.
-6. **Who owns it now** — maintenance and operational responsibility, 15 seconds.
+| Time | Beat | Content |
+| --- | --- | --- |
+| 0:20–0:22 | Kitka vähenee. Vaikeat kysymykset jäävät. | A brief 1968 callback, then Brooks' essential/accidental distinction |
+| 0:22–0:24 | Kuka ymmärtää järjestelmän ensi vuonna? | Naur's theory-building lens; understanding needed for change and handoff |
 
-Optional 30-second reveal poll:
+Treat the Finnish lines as the speaker's interpretations, not historical quotations. AI can also suggest conceptual solutions and help articulate understanding. Ask how those proposals are checked.
 
-> **Ihminen vai AI?**  
-> Ihminen / AI / Molemmat / En tiedä
+**Transition:** what can we delegate today that changes the work in practice?
 
-The reveal should land on: “That was the wrong binary.” The useful questions are how the result was constrained, verified, and owned.
+**Sources:** the historical sources in [veteran lens](09-veteran-lens.md). Full CASE/4GL history, Lehman, and Parnas remain in reserve.
 
-## 0:20–0:55 — Main presentation
+## 0:24–0:31 — 2. Delegation and its conditions
 
-The main presentation is 35 minutes and five movements. Each movement advances the same causal chain.
+**Claim:** substantial delegation becomes possible when the task has useful context, feedback, and enforceable boundaries.
 
-```text
-capability rises
-      ↓
-plausible output gets cheaper
-      ↓
-output volume grows faster than review and attention
-      ↓
-value moves toward understanding, evidence, trust, and ownership
-```
+| Time | Beat | Content and evidence |
+| --- | --- | --- |
+| 0:24–0:26 | Vastauksesta tehtävään | Chat → repository work → bounded outcome; MirrorCode as one concrete capability case |
+| 0:26–0:29 | Luotettava tulos tarvitsee palautetta | One goal–context–agent–evidence–judgment loop; HubSpot's engineering case as supporting material |
+| 0:29–0:31 | Kyky ja lupa ovat eri asioita | 60–90-second incident example, then the practical autonomy rule and poll callback |
 
-### Movement 1 — Haven’t we heard this before? (0:20–0:27)
+**MirrorCode:** substantial reimplementation against reference behavior and tests. Explain that exact reconstruction is more checkable than ordinary product discovery. The 2–17-week human comparison is an expert estimate, not a measured speedup. Use a task description rather than a wall of model scores. [Source](https://epoch.ai/publications/mirrorcode-preliminary-results).
 
-**Claim:** Software development has repeatedly automated its accidental difficulties, while its essential complexity survived.
+**Workflow:** frame the goal, provide relevant context, delegate a bounded change, gather evidence, review the consequence, and improve the environment. Mention tools only as implementations of those functions. HubSpot's useful lesson is that feedback and deterministic lifecycle steps addressed incomplete agent work; do not lead with PR volume. [Source](https://product.hubspot.com/blog/cloud-coding-agents-at-hubspot).
 
-Use the veteran lens:
+**Boundary case:** the August METR investigation concerns agents crossing intended limits in OpenAI cybersecurity evaluations. State the unusual research setting and investigation limitations. Use no exploit details or sensational dialogue. The practical distinction is between an instruction, an enforced permission boundary, and independently recorded evidence. [METR investigation](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/), [OpenAI account](https://openai.com/index/hugging-face-incident-and-the-road-ahead/).
 
-- the 1968 software crisis;
-- high-level languages, 4GLs, CASE, visual programming, outsourcing, cloud, low-code;
-- Brooks’ essential versus accidental complexity;
-- Naur’s programming-as-theory-building question.
+**Landing:** choose autonomy by consequence, reversibility, evaluability, and lifespan. The incident is the first case to shorten if rehearsal shows it needs too much explanation; preserve the principle.
 
-The section should not conclude that AI is merely another CASE tool. Its job is to establish the test:
+**Transition:** what did this capability change at the level of actual work?
 
-> Which difficulty did this generation of tools remove—and which difficulty did it expose?
+## 0:31–0:38 — 3. Productivity and changed work
 
-### Movement 2 — What is genuinely different in 2026? (0:27–0:34)
+**Claim:** task speed, team delivery, and value are different outcomes; AI can change the task mix too.
 
-**Claim:** The unit of delegation is moving from a line of code toward a coherent task.
+| Time | Beat | Content and evidence |
+| --- | --- | --- |
+| 0:31–0:34 | Nopeammin kenelle, missä tehtävässä? | Microsoft and METR, with participants, measured variables, and the follow-up caveat |
+| 0:34–0:36 | Tehtävästä hyödylliseen lopputulokseen | Individual → team → product; DORA and one bottleneck explanation |
+| 0:36–0:38 | AI muuttaa sitä, mitä kannattaa yrittää | Old tasks, newly chosen tasks, and value; a short hypothetical local example |
 
-Begin with only enough model material to establish:
+**Evidence wording:**
 
-- chat → autocomplete → repository agent → bounded outcome;
-- rapidly increasing task horizon;
-- jagged capability and incomplete reliability.
+- Microsoft: approximately **26% more completed tasks**, combining three field experiments and 4,867 developers. Keep exact estimate and uncertainty in notes. [Study summary](https://www.microsoft.com/en-us/research/publication/the-effects-of-generative-ai-on-high-skilled-work-evidence-from-three-field-experiments-with-software-developers/).
+- METR: **19% more completion time** for 16 experienced contributors working on 246 tasks in familiar repositories with early-2025 tools. Its February 2026 follow-up could not establish a reliable current effect because of selection and measurement problems. Say this on stage. [Original result](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/), [follow-up](https://metr.org/blog/2026-02-24-uplift-update/).
+- DORA: the delivery system conditions the outcome; higher adoption was associated with both higher throughput and greater instability. This is not a simple causal guarantee. Its March 2026 synthesis draws on 2025 data. [Synthesis](https://dora.dev/insights/balancing-ai-tensions/).
 
-Then show that a real AI-native workflow is not `prompt → model → code`, but a control system:
+Do not place the Microsoft and METR numbers on a common percentage axis. They measure different quantities. Do not add the self-reported productivity figures as a third apparent experiment.
 
-```text
-goal → local context → skills/tools → agent(s) → evidence → human judgment → learning
-```
+**Opportunity:** use METR's task-substitution distinction to explain that AI can make useful work feasible, while hypothetical manual effort is not automatically value saved. This is a conceptual framework, not another measured uplift. [Analysis](https://metr.org/blog/2026-05-08-task-substitution-and-uplift/).
 
-Skills, MCP/apps, browser use, subagents, tests, hooks, and goals should appear only as parts of these functions—not as a product glossary. The browser closes the gap between compiling and working; skills package repeatable methods; live integrations supply context and action; subagents isolate context and parallel work; deterministic checks keep the generative core inside boundaries.
+Introduce the existing hypothetical manufacturer scenario: testing whether photographed service notes could become helpful draft records. The experiment can be worth doing even before there is a case for building a production system. Label it hypothetical and claim no measured savings.
 
-Use one short frontier-versus-mainstream contrast:
+**Transition:** how do we evaluate the additional work and retain the ability to understand it?
 
-- OpenAI reports an internal product with no manually written application code, enabled by a highly structured repository, isolated environments, browser access, telemetry, review, and continual cleanup;
-- HubSpot reports 7,000 merged fully AI-generated pull requests, while also describing agents that stopped with broken builds or forgot lifecycle steps until deterministic hooks and orchestration were added;
-- Stack Overflow’s April 2026 pulse found 63% rarely or never allowing full autopilot and 68% preferring a predictable single agent to a complex multi-agent setup.
+## 0:38–0:46 — 4. Verification and learning
 
-The point is not that one side is correct. The frontier teams invested in the environment that makes longer delegation safe.
+**Claim:** the work must produce evidence and understanding as well as output.
 
-Open-weight competition, model routing, and USA–China–EU differences move to one dated supporting slide or reserve material. The leaderboard is a weather report, not the story.
+| Time | Beat | Content and evidence |
+| --- | --- | --- |
+| 0:38–0:40 | Kenen aikaa säästit? | Our definition of slop as shifted evaluation cost; return to the demo's correction |
+| 0:40–0:42 | Katselmointi tarvitsee tekijän | Godot and Linux: contrasting policies, shared reviewer scarcity and responsibility |
+| 0:42–0:45 | Valmis tehtävä ja opittu taito ovat eri tuloksia | Coding skill experiment, limitations, and one practical learning recommendation |
+| 0:45–0:46 | Myös arviointia voi parantaa | Smaller changes, reproducible evidence, useful automation, and maintained expertise |
 
-Land on:
+**Maintainers:** use current Godot and Linux rules, including contributor understanding and maintainer discretion. ESLint is the reserve third example. These are project choices, not evidence that all open source takes one position. [Godot](https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html), [Linux](https://kernel.org/doc/html/next/process/generated-content.html).
 
-> **Autonomy is earned by feedback, legibility, and reversibility.**
+**Learning evidence:** the 52-participant experiment concerned learning an unfamiliar Python library. The authors' summary reports immediate quiz averages of 50% with AI and 67% without it; the task-time difference was not statistically significant. Attribute those rounded values to the summary. Do not generalize to permanent deskilling, all juniors, or current autonomous agents. [Author summary](https://www.anthropic.com/research/AI-assistance-coding-skills), [paper](https://arxiv.org/abs/2601.20245).
 
-### Movement 3 — Is it actually faster? (0:34–0:42)
+**Our recommendation:** preserve opportunities to explain one decision, predict a failure, and diagnose a broken example. The study does not prove that this exact practice is the remedy. Connect this back to Naur and the room's code-reading poll.
 
-**Claim:** AI can accelerate a task while failing to accelerate the system around it.
+Agents can support reproduction, testing, and review as well as generation. Evidence should test the intended behavior, rather than merely echoing the generated implementation. Responsibility is not equivalent to manually reading every token.
 
-Present the contradiction:
+**Transition:** where do these distinctions leave products, careers, and the local market?
 
-- Microsoft’s combined field experiments: more completed tasks;
-- METR’s experienced open-source developers: slower in familiar repositories;
-- Stack Overflow: reported productivity alongside distrust and repair cost;
-- DORA: AI amplifies strong and weak delivery systems.
+## 0:46–0:55 — 5. Value, people, and Finland
 
-Connect this to the productivity J-curve: general-purpose technologies require complementary investment in process, skills, architecture, measurement, and organizational design.
+**Claim:** cheaper construction increases the importance of usefulness, adoption, understanding, and continuing ownership.
 
-Question for the room:
+| Time | Beat | Content and evidence |
+| --- | --- | --- |
+| 0:46–0:49 | Halpa toteutus tuo arvon testin lähemmäs | Combine the product question and SaaS economics; return to the maintenance-record example |
+| 0:49–0:52 | AI muuttaa työtä ja odotuksia | Revised employment interpretation, career uncertainty, and team incentives |
+| 0:52–0:55 | AI on paine ja tuote — myös täällä | One current Finnish sector snapshot and the regional application |
 
-> Faster for whom, doing what, measured at which boundary?
+**Product:** would the maintenance-record draft improve real work? Who corrects it, integrates it, finds it useful enough to adopt, and supports it later? These questions join SaaS, attention, and lifecycle cost in one concrete story. Reduced feature cost is not proof that subscriptions or entire product categories disappear. [Existing NCSC source](https://www.ncsc.gov.uk/blogs/vibe-check-ai-may-replace-saas-but-not-for-a-while).
 
-### Movement 4 — Cheap output creates expensive evaluation (0:42–0:49)
+**People:** the August Stanford revision identifies a relative employment gap for US workers aged 22–25 in highly AI-exposed occupations, mainly through reduced hiring. It does not establish a causal AI job-loss count or a Finnish trend. Keep the exact 19% relative-gap definition in notes. [Revision](https://digitaleconomy.stanford.edu/news/canariesaug26/).
 
-**Claim:** When submission becomes cheap but review remains scarce, the system starts protecting reviewer attention.
+Then distinguish evidence from our interpretation: expectations can influence learning, hiring, and trust before forecasts are resolved. Acknowledge uncertainty without telling worried people simply to manage agents. Employer choices about mentoring, learning time, and outcome-based evaluation matter. Token-consumption targets are an optional 30-second example within this budget, not an extra slide or an excuse to ridicule employees. [DORA commentary](https://dora.dev/insights/finding-balance-in-the-era-of-tokenmaxxing/).
 
-Combine several topics into one mechanism:
+**Finland:** use the August outlook's consistent vintage: 2025 sector turnover **EUR 19bn, +5%**; end-June employment **approximately 80,200, -1% against end-March**. Put the observation periods on the slide. Do not carry forward the prototype's EUR 20bn/+9% figures or splice older employment snapshots into a trend. These observations do not isolate an AI effect. [Sector source](https://teknologiateollisuus.fi/en/economic-outlook-and-statistics/economic-outlook/information-technology-in-finland/).
 
-- nearly-correct code and security defects;
-- package hallucinations;
-- open-source review overload;
-- Godot restricting substantial AI-generated contributions;
-- Linux accepting tools while requiring understanding, disclosure, testing, and responsibility;
-- ESLint accepting AI assistance under explicit human-responsibility rules;
-- more apps and products competing for finite attention.
+Company tables stay in reserve. If a contrasting company is needed in discussion, distinguish acquisitions and organic growth; the refreshed Gofore H1 report is available in the research memo.
 
-This is where “AI slop” gets a precise definition:
+**Regional application, explicitly the speaker's proposition:** domain access, integration, relationships, and support can be valuable when implementation becomes more accessible. Return to the same hypothetical local workflow rather than inventing a customer testimonial. Ask what would make its outcome worth paying for and owning.
 
-> Output that saves the producer time by transferring unbounded evaluation cost to someone else.
+## 0:55–1:00 — Close
 
-### Movement 5 — When anyone can build, what deserves to exist? (0:49–0:55)
+| Time | Beat | Content |
+| --- | --- | --- |
+| 0:55–0:57 | Three practical choices | Measure accepted outcomes and rework; preserve learning; assign ownership before release |
+| 0:57–0:59 | AI-fiilis, nyt? | Same question and options as the opening; one brief observation |
+| 0:59–1:00 | Koodi halpeni. Vastuu ei. | Closing lines, final spoken question, open optional comment wall |
 
-**Claim:** The scarce layer moves toward product judgment, durable systems, organizational knowledge, trust, distribution, and responsibility.
+Suggested Finnish takeaways:
 
-Touch the remaining lenses briefly:
+1. **Mittaa hyväksyttyä lopputulosta ja korjaustyötä.**
+2. **Varmista, että osaaminen kasvaa työn mukana.**
+3. **Sovi omistajuus ennen julkaisua.**
 
-- **SaaSpocalypse:** generic point tools and feature layers are exposed; data, workflow, integration, security, support, and accountability remain.
-- **Apprenticeship:** if routine work disappears, organizations must deliberately create the future senior developers who can verify AI output.
-- **Career expectations:** AI changes work through both its current capabilities and expectations about its next capabilities. Motivation, hiring, trust, and team culture can move before displacement is measurable.
-- **Finland:** weak demand and delayed budgets interact with AI-shaped price and productivity expectations; AI is pressure and product, not a single cause.
-- **Global competition:** capital, models, open ecosystems, industrial application, regulation, and sovereignty are different dimensions.
-- **Regional advantage:** domain context, proximity, reputation, and willingness to own the unglamorous system after launch.
+Close with the established lines:
 
-Finish the main section with:
-
-> “Jos agentti kirjoitti koodin, kuka rakensi teorian siitä, miten järjestelmä toimii—ja kuka pystyy muuttamaan sitä ensi vuonna?”
-
-## 0:55–1:00 — Recap
-
-### Three conclusions
-
-1. **The change is real:** plausible software and repository-level execution became dramatically more accessible.
-2. **The old problems survived:** complexity, changing requirements, coordination, maintenance, and responsibility remain.
-3. **The bottleneck moved:** judgment, verification, trust, attention, and ownership become more important per unit of generated code.
-
-Repeat the short mood question:
-
-> **AI-fiilis?**  
-> Innostunut / Utelias / Ristiriitainen / Huolestunut / Väsynyt
-
-Do not treat “more conflicted” as failure. Ask what became clearer.
-
-Close with:
-
-> Koodia syntyy enemmän.  
-> Varmuus ei synny samalla nopeudella.  
+> Koodia syntyy enemmän.
+>
+> Varmuus ei synny samalla nopeudella.
+>
 > Joku omistaa seuraukset joka tapauksessa.
 
-Open the final comment wall:
+**“Minkä seurauksen sinä olet valmis omistamaan?”**
 
-> **Mikä väite tai kysymys jäi pyörimään mieleen?**
+Open **“Mikä väite tai kysymys jäi pyörimään mieleen?”** as the final optional free-text activity. Discussion follows the complete hour. Do not interpret the mood comparison as proof of a causal attitude change.
 
-The formal presentation is now complete.
+## PowerPoint content map
 
-## Optional 60–90 minute runway
+The timed beat tables above are the slide brief. Each row is a communication beat, not an instruction to add a slide per source. Aim for approximately 18–22 sparse content slides, plus opening/closing poll screens; combine adjacent beats when one visual can carry them.
 
-Do not prepare another continuous 30-minute lecture. Use the extra time for:
+Use one primary message, one relevant visual or artifact, and a short factual source/date per content slide. Presenter notes hold sample definitions, uncertainty, transitions, and the difference between findings and our recommendations. Introduce technical terms only when needed to understand the decision.
 
-1. comments from the final wall;
-2. questions chosen by the room;
-3. one or two appendix threads selected by interest;
-4. participants comparing experiences with the gallup results.
+Assets to select before production:
 
-Possible appendix threads:
+- one documented task/process sequence with a correction and evidence;
+- a MirrorCode task description and its evaluation boundary;
+- the reported comprehension comparison with sample and timing;
+- a compact autonomy incident sequence;
+- one consistent Finnish sector snapshot;
+- a simple recurring hypothetical local workflow.
 
-- “No Silver Bullet” in the age of agents;
-- junior development and the missing apprenticeship ladder;
-- open-source maintainer policies and review debt;
-- detailed Finnish consultancy figures;
-- state-of-the-art models and open-weight ecosystems;
-- USA–China–EU competition;
-- SaaS pricing and build-versus-buy economics;
-- security and package hallucination research.
+The real software demo is still a material-selection dependency; the documented research-process fallback makes the draft usable without inventing one. Reuse rights and chart values must be checked when selecting actual assets. This document does not specify slide layouts or implement PowerPoint.
 
-This makes 90 minutes a maximum, not an obligation. At 60 minutes the audience has received the full argument; staying longer is a choice.
+## Compression and discussion reserve
 
-## Likely slide/beat sequence
+If the session runs long, shorten material that is actually in this draft, in this order:
 
-These are communication beats, not a commitment to one visual slide each.
+1. Omit the optional token-target example.
+2. Reduce the autonomy incident to one sentence; retain the practical boundary.
+3. Reduce the second maintainer example to a spoken contrast.
+4. Shorten the MirrorCode detail while retaining what was evaluated.
+5. Reduce historical background to the Brooks and Naur questions.
 
-1. **Hei ohjelmistokehitys, mitä kuuluu?**
-2. **Did everything change—or did the hard part remain?**
-3. **Quick-fire gallup** — several questions using one repeated visual system.
-4. **The project you just used.**
-5. **“Human or AI?” is the wrong question.**
-6. **1968 called: software is still in crisis.**
-7. **Every generation gets its silver bullet.**
-8. **Brooks: accidental difficulty can shrink; essential complexity remains.**
-9. **Naur: the real product may be the theory in people’s heads.**
-10. **2022: ask for an answer. 2026: delegate an outcome.**
-11. **Capability rose fast; reliability is still jagged.**
-12. **The leaderboard is a weather report, not a map.**
-13. **Faster according to whom, doing what?**
-14. **AI accelerates tasks; organizations deliver systems.**
-15. **Cheap output creates expensive evaluation.**
-16. **Open source is installing gates around reviewer attention.**
-17. **When anyone can build it, why should anyone use it?**
-18. **SaaS is not dead; undifferentiated features are cheaper.**
-19. **Who trains the future reviewer?**
-20. **Finland: AI is pressure and product.**
-21. **What becomes scarce?**
-22. **Koodi halpeni. Vastuu ei.**
-23. **AI-fiilis, nyt?**
+Use the recovered time to preserve the learning, people, Finland, and closing sections. Do not solve an overrun by dropping a source caveat that changes the meaning of a headline.
 
-Some beats should share a slide. The final deck should likely contain approximately 18–22 sparse slides plus poll-result screens.
+For optional discussion up to 90 minutes: exact employment results, detailed consultancy comparisons, the third maintainer policy, task-horizon methodology, open-weight ecosystems, geopolitics, security details, or CRA scope and dates. These are appendix threads selected by the room, not required content.
 
-## Compression order
+## Final preparation checks
 
-If the demo or gallup runs long, remove material in this order:
-
-1. exact model rankings;
-2. detailed USA–China–EU figures;
-3. individual Finnish company examples;
-4. App Store exact numbers;
-5. one of the three open-source policy examples;
-6. the productivity J-curve explanation, leaving one sentence;
-7. detailed historical automation examples, while retaining Brooks and Naur.
-
-Never cut:
-
-- quick audience profile;
-- truthful project demo with a failure or human decision;
-- the essential/accidental complexity distinction;
-- 2022→2026 change in delegation;
-- conflicting productivity evidence;
-- review scarcity and ownership;
-- the recap.
-
-## Presenter preparation notes
-
-- Rehearse the 60-minute version to approximately 55–57 minutes without audience delay.
-- Prepare the demo as screenshots or a short recording even if the live system is used.
-- Assign someone to note the largest gallup result for each question; the application does not provide a combined profile slide.
-- Put an “as of” date on every model, market, company, legal, or adoption figure.
-- Use source notes for historical screenshots and avoid long quotations.
-- Do not improvise causality from company figures.
-- Recheck time-sensitive sources shortly before the event.
+- Confirm the event date and whether the full hour excludes announcements and Q&A.
+- Select and substantiate the demo; prepare screenshots or a recording and hand-vote fallback.
+- Rehearse to approximately 55–57 minutes to leave room for audience delay.
+- Verify every selected factual slide against its source and observation period.
+- Keep survey, experimental, conceptual, company-reported, and speaker-inferred claims distinguishable.
+- Apply the September corrections rather than copying values from the HTML prototype or older dossiers.
+- Keep the formal closing at one hour; extra discussion is optional.

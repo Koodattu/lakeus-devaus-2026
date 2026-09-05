@@ -2,7 +2,9 @@
 
 Working material for an hour-long Lakeus-Devaus talk about how AI changed software development from 2022 to 2026—and what that change asks of developers next.
 
-This repository contains the finished HTML presentation and the broader working material behind it: the argument, evidence, audience polls, possible demonstrations, and material cut from the main deck.
+This repository contains an HTML presentation prototype and the broader working material behind it: the argument, evidence, audience polls, possible demonstrations, and material cut from the main talk.
+
+The **[one-hour run of show](docs/02-one-hour-run-of-show.md)** is the main content draft for the future PowerPoint, updated **5 September 2026**. Start there for the structure, timed beats, selected evidence, transitions, and closing takeaways. The [red thread](docs/01-red-thread.md) explains the argument.
 
 ## Working thesis
 
@@ -25,13 +27,15 @@ This repository contains the finished HTML presentation and the broader working 
 - [AI-native software development in August 2026](docs/10-ai-native-development-workflows.md)
 - [Workflow scenarios, field lessons, and open questions](docs/11-workflow-scenarios-and-field-notes.md)
 - [Career anxiety, expectations, and the value shift](docs/12-career-anxiety-and-value-shift.md)
+- [September research refresh and source corrections](docs/13-research-refresh-2026-09-05.md)
 
-Working-material snapshot: **15 August 2026**. The time-sensitive claims used in the deck were rechecked on **18 August 2026** and should be checked again if the event date changes materially.
+The earlier research dossiers retain their dated August snapshots. The **5 September research refresh** records the current corrections and qualifications for selected evidence; it is not a complete re-audit of the source ledger. Follow the updated main draft rather than copying older figures into new slides.
 
 ## HTML presentation
 
-The complete presentation is in [`index.html`](index.html). It has no runtime
-dependencies and can be opened directly in a browser.
+The earlier prototype is in [`index.html`](index.html). It has no runtime
+dependencies and can be opened directly in a browser. It has not been updated to
+match the September content plan. PowerPoint production has not started.
 
 Presentation controls:
 

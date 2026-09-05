@@ -1,5 +1,7 @@
 # Brief and principles
 
+Editorial direction updated **5 September 2026**. Use the [one-hour run of show](02-one-hour-run-of-show.md) as the main presentation draft and the [research refresh](13-research-refresh-2026-09-05.md) for updated evidence and caveats.
+
 ## The communication job
 
 By the end of the session, participants should understand one central change:
@@ -63,6 +65,8 @@ AI has not made software engineering disappear. It has reduced the cost of produ
 
 The human role therefore changes from being the sole producer of every line toward being the accountable editor, system designer, evaluator, and owner of consequences. Writing code still matters, but typing it is a smaller share of the value proposition.
 
+AI can also support design, testing, review, and understanding. The thesis does not assume those activities remain fixed manual costs. Their quality and capacity need deliberate investment as generation grows. Cheaper experimentation can also make worthwhile work feasible for the first time.
+
 ## Important distinctions
 
 The talk should repeatedly separate ideas that public discussion tends to collapse:
@@ -76,6 +80,9 @@ The talk should repeatedly separate ideas that public discussion tends to collap
 | AI correlation and AI causation | Consulting weakness also reflects macroeconomics, customer budgets, public spending, utilization, and post-pandemic adjustment. |
 | A leaderboard score and useful capability | Benchmarks saturate, real tasks are jagged, and reliability matters. |
 | More software and more value | Supply can grow faster than attention, trust, or willingness to pay. |
+| Completing a task and learning a skill | A finished artifact does not establish comprehension or future debugging ability. |
+| Capability and authorization | Success at pursuing a goal does not establish permission to use every available means. |
+| Faster old tasks and newly chosen work | AI changes the task mix; hypothetical manual effort is not automatically value saved. |
 
 ## Tone
 
@@ -124,7 +131,8 @@ The session works if:
 4. the local industry section distinguishes evidence from attribution;
 5. at least one demonstration makes the new development loop tangible without becoming a tutorial;
 6. the final discussion reaches responsibility, value, and human judgment—not only which model is best;
-7. every factual slide has a date, source note, and honest caveat.
+7. every factual slide has a date, source note, and honest caveat;
+8. participants can distinguish output, useful outcomes, and learning, and leave with three practical choices about measurement, understanding, and ownership.
 
 ## Working assumptions to confirm later
 
