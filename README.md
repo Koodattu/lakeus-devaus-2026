@@ -4,7 +4,7 @@ Working material for an hour-long Lakeus-Devaus talk about how AI changed softwa
 
 This repository contains an HTML presentation prototype and the broader working material behind it: the argument, evidence, audience polls, possible demonstrations, and material cut from the main talk.
 
-The **[one-hour run of show](docs/02-one-hour-run-of-show.md)** is the main content draft for the future PowerPoint, updated **5 September 2026**. Start there for the structure, timed beats, selected evidence, transitions, and closing takeaways. The [red thread](docs/01-red-thread.md) explains the argument.
+The **[one-hour run of show](docs/02-one-hour-run-of-show.md)** is the main content draft behind the PowerPoint, updated **5 September 2026**. Start there for the structure, timed beats, selected evidence, transitions, and closing takeaways. The [red thread](docs/01-red-thread.md) explains the argument.
 
 ## Working thesis
 
@@ -31,11 +31,17 @@ The **[one-hour run of show](docs/02-one-hour-run-of-show.md)** is the main cont
 
 The earlier research dossiers retain their dated August snapshots. The **5 September research refresh** records the current corrections and qualifications for selected evidence; it is not a complete re-audit of the source ledger. Follow the updated main draft rather than copying older figures into new slides.
 
+## PowerPoint presentation
+
+The editable [PowerPoint deck](output/lakeus-devaus-2026.pptx) contains 23 Finnish slides with speaker timing, source links, and evidence qualifications in the notes. It follows the September content plan and uses the documented research correction as the process demo.
+
+Opening and closing voting, plus final feedback, take place in [gallup.koodattu.dev](https://gallup.koodattu.dev). The notes mark the browser handoffs. The deck contains no voting-question slides.
+
 ## HTML presentation
 
 The earlier prototype is in [`index.html`](index.html). It has no runtime
 dependencies and can be opened directly in a browser. It has not been updated to
-match the September content plan. PowerPoint production has not started.
+match the September content plan.
 
 Presentation controls:
 
