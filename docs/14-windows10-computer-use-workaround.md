@@ -1,10 +1,65 @@
 # Windows 10 Computer Use compatibility workaround
 
-Recorded: 2026-09-05. This is a workstation maintenance record, not presentation content.
+Recorded: 2026-09-05. Updated: 2026-09-12. This is a workstation maintenance record, not presentation content.
 
 ## Status
 
+**Reinstalled and verified on 2026-09-12 at 13:22:59 EEST (+03:00).** A Codex update selected a new helper runtime without the compatibility DLL. The same reviewed v0.1.0 local build was installed into runtime `a708e72b10c27b59`; its loaded module and working PowerPoint screenshot were verified. The helper was restarted through the normal plugin workflow, so a full Codex restart was not necessary. The September 5 paths and scripts below are historical; use the September 12 rollback command for the current installation.
+
 **Installed on 2026-09-05 at 18:21:15 EEST (+03:00), with explicit user authorization.** The installed DLL matches the locally built and tested hash below, the installation record was read back successfully, and the original helper executable hash is unchanged. After the user's Codex restart, the running helper loaded the local DLL and PowerPoint screenshots and a screenshot-based ribbon click were successfully verified. See the post-restart results below for the scope and limitations of this check.
+
+## Reinstallation after Codex update — 2026-09-12
+
+The user requested reinstalling the fix and checking for a newer release. GitHub's public releases API returned only **v0.1.0**, published on 2026-09-05; no newer published release or prerelease was listed. Its standard ZIP digest still matched the archived release hash below. No new download, source change, or rebuild was needed.
+
+The active Computer Use skill bundle was `26.908.40834`. Normal plugin initialization started a helper in a different runtime:
+
+```text
+C:\Users\Juha\AppData\Local\OpenAI\Codex\runtimes\cua_node\a708e72b10c27b59\bin\node_modules\@oai\sky\bin\windows\codex-computer-use.exe
+```
+
+That directory contained neither `version.dll` nor an installation record. Its helper loaded only Windows' system version DLL, and a PowerPoint screenshot reproduced `SetIsBorderRequired failed: No such interface supported (0x80004002)`. This confirms the missing installation in the new runtime; it does not establish that the compatibility implementation itself had regressed.
+
+Read-only import inspection confirmed that the new helper still imports `version.dll` and `RoGetActivationFactory`. Its SHA-256 is:
+
+```text
+BAD605EF7A800D2E2EBE2D9205DB6F9AB73EF193524392F5CAA1FA2E1A0DAE2C
+```
+
+The retained local DLL was rehashed and matched the previously reviewed, built, tested, and Defender-scanned artifact:
+
+```text
+7F32ECF8D62E65683785D9AE57ACADDE5DE9922BD80AF43C6799D3995C69B982
+```
+
+The reviewed installer was used with fresh guards for the new helper hash and path. Only processes whose executable path matched this target were stopped. Installation added the DLL and record to this directory at `2026-09-12T13:22:59.2140683+03:00`. Post-install checks confirmed the installed DLL hash and unchanged helper executable. The prior runtime was not modified or cleaned up.
+
+After reconnecting through the normal Computer Use API, process-module inspection confirmed that the new helper loaded the local compatibility DLL. A PowerPoint screenshot succeeded and displayed the actual application home screen. A screenshot-based click on New opened the expected page, confirmed by a second successful screenshot. These checks verify capture on the updated helper; they do not replace the longer-term reliability limitations noted below. No existing presentation was opened or edited.
+
+### Current installation and rollback commands
+
+The new installation script is retained for audit; it refuses an existing installation:
+
+```powershell
+& 'C:\Users\Juha\.codex\visualizations\2026\09\05\01a071f0-69ee-7d62-a4a3-a232bfae4047\capture-compat-review-v0.1.0\install-reviewed-2026-09-12.ps1'
+```
+
+To uninstall from the **current September 12 runtime**, use:
+
+```powershell
+& 'C:\Users\Juha\.codex\visualizations\2026\09\05\01a071f0-69ee-7d62-a4a3-a232bfae4047\capture-compat-review-v0.1.0\rollback-2026-09-12.ps1'
+```
+
+This stops only the matching helper and uses the installation record and DLL hash to remove the two installed files. Restart Codex afterward, or reconnect through the normal plugin workflow to start a fresh helper. The older undated rollback script targets only the September 5 runtime.
+
+If the review directory is unavailable, exit Codex and the matching helper first, then use the original package's reviewed installer with the new exact target:
+
+```powershell
+$compatHelperPath = 'C:\Users\Juha\AppData\Local\OpenAI\Codex\runtimes\cua_node\a708e72b10c27b59\bin\node_modules\@oai\sky\bin\windows\codex-computer-use.exe'
+& 'C:\Users\Juha\Downloads\CodexCaptureCompat-v0.1.0-windows-x64\capture-compat\install.ps1' -HelperPath $compatHelperPath -Action Uninstall
+```
+
+Future Codex updates may select yet another runtime. Re-check the active process path, imports, failure, and hashes before installing again; do not distribute the DLL indiscriminately across runtime folders.
 
 ## Problem and diagnosis
 
