@@ -33,6 +33,7 @@ The **[one-hour run of show](docs/02-one-hour-run-of-show.md)** is the revised c
 - [October research bank: evidence, cases, and discussion material](docs/17-research-bank-2026-10-18.md)
 - [October source register and research limits](docs/18-research-source-register-2026-10-18.md)
 - [Presentation structure: slide-by-slide build blueprint](docs/19-presentation-structure.md) — 18 October 2026; applies the speaker's scrapbook/paper style guide and supersedes the DESIGN.md visual direction and the 23-slide storyboard
+- [Maanantain kokeilu](materiaalit/maanantain-kokeilu.md) — Finnish take-home page behind the closing slide's QR code: the four-line task brief, the evening's example and the sources
 
 The earlier research dossiers retain their dated August snapshots. The **5 September research refresh** records the current corrections and qualifications for selected evidence; it is not a complete re-audit of the source ledger. Follow the updated main draft rather than copying older figures into new slides.
 

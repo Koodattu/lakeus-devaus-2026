@@ -1,6 +1,6 @@
 # Presentation structure: the build blueprint
 
-**Version 2.2, 18 October 2026.** This is the blueprint the next PowerPoint is built from. It is not a finished deck.
+**Version 2.3, 18 October 2026.** This is the blueprint the next PowerPoint is built from. It is not a finished deck.
 
 Version 2 applies an independent review of version 1 (summarised in §12). In short:
 
@@ -108,7 +108,7 @@ Use [01-visual-system](../../kuopio-pelaa-2026/presentation-style/01-visual-syst
 | **Frame** (cork / cardboard) | 01, 02, 03, 07, 27, 46, 47, 48 |
 | **Audience prompt** (paper + Bungee, as Kuopio's *kysytään yleisöltä*) | 06 |
 | **Content** (paper) | Everything that argues or teaches |
-| **Full-bleed** (credit only) | 12, 14, 19, 23, 33, 35, 43 (memes, GIF, comic, video, case openers) |
+| **Full-bleed** (credit only) | 12, 14, 19, 23, 35, 43 (memes, GIF, comic, case openers) |
 
 ### 4.2 Components this topic adds
 
@@ -118,7 +118,7 @@ Only four new objects. Each sits on paper like a screenshot.
 |---|---|---|
 | **Code card** | Dark `#20231F` card; Consolas 22–26 pt in warm white; max 6 lines. Mark changed lines with `+`/`−` **and** a pale highlight. | 30, 34 |
 | **Check chip** | A pill holding the command name and the result in words: `läpi` / `ei läpi`. **Only for checks that actually ran.** Unrun checks are grey and say `odotettu: ei läpi → läpi`. | 34 |
-| **Browser frame** | Thin grey chrome around a **real capture**, cropped to the form. Enlarge the relevant field at least 2×. | 28, 32, 34 |
+| **Browser frame** | Thin grey chrome around a clean **mockup** of the form (the walkthrough is slides only). Enlarge the relevant field at least 2×. | 28, 32, 34 |
 | **Lifecycle strip** | Seven small dots top-right: *Rajaa · Konteksti · Toista · Korjaa · Tarkista · Luovuta · Seuraa*. The current dot is blue and labelled. | 29–39 |
 
 **Gone since version 1:** the Agentti/Sinä note pair, the taped honesty tags and the gallup chips on most slides.
@@ -128,7 +128,7 @@ Only four new objects. Each sits on paper like a screenshot.
 - `Lähde: kuvitteellinen esimerkki · …`
 - `Lähde: esityksen tulkinta · …`
 
-A recorded demo is cited as `Lähde: oma demoprojekti, tallenne <pvm>`.
+The address-bug walkthrough is slides only (no recording), so it is always cited as `kuvitteellinen esimerkki`.
 
 **Gallup callbacks.** These live in the speaker notes. Only three slides (13, 17, 38) show a small salmon pin bottom-right, e.g. `↩ Gallup: Nopeuttaako AI sinua?`.
 
@@ -142,10 +142,10 @@ A recorded demo is cited as `Lähde: oma demoprojekti, tallenne <pvm>`.
 | Mascot variant: CRT robot holding a keyboard, magnifying glass, rubber duck and a red **LGTM** stamp | **Make** |
 | `maintenance-illustration.png` | **Reuse** on 18 and 40 |
 | SuomiWoW logo, progress screenshot (Kuopio pp. 104–105) + a repo view | **Reuse / capture** for 43–45 |
-| Address-bug captures + a 20–30 s sped-up screen recording of the agent working | **Must produce** (§10). This is the biggest missing asset. |
+| Address-bug browser mockups (before save / after reload) | **Make** as clean, labelled mockups. No recording (speaker's decision). |
 | Screenshots: curl blog headline, NATO 1968 report page, repo `docs/` listing | **Collect** and record their sources |
 | Memes, reaction GIF, 4-panel comic | **Make or recreate** with Finnish captions. The comic follows the AI-drawn style of Kuopio p. 53. |
-| QR codes: gallup.koodattu.dev and the four-line template page | **Make.** Test them from the back row. |
+| QR codes: gallup.koodattu.dev and the Monday-experiment page (`materiaalit/maanantain-kokeilu.md` on GitHub) | **Make.** Test them from the back row. |
 
 **AI disclosure:** the speaker mentions it in one sentence on 44, and slide 48 carries it in small type.
 
@@ -494,9 +494,9 @@ Full-bleed, tightly cropped screenshot of Daniel Stenberg's blog headline about 
 
 ### Practical · Miten agentin kanssa tehdään töitä? · 35:00–54:00
 
-The lifecycle strip appears on slides 29–39. The bug is cited as `Lähde: kuvitteellinen esimerkki` until real captures exist; after that, `oma demoprojekti, tallenne <pvm>`.
+The lifecycle strip appears on slides 29–39. The bug is a teaching example shown with slides only, cited as `Lähde: kuvitteellinen esimerkki`.
 
-**28 · 35:00 · Browser captures + small loop**
+**28 · 35:00 · Browser mockups + small loop**
 
 - Title: **Asiakas: huoneiston numero katoaa**
 - Subtitle: Osoite tallentuu – B 7 ei
@@ -545,25 +545,24 @@ The lifecycle strip appears on slides 29–39. The bug is cited as `Lähde: kuvi
 - Bottom: **Enemmän työkaluja ei tarkoita parempaa agenttia.**
 - `Lähde:` MCP client best practices · Codex skills · Claude Code workflows.
 
-**32 · 39:50 · Browser captures + trace, 1 build** · strip: *Toista* · 🙋
+**32 · 39:50 · Browser mockups + trace, 1 build** · strip: *Toista* · 🙋
 
 - Title: **Ensin toistetaan, sitten korjataan**
 - Subtitle: Lomake → pyyntö → tallennus → lataus
 - Build a: the chain with no marks. 🙋 "Missä arvo voi kadota? Huutakaa." Build b: the break is circled, *pyynnössä ei ole huoneistoa.*
 - Bottom: **Korjaus ilman toistoa on arvaus.**
 
-**33 · 41:00 · Full-bleed video (#26)** · strip hidden · 30 s
+**33 · 41:00 · Four-frame storyboard** · strip: *Korjaa* · 30 s
 
-A sped-up, real screen recording of the agent:
-
-1. Reading the repo.
-2. Running the failing test.
-3. Editing.
-4. Rerunning.
-
-No title. A small credit: *oma demoprojekti, nopeutettu*.
-
-- **Use only a real recording.** Without one, skip this slide.
+- Title: **Mitä agentti tekee, kun sinä et katso?**
+- Four small frames, left to right, each one line:
+  1. lukee repon ja ohjeet
+  2. ajaa testin → *ei läpi*
+  3. muokkaa koodia
+  4. ajaa testin uudelleen
+- No bottom line.
+- `Lähde:` kuvitteellinen esimerkki.
+- Notes: this replaces a screen recording (speaker's decision, 18.10.2026: slides only, no video). It shows newcomers the agent's working loop in one glance before the diff.
 
 **34 · 41:30 · Code card + checks, 2 builds** · strip: *Korjaa* · 🙋
 
@@ -575,7 +574,7 @@ No title. A small credit: *oma demoprojekti, nopeutettu*.
   - c: browser after reload: *B 7*
 - Bottom: **Mitä tämä testi ei todista?** (🙋 take two answers)
 - Notes:
-  - **Without a recording, the chips are grey and say `odotettu: ei läpi → läpi`.**
+  - **The chips are grey and say `odotettu: ei läpi → läpi`** — nothing was run, so nothing may look like a real pass.
   - The answer to pull out: old records, other countries' address formats, the user's actual workflow.
 
 **35 · 42:50 · Four-panel comic (AI-drawn, as on Kuopio p. 53)**
@@ -684,10 +683,10 @@ Full-bleed screenshot of the SuomiWoW progress page (reuse Kuopio p. 105). Credi
 - Subtitle: Harrastusprojekti, oikeat käyttäjät, oikea tuotanto
 - Number row: **~1 250 committia** · **12 kuukautta** · **2 ihmistä** · **~190 000 riviä koodia**
 - Left, **Agentti:**
-  - kirjoitti valtaosan koodista
+  - Codex ja Claude Code kirjoittivat käytännössä kaiken koodin
   - toteutti ominaisuudet ja korjaukset
   - kirjoitti suunnitelmat ja ajokirjat (`docs/`)
-- Right, **Minä:**
+- Right, **Minä: teen päätökset**
   - mitä palvelu on – ja mitä se ei ole ("ei kasinoa, ei maksullista etenemistä")
   - ettei mennyttä historiaa kirjoiteta uudelleen
   - mitä yhteisö oikeasti haluaa
@@ -696,7 +695,7 @@ Full-bleed screenshot of the SuomiWoW progress page (reuse Kuopio p. 105). Credi
 - Bottom: **Mitä tässä oli halpaa – ja mikä ei?**
 - `Lähde:` github.com/Koodattu/suomiwow.vaarattu.tv (git log 18.10.2026).
 - Notes:
-  - **[CONFIRM]** the agent's share of the code and the tools used (Codex, Claude Code, Copilot all appear in the history).
+  - Confirmed by the speaker (18.10.2026): the code is essentially entirely written with Codex and Claude Code; the speaker makes the decisions. Spoken line: "En kirjoita koodia. Minä päätän."
   - The "Minä" lines paraphrase `PRODUCT.md` ("must not feel like monetized gacha, casino software…"; "preserve raid-tier history instead of silently rewriting past performance").
   - Say in one sentence that this presentation's research was also done with agents, and that the speaker answers for every claim on stage.
 
@@ -712,10 +711,10 @@ Full-bleed screenshot of the SuomiWoW progress page (reuse Kuopio p. 105). Credi
   npm run repair:character-identities -- --apply
   # käynnistä · dry run uudelleen → 0 jäljellä
   ```
-- Bottom: **Agentti kirjoitti korjauksen. Tuotantoon sen ajoin minä.**
+- Bottom: **Agentti kirjoitti korjauksen. Päätös ajaa se tuotantoon oli minun.**
 - `Lähde:` suomiwow.vaarattu.tv `docs/character-identity-repair.md`, `docs/ingestion-leases.md`.
 - Notes:
-  - **[CONFIRM the bottom line.]**
+  - The bottom line follows the speaker's confirmed split: agents write, the speaker decides.
   - Other real commits that make the same point: "Separate database backups from automatic deployment"; "Bound account repair transactions to fit production MongoDB cache"; "Fix ingestion recovery with renewable fenced leases".
   - Bridge: "Ja tästä päästään illan kysymykseen."
 
@@ -737,7 +736,7 @@ Full-bleed screenshot of the SuomiWoW progress page (reuse Kuopio p. 105). Credi
   2. **Varmista, että osaaminen kasvaa työn mukana.**
   3. **Sovi omistajuus ennen julkaisua.**
 - Taped card + QR code: **Maanantaina: yksi toistettava virhe · neljä riviä · katso, mitä näyttöä saat.**
-- The QR code leads to the four-line template (see §10 for hosting).
+- The QR code leads to [`materiaalit/maanantain-kokeilu.md`](../materiaalit/maanantain-kokeilu.md) on GitHub: the four lines, the evening's example, the ladder, the handoff questions and the sources.
 
 **48 · 56:00 · Closing corkboard (#6) + questions**
 
@@ -856,12 +855,8 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
 
 1. **Template.** Start from `KuopioPelaaEsitys.pptx`: copy its masters, textures, fonts and frame layouts, then delete the content. Build the frame slides first.
 2. **New assets** (§4.3).
-3. **Record the demo** — the most important open item.
-   - Build a disposable mini app: one form, one save path, and a missing `apartment` field.
-   - Run Codex or Claude Code for real.
-   - Capture the reproduction, the 20–30 s sped-up recording, the diff, the failing → passing test and the browser after reload.
-   - With the recording, slides 28 and 32–34 become evidence. Without it, slide 33 is skipped and the chips on 34 stay grey.
-4. **Host the four-line template** behind slide 47's QR code. Recommended: a short page in this public repo, `docs/maanantain-kokeilu.md`, holding the four-line brief, one filled-in example and a link to the sources. One QR then gives both the template and the evidence. No new hosting needed.
+3. **Address-bug walkthrough: slides only** (speaker's decision, 18.10.2026). No recording and no live run. Make clean browser mockups and a short, plausible 3-line diff. Label everything `kuvitteellinen esimerkki`; check chips stay grey ("odotettu").
+4. **Monday-experiment page: done.** It lives at [`materiaalit/maanantain-kokeilu.md`](../materiaalit/maanantain-kokeilu.md). Point slide 47's QR code at `https://github.com/Koodattu/lakeus-devaus-2026/blob/main/materiaalit/maanantain-kokeilu.md` (push first, then test the code).
 5. **Native charts and flows.**
    - Charts: 08, 13, 21, 25. Keep the title, subtitle and source identical across each chart's builds.
    - Flows: 16, 28, 39.
@@ -893,12 +888,9 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
 
 ## 11. Open decisions for the speaker
 
-**Settled on 18.10.2026:** takeaway #1 swap confirmed; bio and contacts current; SuomiWoW is the personal proof; the gallup runs only at the start; the speaker ran the December 2024 Lakeus-Devaus event (slide 04 updated); the humour beats have had their final caption pass (12, 14, 23, 35).
+**Settled on 18.10.2026:** takeaway #1 swap confirmed; bio and contacts current; SuomiWoW is the personal proof; the gallup runs only at the start; the speaker ran the December 2024 Lakeus-Devaus event (slide 04 updated); the humour beats have had their final caption pass (12, 14, 23, 35); SuomiWoW code is essentially all Codex and Claude Code, with the speaker making the decisions; the address-bug walkthrough is slides only, with no video; the Monday-experiment page lives in `materiaalit/`.
 
-1. **SuomiWoW lines (44–45):** confirm the agent's share of the code, the tools used, and "Tuotantoon sen ajoin minä".
-2. **Record the demo** (§10 step 3)? It decides whether slides 28 and 32–34 are evidence or illustration.
-3. **Four-line template behind slide 47's QR:** recommended home is this public repo (§10 step 4).
-4. **Event date: unknown.** Until it is set:
+1. **Event date: unknown.** Until it is set:
    - every number on a slide carries its own date or vintage;
    - run §10 step 7 in event week.
    
@@ -907,7 +899,7 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
    - Statistics Finland's annual enterprise AI release came out on 27.11.2025, so a 2026 release is likely around late November 2026 (slide 25).
    - Siili's business review is due 28.10.2026 (backup B14).
    - If the event moves into mid-2027, a new Stack Overflow survey replaces slides 08 and 36.
-5. **Title:** keep *Hei ohjelmistokehitys, mitä kuuluu?* (recommended) or switch to the guide's pattern.
+2. **Title:** keep *Hei ohjelmistokehitys, mitä kuuluu?* (recommended) or switch to the guide's pattern.
 
 ---
 
@@ -917,8 +909,9 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
 |---|---|
 | **Accuracy** | SWE-Maintain card corrected (39). Personal-proof lines corrected (45). "yli" added (17). Slop definition labelled as ours and with "kohtuuton" (20). Finnish employment −1 % now says "maaliskuun lopusta" (24). MirrorCode run detail flagged for confirmation (11). AGENTS.md wording matched to v3 (30). Timeline subtitle fixed (04). Mismatched gallup callback removed (old 27 → B15). |
 | **Structure** | 57 → 49 slides. The 4GL slide, flywheel and sentiment slide moved to backup. Microsoft folded into the METR reveal. Anthropic/OpenAI merged into one contradiction pair. Gofore folded into the local slide. The 48 % trust stat moved into the ladder. Permission slide cut (said aloud). Section returns reduced from five to two plus corner pins. |
-| **Practical half** | Opens with the bug itself. Five audience moments added. A real 30 s agent recording added. The prototype moved after the handoff. The personal proof moved to the close. |
+| **Practical half** | Opens with the bug itself. Five audience moments added. A four-frame agent storyboard added (no video). The prototype moved after the handoff. The personal proof moved to the close. |
 | **Ending** | Answers the literal title ("Kiireistä…") and the salmon note. One summary only. The Monday experiment is on a slide, with a QR code. |
 | **Style** | Bottom lines on about half the slides, mostly questions or dry asides. Plainer titles. The Kuopio bio reused. Five humour beats, including an AI-drawn comic as on Kuopio p. 53. Slide furniture cut to four components. |
 | **Version 2.1 (speaker feedback, 18.10.2026)** | SuomiWoW replaces "Tämäkin esitys" as the personal proof (43–45), including a real production runbook. The closing gallup is dropped; the gallup is only the opening gauge. The close ends with questions inside the hour. Parallel-work slides moved to backup. 48 slides. Takeaways, bio and contacts confirmed. |
 | **Version 2.2 (18.10.2026)** | Slide 04 states the speaker ran the 2024 event, with a hands-up callback. Final caption pass on the humour beats (12, 14, 23, 35). Finnish copy fixes on 08, 11, 36, 39 and 45. Event-date handling added to §11. |
+| **Version 2.3 (18.10.2026)** | SuomiWoW slides state the confirmed split (Codex and Claude Code write, the speaker decides). The video slide 33 became a static four-frame storyboard; the walkthrough is slides only. The Monday-experiment page was written to `materiaalit/maanantain-kokeilu.md`. |
