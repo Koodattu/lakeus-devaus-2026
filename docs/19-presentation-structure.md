@@ -1,6 +1,6 @@
 # Presentation structure: the build blueprint
 
-**Version 2.3, 18 October 2026.** This is the blueprint the next PowerPoint is built from. It is not a finished deck.
+**Version 2.4, 18 October 2026.** This is the blueprint the next PowerPoint is built from. It is not a finished deck.
 
 Version 2 applies an independent review of version 1 (summarised in §12). In short:
 
@@ -861,12 +861,15 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
    - Charts: 08, 13, 21, 25. Keep the title, subtitle and source identical across each chart's builds.
    - Flows: 16, 28, 39.
 6. **Screenshots:** the 2024 event post on the Lakeus-Devaus site, curl, NATO 1968, SuomiWoW (progress page from Kuopio p. 105; a repo view showing `AGENTS.md`, `CLAUDE.md`, `PRODUCT.md`, `docs/`). Record their sources. Refresh the SuomiWoW numbers from git during event week.
-7. **Event-week data refresh:**
-   - Teknologiateollisuus outlook.
-   - Gofore.
-   - Siili, if it's discussed. Its next review is due 28 October.
-   - Recheck the Stack Overflow 2026 pages.
-   - Confirm the MirrorCode run detail.
+7. **Data refresh for a November 2026 event.** Do one pass about a week before the event, and recheck the fast-moving items in event week.
+   - **Slide 24, Teknologiateollisuus:** the August outlook covered Q2. A newer IT-sector outlook (Q3 observations) is likely out by November; switch to it and update the subtitle's vintage.
+   - **Slide 25, Tilastokeskus:** last year's release was 27.11.2025. If the 2026 release comes out before the event, use it; if not, keep "kevät 2025" on the slide.
+   - **Slide 26, Gofore:** use the latest monthly review instead of August's.
+   - **Backup B14, Siili:** its business review is due 28.10.2026.
+   - **Slides 08 and 36, Stack Overflow 2026:** still the current annual survey. Just recheck that the pages are live.
+   - **Slide 11, MirrorCode:** confirm the run detail. The live leaderboard may have moved, so keep the dated protocol.
+   - **Slides 17, 22 and 39:** check for corrections to the October company posts and the SWE-Maintain preprint.
+   - **Slides 44–45, SuomiWoW:** refresh the commit and line counts from git.
 8. **Finnish speaker notes** for every slide: timing, transition sentence, full source links, the caveat to say aloud. Reuse from `output/lakeus-devaus-2026-practical-notes.md` where the slides overlap.
 9. **Checks.** Run [05-checklist](../../kuopio-pelaa-2026/presentation-style/05-checklist.md), plus:
    - [ ] No check shown as passed unless it actually ran
@@ -888,17 +891,9 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
 
 ## 11. Open decisions for the speaker
 
-**Settled on 18.10.2026:** takeaway #1 swap confirmed; bio and contacts current; SuomiWoW is the personal proof; the gallup runs only at the start; the speaker ran the December 2024 Lakeus-Devaus event (slide 04 updated); the humour beats have had their final caption pass (12, 14, 23, 35); SuomiWoW code is essentially all Codex and Claude Code, with the speaker making the decisions; the address-bug walkthrough is slides only, with no video; the Monday-experiment page lives in `materiaalit/`.
+**Settled on 18.10.2026:** takeaway #1 swap confirmed; bio and contacts current; SuomiWoW is the personal proof; the gallup runs only at the start; the speaker ran the December 2024 Lakeus-Devaus event (slide 04 updated); the humour beats have had their final caption pass (12, 14, 23, 35); SuomiWoW code is essentially all Codex and Claude Code, with the speaker making the decisions; the address-bug walkthrough is slides only, with no video; the Monday-experiment page lives in `materiaalit/`; the event is planned for November 2026.
 
-1. **Event date: unknown.** Until it is set:
-   - every number on a slide carries its own date or vintage;
-   - run §10 step 7 in event week.
-   
-   Data that will change in the meantime:
-   - Teknologiateollisuus publishes a new IT-sector outlook each quarter (slide 24).
-   - Statistics Finland's annual enterprise AI release came out on 27.11.2025, so a 2026 release is likely around late November 2026 (slide 25).
-   - Siili's business review is due 28.10.2026 (backup B14).
-   - If the event moves into mid-2027, a new Stack Overflow survey replaces slides 08 and 36.
+1. **Exact event day.** The event is planned for November 2026. The exact day decides whether the late-November Tilastokeskus release makes it in (§10 step 7). Slide 04's "kaksi vuotta sitten" (December 2024 → November 2026) works either way.
 2. **Title:** keep *Hei ohjelmistokehitys, mitä kuuluu?* (recommended) or switch to the guide's pattern.
 
 ---
@@ -915,3 +910,4 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
 | **Version 2.1 (speaker feedback, 18.10.2026)** | SuomiWoW replaces "Tämäkin esitys" as the personal proof (43–45), including a real production runbook. The closing gallup is dropped; the gallup is only the opening gauge. The close ends with questions inside the hour. Parallel-work slides moved to backup. 48 slides. Takeaways, bio and contacts confirmed. |
 | **Version 2.2 (18.10.2026)** | Slide 04 states the speaker ran the 2024 event, with a hands-up callback. Final caption pass on the humour beats (12, 14, 23, 35). Finnish copy fixes on 08, 11, 36, 39 and 45. Event-date handling added to §11. |
 | **Version 2.3 (18.10.2026)** | SuomiWoW slides state the confirmed split (Codex and Claude Code write, the speaker decides). The video slide 33 became a static four-frame storyboard; the walkthrough is slides only. The Monday-experiment page was written to `materiaalit/maanantain-kokeilu.md`. |
+| **Version 2.4 (18.10.2026)** | Event planned for November 2026. §10 step 7 now has a dated, slide-by-slide refresh plan. |
