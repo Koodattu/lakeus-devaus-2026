@@ -1,16 +1,27 @@
 # Presentation structure: the build blueprint
 
-**Written 18 October 2026.** This document is what the next PowerPoint gets built from. It does not describe a finished deck.
+**Version 2.2, 18 October 2026.** This is the blueprint the next PowerPoint is built from. It is not a finished deck.
 
-It combines three inputs:
+Version 2 applies an independent review of version 1 (summarised in §12). In short:
 
-- **What to say:** the [run of show](02-one-hour-run-of-show.md), [red thread](01-red-thread.md), [editorial backlog](07-editorial-backlog.md), the [September refresh](13-research-refresh-2026-09-05.md) and the [October research bank](17-research-bank-2026-10-18.md).
-- **How it looks and sounds:** the speaker's presentation style guide (`kuopio-pelaa-2026/presentation-style/`, files 01–06). This is the style used in *Tekoäly tuli – nyt kaikki on ohi… vai onko?*.
-- **What already failed or worked:** the three earlier decks (`output/*.pptx`), the HTML version and the ppt-master experiment.
+- Corrected six evidence errors.
+- Cut the deck from 57 to 48 slides.
+- Moved the bug and the personal proof.
+- Added interaction to the practical half.
+- Removed most of the slide furniture.
+- Rewrote the copy against the speaker's actual deck, not only the style guide's rules.
 
-**What it replaces:** the visual direction in [DESIGN.md](../DESIGN.md) (navy, lime, dark section slides) and the 23-slide [storyboard](16-practical-presentation-storyboard.md). **What it keeps:** the 5 + 10 + 20 + 20 + 5 programme, the gallups in gallup.koodattu.dev and every evidence rule from the earlier documents.
+**Inputs:**
 
-Slide copy below is in Finnish and everything else is in English, following the repo's convention. All slide copy is a draft. Shorten it freely, but keep each slide's job.
+- **Content:** the [run of show](02-one-hour-run-of-show.md), [red thread](01-red-thread.md), [editorial backlog](07-editorial-backlog.md), the [September refresh](13-research-refresh-2026-09-05.md) and the [October research bank](17-research-bank-2026-10-18.md).
+- **Style:** the speaker's style guide, `kuopio-pelaa-2026/presentation-style/` (files 01–06). Where the guide and the speaker's real deck (`KuopioPelaaEsitys.pdf`) disagree, **follow the real deck**. That is the voice the audience should hear.
+- **History:** the three earlier decks in `output/*.pptx`, the HTML version and the ppt-master experiment.
+
+**This document replaces:** the visual direction in [DESIGN.md](../DESIGN.md) and the 23-slide [storyboard](16-practical-presentation-storyboard.md).
+
+**This document keeps:** the 5 + 10 + 20 + 20 + 5 programme, the opening gallup in gallup.koodattu.dev, and every evidence rule from the earlier documents.
+
+Planning notes are in English and slide copy is in Finnish. The copy is a draft: shorten it freely, but keep each slide's job.
 
 ---
 
@@ -20,14 +31,18 @@ Slide copy below is in Finnish and everything else is in English, following the 
 |---|---|
 | **Title** | Hei ohjelmistokehitys, mitä kuuluu? |
 | **Central question (salmon note)** | **Koodi halpeni. Mikä ei?** |
-| **Answer to the title (slide 54)** | **Koodi halpeni. Vastuu ei.** |
-| **Promise** | Näet, mitä ohjelmistokehityksessä oikeasti muuttui, ja miten agentin kanssa edetään tehtävästä tarkistettuun muutokseen. |
-| **Audience** | Lakeus-Devaus, Seinäjoki: a mixed room of developers, students, managers, entrepreneurs and curious visitors. Some use agents daily, some avoid AI, and some are tired of the subject. |
-| **Format** | 60 minutes: 5 intro, 10 opening gallup, 20 *Mitä kuuluu?* (context), 20 *Miten tehdään?* (practical), 5 closing gallup and wrap-up. Open discussion follows the hour. |
-| **Slides** | 57 numbered slides, ~14 progressive builds, 3 memes, and 14 hidden backup slides |
+| **Answer (slide 46)** | *Mitä kuuluu?* → "Kiireistä. Koodia tulee enemmän kuin ehditään lukea." · *Mikä ei?* → **Vastuu ei.** |
+| **Promise** | Näet, mitä ohjelmistokehityksessä oikeasti muuttui, miten agentin kanssa edetään tehtävästä tarkistettuun muutokseen – ja saat yhden kokeilun maanantaille. |
+| **Audience** | Lakeus-Devaus, Seinäjoki. A mixed room of developers, students, managers, entrepreneurs and the curious. Some people use agents daily; others avoid AI or are tired of the topic. |
+| **Format** | 60 min in five blocks: 5 intro · 10 opening gallup · 20 *Mitä kuuluu?* · 20 *Miten tehdään?* (ends with the speaker's own project) · 5 takeaways and questions. Longer discussion continues after the hour. |
+| **Slides** | 48 numbered slides, ~12 progressive builds, 4 humour beats, 18 hidden backup slides |
 | **Three takeaways** | 1. Pyydä tulosta, jonka voit tarkistaa. · 2. Varmista, että osaaminen kasvaa työn mukana. · 3. Sovi omistajuus ennen julkaisua. |
+| **Take-home experiment** | *Maanantaina: yksi toistettava virhe · neljä riviä · katso, mitä näyttöä saat.* A QR code links to the four-line template (slide 47). |
 
-**Why the salmon note works as the hook:** the style guide's title pattern is a dramatic claim with built-in doubt, and the talk has to answer it explicitly. The title is a greeting, so the doubt goes on the central note: *Koodi halpeni. Mikä ei?* The thesis then answers it word for word. The room sees the question at 00:30, the note returns at every section break, and it is answered at 55:00.
+**How the title gets answered.** The style guide says the talk must answer its title explicitly. The title is a greeting, so slide 46 answers it twice:
+
+1. The literal greeting: *Mitä kuuluu? Kiireistä.*
+2. The salmon note, which the room has seen since 00:30: *Koodi halpeni. Mikä ei? Vastuu ei.*
 
 ---
 
@@ -35,16 +50,16 @@ Slide copy below is in Finnish and everything else is in English, following the 
 
 | Decision | Why |
 |---|---|
-| **Adopt the scrapbook / paper-explainer style** in place of the navy/lime field-guide look | The speaker asked for it. It also matches the speaker's previous talk, so the two read as a series. |
-| **Keep the 5 + 10 + 20 + 20 + 5 programme** | It was agreed on 5 September and the gallups depend on it. |
-| **The practical half replaces the style guide's workshop** | The format has no hands-on block. The address-bug walkthrough plays the "talk → do" role, and slide 52 gives everyone one exercise to take home. |
-| **The gallup replaces the word-association warm-up** | Ten minutes of voting is already the warm-up. Doing both would eat the intro. |
-| **No question slides in the deck** | This is still the agreed rule. The deck has two *kysytään yleisöltä* handoff slides with a QR code and the URL, and the questions themselves stay in the web app. |
-| **About 57 slides instead of 23** | The style guide budgets one point per 40–60 seconds. The deck runs for about 45 of the 60 minutes, which gives roughly 50–60 points. The 23-slide decks ran about 2 minutes per slide, which is too slow for this style. |
-| **History moves to the start of the context half** (style guide beat 11 → our first content beat) | A veteran room needs "ollaanko tässä oltu ennenkin?" before the new numbers, or it tunes out. This is a deliberate deviation from the template order. |
-| **"This presentation was made with agents" is the personal proof** | It is the one real, documented case of "what the AI did and what I decided" that we have. The repo is the evidence. The speaker must confirm every line (see §11). |
-| **Retire `ai-workbench.png`** | Its dark navy palette clashes with cork and paper. **Keep `maintenance-illustration.png`**: its warm paper tones fit the content surface. |
-| **Most new evidence comes from the October bank** | The Stack Overflow 2026 survey, the fuller MirrorCode results, the OpenAI deletion case, curl, SWE-Maintain and Statistics Finland are fresher and more concrete than what the older decks used. |
+| **Use the scrapbook / paper-explainer style.** Write copy in the speaker's real voice. | The speaker asked for it, and it links this talk to the previous one. The real deck beats the guide where they differ: about half the slides get a bottom line, usually a question or a dry aside, not a moral. |
+| **Keep 5 + 10 + 20 + 20 + 5.** | It is agreed. The gallup runs only at the start (speaker's decision, 18.10.2026), so the last five minutes are takeaways and questions. |
+| **48 slides.** | The deck runs about 45 minutes. Cheap beats (memes, GIFs, builds) keep the pace up; dense evidence slides were cut, merged or moved to backup. |
+| **The context half is a story, not a catalogue.** About 15 content slides. | DECISIONS.md rejected the "data-led industry report". Every number must earn its slide. |
+| **The practical half replaces the workshop and is interactive.** | It opens with the bug itself and has five audience moments. The Monday experiment on slide 47 is the "do" part. |
+| **The gallup is the warm-up, used once.** No question slides. | Its only job is to show where this room stands on GenAI and software development. Later slides call back to its answers. The deck has one *kysytään yleisöltä* handoff slide (06). No closing gallup or feedback wall. |
+| **The personal proof is SuomiWoW** (43–45), at the end of the practical half. | The teaching bug shows the method; SuomiWoW shows a year of real agent-assisted work: ~1 250 commits, `AGENTS.md`/`CLAUDE.md`, production runbooks. Its data-repair runbook is the thesis in practice, and the ending climbs from the teaching bug to real work to the thesis. Chosen by the speaker on 18.10.2026. *Tämäkin esitys…* shrinks to one spoken sentence plus the disclosure on 48. |
+| **Takeaway #1 changed.** *Mittaa hyväksyttyä lopputulosta ja korjaustyötä* became *Pyydä tulosta, jonka voit tarkistaa.* | The new #1 covers the practical half and echoes slide 05. Slide 17 ("Kumpaa teillä juhlitaan?") carries the measurement point. **Confirmed by the speaker on 18.10.2026.** |
+| **Light furniture.** Caveats go in the `Lähde:` line, as the guide prescribes. | Version 1 stacked 8–9 extra elements per slide and some of them collided. |
+| **Retire `ai-workbench.png`. Keep `maintenance-illustration.png`.** | Navy clashes with cork; the warm paper tone fits. |
 
 ---
 
@@ -52,108 +67,120 @@ Slide copy below is in Finnish and everything else is in English, following the 
 
 | Style beat ([04](../../kuopio-pelaa-2026/presentation-style/04-deck-template.md)) | Here | Slides |
 |---|---|---|
-| 1 Hook | Collage title → agenda corkboard with the salmon note | 01–02 |
-| 2 Who I am | Bio on cardboard → permission slide | 03–04 |
-| 3 Warm-up | Replaced by the 10-minute gallup, with a short timeline before the handoff | 05–07 |
-| 4 Basics / why now | *Pyydä tulosta, jonka voit tarkistaa*: asking vs delegating | 06 |
-| 5 What professionals think | Stack Overflow 2026 usage by lifecycle stage, plus experience and sentiment | 12, 27 |
-| 6 What users think | Folded into 5. The audience here *is* the professionals, and the gallup covers "users". | — |
-| 7 Why opinions differ | Productivity studies measure different things | 16–18 |
-| 8 Controversy cases + framework | curl case (2 slides) plus the slop definition. MirrorCode is the capability case. | 13, 24–25 |
-| 9 Domain by domain | **The practical lifecycle**: one stage per slide, each with "Agentti / Sinä" | 38–53 |
-| 10 What's possible now | Task substitution and the maintenance-record prototype | 22, 47 |
-| 11 Been here before | 1968 → 4GL → Brooks/Naur, moved to the start (see §2) | 09–11 |
-| 12 Opportunity turn | "AI muuttaa myös sitä, mitä kannattaa yrittää" and the local advantage | 22, 34 |
-| 13 Answer the title | The salmon note flips: *Vastuu ei.* | 54 |
-| 14 Personal proof | *Tämäkin esitys tehtiin agenttien kanssa* (what the agent did / what I decided) | 37 |
-| 15 Takeaways | Takeaways corkboard, 3 notes | 55 |
-| 16 Workshop | Replaced by the practical half (see §2) | 35–53 |
-| 17 Close | Closing-gallup handoff → closing corkboard | 56–57 |
+| 1 Hook | Collage title → agenda corkboard + salmon note | 01–02 |
+| 2 Who I am | Cardboard bio ("Moon härmästä"). Permission to ask is said aloud. | 03 |
+| 3 Warm-up | Timeline + the gallup | 04–06 |
+| 4 Basics | *Kysy vs. delegoi* | 05 |
+| 5–6 What professionals / users think | Stack Overflow 2026 usage, as the bridge out of the gallup | 08 |
+| 7 Why opinions differ | METR "Hetkinen…" + Microsoft | 13–15 |
+| 8 Controversy case + framework | curl (2 slides) + the slop definition; the "Enemmän koodia vai vähemmän?" contradiction | 17, 19–20 |
+| 9 Domain by domain | The practical lifecycle, one stage per slide | 28–42 |
+| 10 What's possible now | Maintenance-record prototype | 18, 40 |
+| 11 Been here before | 1968 → Brooks/Naur, right after the bridge | 09–10 |
+| 12 Opportunity turn | "Mitä kannattaa nyt kokeilla?" / "Mitä täällä kannattaa nyt rakentaa?" | 18, 26 |
+| 13 Answer the title | "Mitä kuuluu? Kiireistä." → "Vastuu ei." | 46 |
+| 14 Personal proof | SuomiWoW: what the agent did, what I decided, a real production runbook | 43–45 |
+| 15 Takeaways | Corkboard + the Monday experiment | 47 |
+| 16 Workshop | The practical half + the Monday experiment | 28–42, 47 |
+| 17 Close | Closing corkboard + questions (no closing gallup) | 48 |
 
 ---
 
-## 4. Visual system for this deck
+## 4. Visual system
 
-Use the style guide's [01-visual-system.md](../../kuopio-pelaa-2026/presentation-style/01-visual-system.md) as written: two surfaces, the `#F1ECE1` paper, Arial Black 32 pt titles, grey 18 pt subtitles, Aptos body text, `#0070C0` for numbers, Bungee for audience prompts, and a `Lähde:` line bottom-left on every claim. Only the additions this topic needs are listed below.
+Use [01-visual-system](../../kuopio-pelaa-2026/presentation-style/01-visual-system.md) as written:
 
-### 4.1 Surfaces, as used here
+- Two surfaces, frame and content.
+- `#F1ECE1` paper.
+- Arial Black 32 pt titles.
+- Grey subtitle.
+- Aptos body.
+- `#0070C0` for big numbers.
+- Bungee for audience prompts.
+- `Lähde:` bottom-left on every claim.
+
+**Layout rule:** at most three or four elements in the content zone. If a slide feels full, it is two slides, or one of them is speaker notes.
+
+### 4.1 Surfaces
 
 | Surface | Slides |
 |---|---|
-| **Frame** (corkboard or cardboard) | 01, 02, 03, 07, 08, 15, 23, 30, 35, 54, 55, 56, 57 |
-| **Content** (warm paper) | Everything that argues or teaches |
-| **Full-bleed** (no title, credit only) | 14, 29, 48 (memes) and 24 (curl case opener) |
-| **Permission / prompt** (paper with a character) | 04 |
+| **Frame** (cork / cardboard) | 01, 02, 03, 07, 27, 46, 47, 48 |
+| **Audience prompt** (paper + Bungee, as Kuopio's *kysytään yleisöltä*) | 06 |
+| **Content** (paper) | Everything that argues or teaches |
+| **Full-bleed** (credit only) | 12, 14, 19, 23, 33, 35, 43 (memes, GIF, comic, video, case openers) |
 
-### 4.2 New components for a software talk
+### 4.2 Components this topic adds
 
-These are **objects placed on the paper surface**, in the same way screenshots or quote cards are. They are not a third surface, so the "never mix surfaces" rule still holds.
+Only four new objects. Each sits on paper like a screenshot.
 
-| Component | Spec | Used on |
+| Component | Spec | Slides |
 |---|---|---|
-| **Code card** | Dark card (`#20231F`), rounded corners 8 px, Consolas 22–26 pt in warm white, maximum 6 lines. Mark changed lines with `+` and `−` **and** a pale highlight, never colour alone. Consolas ships with Windows, so it needs no embedding. | 40, 44 |
-| **Check chip** | Pill shape with ✓ or ✗ **plus the word** (`läpi` / `ei läpi`) and the command name in mono. Green `#00B050` / red `#B64E30`. | 44, 45 |
-| **Browser frame** | A thin grey window chrome around a **real capture**, cropped to the form. The relevant field is enlarged at least 2×. | 43, 44, 47 |
-| **Handoff card** | Paper-coloured card with four small-caps labels: MIKSI · MITÄ MUUTTUI · MITEN TARKISTETTIIN · AVOIN PÄÄTÖS | 46 |
-| **Lifecycle strip** | Seven small dots top-right: *Rajaa · Konteksti · Toista · Korjaa · Tarkista · Luovuta · Seuraa*. The current stage is blue and labelled. This is the practical half's "you are here". | 39–50 |
-| **Agentti / Sinä pair** | Two small sticky notes bottom-right, a light-blue **Agentti:** and a yellow **Sinä:**, one line each. Always labelled, so the colour carries no meaning on its own. It is the style guide's "take-away pair" used as a recurring device. | 39–50 |
-| **Honesty tag** | A taped paper label, bottom-right, in grey Aptos 14 pt: `Kuvitteellinen esimerkki`, `Opetusesimerkki`, `Havainnollistus – ei mitattu`, `Esityksen tulkinta` or `Demotallenne` | Wherever needed (see §7) |
-| **Gallup callback chip** | A small salmon pin, top-right: `↩ Gallup: Nopeuttaako AI sinua?`. It prompts the speaker to recall the room's actual answer aloud. The slide shows the question, never a predicted result. | 09, 12, 16, 21, 26, 27, 42, 45 |
+| **Code card** | Dark `#20231F` card; Consolas 22–26 pt in warm white; max 6 lines. Mark changed lines with `+`/`−` **and** a pale highlight. | 30, 34 |
+| **Check chip** | A pill holding the command name and the result in words: `läpi` / `ei läpi`. **Only for checks that actually ran.** Unrun checks are grey and say `odotettu: ei läpi → läpi`. | 34 |
+| **Browser frame** | Thin grey chrome around a **real capture**, cropped to the form. Enlarge the relevant field at least 2×. | 28, 32, 34 |
+| **Lifecycle strip** | Seven small dots top-right: *Rajaa · Konteksti · Toista · Korjaa · Tarkista · Luovuta · Seuraa*. The current dot is blue and labelled. | 29–39 |
 
-### 4.3 Imagery and assets
+**Gone since version 1:** the Agentti/Sinä note pair, the taped honesty tags and the gallup chips on most slides.
 
-| Asset | Status | Note |
-|---|---|---|
-| Corkboard, cardboard and paper textures | **Reuse** from `kuopio-pelaa-2026/pptx/` (`noticeboard.png`, `cardboard*.png`) | |
-| Speaker cut-out (`mä.png`) | **Reuse** | |
-| Frog character ("Saa kysyä!") | **Reuse** | |
-| Ransom-note title words | **Make new**: `Hei`, `ohjelmistokehitys,`, `mitä`, `kuuluu?`, `Koodi`, `halpeni.`, `Mikä`, `ei?`, `Vastuu`, `ei.` | One PNG per word, generated with the style guide's [06](../../kuopio-pelaa-2026/presentation-style/06-ai-brief.md) prompt |
-| Mascot | **Make a new variant** of the cardboard CRT robot. Props: mechanical keyboard, magnifying glass, rubber duck, and a red **LGTM** stamp. | Same character as Kuopio Pelaa, so the two talks read as a series |
-| `maintenance-illustration.png` | **Reuse** on 22 and 47 | Already disclosed as generated |
-| `ai-workbench.png` | **Retire** | The navy tone does not fit |
-| Address-bug captures | **Must produce** (see §10) | The biggest missing asset |
-| Evidence screenshots | **Collect**: curl blog headline, NATO 1968 report page, a period 4GL/CASE advert, the repo docs listing | Check reuse rights for each |
-| QR codes | **Make**: gallup.koodattu.dev | Test them from the back row |
+**Labels.** Labels move into the `Lähde:` line, and only two are used:
 
-**AI disclosure:** the illustrations and the research used AI. Slide 37 says so naturally, and slide 57 repeats it in small type.
+- `Lähde: kuvitteellinen esimerkki · …`
+- `Lähde: esityksen tulkinta · …`
+
+A recorded demo is cited as `Lähde: oma demoprojekti, tallenne <pvm>`.
+
+**Gallup callbacks.** These live in the speaker notes. Only three slides (13, 17, 38) show a small salmon pin bottom-right, e.g. `↩ Gallup: Nopeuttaako AI sinua?`.
+
+### 4.3 Assets
+
+| Asset | Status |
+|---|---|
+| Cork, cardboard and paper textures; speaker cut-out (`mä.png`); frog | **Reuse** from `kuopio-pelaa-2026/pptx/` |
+| Cardboard bio (p. 7 of the Kuopio deck) | **Reuse.** Update the roles; fix the surname capitalisation to *Ala-Rantala*. |
+| Ransom-note words: `Hei`, `ohjelmistokehitys,`, `mitä`, `kuuluu?`, `Koodi`, `halpeni.`, `Mikä`, `ei?`, `Vastuu`, `ei.`, `Kiireistä.` | **Make**, using the [06](../../kuopio-pelaa-2026/presentation-style/06-ai-brief.md) prompt |
+| Mascot variant: CRT robot holding a keyboard, magnifying glass, rubber duck and a red **LGTM** stamp | **Make** |
+| `maintenance-illustration.png` | **Reuse** on 18 and 40 |
+| SuomiWoW logo, progress screenshot (Kuopio pp. 104–105) + a repo view | **Reuse / capture** for 43–45 |
+| Address-bug captures + a 20–30 s sped-up screen recording of the agent working | **Must produce** (§10). This is the biggest missing asset. |
+| Screenshots: curl blog headline, NATO 1968 report page, repo `docs/` listing | **Collect** and record their sources |
+| Memes, reaction GIF, 4-panel comic | **Make or recreate** with Finnish captions. The comic follows the AI-drawn style of Kuopio p. 53. |
+| QR codes: gallup.koodattu.dev and the four-line template page | **Make.** Test them from the back row. |
+
+**AI disclosure:** the speaker mentions it in one sentence on 44, and slide 48 carries it in small type.
 
 ---
 
-## 5. What makes it cohesive: the red threads
+## 5. What holds it together
 
-The deck runs on five recurring devices. If a slide uses none of them and adds no evidence, cut it.
+1. **The salmon note.** Planted on 02. It rides along on the two section returns (07, 27) and in a corner pin on the first slide of sections B, C and D. It is answered on 46.
+2. **One bug.** *Huoneiston numero katoaa.* It is seeded in slide 05's example request, shown concretely on 28, followed through 29–39, and recapped on 42.
+3. **One hypothetical local prototype.** Service note → draft maintenance record. Introduced on 18, used as the local callback on 26, corrected by the user on 40. Always cited as `kuvitteellinen esimerkki`.
+4. **"What the agent did / what a human decided."** Seeded on 05, proven on the bug on 42, shown on the speaker's own project on 44–45, generalised by the thesis on 46.
+5. **The zoom.** Slide 16's chain *Tarve → Toteutus → Katselmointi → Integrointi → Julkaisu → Käyttö*. Slide 28 zooms into "Toteutus", where the practical loop lives. Slide 39 zooms back out.
 
-1. **The salmon note.** It appears on 02, rides along on every section return (08, 15, 23, 30, 35), and flips to the answer on 54. *Koodi halpeni. Mikä ei?* → *Vastuu ei.*
-2. **One bug, start to finish.** "Huoneiston numero katoaa, kun osoite tallennetaan." It is planted on 06 (the example request), named on 38, and followed through 39–53. Slide 53 recaps it as "what the agent did / what the human decided".
-3. **One hypothetical local prototype.** Photographed service notes become draft maintenance records. It is introduced on 22 (*worth trying now*), returns on 34 (*local advantage*), and pays off on 47 (*the user corrects it*). It always carries the `Kuvitteellinen esimerkki` tag.
-4. **"Agentti teki / ihminen päätti", three times.** It is seeded on 06 (asking vs delegating), shown on the speaker's real work on 37, and proven on the bug on 53. The thesis on 54 is the generalisation of this frame.
-5. **The room talks back.** Gallup callbacks on eight context and practical slides, four guess-first reveals, and a hands-up question on 06. Something interactive happens every 3–4 minutes.
+**Recurring lines.** At most three:
 
-**Zoom device.** Slide 19 shows the delivery chain *Tarve → Toteutus → Katselmointi → Integrointi → Julkaisu → Käyttö*. Slide 38 opens by **zooming into the "Toteutus" box** of that same diagram, and the practical loop lives inside it. Slide 50 zooms back out. This links the two halves visually and keeps the two flows from looking like two competing frameworks.
-
-**Recurring lines.** Use at most three as motifs. The book of candidates is in [07](07-editorial-backlog.md#candidate-recurring-lines).
-- *Koodi halpeni. Vastuu ei.* (thesis)
-- *Valmis tehtävä ja opittu taito ovat eri tuloksia.* (26, called back on 52)
-- *Älä tee nopeudestasi jonkun toisen katselmointivelkaa.* (seeded on 25 by curl, landed on 46)
+- *Koodi halpeni. Vastuu ei.*
+- *Tehtävä valmistui. Ymmärrys ei välttämättä.* (21, recalled on 41)
+- *Älä tee nopeudestasi jonkun toisen katselmointivelkaa.* (seeded by curl on 20, landed on 37)
 
 ---
 
-## 6. Running order at a glance
+## 6. Running order
 
-| Block | Time | Slides | Agenda note (shown on the section return) |
+| Block | Time | Slides | Agenda note |
 |---|---|---|---|
-| Intro | 00:00–05:00 | 01–07 | — |
-| Opening gallup (browser) | 05:00–15:00 | 07 stays on screen | — |
-| **A** Mikä oikeasti muuttui? | 15:00–20:00 | 08–14 | ① |
-| **B** Tuleeko meistä nopeampia? | 20:00–25:40 | 15–22 | ② |
-| **C** Kuka tarkistaa – ja kuka oppii? | 25:40–30:20 | 23–29 | ③ |
-| **D** Mitä tämä tarkoittaa täällä? | 30:20–35:00 | 30–34 | ④ |
-| **Practical**: Miten agentin kanssa tehdään töitä? | 35:00–55:00 | 35–53 | ⑤ |
-| Close | 55:00–60:00 | 54–57 | Salmon note answered |
+| Intro | 00:00–05:00 | 01–06 | — |
+| Opening gallup (browser) | 05:00–15:00 | 06 on screen | — |
+| **A** Mikä oikeasti muuttui? | 15:00–20:00 | 07–12 | ① |
+| **B** Tuleeko meistä nopeampia? | 20:00–25:00 | 13–18 | ② |
+| **C** Kuka tarkistaa – ja kuka oppii? | 25:00–30:00 | 19–23 | ③ |
+| **D** Mitä tämä tarkoittaa täällä? | 30:00–35:00 | 24–27 | ④ |
+| **Practical** Miten agentin kanssa tehdään töitä? | 35:00–54:00 | 28–45 (43–45: SuomiWoW) | ⑤ |
+| Close | 54:00–60:00 | 46–48 | Answered |
 
-**Agenda corkboard (slide 02)**
-
-The title words shrink to the top of the board. Below them sit five pastel notes:
+**Agenda corkboard (slide 02).** The title shrinks to the top. Five pastel notes below:
 
 1. Mikä ohjelmistokehityksessä oikeasti muuttui?
 2. Tuleeko meistä nopeampia?
@@ -161,628 +188,737 @@ The title words shrink to the top of the board. Below them sit five pastel notes
 4. Mitä tämä tarkoittaa täällä Lakeudella?
 5. Miten agentin kanssa tehdään oikeasti töitä?
 
-The salmon note reads **Koodi halpeni. Mikä ei?**
-
-On the build, the notes regroup under two larger notes: **"Mitä kuuluu? (tilannekatsaus)"** and **"Miten tehdään? (käytäntö)"**.
+The salmon note reads **Koodi halpeni. Mikä ei?** On the build, the notes regroup under **"Mitä kuuluu? (tilannekatsaus)"** and **"Miten tehdään? (käytäntö)"**.
 
 ---
 
 ## 7. Slide by slide
 
-Format: **# · start time · slide type** (catalogue numbers from [02-slide-patterns](../../kuopio-pelaa-2026/presentation-style/02-slide-patterns.md)). Then the title, the subtitle, what the audience sees, the bottom line, the source, and speaker notes where needed. ⏩ marks a slide to skip if running late. **Every content slide needs a title, a subtitle and a bottom line.**
+**Format.** Each slide gives:
+
+- **# · start time · slide type** (catalogue numbers from [02-slide-patterns](../../kuopio-pelaa-2026/presentation-style/02-slide-patterns.md))
+- Title, subtitle, what's on the slide, bottom line (only where it adds something), `Lähde:` and notes.
+
+⏩ means skip if late. 🙋 marks an audience moment.
 
 ### Intro · 00:00–05:00
 
 **01 · 00:00 · Collage title (#1)**
-- Corkboard background. Ransom-note words: *Hei ohjelmistokehitys, mitä kuuluu?* Speaker cut-out bottom-left, mascot right. No other text.
-- Notes: Open with a recognisable situation: "Agentti sanoo, että muutos on valmis. Mikä saisi teidät uskomaan sen?"
+
+Corkboard. Ransom-note *Hei ohjelmistokehitys, mitä kuuluu?*, the speaker cut-out and the mascot. No other text.
+
+- Notes: open with "Agentti sanoo, että muutos on valmis. Mikä saisi teidät uskomaan sen?"
 
 **02 · 00:30 · Agenda corkboard (#2), 1 build**
-- The five notes and the salmon note from §6. On the build, the notes regroup into the two halves.
-- Notes: "Ensimmäinen puolisko on tilannekatsaus, toinen käytäntöä. Tämä punainen lappu on koko esityksen kysymys."
+
+The notes from §6. The build regroups them into the two halves.
+
+- Notes: "Tämä punainen lappu on koko illan kysymys."
 
 **03 · 01:15 · Bio on cardboard (#3)**
-- A career ladder of taped labels, a photo stack on the right, and one self-ironic last line. Suggested line: *"Agentti pyörii taustalla nytkin."* **[CONFIRM roles and photo]**
 
-**04 · 01:50 · Permission (#4)**
-- Frog character. In Bungee: **Saa kysyä!** · **Isommat keskustelut tunnin jälkeen.**
-- Notes: The hour is tightly timed because of the gallups, so promise a discussion slot instead of inviting interruptions.
+The Kuopio bio, roles updated:
 
-**05 · 02:00 · Three-point timeline (#18)**
-- Title: **Kaksi vuotta sitten kysyimme eri kysymystä**
-- Subtitle: Lakeus-Devaus 2024 → 2026
-- Timeline:
+- Teknologiajohtaja · Clevoy Oy
+- Diplomi-insinööri, tekoälytutkija · Tampereen yliopisto
+- Ohjelmistokehittäjä · Prima Power
+- Insinööri · Seinäjoen ammattikorkeakoulu
+- **Moon härmästä.**
+
+Photo stack on the right.
+
+- Notes: in Seinäjoki, SeAMK and Härmä are the credentials. Say aloud: "Saa kysyä – lopussa on aikaa kysymyksille." Roles confirmed current (18.10.2026).
+
+**04 · 02:00 · Three-point timeline (#18)**
+
+- Title: **Kaksi vuotta sitten kysyimme täällä eri kysymystä**
+- Subtitle: 2022 → 2024 → 2026
+- Points:
   - **2022:** Kone täydentää rivin.
-  - **Joulukuu 2024:** *Saako paikallisen mallin auttamaan koodauksessa?* (Lakeus-Devaus: Paikalliset koodaavat kielimallit, 50+ osallistujaa)
-  - **2026:** *Kuinka ison tehtävän uskallamme antaa agentille?*
+  - **Joulukuu 2024, Lakeus-Devaus:** "Saako paikallisen mallin auttamaan koodauksessa?" Small thumbnail of the event post on the Lakeus-Devaus site.
+  - **2026:** "Kuinka ison tehtävän uskallamme antaa agentille?"
 - Bottom: **Ja kuka tarkistaa, mitä sieltä tulee takaisin?**
-- Source: Lakeus-Devaus event page. Notes: The years show a direction, not exact capability dates. **[CONFIRM whether the speaker ran the 2024 event; that decides "kysyimme" vs "Lakeus-Devaus kysyi"]**
+- `Lähde:` Lakeus-Devaus: *Paikalliset koodaavat kielimallit* (tapahtuma 12/2024, julkaistu sivustolla 2025).
+- Notes:
+  - The speaker ran the 2024 event: "Kaksi vuotta sitten pidin täällä illan paikallisista koodausmalleista. Kuka oli paikalla?" (🙋 hands).
+  - The years show a direction, not exact capability dates. Keep the reported attendance figure off the slide.
 
-**06 · 03:00 · Two-column definition (#16)**
-- Title: **Pyydä tulosta, jonka voit tarkistaa**
-- Subtitle: Keskustelu ja delegointi ovat eri pyyntöjä
-- Left, **Kysy**:
-  - Request: "Selitä, miten osoitteen tallennus toimii."
-  - What you get: a selitys.
-- Right, **Delegoi**:
-  - Request: "Toista virhe. Korjaa rajattu syy. Näytä toimiva tallennus."
-  - What you get: a muutos, a testi and a tallennus that works.
-- Bottom: **Kummanlaisia pyyntöjä sinä teet useammin?** (show of hands)
-- Notes: This plants the address bug, and the line returns as takeaway 1. Both modes are useful; neither ranks above the other. Codex and Claude Code are examples of tools for the right-hand mode.
+**05 · 03:00 · Two-column definition (#16)** 🙋
 
-**07 · 04:15 · Ask-the-room handoff (#8)**
-- *kysytään yleisöltä* in Bungee, a QR code, **gallup.koodattu.dev** and the session code.
-- Stays on screen from 05:00 to 15:00.
-- Gallup timing: 90 s to join, about 6 min for the seven questions, and 2.5 min to discuss at most three patterns. Use the three-sentence synthesis in [03-live-polls](03-live-polls.md#two-minute-synthesis).
-- Fallback: show of hands for experience, recent use and mood.
+- Title: **Kysy vai delegoi?**
+- Subtitle: Sama työkalu, kaksi eri pyyntöä
+- Left, **Kysy:** "Selitä, miten osoitteen tallennus toimii." → *Saat selityksen.*
+- Right, **Delegoi:** "Toista virhe. Korjaa syy. Näytä, että tallennus toimii." → *Saat muutoksen ja näytön.*
+- Bottom: **Kumpia sinä teet useammin?** (show of hands)
+- Notes:
+  - Plants the bug.
+  - The right-hand phrase returns as takeaway 1.
+  - Neither mode ranks higher.
+
+**06 · 04:15 · Ask-the-room handoff (#8)**
+
+*kysytään yleisöltä*, a QR code, **gallup.koodattu.dev** and the session code. It stays on screen from 05:00 to 15:00.
+
+- Timing: 90 s to join · ~6 min for the questions · 2.5 min on at most three patterns.
+- Synthesis: use the [03](03-live-polls.md#two-minute-synthesis) sentences.
+- Fallback: show of hands.
 
 ### A · Mikä oikeasti muuttui? · 15:00–20:00
 
-**08 · 15:00 · Section return (agenda corkboard, note ① highlighted)** · 10 s
+**07 · 15:00 · Section return (note ① highlighted)** · 10 s
 
-**09 · 15:10 · Historical reframe (#24)** · ↩ Gallup: *Vuosia ohjelmistoalalla?*
-- Title: **Ollaanko tässä oltu ennenkin?**
-- Subtitle: Ohjelmistokriisi on vanhempi kuin useimmat meistä
-- Then/now pair:
-  - **1968:** Ohjelmistoja osataan tehdä enemmän kuin hallita. (NATO 1968 report page)
-  - **2026:** Ohjelmistoa osataan tuottaa enemmän kuin tarkistaa. (a crowded PR list, captured from a public repo or recreated as a graphic)
-- Bottom: **Jokainen sukupolvi saa oman hopealuotinsa.**
-- Source: NATO Software Engineering Conference 1968. Notes: The 2026 line is a rhetorical compression, not a statistic. Ask the 20+ year group whether it sounds familiar.
+**08 · 15:10 · Progressive chart (#10), 1 build** 🙋
 
-**10 · 16:00 · Headline screenshot (#14)** ⏩
-- Title: **"Ohjelmointia ilman ohjelmoijia"**
-- Subtitle: 1980-luvun lupaus: neljännen sukupolven kielet ja CASE
-- Visual: a period advert or headline. **Check reuse rights.** If none can be cleared, recreate it as typewriter text and add the `Havainnollistus` tag.
-- Bottom: **Lupaus ei toteutunut tuotteena. Se toteutui infrastruktuurina.** (SQL, IDEs, CI)
-- Source: JMIS 1984; IEEE Technology Navigator, CASE
-
-**11 · 16:40 · Two-column definition (#16)**
-- Title: **Toteutus helpottuu. Vaikeat kysymykset jäävät.**
-- Subtitle: Brooks 1986 ja Naur 1985, luettuna vuonna 2026
-- Left, **Satunnainen vaikeus**: "Miten tämä kirjoitetaan?" Syntaksi, rajapinnat, pohjakoodi, testirungot. → *AI vie tästä ison osan.*
-- Right, **Olennainen vaikeus**: "Mitä tämän pitää tehdä – ja miksi?" Vaatimukset, muutos, näkymättömyys. Naur: ymmärrys elää ihmisissä. → *AI voi auttaa, mutta ei omista.*
-- Bottom: **Kuka rakentaa teorian järjestelmästä, jos agentti rakentaa koodin?**
-- Source: Brooks, *No Silver Bullet*; Naur, *Programming as Theory Building*. Paraphrase only, no quotations. Notes: Don't claim that AI can only remove accidental complexity. It also proposes designs.
-
-**12 · 17:40 · Progressive chart (#10), guess first, 1 build** · ↩ Gallup: *AI koodauksessa tällä viikolla?*
-- Title: **Mihin kehittäjät käyttävät AI:ta?**
-- Subtitle: Nykyinen käyttö työvaiheittain, 2026
+- Title: **Mihin AI:ta oikeasti käytetään?**
+- Subtitle: Kansainvälinen kehittäjäkysely, 2026
 - Horizontal bars:
-  - Koodin tuottaminen tutulla alueella: **69 %**
-  - Testien kirjoittaminen: **58 %**
-  - Katselmointi: **41 %**
-  - Tuotannon operointi ja vianetsintä: **20 %**
-- Build a shows the labels only. Ask: "Arvatkaa, mikä on alin." Build b reveals the bars.
-- Bottom: **Sama agentti, eri vastuu, eri rajat.**
-- Source: Stack Overflow Developer Survey 2026 · n = 12 547 · kesä–elokuu 2026 · itse valikoitunut otos · monivalinta · tuotanto ei kuulu kaikkien työhön.
-- Notes: Use the current-use column, not the expectations column. The exact values are 69.3 / 58.1 / 40.5 / 19.9.
+  - Koodin tuottaminen tutulla alueella **69 %**
+  - Testien kirjoittaminen **58 %**
+  - Katselmointi **41 %**
+  - Tuotannon operointi ja vianetsintä **20 %**
+- Build a: only the first bar is shown. Ask: "Kuinka moni käyttää AI:ta testien kirjoittamiseen?" Build b reveals the rest.
+- Bottom: **Koodia AI:lle antaa jo moni. Tuotantoa harvempi.**
+- `Lähde:` Stack Overflow Developer Survey 2026 · n = 12 547 · kesä–elokuu 2026 · itse valikoitunut otos · monivalinta · tuotanto ei kuulu kaikkien työhön.
+- Notes:
+  - This is the bridge from the gallup: "Tässä huoneessa X % käytti AI:ta tällä viikolla. Entä maailmalla?"
+  - Use the current-use column (69.3 / 58.1 / 40.5 / 19.9).
 
-**13 · 18:40 · Case beat with big number (#23 + #11), 1 build**
-- Title: **Agentti rakensi ohjelman uudelleen näkemättä sen koodia**
-- Subtitle: MirrorCode: bioinformatiikan työkalu gotree, noin 16 000 riviä
-- Build a, the task card:
-  - **Annettu:** ohjelman käyttäytyminen ja testit
+**09 · 16:10 · Historical reframe (#24)** 🙋
+
+- Title: **Ollaanko tässä oltu ennenkin?**
+- Then/now pair:
+  - **1968:** Ohjelmistoa osataan tehdä enemmän kuin hallita. (NATO report page)
+  - **2026:** Ohjelmistoa osataan tuottaa enemmän kuin tarkistaa. (a long PR list)
+- Bottom: **Jokainen sukupolvi saa oman hopealuotinsa.**
+- `Lähde:` NATO Software Engineering Conference 1968.
+- Notes:
+  - The 2026 line is rhetoric.
+  - Ask the 20+ year group from the gallup: "Kuulostaako tutulta?"
+
+**10 · 17:00 · Two-column (#16)**
+
+- Title: **Kirjoittaminen helpottui. Ymmärtäminen ei.**
+- Subtitle: Brooks ja Naur, luettuna vuonna 2026
+- Left: **"Miten tämä kirjoitetaan?"** Syntaksi, rajapinnat, pohjakoodi. → *Tästä AI vie ison osan.*
+- Right: **"Mitä tämän pitää tehdä – ja miksi?"** Vaatimukset, muutos, ymmärrys ihmisten päässä. → *Tässä AI auttaa, mutta ei omista.*
+- Bottom: **Kuka ymmärtää järjestelmän, jos agentti kirjoittaa koodin?**
+- `Lähde:` Brooks, *No Silver Bullet* · Naur, *Programming as Theory Building*.
+- Notes: paraphrase only. AI also proposes designs, so don't claim it only removes accidental complexity.
+
+**11 · 18:00 · Case beat with big number (#23 + #11), 1 build** 🙋
+
+- Title: **Agentti kirjoitti ohjelman uusiksi näkemättä alkuperäistä koodia**
+- Subtitle: MirrorCode: gotree, noin 16 000 riviä
+- Build a, task card:
+  - **Annettu:** miten ohjelman pitää käyttäytyä + testit
   - **Ei annettu:** lähdekoodia
-- Build b, the result: **2 000 / 2 001** testiä läpi · 14 h · 251 $
-- Bottom: **Iso tehtävä voi onnistua, kun onnistuminen on tarkasti määritelty.**
-- Source: Epoch AI, MirrorCode project page (checked 18 October 2026) · one protocol only · possible training-data contamination
-- Notes: The single failed test is the story. Ask: "Mikä on teidän tehtävänne testisarja?" Any human-weeks estimate is an expert guess, so keep it out of the slide. This is not product discovery or operation.
+- Build b, result: **2 000 / 2 001 testiä läpi.**
+- Bottom: **Iso tehtävä onnistuu, kun tiedetään tarkalleen, mikä on oikein.**
+- `Lähde:` Epoch AI & METR, MirrorCode (projektisivu 18.10.2026) · yksi protokolla · mahdollinen opetusdatan kontaminaatio.
+- Notes:
+  - The single failed test is the story. Ask: "Mikä olisi teidän tehtävänne testisarja?"
+  - Small print can add "14 h · 251 $" **only after confirming** it is the same run as the 2 000/2 001 result. The source lists them as separate facts.
+  - Keep the human-weeks estimate off the slide.
 
-**14 · 19:50 · Full-slide meme (#25)**
-- *Distracted boyfriend* recreated with Finnish labels: Kehittäjä → **"Uusi malli"**, with **"Testit, jotka eivät vieläkään aja"** glaring.
-- It lands the "model-chasing without harness improvement" failure from [11](11-workflow-scenarios-and-field-notes.md) as a joke.
+**12 · 19:30 · Full-slide meme (#25)**
 
-### B · Tuleeko meistä nopeampia? · 20:00–25:40
+*Two buttons*, sweating developer: **"Lue koko diffi"** / **"Hyväksy, kun CI on vihreä"**. Caption under the developer: **Minä, perjantaina klo 15.55.**
 
-**15 · 20:00 · Section return (note ②)** · 10 s
+- Notes: no comment needed. Let it land and move on. The joke is the agenda for the next 15 minutes: speed versus checking.
 
-**16 · 20:10 · Guess first, "Hetkinen…" move (#10), 2 builds** · ↩ Gallup: *Nopeuttaako AI sinua?*
-- Title: **Paljonko AI nopeutti kokeneita kehittäjiä?**
-- Subtitle: Alkuvuosi 2025: 16 kokenutta avoimen lähdekoodin kehittäjää, 246 tehtävää omissa repoissaan
+### B · Tuleeko meistä nopeampia? · 20:00–25:00
+
+*Corner pin on 13: ② Tuleeko meistä nopeampia?*
+
+**13 · 20:00 · "Hetkinen…" progressive reveal (#10), 3 builds** 🙋 · pin `↩ Gallup: Nopeuttaako AI sinua?`
+
+- Title: **Paljonko AI nopeuttaa kokeneita kehittäjiä?**
+- Subtitle: 16 kokenutta kehittäjää, 246 tehtävää omissa repoissaan (alkuvuosi 2025)
 - Builds:
   - a: **Ennakkoarvio:** 24 % nopeammin
-  - b: **Jälkikäteen koettu:** 20 % nopeammin. Pause here and let the room guess.
-  - c: **Mitattu: 19 % enemmän aikaa.** Large, burnt orange, with a text label.
-- Bottom: **Tuntuma nopeudesta ja mitattu nopeus voivat erota.**
-- Source: METR, July 2025 study · METR update, February 2026
+  - b: **Jälkikäteen tuntui:** 20 % nopeammin. Pause here and let the room guess.
+  - c: **Mitattu: 19 % enemmän aikaa.**
+  - d: below, a separate card: *Toinen tutkimus, eri mittari: **+26 % valmistuneita tehtäviä** · 4 867 kehittäjää · koodiavustin*
+- Bottom (d): **Nopeampi kenelle – ja missä tehtävässä?**
+- `Lähde:` METR 2025 & päivitys 2/2026 · Microsoft Research 2025 · eri mittarit, ei samalle akselille.
 
-**17 · 21:20 · Two separate study cards (#11 ×2)**
-- Title: **Tuottavuus riippuu tehtävästä**
-- Subtitle: Kaksi huolellista tutkimusta, kaksi eri mittaria
-- Left, Microsoft and partners: **+26 % valmistuneita tehtäviä**. 4 867 kehittäjää · 3 kenttäkoetta · koodiavustin.
-- Right, METR: **+19 % aikaa**. 16 kokenutta · tutut repot · alkuvuoden 2025 työkalut.
-- Under both: *Eri mittari. Eri tehtävä. Eri ihmiset.*
-- Bottom: **Nopeampi kenelle, missä tehtävässä, mitattuna mistä?**
-- Source: Microsoft Research (2025); METR (2025). **Never put both on one axis and never subtract them.**
+**14 · 21:20 · Reaction GIF (no title)** · 5 s
 
-**18 · 22:10 · Quote-card style (#13)**
+Homer Simpson, *"D'oh!"* (the Kuopio deck already uses Simpsons GIFs). No caption: the room has just seen "ennakkoarvio −24 % → mitattu +19 %", so the reaction is the punchline.
+
+- Notes: keep it to the length of one loop. Check the licence or swap in a similar reaction clip.
+
+**15 · 21:30 · Quote-card style (#13)**
+
 - Title: **Uusin koe ei saanut luotettavaa tulosta**
 - Subtitle: …koska moni ei enää halunnut tehdä töitä ilman AI:ta.
 - Three small cards:
-  - Osallistujat ja tehtävät valikoituivat
-  - Pienempi palkkio
-  - Rinnakkaista agenttityötä vaikea mitata
-- Bottom: **Kun työtapa muuttuu, vanha mittari ei mittaa samaa asiaa.**
-- Source: METR, 24 February 2026. Notes: Let the subtitle get its laugh, then make the point.
+  - osallistujat ja tehtävät valikoituivat
+  - pienempi palkkio
+  - rinnakkaista agenttityötä vaikea mitata
+- Bottom: **Sekin kertoo jotain.**
+- `Lähde:` METR, 24.2.2026.
 
-**19 · 22:40 · Flow diagram (#21), 2 builds**
-- Title: **Nopeampi tehtävä ei yksin nopeuta toimitusta**
-- Subtitle: Missä teillä työ odottaa?
-- Visual: a native flow, *Tarve → Toteutus → Katselmointi → Integrointi → Julkaisu → Käyttö*. Build 1: "Toteutus" shrinks. Build 2: a queue of cards piles up in front of "Katselmointi".
-- Tag: `Havainnollistus – ei mitattu`
-- Bottom: **Pullonkaula ei katoa. Se siirtyy.**
-- Source: DORA, *Balancing AI tensions*, March 2026, using 2025 data. Notes: DORA also discusses AI improving review, so verification capacity is not fixed. **Slide 38 zooms into the "Toteutus" box of this diagram.**
+**16 · 22:00 · Flow (#21), 2 builds** 🙋
 
-**20 · 23:30 · Big number (#11)** ⏩
-- Title: **Kun koodia syntyy tarpeeksi, seuraava ongelma on sen liikenne**
-- Subtitle: Ääriesimerkki: Anthropicin oma kehitys
-- Number: **2 500 → 30 000** yhdistettyä muutosta päivässä (toukokuu → syyskuu 2026)
-- Bottom: **Yksi pullonkaula poistuu – seuraava tulee näkyviin.**
-- Source: Anthropic Engineering, 13 October 2026 · company-reported, extreme workload · merge volume ≠ value
+- Title: **Koodi valmistuu nopeammin. Valmistuuko ominaisuus?**
+- Visual: native chain *Tarve → Toteutus → Katselmointi → Integrointi → Julkaisu → Käyttö*. Build 1: "Toteutus" shrinks. Build 2: cards pile up before "Katselmointi".
+- Bottom: **Missä teillä työ odottaa?**
+- `Lähde:` esityksen tulkinta · DORA 3/2026 (vuoden 2025 aineisto) · leveydet eivät ole mitattuja.
+- Notes: DORA also covers AI helping review. **Slide 28 zooms into "Toteutus".**
 
-**21 · 24:00 · Big number twist (#11)** · ↩ Gallup: *Enemmän vai parempaa koodia?*
-- Title: **Hyvä AI-muutos voi poistaa koodia**
-- Subtitle: OpenAI siivosi omaa kokeilualustaansa agenttien avulla
-- Number: **−800 000 riviä**. Small print: 1 400 PR:ää · 5 insinööriä · 2 viikkoa · konttikuva 3,31 → 1,72 Gt
-- Bottom: **Palkitaanko teillä tuotettua koodia vai hyödyllistä muutosta?**
-- Source: OpenAI developer blog, 14 October 2026 · first-party, not independently measured · deletion count ≠ safety. Notes: The Stack Overflow 2026 survey found 10.2 % whose organisation evaluates AI use in performance reviews. Use that as a discussion hook only.
+**17 · 23:00 · Contradiction pair (#15)** 🙋 · pin `↩ Gallup: Enemmän vai parempaa koodia?`
 
-**22 · 24:40 · Opportunity turn: image plus record**
-- Title: **AI muuttaa myös sitä, mitä kannattaa yrittää**
-- Subtitle: Kokeilu, joka ei ennen ylittänyt kynnystä
-- Visual: `maintenance-illustration.png` beside an editable draft record: *Laite: Pumppu A · Havainto: epätavallinen ääni · Toimi: tarkista laakeri*
-- Tag: `Kuvitteellinen esimerkki`
-- Bottom: **Mitä kokeilisit nyt, mitä ei ennen kannattanut?**
-- Source: METR, *Task substitution and uplift*, May 2026. Notes: The manual effort an artifact would have needed is not money saved if nobody would have built it. The value is learning cheaply whether the workflow helps.
+- Title: **Enemmän koodia vai vähemmän?**
+- Subtitle: Kaksi tekoälyfirmaa, kaksi suuntaa
+- Left, **Anthropic:** noin 2 500 → **yli 30 000** yhdistettyä muutosta päivässä (touko → syyskuu 2026)
+- Right, **OpenAI:** **yli 800 000** riviä poistettu · yli 1 400 PR:ää · 5 insinööriä, 2 viikkoa
+- Bottom: **Kumpaa teillä juhlitaan?**
+- `Lähde:` Anthropic Engineering 13.10.2026 · OpenAI developer blog 14.10.2026 · yritysten omia kertomuksia · määrä ≠ arvo, poisto ≠ turvallisuus.
+- Notes:
+  - This slide carries the measurement point (the old takeaway #1).
+  - The Stack Overflow 2026 survey found 10.2 % whose organisation evaluates AI use in performance reviews. Use it as discussion fuel only.
 
-### C · Kuka tarkistaa – ja kuka oppii? · 25:40–30:20
+**18 · 24:00 · Image + record (opportunity turn)** 🙋
 
-**23 · 25:40 · Section return (note ③)** · 10 s
+- Title: **Mitä kannattaa nyt kokeilla, mitä ei ennen kannattanut?**
+- Subtitle: Esimerkki: huoltomuistiinpanosta luonnos huoltokirjaukseen
+- Visual: `maintenance-illustration.png` + an editable draft:
+  > Laite: Pumppu A · Havainto: epätavallinen ääni · Toimi: tarkista laakeri
+- Bottom: **Kokeilu on halpa. Hyöty pitää silti selvittää.**
+- `Lähde:` kuvitteellinen esimerkki · METR, *Task substitution and uplift* 5/2026.
+- Notes: an artifact nobody would have built saves nobody money. The value is learning cheaply whether the idea helps.
 
-**24 · 25:50 · Case opener (#22)**
-- Full-bleed: a tightly cropped screenshot of Daniel Stenberg's blog headline announcing the end of curl's bug bounty. Credit only.
+### C · Kuka tarkistaa – ja kuka oppii? · 25:00–30:00
 
-**25 · 26:10 · Case beat with timeline (#23 + #18)**
-- Title: **curl lopetti palkkiot haavoittuvuuksista**
+*Corner pin on 20: ③*
+
+**19 · 25:00 · Case opener (#22)**
+
+Full-bleed, tightly cropped screenshot of Daniel Stenberg's blog headline about ending curl's bug bounty. Credit only.
+
+**20 · 25:20 · Case beat with timeline (#23 + #18)**
+
+- Title: **curl lopetti bugipalkkiot**
 - Subtitle: Ylläpitäjät hukkuivat heikkoihin raportteihin
 - Timeline:
   - **Ennen:** palkkio löydetystä haavoittuvuudesta
   - **Sitten:** paljon heikkoja ja vilpillisiä raportteja
-  - **31.1.2026:** palkkio-ohjelma päättyy. Aidot raportit ovat yhä tervetulleita.
-- Small definition card: *AI-slop = tuotos, joka siirtää arviointityön jollekulle toiselle.*
-- Bottom: **Ilmainen lähettää ei ole ilmainen tarkistaa.**
-- Source: Stenberg, daniel.haxx.se, 26 January 2026 · not every poor report was AI-made
-- Notes: Critique the incentive, not the people. For balance, mention the opt-in OSS Scanner (E2): the same capability can help when the receiver agrees to it. The Godot/Linux policy contrast is backup slide B1.
+  - **31.1.2026:** palkkiot loppuvat – aidot raportit yhä tervetulleita
+- Small card: *Esityksen määritelmä: AI-slop siirtää kohtuuttoman arviointityön jollekulle toiselle.*
+- Bottom: **Lähettäminen on ilmaista. Tarkistaminen ei.**
+- `Lähde:` Stenberg, daniel.haxx.se 26.1.2026 · kaikki heikot raportit eivät olleet AI:n tekemiä.
+- Notes:
+  - Critique the incentive, not the people.
+  - For balance: Anthropic's opt-in OSS Scanner shows the same capability helps when the receiver agrees.
+  - The Godot/Linux contrast is backup slide B1.
 
-**26 · 27:10 · Progressive chart (#10), guess first, 1 build** · ↩ Gallup: *Luetko AI-koodin?*
-- Title: **Oppiko AI:n kanssa työskennellyt ryhmä yhtä hyvin?**
-- Subtitle: 52 osallistujaa opetteli uuden Python-kirjaston – välitön osaamiskoe
-- Visual: two native bars on a 0–100 % scale. Build a: empty axes. Build b: **AI-avusteinen 50 %**, **Ilman AI:ta 67 %**.
-- Bottom (on build b): **Tehtävä valmistui. Ymmärrys ei välttämättä.**
-- Source: Shen & Tamkin 2026 (arXiv 2601.20245) · rounded author means · immediate test only · not long-term · not a test of current agents
-- Notes: Say "about 17 percentage points", never "17 % of skill lost". Spoken line: *Valmis tehtävä ja opittu taito ovat eri tuloksia.*
+**21 · 26:20 · Progressive chart (#10), 1 build** 🙋
 
-**27 · 28:20 · Big number pair, guess first (#11), 1 build** · ↩ Gallup: *Vuosia alalla?* / *AI-fiilis?*
-- Title: **Kuka suhtautuu AI:hin myönteisimmin?**
-- Subtitle: Kehittäjät työkokemuksen mukaan, 2026
-- Build a: two empty labels, *1–5 vuotta* and *16+ vuotta*. Ask the room. Build b: **53 %** and **69 %** myönteisiä.
-- Bottom: **Sama muutos näyttää erilaiselta eri uravaiheissa.**
-- Source: Stack Overflow 2026 (publisher-reported split; question n = 14 428) · association, not cause
+- Title: **Oppiiko AI:n kanssa yhtä hyvin?**
+- Subtitle: 52 osallistujaa opetteli uuden Python-kirjaston – heti perään osaamiskoe
+- Build a: empty 0–100 % axes; ask the room. Build b: **AI:n kanssa 50 %** · **ilman 67 %**.
+- Bottom (b): **Tehtävä valmistui. Ymmärrys ei välttämättä.**
+- `Lähde:` Shen & Tamkin 2026 (arXiv 2601.20245) · pyöristetyt keskiarvot · välitön koe, ei pitkäaikainen · ei nykyagenttien testi.
+- Notes:
+  - Gallup callback: "Luetko AI-koodin?"
+  - Say "about 17 percentage points", never "17 % of skill lost".
 
-**28 · 29:00 · Two-column explanation with evidence card**
+**22 · 27:30 · Two-column with evidence card**
+
 - Title: **AI muuttaa työtä kahdesti**
 - Subtitle: Sen kautta, mitä se osaa – ja mitä uskomme sen kohta osaavan
-- Left, **Mitä se tekee**: tehtävät, työkalut, tahti
-- Right, **Mitä odotetaan**: ketä palkataan, mitä opetellaan, kuka mentoroi
-- Evidence card: *Yksi poikkeuksellinen työpaikka: juniorien osuus teknisistä rekrytoinneista 27 % → 9 %, vaikka rekrytointi kasvoi.*
-- Bottom: **Jos ensimmäinen porras kapenee, mistä seuraavat seniorit tulevat?**
-- Source: Anthropic, 16 October 2026 (an AI vendor's own data). Notes: The Stanford US entry-level relative gap (19 %, descriptive) stays in the notes, as does the Reddit career-anxiety framing. Acknowledge the fear without mocking it.
+- Left, **Mitä se tekee:** tehtävät, työkalut, tahti
+- Right, **Mitä odotetaan:** ketä palkataan, mitä opetellaan, kuka mentoroi
+- Card: *Yksi poikkeuksellinen työpaikka: juniorien osuus teknisistä rekrytoinneista 27 % → 9 %, vaikka rekrytointi kasvoi.*
+- Bottom: **Jos ensimmäinen porras kapenee, mistä tulevat seuraavat seniorit?**
+- `Lähde:` Anthropic 16.10.2026 (tekoälyfirman omat luvut).
+- Notes:
+  - Acknowledge career fear, never mock it.
+  - The Stanford US 19 % relative gap stays in the notes.
+  - The Stack Overflow 53 % vs 69 % sentiment split is backup slide B15. Its experience buckets don't match the gallup's.
 
-**29 · 30:10 · Full-slide meme (#25)**
-- *"Corporate needs you to find the differences"*: **AI:n kirjoittama PR** / **Ihmisen kirjoittama PR** → *"Molemmat pitää ymmärtää ennen mergeä."*
-- It closes the slop argument: provenance does not tell you quality.
+**23 · 29:00 · Full-slide meme (#25)**
 
-### D · Mitä tämä tarkoittaa täällä? · 30:20–35:00
+*"Corporate needs you to find the differences"*, captioned in Finnish:
 
-**30 · 30:20 · Section return (note ④)** · 10 s
+1. **"Firma haluaa, että etsit erot näistä kahdesta PR:stä."**
+2. Left picture labelled **AI kirjoitti**, right picture labelled **ihminen kirjoitti** (the same diff in both).
+3. Pam: **"Ne ovat sama PR."**
 
-**31 · 30:30 · Big numbers (#11 ×3)**
+- Notes: the point, spoken after the laugh: the origin doesn't tell you the quality. Someone still has to read and understand it.
+
+### D · Mitä tämä tarkoittaa täällä? · 30:00–35:00
+
+*Corner pin on 24: ④*
+
+**24 · 30:00 · Big numbers (#11 ×3)**
+
 - Title: **Suomen IT-ala ei mahdu yhteen käyrään**
 - Subtitle: Toimialan tilannekuva, elokuu 2026
-- Numbers:
+- Three numbers:
   - **19 mrd €** liikevaihto 2025 (+5 %)
-  - **Uudet tilaukset Q2:** −12 % ed. neljännekseen, +6 % vuoden takaiseen
-  - **~80 200** työntekijää kesäkuussa (−1 %)
+  - **Uudet tilaukset Q2:** −12 % edelliseen neljännekseen, +6 % vuoden takaiseen
+  - **~80 200** työntekijää kesäkuun lopussa (−1 % maaliskuun lopusta)
 - Bottom: **Paine on todellinen. Syy ei ole yksi.**
-- Source: Teknologiateollisuus, tietotekniikka-ala (August outlook; the order survey excludes games and data centres) · **refresh before the event**
-- Notes: These figures do not isolate any AI effect. Never reuse the old 20 bn / +9 % figures.
+- `Lähde:` Teknologiateollisuus, tietotekniikka-ala (elokuun katsaus; tilauskysely ei sisällä peli- ja datakeskusyrityksiä) · **päivitä ennen tilaisuutta**.
+- Notes: these figures don't isolate any AI effect. Never reuse the old 20 bn / +9 % figures.
 
-**32 · 31:20 · Progressive chart (#10), guess first, 1 build**
+**25 · 31:00 · Progressive chart (#10), 1 build** 🙋
+
 - Title: **Monessako yrityksessä AI on käytössä?**
 - Subtitle: Vähintään 10 hengen yritykset Suomessa, kevät 2025
 - Bars:
-  - Tieto ja viestintä: **80 %**
-  - Kaikki toimialat: **38 %**
-  - Rakentaminen: **24 %**
-  - Kuljetus ja varastointi: **13 %**
+  - Tieto ja viestintä **80 %**
+  - Kaikki toimialat **38 %**
+  - Rakentaminen **24 %**
+  - Kuljetus ja varastointi **13 %**
 - Build a hides the bars. Ask: "Arvatkaa rakentaminen."
 - Bottom: **Asiakkaan pullonkaula ei välttämättä ole mallin älykkyys.**
-- Source: Tilastokeskus, 27 November 2025 · broad AI definition · self-reported · not a South Ostrobothnia estimate · 15 % have documented AI rules (keep in the notes)
+- `Lähde:` Tilastokeskus 27.11.2025 · laaja AI-määritelmä · itse ilmoitettu · koko maa, ei Etelä-Pohjanmaa.
 
-**33 · 32:20 · Comparison (#19)**
-- Title: **AI on paine – ja tuote**
-- Subtitle: Mitä asiakas lakkaa ostamasta, mitä alkaa pyytää?
-- Left, **Paine vanhalle mallille**: enemmän tulosta per euro · geneerinen toteutus siirtyy taloon · tuntihinnoittelu kyseenalaistuu · juniorien tehtävät muuttuvat
-- Right, **Kysyntä uudelle**: käyttöönotto ja hallinta · data, tietoturva, integraatiot · ylläpito ja jatkuvuus · osaamisen uudistaminen
-- Example card: *Gofore × Tampereen yliopisto: AI-alusta – arkkitehtuuri, toteutus, hallinta, ylläpito.*
-- Bottom: **Asiakas ostaa myös käyttöönoton, hallinnan ja jatkuvuuden.**
-- Source: Gofore business review for August 2026 (11 September) · company narrative · growth not attributable to AI
+**26 · 32:10 · Opportunity turn** 🙋
 
-**34 · 33:20 · Opportunity turn (#12-style)**
-- Title: **Paikallinen etu syntyy työn tuntemisesta**
+- Title: **Mitä täällä kannattaa nyt rakentaa?**
 - Subtitle: Kun koodi halpenee, mikä lähellä on arvokasta?
-- Four items: tunne oikea työ · pääse käyttäjien luo · liitä nykyisiin järjestelmiin · tue käytössä ja ylläpidossa
-- Small chips: *Lakeus-Devaus, mettäpöyröytymistä vastaan since 2016* · *SEAMK Testauspaja: River IT, syyskuu 2026*
-- Callback: a thumbnail of the maintenance record from slide 22
-- Tag: `Esityksen tulkinta`
-- Bottom: **Mitä täällä kannattaa nyt rakentaa, mitä ei ennen kannattanut?**
-- Source: Lakeus-Devaus; SEAMK event listing. Notes: This is a strategic proposition. Proximity does not guarantee success.
+- Four short items: tunne oikea työ · pääse käyttäjien luo · liitä nykyisiin järjestelmiin · tue käytössä
+- Example card: *Asiakas ostaa myös käyttöönoton, hallinnan ja jatkuvuuden – esim. Gofore × Tampereen yliopisto, AI-alusta.*
+- Corner thumbnail of the maintenance record from 18.
+- Bottom: **Mikä asiakkaan ongelma jää ratkaisematta, vaikka koodi olisi ilmaista?**
+- `Lähde:` esityksen tulkinta · Gofore, elokuun katsaus 11.9.2026 · Lakeus-Devaus · SEAMK Testauspaja: River IT 9/2026.
+- Notes: this is a proposition; proximity guarantees nothing. "Moon härmästä" lands here.
 
-**35 · 34:30 · Section return: halves regroup, ⑤ highlighted**
-- The agenda board from 02's second build, with "Miten tehdään?" pulled forward. 30 s to switch the energy: "Nyt käytäntöön."
+**27 · 34:30 · Section return: halves regroup, ⑤ highlighted**
 
-### Practical · Miten agentin kanssa tehdään töitä? · 35:00–55:00
+30 s. "Nyt käytäntöön."
 
-From slide 39 onward, every slide carries the **lifecycle strip** and an **Agentti / Sinä** note pair (§4.2). The pair is given for each slide.
+### Practical · Miten agentin kanssa tehdään töitä? · 35:00–54:00
 
-**36 · 35:00 · Big number (#11)**
-- Title: **Luottamus syntyy tarkistettavuudesta**
-- Subtitle: Milloin kehittäjät luottavat AI:hin? (2026)
-- Number: **48 %** luottaa, kun tulos on helppo tarkistaa. Small beside it: *6,6 % luottaa myös tärkeissä päätöksissä.*
-- Bottom: **Seuraavat 20 minuuttia: miten tuloksesta tehdään tarkistettava.**
-- Source: Stack Overflow 2026, trust question, n = 14 304 · response categories, not error rates
+The lifecycle strip appears on slides 29–39. The bug is cited as `Lähde: kuvitteellinen esimerkki` until real captures exist; after that, `oma demoprojekti, tallenne <pvm>`.
 
-**37 · 35:40 · Personal proof (#14 showcase)**
-- Title: **Tämäkin esitys tehtiin agenttien kanssa**
-- Subtitle: Mitä agentti teki – mitä minä päätin
-- Visual: a screenshot of the repo's `docs/` listing, plus two columns.
-- Left, **Agentti**:
-  - haki ja luki kymmeniä lähteitä
-  - kirjoitti 18 taustamuistiota
-  - rakensi neljä versiota esityksestä
-  - korjasi omia lukujaan (19 mrd €, ei 20)
-  - hylkäsi lupaavan tutkimuksen, joka osoittautui simulaatioksi
-- Right, **Minä**:
-  - valitsin väitteen
-  - karsin suurimman osan
-  - tarkistin luvut
-  - vastaan jokaisesta väitteestä tällä lavalla
-- Bottom: **Agentti teki paljon. Vastuu lavalla on minun.**
-- Footer: *Tämän esityksen tutkimuksessa ja kuvituksessa on käytetty tekoälyä.*
-- Source: this repository (see [13](13-research-refresh-2026-09-05.md) and [18](18-research-source-register-2026-10-18.md)). **[CONFIRM every line. Describe only what the speaker actually did.]**
+**28 · 35:00 · Browser captures + small loop**
 
-**38 · 36:40 · Loop diagram (#21) with the zoom from 19**
-- Title: **Näin tehtävä etenee AI:n kanssa**
-- Subtitle: Esimerkki: huoneiston numero katoaa, kun osoite tallennetaan
-- Visual: zoom into the "Toteutus" box from 19, which opens into the loop *Rajaa → Konteksti → Toista → Korjaa → Tarkista → Luovuta → Seuraa*. This loop becomes the strip on later slides.
-- Tag: `Opetusesimerkki`
-- Bottom: **Agentti tekee ison osan työstä. Sinä päätät, milloin näyttö riittää.**
-- Source: Codex prompting guide; Claude Code best practices
+- Title: **Asiakas: huoneiston numero katoaa**
+- Subtitle: Osoite tallentuu – B 7 ei
+- Visual: two large browser frames, *ennen tallennusta: B 7* → *uudelleenlatauksen jälkeen: —*. Below them, small: slide 16's "Toteutus" box opens into the loop *Rajaa → Konteksti → Toista → Korjaa → Tarkista → Luovuta → Seuraa*.
+- Bottom: **Agentti saa tehdä tästä ison osan. Katsotaan, mitä sinulle jää.**
 
-**39 · 37:40 · Two-column definition (#16)** · strip: *Rajaa*
-- Title: **Hyvä tehtävä kertoo, miltä valmis näyttää**
-- Subtitle: Sama pyyntö kahdella tavalla
+**29 · 36:10 · Two-column (#16)** · strip: *Rajaa* · 🙋
+
+- Title: **Kerro, miltä valmis näyttää**
 - Left: "Korjaa osoitelomake."
 - Right, four lines:
   - **Ongelma:** Huoneiston numero katoaa tallennuksessa.
   - **Tavoite:** Osoite säilyy myös uudelleenlatauksessa.
-  - **Raja:** Säilytä rajapinta ja muu osoitekäytös.
-  - **Näyttö:** Toistettu virhe, regressiotarkistus, toimiva tallennus.
-- Bottom: **Jos et osaa kirjoittaa näyttöä, et vielä tiedä, mitä pyydät.**
-- Pair: *Agentti: tutkii syyn ja ehdottaa · Sinä: määrität valmiin ja rajat*
-- Notes: The full prompt is in [02](02-one-hour-run-of-show.md#example-task-brief). Give the room 20 seconds to frame one of their own tasks in these four lines.
+  - **Raja:** Rajapinta ja muu osoitekäytös pysyvät ennallaan.
+  - **Näyttö:** Toistettu virhe, regressiotesti, toimiva tallennus.
+- Bottom: **Jos et osaa sanoa, mikä riittää näytöksi, et vielä tiedä, mitä pyydät.**
+- Notes:
+  - 🙋 20 seconds: "Ajatelkaa yksi oma tehtävä näillä neljällä rivillä."
+  - The full prompt is in [02](02-one-hour-run-of-show.md#example-task-brief).
 
-**40 · 38:50 · Repo plus code card** · strip: *Konteksti*
-- Title: **Anna agentille projektin oma totuus**
+**30 · 37:30 · Repo + code card** · strip: *Konteksti*
+
+- Title: **Kerro agentille se, mitä koodi ei kerro**
 - Subtitle: AGENTS.md (Codex) · CLAUDE.md (Claude Code)
 - Left: a small repo tree.
-- Right: a code card with 4 lines:
+- Right, code card:
   ```
   # Osoitteet
   - Testit: npm test -- address
   - Huoneisto on vapaaehtoinen kenttä.
   - Älä muuta /api/address-rajapintaa.
   ```
-- Twist note: *Tutkimus: generoidut ohjetiedostot eivät yleisesti parantaneet onnistumista – kustannus nousi yli 20 %.*
+- Small note: *Tutkimus: ohjetiedostot eivät yleisesti parantaneet onnistumista – kustannus nousi yli 20 %.*
 - Bottom: **Ohjeenkin pitää ansaita paikkansa.**
-- Pair: *Agentti: lukee ja noudattaa · Sinä: kirjoitat vain sen, mitä repo ei kerro*
-- Source: *Evaluating AGENTS.md*, v3 (29 September 2026), plus official docs · `Opetusesimerkki`
+- `Lähde:` *Evaluating AGENTS.md* v3, 29.9.2026 · Codex- ja Claude Code -dokumentaatio.
 
-**41 · 40:00 · Hub diagram** · strip: *Konteksti*
-- Title: **Työkalut tuovat agentin oikean työn äärelle**
-- Subtitle: Valitse tehtävän tarvitsemat – ei kaikkea
+**31 · 38:40 · Hub diagram** · strip: *Konteksti*
+
+- Title: **Mitä agentti saa käyttää?**
+- Subtitle: Vain sitä, mitä tehtävä tarvitsee
 - Diagram, with the agent in the centre:
   - **Shell** → testikomento
   - **Selain** → näkyvä toiminta
   - **MCP** → tikettijärjestelmä
   - **Skill** → toistettava työtapa
-- Bottom: **Työkalu on integraatiovalinta, ei kypsyysmerkki.**
-- Pair: *Agentti: käyttää annettuja työkaluja · Sinä: päätät, mihin sillä on pääsy*
-- Source: MCP client best practices; Codex skills; Claude Code workflows
+- Bottom: **Enemmän työkaluja ei tarkoita parempaa agenttia.**
+- `Lähde:` MCP client best practices · Codex skills · Claude Code workflows.
 
-**42 · 41:00 · Four sliders** · ↩ Gallup: *Agentin PR tuotantoon?*
-- Title: **Kuinka pitkälle agentti saa edetä yksin?**
-- Subtitle: Autonomia ansaitaan palautteella, luettavuudella ja peruttavuudella
-- Sliders:
-  - Vaikutusalue: paikallinen ↔ koko tuotanto
-  - Peruttavuus: heti ↔ vaikea perua
-  - Tarkistettavuus: koneellinen ↔ viiveellä / subjektiivinen
-  - Elinikä: kertakäyttö ↔ vuosien ylläpito
-- A pin marks where the address bug sits on each slider.
-- Bottom: **Mitä vasemmalla, sitä pidemmälle voi delegoida.**
-- Source: our synthesis ([10](10-ai-native-development-workflows.md), [11](11-workflow-scenarios-and-field-notes.md)) · `Esityksen tulkinta`. Notes: Stripe's "deterministic spine" (agent steps between fixed lint, Git and CI steps) is the real-world example. Say it aloud.
+**32 · 39:50 · Browser captures + trace, 1 build** · strip: *Toista* · 🙋
 
-**43 · 42:10 · Browser captures (#14)** · strip: *Toista*
-- Title: **Toista virhe ennen korjausta**
-- Subtitle: Arvo katoaa jossain lomakkeen ja tallennuksen välissä
-- Visual: two browser frames, *ennen tallennusta: B 7* and *uudelleenlatauksen jälkeen: —*, with a trace underneath: *Lomake → pyyntö → tallennus → lataus*. The break is circled.
+- Title: **Ensin toistetaan, sitten korjataan**
+- Subtitle: Lomake → pyyntö → tallennus → lataus
+- Build a: the chain with no marks. 🙋 "Missä arvo voi kadota? Huutakaa." Build b: the break is circled, *pyynnössä ei ole huoneistoa.*
 - Bottom: **Korjaus ilman toistoa on arvaus.**
-- Pair: *Agentti: toistaa ja jäljittää · Sinä: vahvistat, että tämä on oikea virhe*
-- Tag: `Demotallenne` (once captured) or `Havainnollistus`
 
-**44 · 43:20 · Code card plus checks, 3 builds** · strip: *Korjaa*
-- Title: **Pieni muutos, toimiva tarkistus**
-- Subtitle: Muutama rivi koodia, kolme tarkistettavaa asiaa
+**33 · 41:00 · Full-bleed video (#26)** · strip hidden · 30 s
+
+A sped-up, real screen recording of the agent:
+
+1. Reading the repo.
+2. Running the failing test.
+3. Editing.
+4. Rerunning.
+
+No title. A small credit: *oma demoprojekti, nopeutettu*.
+
+- **Use only a real recording.** Without one, skip this slide.
+
+**34 · 41:30 · Code card + checks, 2 builds** · strip: *Korjaa* · 🙋
+
+- Title: **Kolme riviä ja testi**
+- Subtitle: Muutos, regressiotesti ja selain uudelleenlatauksen jälkeen
 - Builds:
-  1. A 3-line diff
-  2. Check chip: *✗ ei läpi*
-  3. Check chip: *✓ läpi*
-  4. Browser after reload: *B 7*
-- Bottom: **Testi kertoo, mitä tarkistettiin – ei sitä, mitä unohdettiin.**
-- Pair: *Agentti: tekee muutoksen ja testin · Sinä: luet, mitä testi oikeasti todistaa*
-- Tag: `Demotallenne` / `Opetusesimerkki`. **Never show an unrun check as passed.**
+  - a: a 3-line diff
+  - b: check chips *ei läpi → läpi*
+  - c: browser after reload: *B 7*
+- Bottom: **Mitä tämä testi ei todista?** (🙋 take two answers)
+- Notes:
+  - **Without a recording, the chips are grey and say `odotettu: ei läpi → läpi`.**
+  - The answer to pull out: old records, other countries' address formats, the user's actual workflow.
 
-**45 · 44:50 · Verification ladder** · ↩ Gallup: *Luetko AI-koodin?* · strip: *Tarkista*
-- Title: **Vihreä testi on askel, ei maali**
-- Subtitle: Mitä kehittäjät tekevät AI:n vastaukselle (2026)
-- Ladder:
-  1. Ajaa
-  2. Ratkaisee ilmoitetun ongelman
-  3. Ei riko muuta
-  4. Toimii uudelleenlatauksessa
-  5. Käyttäjä hyväksyy
-- Side evidence: *76,5 % ajaa paikallisesti · 63,9 % vertaa koodipohjaan · 53,0 % tarkistaa testit/tietoturvan · 9,6 % käyttää sellaisenaan*
-- Bottom: **Mitä tarkistit – ja mitä tarkistus todisti?**
-- Pair: *Agentti: kerää näytön · Sinä: päätät, riittääkö se*
-- Source: Stack Overflow 2026, n = 13 162 · multiple answers allowed · self-reported · the ladder is `Esityksen tulkinta`
+**35 · 42:50 · Four-panel comic (AI-drawn, as on Kuopio p. 53)**
 
-**46 · 45:50 · Handoff card** · strip: *Luovuta*
-- Title: **Hyvä luovutus näyttää muutoksen ja näytön**
-- Subtitle: Malliluovutus – näin katselmoija pääsee nopeasti kiinni
+1. Agentti, iloisena: "Valmis! Kaikki testit menee läpi."
+2. Minä, kahvikuppi kädessä: "Ajoitko ne?"
+3. Agentti, hiljaa: "…"
+4. Agentti: "Ajan ne nyt."
+
+Same two-character, four-panel layout and drawing style as Kuopio p. 53. Generate it with the [06](../../kuopio-pelaa-2026/presentation-style/06-ai-brief.md) workflow and disclose it.
+
+- `Lähde:` kuvitteellinen. Disclosed as generated on 48.
+
+**36 · 43:10 · Ladder** · strip: *Tarkista*
+
+- Title: **"Toimii mun koneella" ei vielä riitä**
+- Subtitle: 48 % vastaajista luottaa AI:hin, kun tuloksen voi helposti tarkistaa
+- Ladder, bottom to top:
+  - 0 Toimii mun koneella
+  - 1 Käynnistyy
+  - 2 Ratkaisee ilmoitetun ongelman
+  - 3 Ei riko muuta
+  - 4 Toimii uudelleenlatauksen jälkeen
+  - 5 Käyttäjä hyväksyy
+- Small evidence card: *76,5 % ajaa paikallisesti · 63,9 % vertaa koodipohjaan · 53,0 % tarkistaa testit tai tietoturvan · 9,6 % käyttää sellaisenaan*
+- Bottom: **Mille portaalle sinä yleensä jäät?**
+- `Lähde:` esityksen tulkinta (portaat) · Stack Overflow 2026, n = 14 304 (luottamus) ja n = 13 162 (toimet), monivalinta, itse raportoitu.
+- Notes: gallup callback, "Luetko AI-koodin?"
+
+**37 · 44:20 · Handoff card** · strip: *Luovuta*
+
+- Title: **Hyvä luovutus: muutos ja todisteet samassa paketissa**
 - Card:
   - **MIKSI:** huoneisto puuttui lähetetystä tiedosta
   - **MITÄ MUUTTUI:** kenttä lisättiin tallennukseen
-  - **MITEN TARKISTETTIIN:** regressiotesti ja selain uudelleenlatauksen jälkeen
+  - **MITEN TARKISTETTIIN:** regressiotesti + selain uudelleenlatauksen jälkeen
   - **AVOIN PÄÄTÖS:** *korjataanko vanhat tietueet, joista huoneisto jo puuttuu?*
-- Bottom: **Älä tee nopeudestasi jonkun toisen katselmointivelkaa.** (callback to curl)
-- Pair: *Agentti: kirjoittaa luovutuksen · Sinä: teet avoimen päätöksen*
-- Tag: `Opetusesimerkki`
+- Bottom: **Älä tee nopeudestasi jonkun toisen katselmointivelkaa.** (curl callback)
 
-**47 · 47:00 · Prototype, part 2**
-- Title: **Prototyyppi auttaa kysymään käyttäjältä**
-- Subtitle: Huoltoesimerkki: asentaja korjaa luonnoksen
-- Visual: service note → draft record → the technician's correction, shown as a strike-through plus a handwritten-style note
-- Tag: `Kuvitteellinen esimerkki`
-- Bottom: **Toimiva selain ei vielä todista hyödyllisyyttä.**
-- Pair: *Agentti: tekee luonnoksen · Käyttäjä: kertoo, mikä on oikein*
-- Notes: Ask: Where do the photos go? Who corrects a confidently wrong record? Who supports it during the busy season?
+**38 · 45:20 · Four sliders** · strip: *Luovuta* · 🙋 · pin `↩ Gallup: Agentin PR tuotantoon?`
 
-**48 · 48:10 · Full-slide meme (#25)**
-- *Spider-Man pointing*: **Agentti A** and **Agentti B**, captioned *"Kumpi muutti address.ts:ää?"*. It sets up 49.
+- Title: **Saako agentti yhdistää tämän itse?**
+- Subtitle: Mitä helpompi tarkistaa ja perua, sitä pidempi lieka
+- Sliders, each with a pin for the address bug:
+  - Vaikutusalue: paikallinen ↔ koko tuotanto
+  - Peruttavuus: heti ↔ vaikea perua
+  - Tarkistettavuus: koneellinen ↔ viiveellä / makuasia
+  - Elinikä: kertakäyttö ↔ vuosien ylläpito
+- 🙋 **Käsi ylös: kuka antaisi?** Compare with the gallup answer.
+- `Lähde:` esityksen tulkinta.
+- Notes: Stripe's "deterministic spine" (agent steps between fixed lint/Git/CI steps) and the Stack Overflow pulse (63 % rarely or never allow full autopilot) are the spoken evidence.
 
-**49 · 48:20 · Branch diagram**
-- Title: **Rinnakkaisuus auttaa vain erillisissä tehtävissä**
-- Subtitle: Omat työpuut, yhteinen tarkistus
-- Diagram: *Worktree A: regressiotesti* and *Worktree B: käyttöohje* merge into *katselmointi + yhteiset tarkistukset*. A small red-flag example: *sama tiedosto → sovi työnjako.*
-- Bottom: **Useampi agentti ei korjaa epäselvää tehtävää.**
-- Pair: *Agentit: tekevät erilliset osat · Sinä: suunnittelet jaon ja yhdistät*
-- Source: Claude Code common workflows · `Havainnollistus`. Do not claim any speedup.
+**39 · 46:40 · Loop (zoom back out to 16) + card** · strip: *Seuraa*
 
-**50 · 49:30 · Loop (zoom back out to 19's chain) plus evidence card** · strip: *Seuraa*
 - Title: **Julkaisu ei ole maali**
 - Subtitle: Palaute, korjaus ja omistaja jatkavat työtä
-- Loop: *virhe tai käyttäjän korjaus → selvitys → rajattu korjaus → tarkistukset → julkaisupäätös*. Owner and notification are labelled.
-- Evidence card: *Seuraava tehtävä perii edellisen jäljet: agentin aiempi muutos heikensi seuraavan tehtävän onnistumista 5,6 %-yks. – kun aiemmat testit menivät läpi, selvää eroa ei havaittu.*
-- Bottom: **Jätä seuraavalle tekijälle testit, ei arvoituksia.**
-- Pair: *Agentti: seuloo ja ehdottaa · Sinä: omistat julkaisun ja ilmoitukset*
-- Source: SWE-Maintain preprint, 10 October 2026 · short sequences, selected repositories, human maintainability not measured
+- Loop: *virhe tai käyttäjän korjaus → selvitys → rajattu korjaus → tarkistukset → julkaisupäätös*. Label the owner and notification.
+- Card: *Esijulkaisu: kun edellisen muutoksen oli tehnyt agentti, seuraava tehtävä onnistui keskimäärin 5,6 %-yksikköä harvemmin.*
+- Bottom: **Mitä seuraava tekijä perii sinulta?**
+- `Lähde:` SWE-Maintain, esijulkaisu 10.10.2026 · lyhyet tehtäväketjut, valitut repot.
+- Notes: in the paper, requiring earlier tests to pass *widened* the gap to 14 points. Only a narrow subset (passing tests and no pre-solved next task) showed no clear difference. Don't present tests as a proven cure.
 
-**51 · 50:50 · Flywheel** ⏩
-- Title: **Korjaa toistuva epäselvyys, älä vain viimeistä vastausta**
-- Subtitle: Kun agentti tekee saman virheen kahdesti
-- Loop: *virhe → mikä puuttui? → pienin pysyvä korjaus (testi · ohje · tarkistus · skill) → kokeile oikealla tehtävällä → poista vanhentunut*
-- Bottom: **Muuten sama korjaus maksetaan joka kerta.**
-- Source: OpenAI Codex cookbook (May and August 2026) · [10 §9](10-ai-native-development-workflows.md#9-the-improvement-flywheel)
+**40 · 47:50 · Prototype, part 2** 🙋
 
-**52 · 51:50 · One big question with three actions**
-- Title: **Delegoi työ – harjoittele ymmärrystä**
-- Subtitle: Kolme tapaa varmistaa, että osaaminen kasvaa
-- Large: *"Mitä rikkoutuisi, jos huoneisto olisi tyhjä?"*
-- Three actions: **Selitä** yksi päätös · **Ennusta** yksi virhe · **Korjaa** yksi rikottu esimerkki
-- Bottom: **Ymmärrys ei synny sivutuotteena. Se pitää järjestää.**
-- Tag: `Esityksen suositus`
-- Notes: Refer back to slide 26 verbally. Do not show the chart again.
+- Title: **Asentaja korjaa luonnoksen**
+- Subtitle: Huoltoesimerkki, osa 2
+- Visual: service note → draft record → the technician's correction (strike-through + handwritten-style note).
+- Bottom: **Selain sanoo, että toimii. Asentaja sanoo, onko siitä hyötyä.**
+- `Lähde:` kuvitteellinen esimerkki.
+- Notes: 🙋 "Mihin kuvat menevät? Kuka korjaa väärän kirjauksen? Kuka tukee sesonkiaikana?"
 
-**53 · 53:00 · Two columns: what the agent did, what the human decided**
+**41 · 48:50 · One big question + three actions** 🙋
+
+- Title: **Delegoi työ – mutta harjoittele ymmärrystä**
+- Large: *"Mitä rikkoutuisi, jos huoneisto olisi tyhjä?"* (🙋 let the room predict)
+- Three actions:
+  - **Selitä** yksi päätös
+  - **Ennusta** yksi virhe
+  - **Korjaa** yksi rikottu esimerkki
+- Bottom: **Ymmärrys ei synny sivutuotteena.**
+- `Lähde:` esityksen tulkinta.
+- Notes: recall 21 aloud ("Tehtävä valmistui. Ymmärrys ei välttämättä."). Don't show the chart again.
+
+**42 · 50:00 · Two columns: what the agent did / what the human decided**
+
 - Title: **Mitä agentti teki – mitä ihminen päätti?**
 - Subtitle: Osoitebugi alusta loppuun
-- Left, **Agentti**: etsi syyn · toisti virheen · ehdotti korjausta · kirjoitti testin · ajoi tarkistukset · kirjoitti luovutuksen
-- Right, **Ihminen**: rajasi tehtävän · päätti, mitä "valmis" tarkoittaa · arvioi näytön · päätti vanhoista tietueista · päätti julkaisusta · omistaa seuraukset
-- Bottom: **Agentti teki suurimman osan työstä. Ihminen teki ne päätökset, joilla on seurauksia.**
-- Notes: This is the rehearsal test. A newcomer should be able to explain these two columns. It mirrors slide 37 on purpose. **54:00 is a 1-minute buffer.**
+- **Agentti:** etsi syyn · toisti virheen · ehdotti korjausta · kirjoitti testin · ajoi tarkistukset · kirjoitti luovutuksen
+- **Ihminen:** rajasi tehtävän · päätti, mitä "valmis" tarkoittaa · arvioi näytön · päätti vanhoista tietueista · päätti julkaisusta
+- No bottom line.
+- Notes: rehearsal test — a newcomer can explain these two columns. Bridge: "Opetusesimerkki oli pieni. Tältä sama näyttää oikeassa projektissa."
 
-### Close · 55:00–60:00
+### The real project · 51:00–54:00 (end of the practical half)
 
-**54 · 55:00 · Answer the title (corkboard), 1 build**
-- The salmon note *Koodi halpeni. Mikä ei?* moves to the centre. On the build, *Mikä ei?* is torn off and the ransom-note words **Vastuu ei.** appear.
-- Three paper labels below:
-  - Koodia syntyy enemmän.
-  - Varmuus ei synny samalla nopeudella.
-  - Joku omistaa seuraukset joka tapauksessa.
+SuomiWoW is the speaker's own production project. The Kuopio audience saw its features. This room sees the backstage: a year of agent-assisted work and what the owner still has to carry. Numbers come from the repository's git history on 18 October 2026.
 
-**55 · 55:30 · Takeaways corkboard (#5)**
-- Three pinned notes:
+**43 · 51:00 · Case opener (#22)** · 20 s
+
+Full-bleed screenshot of the SuomiWoW progress page (reuse Kuopio p. 105). Credit only: *suomiwow.vaarattu.tv*.
+
+- Notes: "Moni teistä ei pelaa WoW:ia, eikä tarvitse. Tämä on suomalaisten kiltojen tulospalvelu, jota oikeat ihmiset käyttävät joka viikko."
+
+**44 · 51:20 · Personal proof (#14)**
+
+- Title: **SuomiWoW: vuosi agenttien kanssa**
+- Subtitle: Harrastusprojekti, oikeat käyttäjät, oikea tuotanto
+- Number row: **~1 250 committia** · **12 kuukautta** · **2 ihmistä** · **~190 000 riviä koodia**
+- Left, **Agentti:**
+  - kirjoitti valtaosan koodista
+  - toteutti ominaisuudet ja korjaukset
+  - kirjoitti suunnitelmat ja ajokirjat (`docs/`)
+- Right, **Minä:**
+  - mitä palvelu on – ja mitä se ei ole ("ei kasinoa, ei maksullista etenemistä")
+  - ettei mennyttä historiaa kirjoiteta uudelleen
+  - mitä yhteisö oikeasti haluaa
+  - milloin muutos menee tuotantoon
+- Small visual: repo screenshot with `AGENTS.md`, `CLAUDE.md`, `PRODUCT.md` and `docs/` visible.
+- Bottom: **Mitä tässä oli halpaa – ja mikä ei?**
+- `Lähde:` github.com/Koodattu/suomiwow.vaarattu.tv (git log 18.10.2026).
+- Notes:
+  - **[CONFIRM]** the agent's share of the code and the tools used (Codex, Claude Code, Copilot all appear in the history).
+  - The "Minä" lines paraphrase `PRODUCT.md` ("must not feel like monetized gacha, casino software…"; "preserve raid-tier history instead of silently rewriting past performance").
+  - Say in one sentence that this presentation's research was also done with agents, and that the speaker answers for every claim on stage.
+
+**45 · 52:30 · Code card: a real production runbook**
+
+- Title: **Koodi oli halpaa. Tämä ei.**
+- Subtitle: Oikea korjaus tuotannon dataan: hahmojen identiteetit
+- Code card (shortened from `docs/character-identity-repair.md`):
+  ```
+  npm run repair:character-identities        # dry run, ei kirjoita mitään
+  # tarkista määrät ja esimerkit
+  # varmuuskopio · pysäytä workerit
+  npm run repair:character-identities -- --apply
+  # käynnistä · dry run uudelleen → 0 jäljellä
+  ```
+- Bottom: **Agentti kirjoitti korjauksen. Tuotantoon sen ajoin minä.**
+- `Lähde:` suomiwow.vaarattu.tv `docs/character-identity-repair.md`, `docs/ingestion-leases.md`.
+- Notes:
+  - **[CONFIRM the bottom line.]**
+  - Other real commits that make the same point: "Separate database backups from automatic deployment"; "Bound account repair transactions to fit production MongoDB cache"; "Fix ingestion recovery with renewable fenced leases".
+  - Bridge: "Ja tästä päästään illan kysymykseen."
+
+### Close · 54:00–60:00
+
+**46 · 54:00 · Answer the title (corkboard), 2 builds**
+
+- The ransom words *Mitä kuuluu?* return.
+- Build 1: a pinned note, **"Kiireistä. Koodia tulee enemmän kuin ehditään lukea."**
+- Build 2: the salmon note *Koodi halpeni. Mikä ei?* — *Mikä ei?* is torn off and the ransom words **Vastuu ei.** appear.
+- Notes:
+  - Say the three lines aloud, not on the slide: "Koodia syntyy enemmän. Varmuus ei synny samalla nopeudella. Joku omistaa seuraukset joka tapauksessa."
+  - Optional human beat: "Me opimme kirjoittamalla koodia. Miten seuraavat oppivat?"
+
+**47 · 55:00 · Takeaways corkboard (#5) + the Monday experiment**
+
+- Three pinned notes (confirmed by the speaker 18.10.2026):
   1. **Pyydä tulosta, jonka voit tarkistaa.**
   2. **Varmista, että osaaminen kasvaa työn mukana.**
   3. **Sovi omistajuus ennen julkaisua.**
-- Notes: Suggest one experiment: "Ota maanantaina yksi toistettava virhe, kirjoita neljä riviä ja katso, mitä näyttöä saat."
+- Taped card + QR code: **Maanantaina: yksi toistettava virhe · neljä riviä · katso, mitä näyttöä saat.**
+- The QR code leads to the four-line template (see §10 for hosting).
 
-**56 · 56:00 · Ask-the-room handoff (#8)**
-- *kysytään yleisöltä – vielä kerran*, a QR code and gallup.koodattu.dev. The closing mood question runs from 56:00 to 59:00.
-- Compare only the largest categories. A more conflicted room can mean the talk worked.
+**48 · 56:00 · Closing corkboard (#6) + questions**
 
-**57 · 59:00 · Closing corkboard (#6)**
-- Speaker cut-out, mascot, and **the same three takeaways** as 55.
-- The salmon note asks: **Minkä seurauksen sinä olet valmis omistamaan?**
-- Contact cards, plus *Palaute: gallup.koodattu.dev* and *Keskustelu jatkuu*.
-- Small print: AI disclosure. **[CONTACTS]**
+- Speaker cut-out, mascot and **the same three takeaways** as 47.
+- Salmon note: **Minkä seurauksen sinä olet valmis omistamaan?**
+- Contact cards (confirmed current): /juha-ala-rantala · /vaarattu · ala-ranta.la · juha@ala-ranta.la
+- Bungee: **Kysymyksiä?**
+- Small print: *Tämän esityksen tutkimuksessa ja kuvituksessa on käytetty tekoälyä.*
+- Notes: 56:00–60:00 questions inside the hour. Longer discussion continues afterwards. No closing gallup.
 
-### Hidden backup slides (after 57, hidden or in a separate file)
-
-Use these in the discussion after the hour. Each one is built like a normal content slide.
+### Hidden backup slides (after 48, hidden or in a separate file)
 
 | # | Title (draft) | Source |
 |---|---|---|
-| B1 | **Lähettäminen on halpaa. Katselmointi on hallittua.** (Godot vs Linux contrast pair) | [09](09-veteran-lens.md), current policies |
-| B2 | **Kyky saavuttaa tavoite ja lupa käyttää keinoja ovat eri asioita** (METR / Hugging Face incident, 3 beats) | [13](13-research-refresh-2026-09-05.md) |
-| B3 | **Etujoukko ja arki** (Stack Overflow pulse 63 % / 68 %; Anthropic: users made ~70 % of planning decisions, agents ~80 % of execution) | [10](10-ai-native-development-workflows.md) |
-| B4 | **Autonomian portaat 0–5** | [10](10-ai-native-development-workflows.md) |
-| B5 | **SaaS ei kuole – ominaisuudet hinnoitellaan uudelleen** | [04 §8](04-research-notes.md) |
-| B6 | **Jos ohjelmiston tekeminen halpenee 90 %…** (Jevons question) | [09](09-veteran-lens.md) |
-| B7 | **Sovelluksia enemmän, latauksia ei samassa tahdissa** (App Store 2022 → 2025; no causal claim) | [04 §6](04-research-notes.md) |
-| B8 | **Nuorten työllisyys Yhdysvalloissa** (Stanford 19 % relative gap, descriptive) | [17 D4](17-research-bank-2026-10-18.md) |
-| B9 | **Tietoturva-AI apuna: suostumus ratkaisee** (OSS Scanner, evidence viewer) | [17 E2–E3](17-research-bank-2026-10-18.md) |
-| B10 | **Julkaisu aloittaa velvollisuuksia** (CRA reporting from 11 September 2026) | [17 F5](17-research-bank-2026-10-18.md) |
-| B11 | **Kuka kirjoittaa yhteisen ymmärryksen?** (Stack Overflow knowledge community) | [17 D3](17-research-bank-2026-10-18.md) |
-| B12 | **Microsoft-tutkimus tarkemmin** (setting, standard error) | [13](13-research-refresh-2026-09-05.md) |
-| B13 | **Konsulttiyhtiöt 2026** (**refresh first**; different periods) | [05](05-finland-and-lakeus.md) |
-| B14 | **Stripe: deterministinen selkäranka** (1 300+ PRs per week, all human-reviewed) | [17 C4](17-research-bank-2026-10-18.md) |
+| B1 | **Lähettäminen on halpaa. Katselmointi on hallittua.** (Godot vs Linux) | [09](09-veteran-lens.md), current policies |
+| B2 | **Kyky saavuttaa tavoite ja lupa käyttää keinoja ovat eri asioita** (METR / Hugging Face incident) | [13](13-research-refresh-2026-09-05.md) |
+| B3 | **Ohjelmointia ilman ohjelmoijia** (4GL / CASE, 1980s) | [09](09-veteran-lens.md) |
+| B4 | **Etujoukko ja arki** (SO pulse 63 % / 68 %; Anthropic 70 % planning / 80 % execution) | [10](10-ai-native-development-workflows.md) |
+| B5 | **Autonomian portaat 0–5** | [10](10-ai-native-development-workflows.md) |
+| B6 | **Korjaa toistuva epäselvyys, älä vain viimeistä vastausta** (improvement flywheel) | [10 §9](10-ai-native-development-workflows.md#9-the-improvement-flywheel), [17 C7–C8](17-research-bank-2026-10-18.md) |
+| B7 | **SaaS ei kuole – ominaisuudet hinnoitellaan uudelleen** | [04 §8](04-research-notes.md) |
+| B8 | **Jos ohjelmiston tekeminen halpenee 90 %…** (Jevons) | [09](09-veteran-lens.md) |
+| B9 | **Sovelluksia enemmän, latauksia ei samassa tahdissa** (App Store; no causal claim) | [04 §6](04-research-notes.md) |
+| B10 | **Nuorten työllisyys Yhdysvalloissa** (Stanford, 19 % relative gap, descriptive) | [17 D4](17-research-bank-2026-10-18.md) |
+| B11 | **Tietoturva-AI apuna: suostumus ratkaisee** (OSS Scanner, evidence viewer) | [17 E2–E3](17-research-bank-2026-10-18.md) |
+| B12 | **Julkaisu aloittaa velvollisuuksia** (CRA reporting from 11.9.2026) | [17 F5](17-research-bank-2026-10-18.md) |
+| B13 | **Kuka kirjoittaa yhteisen ymmärryksen?** (Stack Overflow knowledge community) | [17 D3](17-research-bank-2026-10-18.md) |
+| B14 | **Konsulttiyhtiöt 2026** (**refresh first**) | [05](05-finland-and-lakeus.md) |
+| B15 | **Kuka suhtautuu AI:hin myönteisimmin?** (SO 2026: 53 % for 1–5 years vs 69 % for 16+ years; association only) | [17 A6](17-research-bank-2026-10-18.md) |
+| B16 | **Kumpi muutti address.ts:ää?** (Spider-Man meme) | — |
+| B17 | **Kaksi agenttia, kaksi worktreetä** (parallel work; pull back in if rehearsal runs short) | Claude Code common workflows |
+| B18 | **Tämäkin esitys tehtiin agenttien kanssa** (the research process behind this talk) | docs/13, docs/18 |
 
 ---
 
 ## 8. Interaction map
 
-| Time | What the room does |
+| Time | Moment |
 |---|---|
-| 03:00 | Show of hands: which kind of requests do you make? (06) |
-| 05:00–15:00 | Opening gallup, 7 questions |
-| 15:10 | Veterans: does this sound familiar? (09) |
-| 17:40 | Guess the lowest bar (12) |
-| 18:40 | What is your task's test suite? (13) |
-| 20:10 | Guess the measured result (16) |
-| 22:40 | Where does work wait for you? (19) |
-| 27:10 | Guess which group learned better (26) |
-| 28:20 | Guess which experience group is more positive (27) |
-| 31:20 | Guess construction's adoption rate (32) |
-| 33:20 | What is worth building here now? (34) |
-| 37:40 | 20 seconds: frame your own task in four lines (39) |
-| 56:00–59:00 | Closing gallup |
-| 59:00 | Final question to take away (57) |
+| 02:00 | Hands up: kuka oli joulukuun 2024 illassa? (04) |
+| 03:00 | Show of hands: kysy vai delegoi? (05) |
+| 05:00–15:00 | Opening gallup |
+| 15:10 | Guess: testien kirjoittaminen % (08) |
+| 16:10 | Veterans: kuulostaako tutulta? (09) |
+| 18:00 | Mikä olisi teidän testisarja? (11) |
+| 20:00 | Guess the measured METR result (13) |
+| 22:00 | Missä teillä työ odottaa? (16) |
+| 23:00 | Kumpaa teillä juhlitaan? (17) |
+| 24:00 | Mitä kokeilisit nyt? (18) |
+| 26:20 | Guess: kumpi ryhmä oppi paremmin (21) |
+| 31:00 | Guess: rakentaminen (25) |
+| 32:10 | Mikä ongelma jää ratkaisematta? (26) |
+| 36:10 | 20 s: frame your own task in four lines (29) |
+| 39:50 | Shout: missä arvo katoaa? (32) |
+| 41:30 | Mitä tämä testi ei todista? (34) |
+| 43:10 | Mihin porrasta jäät? (36, rhetorical) |
+| 45:20 | Hands up: saako agentti yhdistää? (38) |
+| 47:50 | Mihin kuvat menevät? (40) |
+| 48:50 | Predict: mitä rikkoutuisi? (41) |
+| 51:20 | Mitä tässä oli halpaa – ja mikä ei? (44) |
+| 56:00–60:00 | Questions (48) |
 
-The hands-on workshop from the style template is replaced by the practical half and the Monday experiment on 55. The style guide's "would you use this?" moment becomes the maintenance-record questions on 22 and 47.
+The longest stretch without an audience moment is about 4.5 minutes (26:20–31:00).
 
 ---
 
 ## 9. What we use and what we don't
 
-### 9.1 Main deck: evidence that appears on slides
+### 9.1 On slides, with the caveat that must travel with each item
 
-| Evidence | Slide | Caveat that must travel with it |
+| Evidence | Slide | Caveat |
 |---|---|---|
+| Stack Overflow 2026: workflow use | 08 | n = 12 547; self-selected; multiple choice; current-use column |
 | NATO 1968 | 09 | The 2026 line is rhetoric |
-| 4GL / CASE | 10 | Reuse rights; history, not proof |
-| Brooks, Naur | 11 | Paraphrase only; AI also reaches essential work |
-| Stack Overflow 2026: workflow use | 12 | n = 12 547, self-selected, multiple choice, current-use column |
-| MirrorCode project page | 13 | One protocol; contamination risk; human weeks are an estimate |
-| METR 2025 + February 2026 note | 16–18 | Early-2025 tools; not a current effect; never on Microsoft's axis |
-| Microsoft field experiments | 17 | Completed tasks, not speed; specific assistant |
-| DORA, March 2026 | 19 | 2025 data; associations; widths not measured |
-| Anthropic source control ⏩ | 20 | Extreme, vendor-reported |
-| OpenAI deletion case | 21 | First-party; deletion ≠ safety |
-| METR task substitution | 22 | Conceptual; hypothetical effort ≠ savings |
-| curl bug bounty | 24–25 | One project; not all reports were AI-made |
-| Skill-formation experiment | 26 | ~17 percentage points; immediate test; not deskilling |
-| Stack Overflow 2026: sentiment by experience | 27 | Association |
-| Anthropic employment | 28 | Exceptional AI-vendor workplace; share ≠ jobs lost |
-| Teknologiateollisuus, August | 31 | No AI effect identified; refresh before the event |
-| Tilastokeskus, 2025 | 32 | Broad definition; ≥10 employees; national, not regional |
-| Gofore, August | 33 | Company narrative |
-| Stack Overflow 2026: trust | 36 | Response categories |
-| AGENTS.md study v3 | 40 | Tested setups only; not "delete your instructions" |
-| Stack Overflow 2026: verification actions | 45 | Self-reported; overlapping answers |
-| SWE-Maintain | 50 | Preprint; short sequences |
+| Brooks, Naur | 10 | Paraphrase; AI also reaches essential work |
+| MirrorCode | 11 | One protocol; contamination; confirm 14 h / $251 is the same run before using it |
+| METR 2025 + Feb 2026 note; Microsoft 2025 | 13, 15 | Different measures; never one axis; early-2025 tools |
+| DORA, March 2026 | 16 | 2025 data; illustration widths |
+| Anthropic source control; OpenAI deletion | 17 | "yli"; company accounts; volume ≠ value |
+| METR task substitution | 18 | Conceptual; hypothetical effort ≠ savings |
+| curl | 19–20 | One project; not all reports were AI-made; slop definition labelled as ours, with "kohtuuton" |
+| Skill-formation experiment | 21 | ~17 pp; immediate test only |
+| Anthropic employment | 22 | Exceptional vendor; hiring share ≠ jobs lost |
+| Teknologiateollisuus, August | 24 | −1 % is vs end of March; refresh |
+| Tilastokeskus 2025 | 25 | ≥10 employees; broad definition; national |
+| Gofore | 26 | Company narrative |
+| AGENTS.md study v3 | 30 | Tested setups; "context files", not only generated ones |
+| Stack Overflow 2026: trust + verification actions | 36 | Response categories; self-reported; overlapping |
+| SWE-Maintain | 39 | Preprint; 5.6 pp average; tests are not a proven cure |
+| SuomiWoW repository (git log, `PRODUCT.md`, `docs/`) | 44–45 | The speaker's own project; numbers from git on 18.10.2026, refresh in event week; confirm the agent's share |
 
 ### 9.2 Speaker notes only
 
-Stanford's entry-level gap · Reddit career anxiety (as framing only, never on a slide) · DORA tokenmaxxing · Stack Overflow's 10.2 % performance-evaluation figure · Stripe on 42 · OSS Scanner on 25 · METR's 2025 study details · Microsoft standard error · the 15 % of firms with AI rules · the CAID multi-agent method · the full task prompt.
+Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA tokenmaxxing · Stack Overflow's 10.2 % performance-evaluation figure · Stripe and the SO pulse (38) · OSS Scanner (20) · Microsoft standard error · the 15 % of firms with documented AI rules · the full task prompt · the SWE-Maintain subset detail.
 
-### 9.3 Backup only
-
-Everything in B1–B14.
-
-### 9.4 Not used at all
+### 9.3 Not used
 
 | Item | Reason |
 |---|---|
-| Model leaderboard, benchmark tables, tool or logo walls | Dates fast; turns the talk into brand preference |
-| Live coding or live agent runs | Fragile and slow. Prepared captures only. |
-| Prompting or installation tutorial | Wrong format |
-| Geopolitics, energy, EU AI Act timeline | Off the red thread |
-| "AI makes developers 26 % faster" / "19 % slower" | False generalisations |
-| "Junior jobs fell 20 %", "SaaS is dead", "AI caused the Finnish downturn" | Not supported |
+| Model leaderboards, tool or logo walls | Date fast |
+| Live coding / live agent runs | Fragile. Prepared captures only. |
+| Prompting or install tutorial | Wrong format |
+| Geopolitics, energy, AI Act timeline | Off the thread |
+| "26 % faster" / "19 % slower" as general claims | False generalisations |
+| A trend line fusing METR "−19 %" into later "+100 % / +200 %" figures, as on **Kuopio p. 61** | Mixes measures and studies. **Don't reuse that slide.** |
+| "Junior jobs fell 20 %", "SaaS is dead", "AI caused the Finnish downturn" | Unsupported |
 | Social-coding simulation preprint (2608.03585) | Simulated, not observed |
 | Old Finnish figures (20 bn, +9 %, 79 200) | Superseded |
-| Navy/lime palette, dark section slides, SmartArt, `ai-workbench.png` | Replaced by the style guide |
-| A poll question on a slide | Questions stay in gallup.koodattu.dev |
-| The HTML deck as a production base | Different medium; reference only |
+| Navy/lime palette, dark section slides, SmartArt, `ai-workbench.png` | Replaced |
+| Poll questions on slides | Questions stay in gallup.koodattu.dev |
+| Per-slide Agentti/Sinä notes, taped honesty tags, six label variants | Furniture overload; caveats go in `Lähde:` |
 
 ---
 
 ## 10. Production plan
 
-1. **Start from `KuopioPelaaEsitys.pptx` as a template.** Copy its masters, textures, fonts and frame layouts, then delete its content. Building the frame slides first gives the deck its identity before the content exists (style guide quick start, step 4).
-2. **Make the new assets:** ransom-note words, the mascot variant and the QR codes (§4.3).
-3. **Record the address-bug demo.** This is the biggest open item. Build a disposable mini app with one form and one save path, and plant the missing `apartment` field. Then run Codex or Claude Code for real and capture the reproduction, the diff, the failing and passing test, and the browser after reload. Slides 43–46 then become `Demotallenne` instead of `Havainnollistus`, which makes the practical half far stronger. Until then, every one of those slides must carry the illustrative tag.
-4. **Build the native charts:** 12, 26, 27 and 32 as real PowerPoint charts with data, using the same template on each, plus the flows on 19, 38 and 50. Keep titles, subtitles and sources identical across a chart's build steps.
-5. **Collect the screenshots:** curl, NATO 1968, 4GL, and the repo listing. Record each licence or source in the notes.
-6. **Refresh the data during event week:** the Teknologiateollisuus outlook, Gofore and Siili (Siili's review is due 28 October), and a recheck of the Stack Overflow 2026 pages.
-7. **Write speaker notes** for every slide in Finnish, with the timing, the transition sentence, full source links and the caveat to say aloud. The 23-slide deck's notes in `output/lakeus-devaus-2026-practical-notes.md` are reusable for about 15 of these slides.
-8. **Run the style guide's [05-checklist](../../kuopio-pelaa-2026/presentation-style/05-checklist.md),** plus these talk-specific checks:
-   - [ ] No checks shown as passed that were not actually run
-   - [ ] Every `Kuvitteellinen` / `Opetus` / `Havainnollistus` tag is in place
+1. **Template.** Start from `KuopioPelaaEsitys.pptx`: copy its masters, textures, fonts and frame layouts, then delete the content. Build the frame slides first.
+2. **New assets** (§4.3).
+3. **Record the demo** — the most important open item.
+   - Build a disposable mini app: one form, one save path, and a missing `apartment` field.
+   - Run Codex or Claude Code for real.
+   - Capture the reproduction, the 20–30 s sped-up recording, the diff, the failing → passing test and the browser after reload.
+   - With the recording, slides 28 and 32–34 become evidence. Without it, slide 33 is skipped and the chips on 34 stay grey.
+4. **Host the four-line template** behind slide 47's QR code. Recommended: a short page in this public repo, `docs/maanantain-kokeilu.md`, holding the four-line brief, one filled-in example and a link to the sources. One QR then gives both the template and the evidence. No new hosting needed.
+5. **Native charts and flows.**
+   - Charts: 08, 13, 21, 25. Keep the title, subtitle and source identical across each chart's builds.
+   - Flows: 16, 28, 39.
+6. **Screenshots:** the 2024 event post on the Lakeus-Devaus site, curl, NATO 1968, SuomiWoW (progress page from Kuopio p. 105; a repo view showing `AGENTS.md`, `CLAUDE.md`, `PRODUCT.md`, `docs/`). Record their sources. Refresh the SuomiWoW numbers from git during event week.
+7. **Event-week data refresh:**
+   - Teknologiateollisuus outlook.
+   - Gofore.
+   - Siili, if it's discussed. Its next review is due 28 October.
+   - Recheck the Stack Overflow 2026 pages.
+   - Confirm the MirrorCode run detail.
+8. **Finnish speaker notes** for every slide: timing, transition sentence, full source links, the caveat to say aloud. Reuse from `output/lakeus-devaus-2026-practical-notes.md` where the slides overlap.
+9. **Checks.** Run [05-checklist](../../kuopio-pelaa-2026/presentation-style/05-checklist.md), plus:
+   - [ ] No check shown as passed unless it actually ran
+   - [ ] Every hypothetical or interpretive slide says so in `Lähde:`
    - [ ] Microsoft and METR never share an axis
-   - [ ] The takeaways on 55 and 57 are identical
-   - [ ] Both gallup handoffs work offline-to-browser, with a hands-up fallback
-   - [ ] Rehearsal finishes the context half at 35:00 and the practical half at 55:00
+   - [ ] Takeaways on 47 and 48 are identical
+   - [ ] The gallup handoff works, with a show-of-hands fallback
+   - [ ] Rehearsal hits 35:00, 51:00 and 54:00
 
 ### If running late
 
 | Late by | Skip | Never skip |
 |---|---|---|
-| 1 min | 10, 20 | 43–46 (reproduce → handoff) |
-| 2 min | + 51, + merge 41 into 42 orally | 53, 54, 55 |
-| 3+ min | + 27, + shorten 33 to the example card | The closing gallup |
+| 1 min | 14, 35 | 28–37 (bug → handoff) |
+| 2 min | + 40, + compress 31 into one sentence on 30 | 44–47 |
+| 3+ min | + 23, + 26 to its example card only, + shorten questions | 46–48 |
 
 ---
 
 ## 11. Open decisions for the speaker
 
-1. **Title.** Keep *Hei ohjelmistokehitys, mitä kuuluu?* (recommended, since it is probably already announced) with the salmon-note hook? Or switch to the style-guide pattern, for example *Agentti koodaa – kehittäjät on ohi… vai onko?*
-2. **Bio facts** for 03: current roles, photo, and the self-ironic line.
-3. **Slide 37:** confirm each claim about what the agent did and what the speaker decided. Optionally add the gallup app's development story if its history supports a truthful reveal ([06](06-demo-and-reveal.md)).
-4. **Lakeus-Devaus 2024:** did the speaker run that event? This affects the wording on 05.
-5. **Record the real demo** (step 3 of §10) or keep the illustrative sequence.
-6. **Memes:** are the three planned ones (14, 29, 48) right for this room? The Finnish caption text needs a final pass.
-7. **Takeaway set:** the proposed three, or the earlier strategic set (*Mittaa hyväksyttyä lopputulosta ja korjaustyötä* in place of #1)?
-8. **Event date:** sets the data-refresh window.
-9. **Contacts** for 57.
+**Settled on 18.10.2026:** takeaway #1 swap confirmed; bio and contacts current; SuomiWoW is the personal proof; the gallup runs only at the start; the speaker ran the December 2024 Lakeus-Devaus event (slide 04 updated); the humour beats have had their final caption pass (12, 14, 23, 35).
+
+1. **SuomiWoW lines (44–45):** confirm the agent's share of the code, the tools used, and "Tuotantoon sen ajoin minä".
+2. **Record the demo** (§10 step 3)? It decides whether slides 28 and 32–34 are evidence or illustration.
+3. **Four-line template behind slide 47's QR:** recommended home is this public repo (§10 step 4).
+4. **Event date: unknown.** Until it is set:
+   - every number on a slide carries its own date or vintage;
+   - run §10 step 7 in event week.
+   
+   Data that will change in the meantime:
+   - Teknologiateollisuus publishes a new IT-sector outlook each quarter (slide 24).
+   - Statistics Finland's annual enterprise AI release came out on 27.11.2025, so a 2026 release is likely around late November 2026 (slide 25).
+   - Siili's business review is due 28.10.2026 (backup B14).
+   - If the event moves into mid-2027, a new Stack Overflow survey replaces slides 08 and 36.
+5. **Title:** keep *Hei ohjelmistokehitys, mitä kuuluu?* (recommended) or switch to the guide's pattern.
+
+---
+
+## 12. Changes from version 1 (after the independent review)
+
+| Area | Change |
+|---|---|
+| **Accuracy** | SWE-Maintain card corrected (39). Personal-proof lines corrected (45). "yli" added (17). Slop definition labelled as ours and with "kohtuuton" (20). Finnish employment −1 % now says "maaliskuun lopusta" (24). MirrorCode run detail flagged for confirmation (11). AGENTS.md wording matched to v3 (30). Timeline subtitle fixed (04). Mismatched gallup callback removed (old 27 → B15). |
+| **Structure** | 57 → 49 slides. The 4GL slide, flywheel and sentiment slide moved to backup. Microsoft folded into the METR reveal. Anthropic/OpenAI merged into one contradiction pair. Gofore folded into the local slide. The 48 % trust stat moved into the ladder. Permission slide cut (said aloud). Section returns reduced from five to two plus corner pins. |
+| **Practical half** | Opens with the bug itself. Five audience moments added. A real 30 s agent recording added. The prototype moved after the handoff. The personal proof moved to the close. |
+| **Ending** | Answers the literal title ("Kiireistä…") and the salmon note. One summary only. The Monday experiment is on a slide, with a QR code. |
+| **Style** | Bottom lines on about half the slides, mostly questions or dry asides. Plainer titles. The Kuopio bio reused. Five humour beats, including an AI-drawn comic as on Kuopio p. 53. Slide furniture cut to four components. |
+| **Version 2.1 (speaker feedback, 18.10.2026)** | SuomiWoW replaces "Tämäkin esitys" as the personal proof (43–45), including a real production runbook. The closing gallup is dropped; the gallup is only the opening gauge. The close ends with questions inside the hour. Parallel-work slides moved to backup. 48 slides. Takeaways, bio and contacts confirmed. |
+| **Version 2.2 (18.10.2026)** | Slide 04 states the speaker ran the 2024 event, with a hands-up callback. Final caption pass on the humour beats (12, 14, 23, 35). Finnish copy fixes on 08, 11, 36, 39 and 45. Event-date handling added to §11. |
