@@ -30,8 +30,12 @@ The **[one-hour run of show](docs/02-one-hour-run-of-show.md)** is the revised c
 - [September research refresh and source corrections](docs/13-research-refresh-2026-09-05.md)
 - [Presentation design research and installed skill](docs/15-presentation-design-research.md)
 - [Practical presentation storyboard](docs/16-practical-presentation-storyboard.md)
+- [October research bank: evidence, cases, and discussion material](docs/17-research-bank-2026-10-18.md)
+- [October source register and research limits](docs/18-research-source-register-2026-10-18.md)
 
 The earlier research dossiers retain their dated August snapshots. The **5 September research refresh** records the current corrections and qualifications for selected evidence; it is not a complete re-audit of the source ledger. Follow the updated main draft rather than copying older figures into new slides.
+
+The **18 October research bank** expands the material available for the next editorial pass, with 33 topic cards, additional discussion prompts, and dated source qualifications. It includes newly published evidence and selected updates to older claims. It does not change the running order or existing decks; use its freshness warnings before reusing earlier research.
 
 ## PowerPoint presentation
 
