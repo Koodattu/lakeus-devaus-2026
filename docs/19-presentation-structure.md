@@ -1,6 +1,6 @@
 # Presentation structure: the build blueprint
 
-**Version 2.4, 18 October 2026.** This is the blueprint the next PowerPoint is built from. It is not a finished deck.
+**Version 2.5, 19 October 2026.** This is the blueprint the next PowerPoint is built from. It is not a finished deck.
 
 Version 2 applies an independent review of version 1 (summarised in §12). In short:
 
@@ -14,7 +14,7 @@ Version 2 applies an independent review of version 1 (summarised in §12). In sh
 **Inputs:**
 
 - **Content:** the [run of show](02-one-hour-run-of-show.md), [red thread](01-red-thread.md), [editorial backlog](07-editorial-backlog.md), the [September refresh](13-research-refresh-2026-09-05.md) and the [October research bank](17-research-bank-2026-10-18.md).
-- **Style:** the speaker's style guide, `kuopio-pelaa-2026/presentation-style/` (files 01–06). Where the guide and the speaker's real deck (`KuopioPelaaEsitys.pdf`) disagree, **follow the real deck**. That is the voice the audience should hear.
+- **Style:** the speaker's style guide, `kuopio-pelaa-2026/presentation-style/` (files 01–06), applied to **structure, narrative moves, voice and interaction**, not to the look. Where the guide and the speaker's real deck (`KuopioPelaaEsitys.pdf`) disagree on voice, **follow the real deck**. The look is the "Clean diff" theme in §4.
 - **History:** the three earlier decks in `output/*.pptx`, the HTML version and the ppt-master experiment.
 
 **This document replaces:** the visual direction in [DESIGN.md](../DESIGN.md) and the 23-slide [storyboard](16-practical-presentation-storyboard.md).
@@ -30,7 +30,7 @@ Planning notes are in English and slide copy is in Finnish. The copy is a draft:
 | | |
 |---|---|
 | **Title** | Hei ohjelmistokehitys, mitä kuuluu? |
-| **Central question (salmon note)** | **Koodi halpeni. Mikä ei?** |
+| **Central question ("illan kysymys" card)** | **Koodi halpeni. Mikä ei?** |
 | **Answer (slide 46)** | *Mitä kuuluu?* → "Kiireistä. Koodia tulee enemmän kuin ehditään lukea." · *Mikä ei?* → **Vastuu ei.** |
 | **Promise** | Näet, mitä ohjelmistokehityksessä oikeasti muuttui, miten agentin kanssa edetään tehtävästä tarkistettuun muutokseen – ja saat yhden kokeilun maanantaille. |
 | **Audience** | Lakeus-Devaus, Seinäjoki. A mixed room of developers, students, managers, entrepreneurs and the curious. Some people use agents daily; others avoid AI or are tired of the topic. |
@@ -42,7 +42,7 @@ Planning notes are in English and slide copy is in Finnish. The copy is a draft:
 **How the title gets answered.** The style guide says the talk must answer its title explicitly. The title is a greeting, so slide 46 answers it twice:
 
 1. The literal greeting: *Mitä kuuluu? Kiireistä.*
-2. The salmon note, which the room has seen since 00:30: *Koodi halpeni. Mikä ei? Vastuu ei.*
+2. The central question, which the room has seen since 00:30: *Koodi halpeni. Mikä ei? Vastuu ei.*
 
 ---
 
@@ -50,7 +50,7 @@ Planning notes are in English and slide copy is in Finnish. The copy is a draft:
 
 | Decision | Why |
 |---|---|
-| **Use the scrapbook / paper-explainer style.** Write copy in the speaker's real voice. | The speaker asked for it, and it links this talk to the previous one. The real deck beats the guide where they differ: about half the slides get a bottom line, usually a question or a dry aside, not a moral. |
+| **Use the style guide's structure and voice, with a new "Clean diff" look** (§4). | The speaker clarified on 19.10.2026 that the guide is about how talks are built, not how slides look. The voice follows the real deck: about half the slides get a bottom line, usually a question or a dry aside, not a moral. |
 | **Keep 5 + 10 + 20 + 20 + 5.** | It is agreed. The gallup runs only at the start (speaker's decision, 18.10.2026), so the last five minutes are takeaways and questions. |
 | **48 slides.** | The deck runs about 45 minutes. Cheap beats (memes, GIFs, builds) keep the pace up; dense evidence slides were cut, merged or moved to backup. |
 | **The context half is a story, not a catalogue.** About 15 content slides. | DECISIONS.md rejected the "data-led industry report". Every number must earn its slide. |
@@ -59,7 +59,7 @@ Planning notes are in English and slide copy is in Finnish. The copy is a draft:
 | **The personal proof is SuomiWoW** (43–45), at the end of the practical half. | The teaching bug shows the method; SuomiWoW shows a year of real agent-assisted work: ~1 250 commits, `AGENTS.md`/`CLAUDE.md`, production runbooks. Its data-repair runbook is the thesis in practice, and the ending climbs from the teaching bug to real work to the thesis. Chosen by the speaker on 18.10.2026. *Tämäkin esitys…* shrinks to one spoken sentence plus the disclosure on 48. |
 | **Takeaway #1 changed.** *Mittaa hyväksyttyä lopputulosta ja korjaustyötä* became *Pyydä tulosta, jonka voit tarkistaa.* | The new #1 covers the practical half and echoes slide 05. Slide 17 ("Kumpaa teillä juhlitaan?") carries the measurement point. **Confirmed by the speaker on 18.10.2026.** |
 | **Light furniture.** Caveats go in the `Lähde:` line, as the guide prescribes. | Version 1 stacked 8–9 extra elements per slide and some of them collided. |
-| **Retire `ai-workbench.png`. Keep `maintenance-illustration.png`.** | Navy clashes with cork; the warm paper tone fits. |
+| **Retire `ai-workbench.png`. Keep `maintenance-illustration.png`.** | The workbench image is decorative; the maintenance illustration carries the hypothetical example. |
 
 ---
 
@@ -67,8 +67,8 @@ Planning notes are in English and slide copy is in Finnish. The copy is a draft:
 
 | Style beat ([04](../../kuopio-pelaa-2026/presentation-style/04-deck-template.md)) | Here | Slides |
 |---|---|---|
-| 1 Hook | Collage title → agenda corkboard + salmon note | 01–02 |
-| 2 Who I am | Cardboard bio ("Moon härmästä"). Permission to ask is said aloud. | 03 |
+| 1 Hook | Dark title slide → agenda with the "illan kysymys" card | 01–02 |
+| 2 Who I am | Bio as a `git log` career timeline ("+ Moon härmästä."). Permission to ask is said aloud. | 03 |
 | 3 Warm-up | Timeline + the gallup | 04–06 |
 | 4 Basics | *Kysy vs. delegoi* | 05 |
 | 5–6 What professionals / users think | Stack Overflow 2026 usage, as the bridge out of the gallup | 08 |
@@ -80,80 +80,78 @@ Planning notes are in English and slide copy is in Finnish. The copy is a draft:
 | 12 Opportunity turn | "Mitä kannattaa nyt kokeilla?" / "Mitä täällä kannattaa nyt rakentaa?" | 18, 26 |
 | 13 Answer the title | "Mitä kuuluu? Kiireistä." → "Vastuu ei." | 46 |
 | 14 Personal proof | SuomiWoW: what the agent did, what I decided, a real production runbook | 43–45 |
-| 15 Takeaways | Corkboard + the Monday experiment | 47 |
+| 15 Takeaways | Three numbered cards + the Monday experiment | 47 |
 | 16 Workshop | The practical half + the Monday experiment | 28–42, 47 |
-| 17 Close | Closing corkboard + questions (no closing gallup) | 48 |
+| 17 Close | Dark closing slide + questions (no closing gallup) | 48 |
 
 ---
 
-## 4. Visual system
+## 4. Visual system: "Clean diff"
 
-Use [01-visual-system](../../kuopio-pelaa-2026/presentation-style/01-visual-system.md) as written:
+**Changed on 19.10.2026.** The speaker's style guide describes how the talk is structured and told, not how it looks. This deck therefore gets its own simple look that fits the topic. The Kuopio scrapbook look (corkboard, ransom-note letters, sticky notes, the cardboard mascot) is **not** used.
 
-- Two surfaces, frame and content.
-- `#F1ECE1` paper.
-- Arial Black 32 pt titles.
-- Grey subtitle.
-- Aptos body.
-- `#0070C0` for big numbers.
-- Bungee for audience prompts.
-- `Lähde:` bottom-left on every claim.
+**The idea:** a calm, readable code-review look. White slides, near-black text and one blue accent. Code-review cues are the only motif:
 
-**Layout rule:** at most three or four elements in the content zone. If a slide feels full, it is two slides, or one of them is speaker notes.
+- monospace section labels, such as `// 02 · nopeus`;
+- green **+** and red **−** used only where something is added or lost;
+- cards that look like PR comments or code blocks.
 
 ### 4.1 Surfaces
 
-| Surface | Slides |
-|---|---|
-| **Frame** (cork / cardboard) | 01, 02, 03, 07, 27, 46, 47, 48 |
-| **Audience prompt** (paper + Bungee, as Kuopio's *kysytään yleisöltä*) | 06 |
-| **Content** (paper) | Everything that argues or teaches |
-| **Full-bleed** (credit only) | 12, 14, 19, 23, 35, 43 (memes, GIF, comic, case openers) |
-
-### 4.2 Components this topic adds
-
-Only four new objects. Each sits on paper like a screenshot.
-
-| Component | Spec | Slides |
+| Surface | Use | Slides |
 |---|---|---|
-| **Code card** | Dark `#20231F` card; Consolas 22–26 pt in warm white; max 6 lines. Mark changed lines with `+`/`−` **and** a pale highlight. | 30, 34 |
-| **Check chip** | A pill holding the command name and the result in words: `läpi` / `ei läpi`. **Only for checks that actually ran.** Unrun checks are grey and say `odotettu: ei läpi → läpi`. | 34 |
-| **Browser frame** | Thin grey chrome around a clean **mockup** of the form (the walkthrough is slides only). Enlarge the relevant field at least 2×. | 28, 32, 34 |
-| **Lifecycle strip** | Seven small dots top-right: *Rajaa · Konteksti · Toista · Korjaa · Tarkista · Luovuta · Seuraa*. The current dot is blue and labelled. | 29–39 |
+| **Dark** (`#0D1117`, editor-dark) | Title, section dividers, the answer, closing | 01, 07, 27, 46, 48 |
+| **Light** (white) | Everything that argues or teaches | All others |
+| **Full-bleed** | SuomiWoW screenshot | 43 |
 
-**Gone since version 1:** the Agentti/Sinä note pair, the taped honesty tags and the gallup chips on most slides.
+### 4.2 Palette and type
 
-**Labels.** Labels move into the `Lähde:` line, and only two are used:
+| Role | Value |
+|---|---|
+| Text | `#111827`; muted `#6B7280`; lines `#E5E7EB` |
+| Accent | Blue `#2563EB`, with soft blue `#EFF6FF` for question cards |
+| Added / good | Green `#1A7F37` on `#DAFBE1` |
+| Lost / bad | Red `#CF222E` on `#FFEBE9` |
+| Pending decision | Amber `#9A6700` on `#FFF8C5` |
+| Code cards | `#F6F8FA` with a `#D0D7DE` border |
+| Fonts | Segoe UI (titles bold, body regular) and Consolas (labels, code, numbers in lists). Both ship with Windows. |
 
-- `Lähde: kuvitteellinen esimerkki · …`
-- `Lähde: esityksen tulkinta · …`
+Slide anatomy stays as the style guide describes:
 
-The address-bug walkthrough is slides only (no recording), so it is always cited as `kuvitteellinen esimerkki`.
+- title top-left (Segoe UI bold, 26–32 pt) with a grey subtitle;
+- evidence in the middle;
+- an optional bottom line (20 pt bold);
+- `Lähde:` bottom-left (11 pt).
 
-**Gallup callbacks.** These live in the speaker notes. Only three slides (13, 17, 38) show a small salmon pin bottom-right, e.g. `↩ Gallup: Nopeuttaako AI sinua?`.
+A monospace section label sits above the title, and the slide number is top-right.
 
-### 4.3 Assets
+### 4.3 Components
+
+| Component | Use |
+|---|---|
+| **Question card** | Light blue with a `// kysymys yleisölle` or `// arvaa` label. Used for every audience moment. |
+| **Code card** | GitHub-style light code block, with an optional file-name header and green/red diff lines. |
+| **Diff row** | A full-width row with **+** or **−**. Used for the answer slide (46), the bio's "+ Moon härmästä." and the METR "− Mitattu" row. |
+| **Check chip** | Grey pill reading "odotettu: …". Only checks that actually ran would ever show as passed. |
+| **Browser mockup** | Simple window frame with form fields. The bad field is red, the fixed one green. |
+| **Lifecycle strip** | Seven dots bottom-right on slides 29–39, with the current stage labelled. |
+| **Gallup pill** | Small light-blue pill, top-right, on 13, 17 and 38. |
+| **Avatar** | Round crop of the speaker's photo. Used on 01, 12, 35 and 48. |
+
+### 4.4 Assets
 
 | Asset | Status |
 |---|---|
-| Cork, cardboard and paper textures; speaker cut-out (`mä.png`); frog | **Reuse** from `kuopio-pelaa-2026/pptx/` |
-| Cardboard bio (p. 7 of the Kuopio deck) | **Reuse.** Update the roles; fix the surname capitalisation to *Ala-Rantala*. |
-| Ransom-note words: `Hei`, `ohjelmistokehitys,`, `mitä`, `kuuluu?`, `Koodi`, `halpeni.`, `Mikä`, `ei?`, `Vastuu`, `ei.`, `Kiireistä.` | **Make**, using the [06](../../kuopio-pelaa-2026/presentation-style/06-ai-brief.md) prompt |
-| Mascot variant: CRT robot holding a keyboard, magnifying glass, rubber duck and a red **LGTM** stamp | **Make** |
-| `maintenance-illustration.png` | **Reuse** on 18 and 40 |
-| SuomiWoW logo, progress screenshot (Kuopio pp. 104–105) + a repo view | **Reuse / capture** for 43–45 |
-| Address-bug browser mockups (before save / after reload) | **Make** as clean, labelled mockups. No recording (speaker's decision). |
-| Screenshots: curl blog headline, NATO 1968 report page, repo `docs/` listing | **Collect** and record their sources |
-| Memes, reaction GIF, 4-panel comic | **Make or recreate** with Finnish captions. The comic follows the AI-drawn style of Kuopio p. 53. |
-| QR codes: gallup.koodattu.dev and the Monday-experiment page (`materiaalit/maanantain-kokeilu.md` on GitHub) | **Make.** Test them from the back row. |
-
-**AI disclosure:** the speaker mentions it in one sentence on 44, and slide 48 carries it in small type.
-
----
+| Speaker photo + round avatar crop | From the speaker's own photo (`build/make_assets.py`) |
+| `maintenance-illustration.png` | Reused on 18, 26 and 40 (disclosed as AI-generated) |
+| SuomiWoW logo and progress screenshot | Reused; refresh the screenshot in November |
+| Icons | Font Awesome via `react-icons`, drawn in the accent colour |
+| QR codes | gallup.koodattu.dev and the Monday-experiment page |
+| Memes | Rebuilt from shapes and the avatar (12, 23); the GIF on 14 is a placeholder |
 
 ## 5. What holds it together
 
-1. **The salmon note.** Planted on 02. It rides along on the two section returns (07, 27) and in a corner pin on the first slide of sections B, C and D. It is answered on 46.
+1. **The central question.** Planted on 02 as the `// illan kysymys` card. The section labels (`// 01 · …`) and the two dark dividers (07, 27) keep the thread visible. It is answered on 46 as a diff.
 2. **One bug.** *Huoneiston numero katoaa.* It is seeded in slide 05's example request, shown concretely on 28, followed through 29–39, and recapped on 42.
 3. **One hypothetical local prototype.** Service note → draft maintenance record. Introduced on 18, used as the local callback on 26, corrected by the user on 40. Always cited as `kuvitteellinen esimerkki`.
 4. **"What the agent did / what a human decided."** Seeded on 05, proven on the bug on 42, shown on the speaker's own project on 44–45, generalised by the thesis on 46.
@@ -180,7 +178,7 @@ The address-bug walkthrough is slides only (no recording), so it is always cited
 | **Practical** Miten agentin kanssa tehdään töitä? | 35:00–54:00 | 28–45 (43–45: SuomiWoW) | ⑤ |
 | Close | 54:00–60:00 | 46–48 | Answered |
 
-**Agenda corkboard (slide 02).** The title shrinks to the top. Five pastel notes below:
+**Agenda (slide 02).** Title "Tänään", five numbered rows:
 
 1. Mikä ohjelmistokehityksessä oikeasti muuttui?
 2. Tuleeko meistä nopeampia?
@@ -188,7 +186,7 @@ The address-bug walkthrough is slides only (no recording), so it is always cited
 4. Mitä tämä tarkoittaa täällä Lakeudella?
 5. Miten agentin kanssa tehdään oikeasti töitä?
 
-The salmon note reads **Koodi halpeni. Mikä ei?** On the build, the notes regroup under **"Mitä kuuluu? (tilannekatsaus)"** and **"Miten tehdään? (käytäntö)"**.
+A blue card on the right reads `// illan kysymys` **Koodi halpeni. Mikä ei?** On the build, the rows group under **"Mitä kuuluu? · tilannekatsaus"** and **"Miten tehdään? · käytäntö"**.
 
 ---
 
@@ -205,19 +203,19 @@ The salmon note reads **Koodi halpeni. Mikä ei?** On the build, the notes regro
 
 **01 · 00:00 · Collage title (#1)**
 
-Corkboard. Ransom-note *Hei ohjelmistokehitys, mitä kuuluu?*, the speaker cut-out and the mascot. No other text.
+Dark slide. A monospace line `$ git diff 2022..2026 -- ohjelmistokehitys`, the title *Hei ohjelmistokehitys, mitä kuuluu?*, the speaker's name and event, and a round avatar.
 
 - Notes: open with "Agentti sanoo, että muutos on valmis. Mikä saisi teidät uskomaan sen?"
 
-**02 · 00:30 · Agenda corkboard (#2), 1 build**
+**02 · 00:30 · Agenda (#2), 1 build**
 
 The notes from §6. The build regroups them into the two halves.
 
 - Notes: "Tämä punainen lappu on koko illan kysymys."
 
-**03 · 01:15 · Bio on cardboard (#3)**
+**03 · 01:15 · Bio (#3)**
 
-The Kuopio bio, roles updated:
+Photo left. Right: name, then `$ git log --oneline ura` as a timeline of roles:
 
 - Teknologiajohtaja · Clevoy Oy
 - Diplomi-insinööri, tekoälytutkija · Tampereen yliopisto
@@ -577,14 +575,14 @@ The lifecycle strip appears on slides 29–39. The bug is a teaching example sho
   - **The chips are grey and say `odotettu: ei läpi → läpi`** — nothing was run, so nothing may look like a real pass.
   - The answer to pull out: old records, other countries' address formats, the user's actual workflow.
 
-**35 · 42:50 · Four-panel comic (AI-drawn, as on Kuopio p. 53)**
+**35 · 42:50 · Four-panel comic (robot icon + speaker avatar)**
 
 1. Agentti, iloisena: "Valmis! Kaikki testit menee läpi."
 2. Minä, kahvikuppi kädessä: "Ajoitko ne?"
 3. Agentti, hiljaa: "…"
 4. Agentti: "Ajan ne nyt."
 
-Same two-character, four-panel layout and drawing style as Kuopio p. 53. Generate it with the [06](../../kuopio-pelaa-2026/presentation-style/06-ai-brief.md) workflow and disclose it.
+Built from shapes: the agent is a robot icon, "Minä" is the speaker's avatar. It can be swapped for an AI-drawn version if wanted; disclose it if so.
 
 - `Lähde:` kuvitteellinen. Disclosed as generated on 48.
 
@@ -720,16 +718,16 @@ Full-bleed screenshot of the SuomiWoW progress page (reuse Kuopio p. 105). Credi
 
 ### Close · 54:00–60:00
 
-**46 · 54:00 · Answer the title (corkboard), 2 builds**
+**46 · 54:00 · Answer the title (dark, as a diff), 2 builds**
 
-- The ransom words *Mitä kuuluu?* return.
+- `$ git diff kysymys..vastaus`, then the line *Hei ohjelmistokehitys, mitä kuuluu?*
 - Build 1: a pinned note, **"Kiireistä. Koodia tulee enemmän kuin ehditään lukea."**
-- Build 2: the salmon note *Koodi halpeni. Mikä ei?* — *Mikä ei?* is torn off and the ransom words **Vastuu ei.** appear.
+- Build 2: the line *Koodi halpeni. Mikä ei?* appears; on the next build it turns into a red **−** line and a green **+ Koodi halpeni. Vastuu ei.** appears under it.
 - Notes:
   - Say the three lines aloud, not on the slide: "Koodia syntyy enemmän. Varmuus ei synny samalla nopeudella. Joku omistaa seuraukset joka tapauksessa."
   - Optional human beat: "Me opimme kirjoittamalla koodia. Miten seuraavat oppivat?"
 
-**47 · 55:00 · Takeaways corkboard (#5) + the Monday experiment**
+**47 · 55:00 · Takeaways (#5) + the Monday experiment**
 
 - Three pinned notes (confirmed by the speaker 18.10.2026):
   1. **Pyydä tulosta, jonka voit tarkistaa.**
@@ -738,12 +736,12 @@ Full-bleed screenshot of the SuomiWoW progress page (reuse Kuopio p. 105). Credi
 - Taped card + QR code: **Maanantaina: yksi toistettava virhe · neljä riviä · katso, mitä näyttöä saat.**
 - The QR code leads to [`materiaalit/maanantain-kokeilu.md`](../materiaalit/maanantain-kokeilu.md) on GitHub: the four lines, the evening's example, the ladder, the handoff questions and the sources.
 
-**48 · 56:00 · Closing corkboard (#6) + questions**
+**48 · 56:00 · Closing (#6, dark) + questions**
 
-- Speaker cut-out, mascot and **the same three takeaways** as 47.
-- Salmon note: **Minkä seurauksen sinä olet valmis omistamaan?**
+- Round avatar and **the same three takeaways** as 47.
+- Large headline: **Minkä seurauksen sinä olet valmis omistamaan?**
 - Contact cards (confirmed current): /juha-ala-rantala · /vaarattu · ala-ranta.la · juha@ala-ranta.la
-- Bungee: **Kysymyksiä?**
+- **Kysymyksiä?** in blue, top-right.
 - Small print: *Tämän esityksen tutkimuksessa ja kuvituksessa on käytetty tekoälyä.*
 - Notes: 56:00–60:00 questions inside the hour. Longer discussion continues afterwards. No closing gallup.
 
@@ -853,7 +851,7 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
 
 ## 10. Production plan
 
-1. **Template.** Start from `KuopioPelaaEsitys.pptx`: copy its masters, textures, fonts and frame layouts, then delete the content. Build the frame slides first.
+1. **Generator.** The deck is built by `output/v3/build/build-deck.js` (pptxgenjs) in the Clean diff theme; see [output/v3/README.md](../output/v3/README.md).
 2. **New assets** (§4.3).
 3. **Address-bug walkthrough: slides only** (speaker's decision, 18.10.2026). No recording and no live run. Make clean browser mockups and a short, plausible 3-line diff. Label everything `kuvitteellinen esimerkki`; check chips stay grey ("odotettu").
 4. **Monday-experiment page: done.** It lives at [`materiaalit/maanantain-kokeilu.md`](../materiaalit/maanantain-kokeilu.md). Point slide 47's QR code at `https://github.com/Koodattu/lakeus-devaus-2026/blob/main/materiaalit/maanantain-kokeilu.md` (push first, then test the code).
@@ -905,9 +903,10 @@ Stanford's entry-level gap · Reddit career anxiety (framing only) · DORA token
 | **Accuracy** | SWE-Maintain card corrected (39). Personal-proof lines corrected (45). "yli" added (17). Slop definition labelled as ours and with "kohtuuton" (20). Finnish employment −1 % now says "maaliskuun lopusta" (24). MirrorCode run detail flagged for confirmation (11). AGENTS.md wording matched to v3 (30). Timeline subtitle fixed (04). Mismatched gallup callback removed (old 27 → B15). |
 | **Structure** | 57 → 49 slides. The 4GL slide, flywheel and sentiment slide moved to backup. Microsoft folded into the METR reveal. Anthropic/OpenAI merged into one contradiction pair. Gofore folded into the local slide. The 48 % trust stat moved into the ladder. Permission slide cut (said aloud). Section returns reduced from five to two plus corner pins. |
 | **Practical half** | Opens with the bug itself. Five audience moments added. A four-frame agent storyboard added (no video). The prototype moved after the handoff. The personal proof moved to the close. |
-| **Ending** | Answers the literal title ("Kiireistä…") and the salmon note. One summary only. The Monday experiment is on a slide, with a QR code. |
+| **Ending** | Answers the literal title ("Kiireistä…") and the central question. One summary only. The Monday experiment is on a slide, with a QR code. |
 | **Style** | Bottom lines on about half the slides, mostly questions or dry asides. Plainer titles. The Kuopio bio reused. Five humour beats, including an AI-drawn comic as on Kuopio p. 53. Slide furniture cut to four components. |
 | **Version 2.1 (speaker feedback, 18.10.2026)** | SuomiWoW replaces "Tämäkin esitys" as the personal proof (43–45), including a real production runbook. The closing gallup is dropped; the gallup is only the opening gauge. The close ends with questions inside the hour. Parallel-work slides moved to backup. 48 slides. Takeaways, bio and contacts confirmed. |
 | **Version 2.2 (18.10.2026)** | Slide 04 states the speaker ran the 2024 event, with a hands-up callback. Final caption pass on the humour beats (12, 14, 23, 35). Finnish copy fixes on 08, 11, 36, 39 and 45. Event-date handling added to §11. |
 | **Version 2.3 (18.10.2026)** | SuomiWoW slides state the confirmed split (Codex and Claude Code write, the speaker decides). The video slide 33 became a static four-frame storyboard; the walkthrough is slides only. The Monday-experiment page was written to `materiaalit/maanantain-kokeilu.md`. |
 | **Version 2.4 (18.10.2026)** | Event planned for November 2026. §10 step 7 now has a dated, slide-by-slide refresh plan. |
+| **Version 2.5 (19.10.2026)** | Visual system replaced: the style guide now governs structure and voice only, and the deck uses its own "Clean diff" theme (§4). Frame-slide descriptions updated. Content and order unchanged. |
